@@ -17,6 +17,7 @@ func check(e error) {
 
 func writeMainIndex(fn string) {
 	// For more granular writes, open a file for writing.
+	os.MkdirAll(path.Dir(fn), os.ModePerm)
 	f, err := os.Create(fn)
 	check(err)
 
@@ -115,7 +116,7 @@ func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definiti
 }
 
 func main() {
-	var docs_location = flag.String("docs_location", "./docs", "Location of the docs directory.")
+	var docs_location = flag.String("docs_location", "./doc_source", "Location of the docs directory.")
 	flag.Parse()
 
 	fmt.Printf("Generating documentation.\n")
@@ -130,6 +131,8 @@ func main() {
 
 	// Generate top level configuration.
 	f.WriteString("site_name: Expreduce\n\n")
+	f.WriteString("docs_dir: 'doc_source'\n")
+	f.WriteString("site_dir: 'docs'\n\n")
 	f.WriteString("pages:\n")
 	f.WriteString("- Home: 'index.md'\n")
 	writeMainIndex(path.Join(*docs_location, "index.md"))

@@ -1,0 +1,1034 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Expreduce documentation", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#expreduce-documentation", 
+            "text": "", 
+            "title": "Expreduce documentation"
+        }, 
+        {
+            "location": "/builtin/combinatorics/", 
+            "text": "combinatorics documentation\n\n\nIntegerPartitions\n\n\nPermutations\n\n\nMultinomial", 
+            "title": "combinatorics"
+        }, 
+        {
+            "location": "/builtin/combinatorics/#combinatorics-documentation", 
+            "text": "IntegerPartitions  Permutations  Multinomial", 
+            "title": "combinatorics documentation"
+        }, 
+        {
+            "location": "/builtin/combinatorics/integerpartitions/", 
+            "text": "IntegerPartitions", 
+            "title": "IntegerPartitions "
+        }, 
+        {
+            "location": "/builtin/combinatorics/integerpartitions/#integerpartitions", 
+            "text": "", 
+            "title": "IntegerPartitions"
+        }, 
+        {
+            "location": "/builtin/combinatorics/permutations/", 
+            "text": "Permutations", 
+            "title": "Permutations "
+        }, 
+        {
+            "location": "/builtin/combinatorics/permutations/#permutations", 
+            "text": "", 
+            "title": "Permutations"
+        }, 
+        {
+            "location": "/builtin/combinatorics/multinomial/", 
+            "text": "Multinomial\n\n\nRules\n\n\nMultinomial\n[\nseq___\n]\n \n:=\n \nFactorial\n[\nApply\n[\nPlus\n,\n \n{\nseq\n}]]\n \n/\n \nApply\n[\nTimes\n,\n \nMap\n[\nFactorial\n,\n \n{\nseq\n}]]", 
+            "title": "Multinomial "
+        }, 
+        {
+            "location": "/builtin/combinatorics/multinomial/#multinomial", 
+            "text": "", 
+            "title": "Multinomial"
+        }, 
+        {
+            "location": "/builtin/combinatorics/multinomial/#rules", 
+            "text": "Multinomial [ seq___ ]   :=   Factorial [ Apply [ Plus ,   { seq }]]   /   Apply [ Times ,   Map [ Factorial ,   { seq }]]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/calculus/", 
+            "text": "calculus documentation\n\n\nD\n\n\nIntegrate", 
+            "title": "calculus"
+        }, 
+        {
+            "location": "/builtin/calculus/#calculus-documentation", 
+            "text": "D  Integrate", 
+            "title": "calculus documentation"
+        }, 
+        {
+            "location": "/builtin/calculus/d/", 
+            "text": "D\n\n\nRules\n\n\nD\n[\nx_\n,\nx_\n]\n \n:=\n \n1\n\n\nD\n[\na_\n,\nx_\n]\n \n:=\n \n0\n\n\nD\n[\na_\n+\nb__\n,\nx_\n]\n \n:=\n \nD\n[\na\n,\nx\n]\n+\nD\n[\nPlus\n[\nb\n],\nx\n]\n\n\nD\n[\na_\n \nb__\n,\nx_\n]\n \n:=\n \nD\n[\na\n,\nx\n]\n \nb\n+\na\n \nD\n[\nTimes\n[\nb\n],\nx\n]\n\n\nD\n[\na_\n^\n(\nb_\n),\n \nx_\n]\n \n:=\n \na\n^\nb\n*\n(\nD\n[\nb\n,\nx\n]\n \nLog\n[\na\n]\n+\nD\n[\na\n,\nx\n]\n/\na\n*\nb\n)\n\n\nD\n[\nLog\n[\na_\n],\n \nx_\n]\n \n:=\n \nD\n[\na\n,\n \nx\n]\n/\na\n\n\nD\n[\nSin\n[\na_\n],\n \nx_\n]\n \n:=\n \nD\n[\na\n,\nx\n]\n \nCos\n[\na\n]\n\n\nD\n[\nCos\n[\na_\n],\n \nx_\n]\n \n:=\n \n-\nD\n[\na\n,\nx\n]\n \nSin\n[\na\n]", 
+            "title": "D "
+        }, 
+        {
+            "location": "/builtin/calculus/d/#d", 
+            "text": "", 
+            "title": "D"
+        }, 
+        {
+            "location": "/builtin/calculus/d/#rules", 
+            "text": "D [ x_ , x_ ]   :=   1  D [ a_ , x_ ]   :=   0  D [ a_ + b__ , x_ ]   :=   D [ a , x ] + D [ Plus [ b ], x ]  D [ a_   b__ , x_ ]   :=   D [ a , x ]   b + a   D [ Times [ b ], x ]  D [ a_ ^ ( b_ ),   x_ ]   :=   a ^ b * ( D [ b , x ]   Log [ a ] + D [ a , x ] / a * b )  D [ Log [ a_ ],   x_ ]   :=   D [ a ,   x ] / a  D [ Sin [ a_ ],   x_ ]   :=   D [ a , x ]   Cos [ a ]  D [ Cos [ a_ ],   x_ ]   :=   - D [ a , x ]   Sin [ a ]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/calculus/integrate/", 
+            "text": "Integrate\n\n\nRules\n\n\nIntegrate\n[\na_Integer\n,\nx_Symbol\n]\n \n:=\n \na\n*\nx\n\n\nIntegrate\n[\na_Integer\n*\nb_\n,\nx_Symbol\n]\n \n:=\n \na\n*\nIntegrate\n[\nb\n,\nx\n]\n\n\nIntegrate\n[\na_\n+\nb__\n,\nx_Symbol\n]\n \n:=\n \nIntegrate\n[\na\n,\nx\n]\n+\nIntegrate\n[\nPlus\n[\nb\n],\nx\n]\n\n\nIntegrate\n[\nx_Symbol\n^\nn_Integer\n,\n \nx_Symbol\n]\n \n:=\n \nx\n^\n(\nn\n+\n1\n)\n/\n(\nn\n+\n1\n)\n\n\nIntegrate\n[\nx_Symbol\n^\nn_Rational\n,\n \nx_Symbol\n]\n \n:=\n \nx\n^\n(\nn\n+\n1\n)\n/\n(\nn\n+\n1\n)", 
+            "title": "Integrate "
+        }, 
+        {
+            "location": "/builtin/calculus/integrate/#integrate", 
+            "text": "", 
+            "title": "Integrate"
+        }, 
+        {
+            "location": "/builtin/calculus/integrate/#rules", 
+            "text": "Integrate [ a_Integer , x_Symbol ]   :=   a * x  Integrate [ a_Integer * b_ , x_Symbol ]   :=   a * Integrate [ b , x ]  Integrate [ a_ + b__ , x_Symbol ]   :=   Integrate [ a , x ] + Integrate [ Plus [ b ], x ]  Integrate [ x_Symbol ^ n_Integer ,   x_Symbol ]   :=   x ^ ( n + 1 ) / ( n + 1 )  Integrate [ x_Symbol ^ n_Rational ,   x_Symbol ]   :=   x ^ ( n + 1 ) / ( n + 1 )", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/comparison/", 
+            "text": "comparison documentation\n\n\nEqual\n\n\nSameQ\n\n\nMatchQ", 
+            "title": "comparison"
+        }, 
+        {
+            "location": "/builtin/comparison/#comparison-documentation", 
+            "text": "Equal  SameQ  MatchQ", 
+            "title": "comparison documentation"
+        }, 
+        {
+            "location": "/builtin/comparison/equal/", 
+            "text": "Equal", 
+            "title": "Equal "
+        }, 
+        {
+            "location": "/builtin/comparison/equal/#equal", 
+            "text": "", 
+            "title": "Equal"
+        }, 
+        {
+            "location": "/builtin/comparison/sameq/", 
+            "text": "SameQ", 
+            "title": "SameQ "
+        }, 
+        {
+            "location": "/builtin/comparison/sameq/#sameq", 
+            "text": "", 
+            "title": "SameQ"
+        }, 
+        {
+            "location": "/builtin/comparison/matchq/", 
+            "text": "MatchQ", 
+            "title": "MatchQ "
+        }, 
+        {
+            "location": "/builtin/comparison/matchq/#matchq", 
+            "text": "", 
+            "title": "MatchQ"
+        }, 
+        {
+            "location": "/builtin/constants/", 
+            "text": "constants documentation\n\n\nRational\n\n\nNumberQ\n\n\nString", 
+            "title": "constants"
+        }, 
+        {
+            "location": "/builtin/constants/#constants-documentation", 
+            "text": "Rational  NumberQ  String", 
+            "title": "constants documentation"
+        }, 
+        {
+            "location": "/builtin/constants/rational/", 
+            "text": "Rational", 
+            "title": "Rational "
+        }, 
+        {
+            "location": "/builtin/constants/rational/#rational", 
+            "text": "", 
+            "title": "Rational"
+        }, 
+        {
+            "location": "/builtin/constants/numberq/", 
+            "text": "NumberQ", 
+            "title": "NumberQ "
+        }, 
+        {
+            "location": "/builtin/constants/numberq/#numberq", 
+            "text": "", 
+            "title": "NumberQ"
+        }, 
+        {
+            "location": "/builtin/constants/string/", 
+            "text": "String", 
+            "title": "String "
+        }, 
+        {
+            "location": "/builtin/constants/string/#string", 
+            "text": "", 
+            "title": "String"
+        }, 
+        {
+            "location": "/builtin/expression/", 
+            "text": "expression documentation\n\n\nApply\n\n\nSequence\n\n\nApply\n\n\nEvaluate\n\n\nFunction\n\n\nHold", 
+            "title": "expression"
+        }, 
+        {
+            "location": "/builtin/expression/#expression-documentation", 
+            "text": "Apply  Sequence  Apply  Evaluate  Function  Hold", 
+            "title": "expression documentation"
+        }, 
+        {
+            "location": "/builtin/expression/apply/", 
+            "text": "Apply", 
+            "title": "Apply "
+        }, 
+        {
+            "location": "/builtin/expression/apply/#apply", 
+            "text": "", 
+            "title": "Apply"
+        }, 
+        {
+            "location": "/builtin/expression/sequence/", 
+            "text": "Sequence", 
+            "title": "Sequence "
+        }, 
+        {
+            "location": "/builtin/expression/sequence/#sequence", 
+            "text": "", 
+            "title": "Sequence"
+        }, 
+        {
+            "location": "/builtin/expression/apply/", 
+            "text": "Apply", 
+            "title": "Apply "
+        }, 
+        {
+            "location": "/builtin/expression/apply/#apply", 
+            "text": "", 
+            "title": "Apply"
+        }, 
+        {
+            "location": "/builtin/expression/evaluate/", 
+            "text": "Evaluate", 
+            "title": "Evaluate "
+        }, 
+        {
+            "location": "/builtin/expression/evaluate/#evaluate", 
+            "text": "", 
+            "title": "Evaluate"
+        }, 
+        {
+            "location": "/builtin/expression/function/", 
+            "text": "Function", 
+            "title": "Function "
+        }, 
+        {
+            "location": "/builtin/expression/function/#function", 
+            "text": "", 
+            "title": "Function"
+        }, 
+        {
+            "location": "/builtin/expression/hold/", 
+            "text": "Hold", 
+            "title": "Hold "
+        }, 
+        {
+            "location": "/builtin/expression/hold/#hold", 
+            "text": "", 
+            "title": "Hold"
+        }, 
+        {
+            "location": "/builtin/flowcontrol/", 
+            "text": "flowcontrol documentation\n\n\nIf\n\n\nWhile\n\n\nKroneckerDelta", 
+            "title": "flowcontrol"
+        }, 
+        {
+            "location": "/builtin/flowcontrol/#flowcontrol-documentation", 
+            "text": "If  While  KroneckerDelta", 
+            "title": "flowcontrol documentation"
+        }, 
+        {
+            "location": "/builtin/flowcontrol/if/", 
+            "text": "If", 
+            "title": "If "
+        }, 
+        {
+            "location": "/builtin/flowcontrol/if/#if", 
+            "text": "", 
+            "title": "If"
+        }, 
+        {
+            "location": "/builtin/flowcontrol/while/", 
+            "text": "While", 
+            "title": "While "
+        }, 
+        {
+            "location": "/builtin/flowcontrol/while/#while", 
+            "text": "", 
+            "title": "While"
+        }, 
+        {
+            "location": "/builtin/flowcontrol/kroneckerdelta/", 
+            "text": "KroneckerDelta\n\n\nRules\n\n\nKroneckerDelta\n[\nx_Integer\n]\n \n:=\n \nIf\n[\nx\n \n==\n \n0\n,\n \n1\n,\n \n0\n]", 
+            "title": "KroneckerDelta "
+        }, 
+        {
+            "location": "/builtin/flowcontrol/kroneckerdelta/#kroneckerdelta", 
+            "text": "", 
+            "title": "KroneckerDelta"
+        }, 
+        {
+            "location": "/builtin/flowcontrol/kroneckerdelta/#rules", 
+            "text": "KroneckerDelta [ x_Integer ]   :=   If [ x   ==   0 ,   1 ,   0 ]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/list/", 
+            "text": "list documentation\n\n\nList\n\n\nTotal\n\n\nMean\n\n\nDepth\n\n\nLength\n\n\nTable\n\n\nSum\n\n\nProduct\n\n\nMemberQ\n\n\nMap\n\n\nArray\n\n\nCases\n\n\nPadRight\n\n\nPadLeft\n\n\nRange", 
+            "title": "list"
+        }, 
+        {
+            "location": "/builtin/list/#list-documentation", 
+            "text": "List  Total  Mean  Depth  Length  Table  Sum  Product  MemberQ  Map  Array  Cases  PadRight  PadLeft  Range", 
+            "title": "list documentation"
+        }, 
+        {
+            "location": "/builtin/list/list/", 
+            "text": "List", 
+            "title": "List "
+        }, 
+        {
+            "location": "/builtin/list/list/#list", 
+            "text": "", 
+            "title": "List"
+        }, 
+        {
+            "location": "/builtin/list/total/", 
+            "text": "Total\n\n\nTotal[list]\n sums all the values in \nlist\n.\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nTotal\n[{\n1\n,\n2\n,\n3\n,\n4\n}]\n\n\nOut\n[\n1\n]\n=\n \n10\n\n\n\n\n\n\nFurther examples\n\n\nThe total of an empty list is zero:\n\n\nIn\n[\n1\n]\n:=\n \nTotal\n[{}]\n\n\nOut\n[\n1\n]\n=\n \n0\n\n\n\n\n\n\nRules\n\n\nTotal\n[\nl__List\n]\n \n:=\n \nApply\n[\nPlus\n,\n \nl\n]", 
+            "title": "Total "
+        }, 
+        {
+            "location": "/builtin/list/total/#total", 
+            "text": "Total[list]  sums all the values in  list .", 
+            "title": "Total"
+        }, 
+        {
+            "location": "/builtin/list/total/#simple-examples", 
+            "text": "In [ 1 ] :=   Total [{ 1 , 2 , 3 , 4 }]  Out [ 1 ] =   10", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/list/total/#further-examples", 
+            "text": "The total of an empty list is zero:  In [ 1 ] :=   Total [{}]  Out [ 1 ] =   0", 
+            "title": "Further examples"
+        }, 
+        {
+            "location": "/builtin/list/total/#rules", 
+            "text": "Total [ l__List ]   :=   Apply [ Plus ,   l ]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/list/mean/", 
+            "text": "Mean\n\n\nCalculate the statistical mean of the list.\n\n\nRules\n\n\nMean\n[\nl__List\n]\n \n:=\n \nTotal\n[\nl\n]\n/\nLength\n[\nl\n]", 
+            "title": "Mean "
+        }, 
+        {
+            "location": "/builtin/list/mean/#mean", 
+            "text": "Calculate the statistical mean of the list.", 
+            "title": "Mean"
+        }, 
+        {
+            "location": "/builtin/list/mean/#rules", 
+            "text": "Mean [ l__List ]   :=   Total [ l ] / Length [ l ]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/list/depth/", 
+            "text": "Depth\n\n\nReturn the depth of an expression.", 
+            "title": "Depth "
+        }, 
+        {
+            "location": "/builtin/list/depth/#depth", 
+            "text": "Return the depth of an expression.", 
+            "title": "Depth"
+        }, 
+        {
+            "location": "/builtin/list/length/", 
+            "text": "Length", 
+            "title": "Length "
+        }, 
+        {
+            "location": "/builtin/list/length/#length", 
+            "text": "", 
+            "title": "Length"
+        }, 
+        {
+            "location": "/builtin/list/table/", 
+            "text": "Table\n\n\nRules\n\n\nTable\n[\na_\n,\n \nb_Integer\n]\n \n:=\n \nTable\n[\na\n,\n \n{\ni\n,\n \n1\n,\n \nb\n}]", 
+            "title": "Table "
+        }, 
+        {
+            "location": "/builtin/list/table/#table", 
+            "text": "", 
+            "title": "Table"
+        }, 
+        {
+            "location": "/builtin/list/table/#rules", 
+            "text": "Table [ a_ ,   b_Integer ]   :=   Table [ a ,   { i ,   1 ,   b }]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/list/sum/", 
+            "text": "Sum\n\n\nRules\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)", 
+            "title": "Sum "
+        }, 
+        {
+            "location": "/builtin/list/sum/#sum", 
+            "text": "", 
+            "title": "Sum"
+        }, 
+        {
+            "location": "/builtin/list/sum/#rules", 
+            "text": "Sum [ i_Symbol ,   { i_Symbol ,   0 ,   n_Integer }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   1 ,   n_Integer }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   0 ,   n_Symbol }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   1 ,   n_Symbol }]   :=   1 / 2 * n * ( 1   +   n )", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/list/product/", 
+            "text": "Product", 
+            "title": "Product "
+        }, 
+        {
+            "location": "/builtin/list/product/#product", 
+            "text": "", 
+            "title": "Product"
+        }, 
+        {
+            "location": "/builtin/list/memberq/", 
+            "text": "MemberQ", 
+            "title": "MemberQ "
+        }, 
+        {
+            "location": "/builtin/list/memberq/#memberq", 
+            "text": "", 
+            "title": "MemberQ"
+        }, 
+        {
+            "location": "/builtin/list/map/", 
+            "text": "Map", 
+            "title": "Map "
+        }, 
+        {
+            "location": "/builtin/list/map/#map", 
+            "text": "", 
+            "title": "Map"
+        }, 
+        {
+            "location": "/builtin/list/array/", 
+            "text": "Array", 
+            "title": "Array "
+        }, 
+        {
+            "location": "/builtin/list/array/#array", 
+            "text": "", 
+            "title": "Array"
+        }, 
+        {
+            "location": "/builtin/list/cases/", 
+            "text": "Cases", 
+            "title": "Cases "
+        }, 
+        {
+            "location": "/builtin/list/cases/#cases", 
+            "text": "", 
+            "title": "Cases"
+        }, 
+        {
+            "location": "/builtin/list/padright/", 
+            "text": "PadRight", 
+            "title": "PadRight "
+        }, 
+        {
+            "location": "/builtin/list/padright/#padright", 
+            "text": "", 
+            "title": "PadRight"
+        }, 
+        {
+            "location": "/builtin/list/padleft/", 
+            "text": "PadLeft", 
+            "title": "PadLeft "
+        }, 
+        {
+            "location": "/builtin/list/padleft/#padleft", 
+            "text": "", 
+            "title": "PadLeft"
+        }, 
+        {
+            "location": "/builtin/list/range/", 
+            "text": "Range", 
+            "title": "Range "
+        }, 
+        {
+            "location": "/builtin/list/range/#range", 
+            "text": "", 
+            "title": "Range"
+        }, 
+        {
+            "location": "/builtin/order/", 
+            "text": "order documentation\n\n\nOrder", 
+            "title": "order"
+        }, 
+        {
+            "location": "/builtin/order/#order-documentation", 
+            "text": "Order", 
+            "title": "order documentation"
+        }, 
+        {
+            "location": "/builtin/order/order/", 
+            "text": "Order", 
+            "title": "Order "
+        }, 
+        {
+            "location": "/builtin/order/order/#order", 
+            "text": "", 
+            "title": "Order"
+        }, 
+        {
+            "location": "/builtin/plus/", 
+            "text": "plus documentation\n\n\nPlus\n\n\nInfinity\n\n\nComplexInfinity\n\n\nIndeterminate", 
+            "title": "plus"
+        }, 
+        {
+            "location": "/builtin/plus/#plus-documentation", 
+            "text": "Plus  Infinity  ComplexInfinity  Indeterminate", 
+            "title": "plus documentation"
+        }, 
+        {
+            "location": "/builtin/plus/plus/", 
+            "text": "Plus\n\n\nRules\n\n\nPlus\n[\na_\n,\n \n-\na_\n,\n \nrest___\n]\n \n:=\n \nPlus\n[\nrest\n]\n\n\nPlus\n[\nc1_Integer\n*\na_\n,\n \nc2_Integer\n*\na_\n,\n \nrest___\n]\n \n:=\n \n((\nc1\n+\nc2\n)\n*\na\n \n+\n \nrest\n)\n\n\nPlus\n[\nc1_Integer\n*\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \n(\nc1\n+\n1\n)\n*\na\n+\nrest\n\n\nPlus\n[\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \n2\n*\na\n \n+\n \nrest\n\n\nPlus\n[\nc1_Real\n*\na_\n,\n \nc2_Integer\n*\na_\n,\n \nrest___\n]\n \n:=\n \n(\nc1\n+\nc2\n)\n*\na\n \n+\n \nrest\n\n\nPlus\n[\nc_Real\n*\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \n(\nc\n+\n1\n)\n*\na\n \n+\n \nrest", 
+            "title": "Plus "
+        }, 
+        {
+            "location": "/builtin/plus/plus/#plus", 
+            "text": "", 
+            "title": "Plus"
+        }, 
+        {
+            "location": "/builtin/plus/plus/#rules", 
+            "text": "Plus [ a_ ,   - a_ ,   rest___ ]   :=   Plus [ rest ]  Plus [ c1_Integer * a_ ,   c2_Integer * a_ ,   rest___ ]   :=   (( c1 + c2 ) * a   +   rest )  Plus [ c1_Integer * a_ ,   a_ ,   rest___ ]   :=   ( c1 + 1 ) * a + rest  Plus [ a_ ,   a_ ,   rest___ ]   :=   2 * a   +   rest  Plus [ c1_Real * a_ ,   c2_Integer * a_ ,   rest___ ]   :=   ( c1 + c2 ) * a   +   rest  Plus [ c_Real * a_ ,   a_ ,   rest___ ]   :=   ( c + 1 ) * a   +   rest", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/plus/infinity/", 
+            "text": "Infinity\n\n\nRules\n\n\nPlus\n[\nInfinity\n,\n \n_Integer\n,\n \nrest___\n]\n \n:=\n \nInfinity\n \n+\n \nrest\n\n\nPlus\n[\nInfinity\n,\n \n_Real\n,\n \nrest___\n]\n \n:=\n \nInfinity\n \n+\n \nrest\n\n\nPlus\n[\n-\nInfinity\n,\n \n_Integer\n,\n \nrest___\n]\n \n:=\n \n-\nInfinity\n \n+\n \nrest\n\n\nPlus\n[\n-\nInfinity\n,\n \n_Real\n,\n \nrest___\n]\n \n:=\n \n-\nInfinity\n \n+\n \nrest\n\n\nPlus\n[\nInfinity\n,\n \n-\nInfinity\n,\n \nrest___\n]\n \n:=\n \nIndeterminate\n \n+\n \nrest", 
+            "title": "Infinity "
+        }, 
+        {
+            "location": "/builtin/plus/infinity/#infinity", 
+            "text": "", 
+            "title": "Infinity"
+        }, 
+        {
+            "location": "/builtin/plus/infinity/#rules", 
+            "text": "Plus [ Infinity ,   _Integer ,   rest___ ]   :=   Infinity   +   rest  Plus [ Infinity ,   _Real ,   rest___ ]   :=   Infinity   +   rest  Plus [ - Infinity ,   _Integer ,   rest___ ]   :=   - Infinity   +   rest  Plus [ - Infinity ,   _Real ,   rest___ ]   :=   - Infinity   +   rest  Plus [ Infinity ,   - Infinity ,   rest___ ]   :=   Indeterminate   +   rest", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/plus/complexinfinity/", 
+            "text": "ComplexInfinity", 
+            "title": "ComplexInfinity "
+        }, 
+        {
+            "location": "/builtin/plus/complexinfinity/#complexinfinity", 
+            "text": "", 
+            "title": "ComplexInfinity"
+        }, 
+        {
+            "location": "/builtin/plus/indeterminate/", 
+            "text": "Indeterminate", 
+            "title": "Indeterminate "
+        }, 
+        {
+            "location": "/builtin/plus/indeterminate/#indeterminate", 
+            "text": "", 
+            "title": "Indeterminate"
+        }, 
+        {
+            "location": "/builtin/power/", 
+            "text": "power documentation\n\n\nPower\n\n\nPowerExpand", 
+            "title": "power"
+        }, 
+        {
+            "location": "/builtin/power/#power-documentation", 
+            "text": "Power  PowerExpand", 
+            "title": "power documentation"
+        }, 
+        {
+            "location": "/builtin/power/power/", 
+            "text": "Power\n\n\nRules\n\n\nPower\n[\nPower\n[\na_\n,\nb_Integer\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Real\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nTimes\n[\nExcept\n[\n_Symbol\n,\n \nfirst_\n],\n \ninner___\n],\n \npow_\n]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nTimes\n[\nfirst_\n,\n \ninner___\n],\n \nExcept\n[\n_Symbol\n,\n \npow_\n]]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]", 
+            "title": "Power "
+        }, 
+        {
+            "location": "/builtin/power/power/#power", 
+            "text": "", 
+            "title": "Power"
+        }, 
+        {
+            "location": "/builtin/power/power/#rules", 
+            "text": "Power [ Power [ a_ , b_Integer ], c_Integer ]   :=   a ^ ( b * c )  Power [ Power [ a_ , b_Real ], c_Integer ]   :=   a ^ ( b * c )  Power [ Times [ Except [ _Symbol ,   first_ ],   inner___ ],   pow_ ]   :=   first ^ pow * Power [ Times [ inner ], pow ]  Power [ Times [ first_ ,   inner___ ],   Except [ _Symbol ,   pow_ ]]   :=   first ^ pow * Power [ Times [ inner ], pow ]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/power/powerexpand/", 
+            "text": "PowerExpand\n\n\nRules\n\n\nPowerExpand\n[\nexp_\n]\n \n:=\n \nexp\n \n//.\n \n{\nLog\n[\nx_\n \ny_\n]\n:\nLog\n[\nx\n]\n+\nLog\n[\ny\n],\nLog\n[\nx_\n^\nk_\n]\n:\nk\n \nLog\n[\nx\n]}", 
+            "title": "PowerExpand "
+        }, 
+        {
+            "location": "/builtin/power/powerexpand/#powerexpand", 
+            "text": "", 
+            "title": "PowerExpand"
+        }, 
+        {
+            "location": "/builtin/power/powerexpand/#rules", 
+            "text": "PowerExpand [ exp_ ]   :=   exp   //.   { Log [ x_   y_ ] : Log [ x ] + Log [ y ], Log [ x_ ^ k_ ] : k   Log [ x ]}", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/random/", 
+            "text": "random documentation\n\n\nRandomReal\n\n\nSeedRandom", 
+            "title": "random"
+        }, 
+        {
+            "location": "/builtin/random/#random-documentation", 
+            "text": "RandomReal  SeedRandom", 
+            "title": "random documentation"
+        }, 
+        {
+            "location": "/builtin/random/randomreal/", 
+            "text": "RandomReal\n\n\nRules\n\n\nRandomReal\n[{\nmin_\n,\n \nmax_\n}]\n \n:=\n \nRandomReal\n[]\n*\n(\nmax\n \n-\n \nmin\n)\n \n+\n \nmin\n\n\nRandomReal\n[\nmax_\n]\n \n:=\n \nRandomReal\n[]\n*\nmax", 
+            "title": "RandomReal "
+        }, 
+        {
+            "location": "/builtin/random/randomreal/#randomreal", 
+            "text": "", 
+            "title": "RandomReal"
+        }, 
+        {
+            "location": "/builtin/random/randomreal/#rules", 
+            "text": "RandomReal [{ min_ ,   max_ }]   :=   RandomReal [] * ( max   -   min )   +   min  RandomReal [ max_ ]   :=   RandomReal [] * max", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/random/seedrandom/", 
+            "text": "SeedRandom", 
+            "title": "SeedRandom "
+        }, 
+        {
+            "location": "/builtin/random/seedrandom/#seedrandom", 
+            "text": "", 
+            "title": "SeedRandom"
+        }, 
+        {
+            "location": "/builtin/replacement/", 
+            "text": "replacement documentation\n\n\nReplaceAll\n\n\nReplaceRepeated\n\n\nRule\n\n\nRuleDelayed", 
+            "title": "replacement"
+        }, 
+        {
+            "location": "/builtin/replacement/#replacement-documentation", 
+            "text": "ReplaceAll  ReplaceRepeated  Rule  RuleDelayed", 
+            "title": "replacement documentation"
+        }, 
+        {
+            "location": "/builtin/replacement/replaceall/", 
+            "text": "ReplaceAll", 
+            "title": "ReplaceAll "
+        }, 
+        {
+            "location": "/builtin/replacement/replaceall/#replaceall", 
+            "text": "", 
+            "title": "ReplaceAll"
+        }, 
+        {
+            "location": "/builtin/replacement/replacerepeated/", 
+            "text": "ReplaceRepeated", 
+            "title": "ReplaceRepeated "
+        }, 
+        {
+            "location": "/builtin/replacement/replacerepeated/#replacerepeated", 
+            "text": "", 
+            "title": "ReplaceRepeated"
+        }, 
+        {
+            "location": "/builtin/replacement/rule/", 
+            "text": "Rule", 
+            "title": "Rule "
+        }, 
+        {
+            "location": "/builtin/replacement/rule/#rule", 
+            "text": "", 
+            "title": "Rule"
+        }, 
+        {
+            "location": "/builtin/replacement/ruledelayed/", 
+            "text": "RuleDelayed", 
+            "title": "RuleDelayed "
+        }, 
+        {
+            "location": "/builtin/replacement/ruledelayed/#ruledelayed", 
+            "text": "", 
+            "title": "RuleDelayed"
+        }, 
+        {
+            "location": "/builtin/sort/", 
+            "text": "sort documentation\n\n\nSort", 
+            "title": "sort"
+        }, 
+        {
+            "location": "/builtin/sort/#sort-documentation", 
+            "text": "Sort", 
+            "title": "sort documentation"
+        }, 
+        {
+            "location": "/builtin/sort/sort/", 
+            "text": "Sort", 
+            "title": "Sort "
+        }, 
+        {
+            "location": "/builtin/sort/sort/#sort", 
+            "text": "", 
+            "title": "Sort"
+        }, 
+        {
+            "location": "/builtin/symbol/", 
+            "text": "symbol documentation\n\n\nSet\n\n\nSetDelayed\n\n\nAttributes\n\n\nClear", 
+            "title": "symbol"
+        }, 
+        {
+            "location": "/builtin/symbol/#symbol-documentation", 
+            "text": "Set  SetDelayed  Attributes  Clear", 
+            "title": "symbol documentation"
+        }, 
+        {
+            "location": "/builtin/symbol/set/", 
+            "text": "Set", 
+            "title": "Set "
+        }, 
+        {
+            "location": "/builtin/symbol/set/#set", 
+            "text": "", 
+            "title": "Set"
+        }, 
+        {
+            "location": "/builtin/symbol/setdelayed/", 
+            "text": "SetDelayed", 
+            "title": "SetDelayed "
+        }, 
+        {
+            "location": "/builtin/symbol/setdelayed/#setdelayed", 
+            "text": "", 
+            "title": "SetDelayed"
+        }, 
+        {
+            "location": "/builtin/symbol/attributes/", 
+            "text": "Attributes", 
+            "title": "Attributes "
+        }, 
+        {
+            "location": "/builtin/symbol/attributes/#attributes", 
+            "text": "", 
+            "title": "Attributes"
+        }, 
+        {
+            "location": "/builtin/symbol/clear/", 
+            "text": "Clear", 
+            "title": "Clear "
+        }, 
+        {
+            "location": "/builtin/symbol/clear/#clear", 
+            "text": "", 
+            "title": "Clear"
+        }, 
+        {
+            "location": "/builtin/system/", 
+            "text": "system documentation\n\n\nSetLogging\n\n\nDefinition\n\n\nTiming\n\n\nPrint\n\n\nCompoundExpression\n\n\nHead\n\n\nMessageName\n\n\nInfix", 
+            "title": "system"
+        }, 
+        {
+            "location": "/builtin/system/#system-documentation", 
+            "text": "SetLogging  Definition  Timing  Print  CompoundExpression  Head  MessageName  Infix", 
+            "title": "system documentation"
+        }, 
+        {
+            "location": "/builtin/system/setlogging/", 
+            "text": "SetLogging", 
+            "title": "SetLogging "
+        }, 
+        {
+            "location": "/builtin/system/setlogging/#setlogging", 
+            "text": "", 
+            "title": "SetLogging"
+        }, 
+        {
+            "location": "/builtin/system/definition/", 
+            "text": "Definition", 
+            "title": "Definition "
+        }, 
+        {
+            "location": "/builtin/system/definition/#definition", 
+            "text": "", 
+            "title": "Definition"
+        }, 
+        {
+            "location": "/builtin/system/timing/", 
+            "text": "Timing", 
+            "title": "Timing "
+        }, 
+        {
+            "location": "/builtin/system/timing/#timing", 
+            "text": "", 
+            "title": "Timing"
+        }, 
+        {
+            "location": "/builtin/system/print/", 
+            "text": "Print", 
+            "title": "Print "
+        }, 
+        {
+            "location": "/builtin/system/print/#print", 
+            "text": "", 
+            "title": "Print"
+        }, 
+        {
+            "location": "/builtin/system/compoundexpression/", 
+            "text": "CompoundExpression", 
+            "title": "CompoundExpression "
+        }, 
+        {
+            "location": "/builtin/system/compoundexpression/#compoundexpression", 
+            "text": "", 
+            "title": "CompoundExpression"
+        }, 
+        {
+            "location": "/builtin/system/head/", 
+            "text": "Head\n\n\nHead[expr] returns the head of the expression.", 
+            "title": "Head "
+        }, 
+        {
+            "location": "/builtin/system/head/#head", 
+            "text": "Head[expr] returns the head of the expression.", 
+            "title": "Head"
+        }, 
+        {
+            "location": "/builtin/system/messagename/", 
+            "text": "MessageName", 
+            "title": "MessageName "
+        }, 
+        {
+            "location": "/builtin/system/messagename/#messagename", 
+            "text": "", 
+            "title": "MessageName"
+        }, 
+        {
+            "location": "/builtin/system/infix/", 
+            "text": "Infix", 
+            "title": "Infix "
+        }, 
+        {
+            "location": "/builtin/system/infix/#infix", 
+            "text": "", 
+            "title": "Infix"
+        }, 
+        {
+            "location": "/builtin/string/", 
+            "text": "string documentation\n\n\nToString\n\n\nStringJoin", 
+            "title": "string"
+        }, 
+        {
+            "location": "/builtin/string/#string-documentation", 
+            "text": "ToString  StringJoin", 
+            "title": "string documentation"
+        }, 
+        {
+            "location": "/builtin/string/tostring/", 
+            "text": "ToString\n\n\nRules\n\n\nToString\n[\na_\n]\n \n:=\n \nToString\n[\na\n,\n \nOutputForm\n]", 
+            "title": "ToString "
+        }, 
+        {
+            "location": "/builtin/string/tostring/#tostring", 
+            "text": "", 
+            "title": "ToString"
+        }, 
+        {
+            "location": "/builtin/string/tostring/#rules", 
+            "text": "ToString [ a_ ]   :=   ToString [ a ,   OutputForm ]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/string/stringjoin/", 
+            "text": "StringJoin\n\n\nRules\n\n\nStringJoin\n[\nlist_List\n]\n \n:=\n \nStringJoin\n[\nlist\n \n/.\n \nList\n-\nSequence\n]", 
+            "title": "StringJoin "
+        }, 
+        {
+            "location": "/builtin/string/stringjoin/#stringjoin", 
+            "text": "", 
+            "title": "StringJoin"
+        }, 
+        {
+            "location": "/builtin/string/stringjoin/#rules", 
+            "text": "StringJoin [ list_List ]   :=   StringJoin [ list   /.   List - Sequence ]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/time/", 
+            "text": "time documentation\n\n\nUnixTime", 
+            "title": "time"
+        }, 
+        {
+            "location": "/builtin/time/#time-documentation", 
+            "text": "UnixTime", 
+            "title": "time documentation"
+        }, 
+        {
+            "location": "/builtin/time/unixtime/", 
+            "text": "UnixTime", 
+            "title": "UnixTime "
+        }, 
+        {
+            "location": "/builtin/time/unixtime/#unixtime", 
+            "text": "", 
+            "title": "UnixTime"
+        }, 
+        {
+            "location": "/builtin/times/", 
+            "text": "times documentation\n\n\nTimes\n\n\nFactorial", 
+            "title": "times"
+        }, 
+        {
+            "location": "/builtin/times/#times-documentation", 
+            "text": "Times  Factorial", 
+            "title": "times documentation"
+        }, 
+        {
+            "location": "/builtin/times/times/", 
+            "text": "Times\n\n\nRules\n\n\nTimes\n[\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \na\n^\n2\n \n*\n \nrest\n\n\nTimes\n[\na_\n^\nn_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \na\n^\n(\nn\n+\n1\n)\n \n*\n \nrest\n\n\nTimes\n[\na_\n^\nn_\n,\n \na_\n^\nm_\n,\n \nrest___\n]\n \n:=\n \na\n^\n(\nn\n+\nm\n)\n \n*\n \nrest\n\n\nTimes\n[\nden_Integer\n^\n(\n-\n1\n),\n \nnum_Integer\n,\n \nrest___\n]\n \n:=\n \nRational\n[\nnum\n,\nden\n]\n \n*\n \nrest\n\n\nTimes\n[\na_\n,\n \nPower\n[\na_\n,\n \n-\n1\n],\n \nrest___\n]\n \n:=\n \nrest\n\n\nTimes\n[\na_\n^\nb_\n,\n \nPower\n[\na_\n,\n \n-\n1\n],\n \nrest___\n]\n \n:=\n \na\n^\n(\nb\n-\n1\n)\n \n*\n \nrest\n\n\n(\n1\n/\nInfinity\n)\n \n:=\n \n0", 
+            "title": "Times "
+        }, 
+        {
+            "location": "/builtin/times/times/#times", 
+            "text": "", 
+            "title": "Times"
+        }, 
+        {
+            "location": "/builtin/times/times/#rules", 
+            "text": "Times [ a_ ,   a_ ,   rest___ ]   :=   a ^ 2   *   rest  Times [ a_ ^ n_ ,   a_ ,   rest___ ]   :=   a ^ ( n + 1 )   *   rest  Times [ a_ ^ n_ ,   a_ ^ m_ ,   rest___ ]   :=   a ^ ( n + m )   *   rest  Times [ den_Integer ^ ( - 1 ),   num_Integer ,   rest___ ]   :=   Rational [ num , den ]   *   rest  Times [ a_ ,   Power [ a_ ,   - 1 ],   rest___ ]   :=   rest  Times [ a_ ^ b_ ,   Power [ a_ ,   - 1 ],   rest___ ]   :=   a ^ ( b - 1 )   *   rest  ( 1 / Infinity )   :=   0", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/times/factorial/", 
+            "text": "Factorial", 
+            "title": "Factorial "
+        }, 
+        {
+            "location": "/builtin/times/factorial/#factorial", 
+            "text": "", 
+            "title": "Factorial"
+        }, 
+        {
+            "location": "/builtin/pattern/", 
+            "text": "pattern documentation\n\n\nPattern\n\n\nBlank\n\n\nBlankSequence\n\n\nBlankNullSequence\n\n\nExcept\n\n\nPatternTest\n\n\nCondition\n\n\nAlternatives", 
+            "title": "pattern"
+        }, 
+        {
+            "location": "/builtin/pattern/#pattern-documentation", 
+            "text": "Pattern  Blank  BlankSequence  BlankNullSequence  Except  PatternTest  Condition  Alternatives", 
+            "title": "pattern documentation"
+        }, 
+        {
+            "location": "/builtin/pattern/pattern/", 
+            "text": "Pattern", 
+            "title": "Pattern "
+        }, 
+        {
+            "location": "/builtin/pattern/pattern/#pattern", 
+            "text": "", 
+            "title": "Pattern"
+        }, 
+        {
+            "location": "/builtin/pattern/blank/", 
+            "text": "Blank", 
+            "title": "Blank "
+        }, 
+        {
+            "location": "/builtin/pattern/blank/#blank", 
+            "text": "", 
+            "title": "Blank"
+        }, 
+        {
+            "location": "/builtin/pattern/blanksequence/", 
+            "text": "BlankSequence", 
+            "title": "BlankSequence "
+        }, 
+        {
+            "location": "/builtin/pattern/blanksequence/#blanksequence", 
+            "text": "", 
+            "title": "BlankSequence"
+        }, 
+        {
+            "location": "/builtin/pattern/blanknullsequence/", 
+            "text": "BlankNullSequence", 
+            "title": "BlankNullSequence "
+        }, 
+        {
+            "location": "/builtin/pattern/blanknullsequence/#blanknullsequence", 
+            "text": "", 
+            "title": "BlankNullSequence"
+        }, 
+        {
+            "location": "/builtin/pattern/except/", 
+            "text": "Except", 
+            "title": "Except "
+        }, 
+        {
+            "location": "/builtin/pattern/except/#except", 
+            "text": "", 
+            "title": "Except"
+        }, 
+        {
+            "location": "/builtin/pattern/patterntest/", 
+            "text": "PatternTest", 
+            "title": "PatternTest "
+        }, 
+        {
+            "location": "/builtin/pattern/patterntest/#patterntest", 
+            "text": "", 
+            "title": "PatternTest"
+        }, 
+        {
+            "location": "/builtin/pattern/condition/", 
+            "text": "Condition", 
+            "title": "Condition "
+        }, 
+        {
+            "location": "/builtin/pattern/condition/#condition", 
+            "text": "", 
+            "title": "Condition"
+        }, 
+        {
+            "location": "/builtin/pattern/alternatives/", 
+            "text": "Alternatives", 
+            "title": "Alternatives "
+        }, 
+        {
+            "location": "/builtin/pattern/alternatives/#alternatives", 
+            "text": "", 
+            "title": "Alternatives"
+        }
+    ]
+}
