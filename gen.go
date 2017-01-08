@@ -54,6 +54,34 @@ func renderUsage(f *os.File, def expreduce.Definition) {
 	f.WriteString(fmt.Sprintf("%v\n\n", def.Usage))
 }
 
+func renderRules(f *os.File, def expreduce.Definition) {
+	f.WriteString("##Rules\n")
+	f.WriteString("```wl\n")
+	for _, rule := range def.Rules {
+		f.WriteString(fmt.Sprintf("%v := %v\n", rule.Lhs, rule.Rhs))
+	}
+	f.WriteString("```\n")
+}
+
+func renderExamples(f *os.File, category string, examples []expreduce.TestInstruction) {
+	f.WriteString(fmt.Sprintf("##%v\n", category))
+	count := 1
+	for _, ti := range examples {
+		comment, isComment := ti.(*expreduce.TestComment)
+		if isComment {
+			f.WriteString(fmt.Sprintf("%v\n", comment.Comment))
+		}
+		sameTest, isSameTest := ti.(*expreduce.SameTest)
+		if isSameTest {
+			f.WriteString("```wl\n")
+			f.WriteString(fmt.Sprintf("In[%d]:= %v\n", count, sameTest.In))
+			f.WriteString(fmt.Sprintf("Out[%d]= %v\n", count, sameTest.Out))
+			f.WriteString("```\n")
+			count += 1
+		}
+	}
+}
+
 func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definition) {
 	// For more granular writes, open a file for writing.
 	os.MkdirAll(path.Dir(fn), os.ModePerm)
@@ -64,10 +92,22 @@ func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definiti
 	// after opening a file.
 	defer f.Close()
 
-	f.WriteString(fmt.Sprintf("#%v documentation\n", def.Name))
+	f.WriteString(fmt.Sprintf("#%v\n", def.Name))
 
 	if len(def.Usage) > 0 {
 		renderUsage(f, def)
+	}
+
+	if len(def.SimpleExamples) > 0 {
+		renderExamples(f, "Simple examples", def.SimpleExamples)
+	}
+
+	if len(def.FurtherExamples) > 0 {
+		renderExamples(f, "Further examples", def.FurtherExamples)
+	}
+
+	if len(def.Rules) > 0 {
+		renderRules(f, def)
 	}
 
 	f.Sync()
