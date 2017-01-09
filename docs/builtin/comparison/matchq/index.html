@@ -277,6 +277,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="expression" href="../../expression/">
         expression
@@ -707,6 +715,65 @@
         <div class="wrapper">
           
           <h1 id="matchq">MatchQ</h1>
+<p><code>MatchQ[expr, form]</code> returns True if <code>expr</code> matches <code>form</code>, False otherwise.</p>
+<p><code>Attributes[MatchQ] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<p>A <code>Blank[]</code> expression matches everything:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="m">2</span><span class="o">*</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="o">_</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<p>Although a more specific pattern would have matched as well:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="m">2</span><span class="o">*</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nt">c1_Integer</span><span class="o">*</span><span class="nt">a_Symbol</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<p>Since <code>Times</code> is <code>Orderless</code>, this would work as well:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">x</span><span class="o">*</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nt">c1_Integer</span><span class="o">*</span><span class="nt">a_Symbol</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<p>As would the <code>FullForm</code>:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nb">Times</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="nt">c1_Integer</span><span class="o">*</span><span class="nt">a_Symbol</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<p>Named patterns must match the same expression, or the match will fail:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nt">x_Symbol</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">x_Symbol</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[{</span><span class="m">2</span><span class="o">^</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="o">^</span><span class="nt">x_Symbol</span><span class="p">,</span><span class="w"> </span><span class="nt">x_Symbol</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[{</span><span class="m">2</span><span class="o">^</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="o">^</span><span class="nt">x_Symbol</span><span class="p">,</span><span class="w"> </span><span class="nt">x_Symbol</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<p><code>Blank</code> sequences allow for the matching of multiple objects. <code>BlankSequence</code> (__) matches one or more parts of the expression:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="o">__</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="o">__</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<p><code>BlankNullSequence</code> (___) allows for zero or more matches:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="o">___</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

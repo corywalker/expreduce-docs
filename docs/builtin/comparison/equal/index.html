@@ -277,6 +277,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="expression" href="../../expression/">
         expression
@@ -707,6 +715,69 @@
         <div class="wrapper">
           
           <h1 id="equal">Equal</h1>
+<p><code>lhs == rhs</code> evaluates to True or False if equality or inequality is known.</p>
+<p><code>Attributes[Equal] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<p>Expressions known to be equal will evaluate to True:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">9</span><span class="o">*</span><span class="nv">x</span><span class="o">==</span><span class="nv">x</span><span class="o">*</span><span class="m">9</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<p>Sometimes expressions may or may not be equal, or Expreduce does not know how to test for equality. In these cases, the statement will remain unevaluated:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">9</span><span class="o">*</span><span class="nv">x</span><span class="o">==</span><span class="nv">x</span><span class="o">*</span><span class="m">10</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="m">9</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">((</span><span class="m">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="p">))</span><span class="w"></span>
+</pre></div>
+
+
+<p>Equal considers Integers and Reals that are close enough to be equal:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">tmp</span><span class="o">=</span><span class="m">5</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">tmp</span><span class="o">==</span><span class="m">5</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">tmp</span><span class="o">==</span><span class="m">5.</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">tmp</span><span class="o">==</span><span class="m">5.00000</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<p>Equal can test for Rational equality:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">4</span><span class="o">/</span><span class="m">3</span><span class="o">==</span><span class="m">3</span><span class="o">/</span><span class="m">2</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">4</span><span class="o">/</span><span class="m">3</span><span class="o">==</span><span class="m">8</span><span class="o">/</span><span class="m">6</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">If</span><span class="p">[</span><span class="nv">xx</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">yy</span><span class="p">,</span><span class="w"> </span><span class="nv">zz</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">If</span><span class="p">[</span><span class="nv">xx</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">yy</span><span class="p">,</span><span class="w"> </span><span class="nv">zz</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<p>Equal does not match patterns:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">}</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nt">_List</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">}</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nt">_List</span><span class="w"></span>
+</pre></div>
+
+
+<p>This functionality is reserved for MatchQ:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="nt">_List</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

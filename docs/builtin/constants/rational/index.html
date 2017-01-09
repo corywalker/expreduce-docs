@@ -277,6 +277,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="expression" href="../../expression/">
         expression
@@ -707,6 +715,81 @@
         <div class="wrapper">
           
           <h1 id="rational">Rational</h1>
+<p><code>Rational</code> is the head for the atomic rational type.</p>
+<p><code>Attributes[Rational] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<p>Rationals are created from <code>Times</code> when a rational form is encountered:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Times</span><span class="p">[</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="o">^-</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Head</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Rational</span><span class="w"></span>
+</pre></div>
+
+
+<p>Which is equivalent to typing them in directly:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">5</span><span class="o">/</span><span class="m">6</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Head</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Rational</span><span class="w"></span>
+</pre></div>
+
+
+<p>Or being even more explicit:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Head</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Rational</span><span class="w"></span>
+</pre></div>
+
+
+<p>Rationals simplify on evaluation:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="o">/</span><span class="m">3</span><span class="w"></span>
+</pre></div>
+
+
+<p>Which might include evaluating to an Integer:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="o">-</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Head</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Integer</span><span class="w"></span>
+</pre></div>
+
+
+<p>Rationals of non-Integer types are not allowed:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<p>Undefined rationals are handled accordingly:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Indeterminate</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">ComplexInfinity</span><span class="w"></span>
+</pre></div>
+
+
+<p>Rational numbers have some special handling for pattern matching:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">/</span><span class="m">3</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">test</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="o">/</span><span class="m">3</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">test</span><span class="p">,</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="nt">a_Integer</span><span class="p">,</span><span class="w"> </span><span class="nt">b_Integer</span><span class="p">]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">2</span><span class="o">/</span><span class="m">3</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="nt">a_Integer</span><span class="p">,</span><span class="w"> </span><span class="nt">b_Integer</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">}</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">2</span><span class="o">/</span><span class="m">3</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nt">a_Integer</span><span class="o">/</span><span class="nt">b_Integer</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">}</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">/</span><span class="m">3</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

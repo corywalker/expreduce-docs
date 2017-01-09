@@ -277,6 +277,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="expression" href="../../expression/">
         expression
@@ -707,6 +715,47 @@
         <div class="wrapper">
           
           <h1 id="sameq">SameQ</h1>
+<p><code>lhs === rhs</code> evaluates to True if <code>lhs</code> and <code>rhs</code> are identical after evaluation, False otherwise.</p>
+<p><code>Attributes[SameQ] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">a</span><span class="o">===</span><span class="nv">a</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="m">5</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<p>Unlike Equal, SameQ does not forgive differences between Integers and Reals:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="m">5.</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<p>SameQ considers the arguments of all expressions and subexpressions:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2.</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<p>SameQ does not match patterns:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">}</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nt">_List</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<p>This functionality is reserved for MatchQ:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="nt">_List</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

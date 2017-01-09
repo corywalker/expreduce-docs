@@ -102,6 +102,18 @@
     </url>
         
     <url>
+     <loc>/builtin/constants/real/</loc>
+     <lastmod>2017-01-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/constants/integer/</loc>
+     <lastmod>2017-01-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/builtin/expression/</loc>
      <lastmod>2017-01-08</lastmod>
      <changefreq>daily</changefreq>

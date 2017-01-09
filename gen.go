@@ -51,8 +51,13 @@ func writeCategoryIndex(fn string, defSet expreduce.NamedDefSet) {
 	fmt.Printf("Finished writing %v.\n", fn)
 }
 
-func renderUsage(f *os.File, def expreduce.Definition) {
-	f.WriteString(fmt.Sprintf("%v\n\n", def.Usage))
+func renderUsage(f *os.File, def expreduce.Definition, es *expreduce.EvalState) {
+	if len(def.Usage) > 0 {
+		f.WriteString(fmt.Sprintf("%v\n\n", def.Usage))
+	}
+	attrLookup := fmt.Sprintf("Attributes[%s]", def.Name)
+	attrs := expreduce.EasyRun(attrLookup, es)
+	f.WriteString(fmt.Sprintf("`%v := %v`\n\n", attrLookup, attrs))
 }
 
 func renderRules(f *os.File, def expreduce.Definition) {
@@ -80,10 +85,18 @@ func renderExamples(f *os.File, category string, examples []expreduce.TestInstru
 			f.WriteString("```\n")
 			count += 1
 		}
+		stringTest, isStringTest := ti.(*expreduce.StringTest)
+		if isStringTest {
+			f.WriteString("```wl\n")
+			f.WriteString(fmt.Sprintf("In[%d]:= %v\n", count, stringTest.In))
+			f.WriteString(fmt.Sprintf("Out[%d]= %v\n", count, stringTest.Out))
+			f.WriteString("```\n")
+			count += 1
+		}
 	}
 }
 
-func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definition) {
+func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definition, es *expreduce.EvalState) {
 	// For more granular writes, open a file for writing.
 	os.MkdirAll(path.Dir(fn), os.ModePerm)
 	f, err := os.Create(fn)
@@ -95,9 +108,7 @@ func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definiti
 
 	f.WriteString(fmt.Sprintf("#%v\n", def.Name))
 
-	if len(def.Usage) > 0 {
-		renderUsage(f, def)
-	}
+	renderUsage(f, def, es)
 
 	if len(def.SimpleExamples) > 0 {
 		renderExamples(f, "Simple examples", def.SimpleExamples)
@@ -120,6 +131,7 @@ func main() {
 	flag.Parse()
 
 	fmt.Printf("Generating documentation.\n")
+	es := expreduce.NewEvalState()
 
 	ymlFn := "mkdocs.yml"
 	f, err := os.Create(ymlFn)
@@ -156,7 +168,7 @@ func main() {
 				defSet.Name,
 				strings.ToLower(def.Name),
 			)
-			writeSymbol(path.Join(*docs_location, symbolFn), defSet, def)
+			writeSymbol(path.Join(*docs_location, symbolFn), defSet, def, es)
 			symbolDef := fmt.Sprintf(
 				"    - '%s ': '%s'\n",
 				def.Name,

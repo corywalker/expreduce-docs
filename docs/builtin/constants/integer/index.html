@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Except  - Expreduce</title>
+        <title>Integer  - Expreduce</title>
       
       
       
@@ -99,7 +99,7 @@
             
           </span>
         
-        Except 
+        Integer 
       </div>
     </div>
     
@@ -255,7 +255,7 @@
         
   
     <li>
-      <a class="" title="constants" href="../../constants/">
+      <a class="" title="constants" href="../">
         constants
       </a>
       
@@ -660,7 +660,7 @@
         
   
     <li>
-      <a class="" title="pattern" href="../">
+      <a class="" title="pattern" href="../../pattern/">
         pattern
       </a>
       
@@ -714,8 +714,25 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="except">Except</h1>
-<p><code>Attributes[Except] := {Protected}</code></p>
+          <h1 id="integer">Integer</h1>
+<p><code>Integer</code> is the head for the atomic integer type.</p>
+<p><code>Attributes[Integer] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="m">153</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Integer</span><span class="w"></span>
+</pre></div>
+
+
+<p>Integer numbers are backed by arbitrary-precision data structures:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Factorial</span><span class="p">[</span><span class="m">40</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">815915283247897734345611269596115894272000000000</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="m">153</span><span class="p">,</span><span class="w"> </span><span class="nt">_Integer</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -732,7 +749,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../blanknullsequence/" title="BlankNullSequence ">
+        <a href="../real/" title="Real ">
           <span class="direction">
             Previous
           </span>
@@ -742,7 +759,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                BlankNullSequence 
+                Real 
               </div>
             </div>
           </div>
@@ -751,14 +768,14 @@
     </div>
     <div class="next">
       
-        <a href="../patterntest/" title="PatternTest ">
+        <a href="../../expression/" title="expression">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                PatternTest 
+                expression
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
