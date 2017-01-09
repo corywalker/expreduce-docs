@@ -6,7 +6,7 @@ import (
 	"os"
 	"path"
 	"strings"
-	"github.com/corywalker/expreduce"
+	"github.com/corywalker/expreduce/expreduce"
 )
 
 func check(e error) {
@@ -187,6 +187,7 @@ func main() {
 	f.WriteString("markdown_extensions:\n")
 	f.WriteString("  #- codehilite(css_class=code)\n")
 	f.WriteString("  - codehilite(css_class=language-wl)\n")
+	f.WriteString("  - admonition\n")
 
 	f.Sync()
 	fmt.Printf("Finished writing %v.\n", ymlFn)

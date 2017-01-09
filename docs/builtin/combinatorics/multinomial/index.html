@@ -707,6 +707,20 @@
         <div class="wrapper">
           
           <h1 id="multinomial">Multinomial</h1>
+<p><code>Multinomial[n1, n2, ...]</code> gives the multinomial coefficient for the given term.</p>
+<h2 id="simple-examples">Simple examples</h2>
+<p>Find the multinomial coefficient for the 1, 3, 1 term:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Multinomial</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="w"></span>
+</pre></div>
+
+
+<p><code>Multinomial</code> handles symbolic arguments:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Multinomial</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="nv">k</span><span class="p">,</span><span class="m">1</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Factorial</span><span class="p">[</span><span class="nv">k</span><span class="o">+</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">Factorial</span><span class="p">[</span><span class="nv">k</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+
+
 <h2 id="rules">Rules</h2>
 <div class="language-wl"><pre><span></span><span class="nb">Multinomial</span><span class="p">[</span><span class="nt">seq___</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Factorial</span><span class="p">[</span><span class="nb">Apply</span><span class="p">[</span><span class="nb">Plus</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">seq</span><span class="p">}]]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">Apply</span><span class="p">[</span><span class="nb">Times</span><span class="p">,</span><span class="w"> </span><span class="nb">Map</span><span class="p">[</span><span class="nb">Factorial</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">seq</span><span class="p">}]]</span><span class="w"></span>
 </pre></div>

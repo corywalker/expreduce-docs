@@ -22,7 +22,7 @@
         }, 
         {
             "location": "/builtin/combinatorics/integerpartitions/", 
-            "text": "IntegerPartitions", 
+            "text": "IntegerPartitions\n\n\nSimple examples\n\n\nFind the partitions of 4:\n\n\nIn\n[\n1\n]\n:=\n \nIntegerPartitions\n[\n4\n]\n\n\nOut\n[\n1\n]\n=\n \n{{\n4\n},\n \n{\n3\n,\n \n1\n},\n \n{\n2\n,\n \n2\n},\n \n{\n2\n,\n \n1\n,\n \n1\n},\n \n{\n1\n,\n \n1\n,\n \n1\n,\n \n1\n}}\n\n\n\n\n\n\nFind the partitions of 10, using a maximum of k = 2 integers:\n\n\nIn\n[\n2\n]\n:=\n \nIntegerPartitions\n[\n10\n,\n \n2\n]\n\n\nOut\n[\n2\n]\n=\n \n{{\n10\n},\n \n{\n9\n,\n \n1\n},\n \n{\n8\n,\n \n2\n},\n \n{\n7\n,\n \n3\n},\n \n{\n6\n,\n \n4\n},\n \n{\n5\n,\n \n5\n}}\n\n\n\n\n\n\nFurther examples\n\n\nThe partitions of zero is a nested empty List:\n\n\nIn\n[\n1\n]\n:=\n \nIntegerPartitions\n[\n0\n]\n\n\nOut\n[\n1\n]\n=\n \n{{}}", 
             "title": "IntegerPartitions "
         }, 
         {
@@ -31,8 +31,18 @@
             "title": "IntegerPartitions"
         }, 
         {
+            "location": "/builtin/combinatorics/integerpartitions/#simple-examples", 
+            "text": "Find the partitions of 4:  In [ 1 ] :=   IntegerPartitions [ 4 ]  Out [ 1 ] =   {{ 4 },   { 3 ,   1 },   { 2 ,   2 },   { 2 ,   1 ,   1 },   { 1 ,   1 ,   1 ,   1 }}   Find the partitions of 10, using a maximum of k = 2 integers:  In [ 2 ] :=   IntegerPartitions [ 10 ,   2 ]  Out [ 2 ] =   {{ 10 },   { 9 ,   1 },   { 8 ,   2 },   { 7 ,   3 },   { 6 ,   4 },   { 5 ,   5 }}", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/combinatorics/integerpartitions/#further-examples", 
+            "text": "The partitions of zero is a nested empty List:  In [ 1 ] :=   IntegerPartitions [ 0 ]  Out [ 1 ] =   {{}}", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/combinatorics/permutations/", 
-            "text": "Permutations", 
+            "text": "Permutations\n\n\nSimple examples\n\n\nFind the permutations of \n{1, 2, 3}\n:\n\n\nIn\n[\n1\n]\n:=\n \nPermutations\n[\nRange\n[\n3\n]]\n\n\nOut\n[\n1\n]\n=\n \n{{\n1\n,\n \n2\n,\n \n3\n},\n \n{\n1\n,\n \n3\n,\n \n2\n},\n \n{\n2\n,\n \n1\n,\n \n3\n},\n \n{\n2\n,\n \n3\n,\n \n1\n},\n \n{\n3\n,\n \n1\n,\n \n2\n},\n \n{\n3\n,\n \n2\n,\n \n1\n}}\n\n\n\n\n\n\nPermutations\n ignores duplicates:\n\n\nIn\n[\n2\n]\n:=\n \nPermutations\n[{\n1\n,\n \n2\n,\n \n2\n}]\n\n\nOut\n[\n2\n]\n=\n \n{{\n1\n,\n \n2\n,\n \n2\n},\n \n{\n2\n,\n \n1\n,\n \n2\n},\n \n{\n2\n,\n \n2\n,\n \n1\n}}", 
             "title": "Permutations "
         }, 
         {
@@ -41,14 +51,24 @@
             "title": "Permutations"
         }, 
         {
+            "location": "/builtin/combinatorics/permutations/#simple-examples", 
+            "text": "Find the permutations of  {1, 2, 3} :  In [ 1 ] :=   Permutations [ Range [ 3 ]]  Out [ 1 ] =   {{ 1 ,   2 ,   3 },   { 1 ,   3 ,   2 },   { 2 ,   1 ,   3 },   { 2 ,   3 ,   1 },   { 3 ,   1 ,   2 },   { 3 ,   2 ,   1 }}   Permutations  ignores duplicates:  In [ 2 ] :=   Permutations [{ 1 ,   2 ,   2 }]  Out [ 2 ] =   {{ 1 ,   2 ,   2 },   { 2 ,   1 ,   2 },   { 2 ,   2 ,   1 }}", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/combinatorics/multinomial/", 
-            "text": "Multinomial\n\n\nRules\n\n\nMultinomial\n[\nseq___\n]\n \n:=\n \nFactorial\n[\nApply\n[\nPlus\n,\n \n{\nseq\n}]]\n \n/\n \nApply\n[\nTimes\n,\n \nMap\n[\nFactorial\n,\n \n{\nseq\n}]]", 
+            "text": "Multinomial\n\n\nMultinomial[n1, n2, ...]\n gives the multinomial coefficient for the given term.\n\n\nSimple examples\n\n\nFind the multinomial coefficient for the 1, 3, 1 term:\n\n\nIn\n[\n1\n]\n:=\n \nMultinomial\n[\n1\n,\n \n3\n,\n \n1\n]\n\n\nOut\n[\n1\n]\n=\n \n20\n\n\n\n\n\n\nMultinomial\n handles symbolic arguments:\n\n\nIn\n[\n2\n]\n:=\n \nMultinomial\n[\n1\n,\nk\n,\n1\n]\n\n\nOut\n[\n2\n]\n=\n \nFactorial\n[\nk\n+\n2\n]\n \n/\n \nFactorial\n[\nk\n]\n\n\n\n\n\n\nRules\n\n\nMultinomial\n[\nseq___\n]\n \n:=\n \nFactorial\n[\nApply\n[\nPlus\n,\n \n{\nseq\n}]]\n \n/\n \nApply\n[\nTimes\n,\n \nMap\n[\nFactorial\n,\n \n{\nseq\n}]]", 
             "title": "Multinomial "
         }, 
         {
             "location": "/builtin/combinatorics/multinomial/#multinomial", 
-            "text": "", 
+            "text": "Multinomial[n1, n2, ...]  gives the multinomial coefficient for the given term.", 
             "title": "Multinomial"
+        }, 
+        {
+            "location": "/builtin/combinatorics/multinomial/#simple-examples", 
+            "text": "Find the multinomial coefficient for the 1, 3, 1 term:  In [ 1 ] :=   Multinomial [ 1 ,   3 ,   1 ]  Out [ 1 ] =   20   Multinomial  handles symbolic arguments:  In [ 2 ] :=   Multinomial [ 1 , k , 1 ]  Out [ 2 ] =   Factorial [ k + 2 ]   /   Factorial [ k ]", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/combinatorics/multinomial/#rules", 
