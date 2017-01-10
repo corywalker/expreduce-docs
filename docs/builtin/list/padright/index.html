@@ -254,6 +254,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="constants" href="../../constants/">
         constants
@@ -326,10 +330,6 @@
       </a>
       
     </li>
-  
-
-      
-        
   
 
       
@@ -716,6 +716,20 @@
           
           <h1 id="padright">PadRight</h1>
 <p><code>Attributes[PadRight] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PadRight</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">},</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PadRight</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">},</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PadRight</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">},</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">}</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

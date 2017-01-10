@@ -127,12 +127,12 @@
         }, 
         {
             "location": "/builtin/comparison/", 
-            "text": "comparison documentation\n\n\nEqual\n\n\nSameQ\n\n\nMatchQ", 
+            "text": "comparison documentation\n\n\nEqual\n\n\nUnequal\n\n\nSameQ\n\n\nMatchQ", 
             "title": "comparison"
         }, 
         {
             "location": "/builtin/comparison/#comparison-documentation", 
-            "text": "Equal  SameQ  MatchQ", 
+            "text": "Equal  Unequal  SameQ  MatchQ", 
             "title": "comparison documentation"
         }, 
         {
@@ -154,6 +154,21 @@
             "location": "/builtin/comparison/equal/#further-examples", 
             "text": "In [ 1 ] :=   If [ xx   ==   2 ,   yy ,   zz ]   ==   If [ xx   ==   2 ,   yy ,   zz ]  Out [ 1 ] =   True   Equal does not match patterns:  In [ 2 ] :=   { 1 ,   2 ,   3 }   ==   _List  Out [ 2 ] =   { 1 ,   2 ,   3 }   ==   _List   This functionality is reserved for MatchQ:  In [ 3 ] :=   MatchQ [{ 1 ,   2 ,   3 },   _List ]  Out [ 3 ] =   True", 
             "title": "Further examples"
+        }, 
+        {
+            "location": "/builtin/comparison/unequal/", 
+            "text": "Unequal\n\n\nlhs != rhs\n evaluates to True if inequality is known or False if equality is known.\n\n\nAttributes[Unequal] := {Protected}\n\n\nSimple examples\n\n\nExpressions known to be unequal will evaluate to True:\n\n\nIn\n[\n1\n]\n:=\n \n9\n \n!=\n \n8\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nSometimes expressions may or may not be unequal, or Expreduce does not know how to test for inequality. In these cases, the statement will remain unevaluated:\n\n\nIn\n[\n2\n]\n:=\n \n9\n*\nx\n \n!=\n \nx\n*\n10\n\n\nOut\n[\n2\n]\n=\n \n((\n9\n \n*\n \nx\n))\n \n!=\n \n((\n10\n \n*\n \nx\n))\n\n\n\n\n\n\nUnequal considers Integers and Reals that are close enough to be equal:\n\n\nIn\n[\n3\n]\n:=\n \ntmp\n=\n5\n\n\nOut\n[\n3\n]\n=\n \n5\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \ntmp\n \n!=\n \n5\n\n\nOut\n[\n4\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \ntmp\n \n!=\n \n5.\n\n\nOut\n[\n5\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \ntmp\n \n!=\n \n5.00000\n\n\nOut\n[\n6\n]\n=\n \nFalse\n\n\n\n\n\n\nUnequal can test for Rational inequality:\n\n\nIn\n[\n7\n]\n:=\n \n4\n/\n3\n \n!=\n \n3\n/\n2\n\n\nOut\n[\n7\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \n4\n/\n3\n \n!=\n \n8\n/\n6\n\n\nOut\n[\n8\n]\n=\n \nFalse", 
+            "title": "Unequal "
+        }, 
+        {
+            "location": "/builtin/comparison/unequal/#unequal", 
+            "text": "lhs != rhs  evaluates to True if inequality is known or False if equality is known.  Attributes[Unequal] := {Protected}", 
+            "title": "Unequal"
+        }, 
+        {
+            "location": "/builtin/comparison/unequal/#simple-examples", 
+            "text": "Expressions known to be unequal will evaluate to True:  In [ 1 ] :=   9   !=   8  Out [ 1 ] =   True   Sometimes expressions may or may not be unequal, or Expreduce does not know how to test for inequality. In these cases, the statement will remain unevaluated:  In [ 2 ] :=   9 * x   !=   x * 10  Out [ 2 ] =   (( 9   *   x ))   !=   (( 10   *   x ))   Unequal considers Integers and Reals that are close enough to be equal:  In [ 3 ] :=   tmp = 5  Out [ 3 ] =   5   In [ 4 ] :=   tmp   !=   5  Out [ 4 ] =   False   In [ 5 ] :=   tmp   !=   5.  Out [ 5 ] =   False   In [ 6 ] :=   tmp   !=   5.00000  Out [ 6 ] =   False   Unequal can test for Rational inequality:  In [ 7 ] :=   4 / 3   !=   3 / 2  Out [ 7 ] =   True   In [ 8 ] :=   4 / 3   !=   8 / 6  Out [ 8 ] =   False", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/comparison/sameq/", 
@@ -297,118 +312,158 @@
         }, 
         {
             "location": "/builtin/expression/", 
-            "text": "expression documentation\n\n\nApply\n\n\nSequence\n\n\nApply\n\n\nEvaluate\n\n\nFunction\n\n\nHold", 
+            "text": "expression documentation\n\n\nApply\n\n\nSequence\n\n\nEvaluate\n\n\nFunction\n\n\nSlot\n\n\nHold", 
             "title": "expression"
         }, 
         {
             "location": "/builtin/expression/#expression-documentation", 
-            "text": "Apply  Sequence  Apply  Evaluate  Function  Hold", 
+            "text": "Apply  Sequence  Evaluate  Function  Slot  Hold", 
             "title": "expression documentation"
         }, 
         {
             "location": "/builtin/expression/apply/", 
-            "text": "Apply\n\n\nAttributes[Apply] := {Protected}", 
+            "text": "Apply\n\n\nApply[f, e]\n (\nf@@e\n) replaces the head of expression \ne\n with \nf\n.\n\n\nAttributes[Apply] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nApply\n[\nbar\n,\n \nfoo\n[\nsyma\n,\n \nsymb\n]]\n\n\nOut\n[\n1\n]\n=\n \nbar\n[\nsyma\n,\n \nsymb\n]\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nbar\n@@\nfoo\n[\nsyma\n,\n \nsymb\n]\n\n\nOut\n[\n2\n]\n=\n \nbar\n[\nsyma\n,\n \nsymb\n]\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nList\n@@\n(\nsyma\n \n+\n \nsymb\n)\n\n\nOut\n[\n3\n]\n=\n \n{\nsyma\n,\n \nsymb\n}\n\n\n\n\n\n\nApply\n is useful in performing aggregations on \nList\ns:\n\n\nIn\n[\n4\n]\n:=\n \nTimes\n \n@@\n \n{\n2\n,\n \n6\n}\n\n\nOut\n[\n4\n]\n=\n \n12\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nTimes\n \n@@\n \n{\na\n,\n \nb\n}\n\n\nOut\n[\n5\n]\n=\n \na\n \nb\n\n\n\n\n\n\nFurther examples\n\n\nApply\n has no effect on atoms:\n\n\nIn\n[\n1\n]\n:=\n \nfoo\n \n@@\n \n1\n\n\nOut\n[\n1\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nfoo\n \n@@\n \nbar\n\n\nOut\n[\n2\n]\n=\n \nbar", 
             "title": "Apply "
         }, 
         {
             "location": "/builtin/expression/apply/#apply", 
-            "text": "Attributes[Apply] := {Protected}", 
+            "text": "Apply[f, e]  ( f@@e ) replaces the head of expression  e  with  f .  Attributes[Apply] := {Protected}", 
             "title": "Apply"
         }, 
         {
+            "location": "/builtin/expression/apply/#simple-examples", 
+            "text": "In [ 1 ] :=   Apply [ bar ,   foo [ syma ,   symb ]]  Out [ 1 ] =   bar [ syma ,   symb ]   In [ 2 ] :=   bar @@ foo [ syma ,   symb ]  Out [ 2 ] =   bar [ syma ,   symb ]   In [ 3 ] :=   List @@ ( syma   +   symb )  Out [ 3 ] =   { syma ,   symb }   Apply  is useful in performing aggregations on  List s:  In [ 4 ] :=   Times   @@   { 2 ,   6 }  Out [ 4 ] =   12   In [ 5 ] :=   Times   @@   { a ,   b }  Out [ 5 ] =   a   b", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/expression/apply/#further-examples", 
+            "text": "Apply  has no effect on atoms:  In [ 1 ] :=   foo   @@   1  Out [ 1 ] =   1   In [ 2 ] :=   foo   @@   bar  Out [ 2 ] =   bar", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/expression/sequence/", 
-            "text": "Sequence\n\n\nAttributes[Sequence] := {Protected}", 
+            "text": "Sequence\n\n\nSequence[e1, e2, ...]\n holds a list of expressions to be automatically inserted into another function.\n\n\nAttributes[Sequence] := {Protected}\n\n\nSimple examples\n\n\nSequence arguments are automatically inserted into the parent functions:\n\n\nIn\n[\n1\n]\n:=\n \nfoo\n[\na\n,\n \nSequence\n[\n2\n,\n \n3\n]]\n\n\nOut\n[\n1\n]\n=\n \nfoo\n[\na\n,\n \n2\n,\n \n3\n]\n\n\n\n\n\n\nOutside of the context of functions, Sequence objects do not merge:\n\n\nIn\n[\n2\n]\n:=\n \nSequence\n[\n2\n,\n \n3\n]\n\n\nOut\n[\n2\n]\n=\n \nSequence\n[\n2\n,\n \n3\n]\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nSequence\n[\n2\n,\n \n3\n]\n \n+\n \nSequence\n[\n5\n,\n \n4\n]\n\n\nOut\n[\n3\n]\n=\n \n14\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSequence\n[\n2\n,\n \n3\n]\n*\nSequence\n[\n5\n,\n \n4\n]\n\n\nOut\n[\n4\n]\n=\n \n120\n\n\n\n\n\n\nFurther examples\n\n\nEmpty \nSequence[]\n objects effectively disappear:\n\n\nIn\n[\n1\n]\n:=\n \nfoo\n[\nSequence\n[]]\n\n\nOut\n[\n1\n]\n=\n \nfoo\n[]", 
             "title": "Sequence "
         }, 
         {
             "location": "/builtin/expression/sequence/#sequence", 
-            "text": "Attributes[Sequence] := {Protected}", 
+            "text": "Sequence[e1, e2, ...]  holds a list of expressions to be automatically inserted into another function.  Attributes[Sequence] := {Protected}", 
             "title": "Sequence"
         }, 
         {
-            "location": "/builtin/expression/apply/", 
-            "text": "Apply\n\n\nAttributes[Apply] := {Protected}", 
-            "title": "Apply "
+            "location": "/builtin/expression/sequence/#simple-examples", 
+            "text": "Sequence arguments are automatically inserted into the parent functions:  In [ 1 ] :=   foo [ a ,   Sequence [ 2 ,   3 ]]  Out [ 1 ] =   foo [ a ,   2 ,   3 ]   Outside of the context of functions, Sequence objects do not merge:  In [ 2 ] :=   Sequence [ 2 ,   3 ]  Out [ 2 ] =   Sequence [ 2 ,   3 ]   In [ 3 ] :=   Sequence [ 2 ,   3 ]   +   Sequence [ 5 ,   4 ]  Out [ 3 ] =   14   In [ 4 ] :=   Sequence [ 2 ,   3 ] * Sequence [ 5 ,   4 ]  Out [ 4 ] =   120", 
+            "title": "Simple examples"
         }, 
         {
-            "location": "/builtin/expression/apply/#apply", 
-            "text": "Attributes[Apply] := {Protected}", 
-            "title": "Apply"
+            "location": "/builtin/expression/sequence/#further-examples", 
+            "text": "Empty  Sequence[]  objects effectively disappear:  In [ 1 ] :=   foo [ Sequence []]  Out [ 1 ] =   foo []", 
+            "title": "Further examples"
         }, 
         {
             "location": "/builtin/expression/evaluate/", 
-            "text": "Evaluate\n\n\nAttributes[Evaluate] := {Protected}", 
+            "text": "Evaluate\n\n\nEvaluate[expr]\n evaluates to an evaluated form of \nexpr\n, even when under hold conditions.\n\n\nAttributes[Evaluate] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nHold\n[\nEvaluate\n[\n1\n \n+\n \n3\n],\n \n2\n \n+\n \n1\n]\n\n\nOut\n[\n1\n]\n=\n \nHold\n[\n4\n,\n \n(\n2\n \n+\n \n1\n)]\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nHold\n[\nfoo\n[\nEvaluate\n[\n1\n \n+\n \n1\n]]]\n\n\nOut\n[\n2\n]\n=\n \nHold\n[\nfoo\n[\nEvaluate\n[(\n1\n \n+\n \n1\n)]]]\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nHold\n[\nEvaluate\n[\n1\n \n+\n \n3\n,\n \n5\n \n+\n \n2\n],\n \n2\n \n+\n \n1\n]\n\n\nOut\n[\n3\n]\n=\n \nHold\n[\n4\n,\n \n7\n,\n \n(\n2\n \n+\n \n1\n)]\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nHold\n[\nSequence\n[\n1\n \n+\n \n3\n,\n \n5\n \n+\n \n2\n],\n \n2\n \n+\n \n1\n]\n\n\nOut\n[\n4\n]\n=\n \nHold\n[(\n1\n \n+\n \n3\n),\n \n(\n5\n \n+\n \n2\n),\n \n(\n2\n \n+\n \n1\n)]", 
             "title": "Evaluate "
         }, 
         {
             "location": "/builtin/expression/evaluate/#evaluate", 
-            "text": "Attributes[Evaluate] := {Protected}", 
+            "text": "Evaluate[expr]  evaluates to an evaluated form of  expr , even when under hold conditions.  Attributes[Evaluate] := {Protected}", 
             "title": "Evaluate"
         }, 
         {
+            "location": "/builtin/expression/evaluate/#simple-examples", 
+            "text": "In [ 1 ] :=   Hold [ Evaluate [ 1   +   3 ],   2   +   1 ]  Out [ 1 ] =   Hold [ 4 ,   ( 2   +   1 )]   In [ 2 ] :=   Hold [ foo [ Evaluate [ 1   +   1 ]]]  Out [ 2 ] =   Hold [ foo [ Evaluate [( 1   +   1 )]]]   In [ 3 ] :=   Hold [ Evaluate [ 1   +   3 ,   5   +   2 ],   2   +   1 ]  Out [ 3 ] =   Hold [ 4 ,   7 ,   ( 2   +   1 )]   In [ 4 ] :=   Hold [ Sequence [ 1   +   3 ,   5   +   2 ],   2   +   1 ]  Out [ 4 ] =   Hold [( 1   +   3 ),   ( 5   +   2 ),   ( 2   +   1 )]", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/expression/function/", 
-            "text": "Function\n\n\nAttributes[Function] := {HoldAll, Protected}", 
+            "text": "Function\n\n\nFunction[inner]\n defines a pure function where \ninner\n is evaluated with \nSlot\n parameters.\n\n\nFunction[x, inner]\n defines a pure function where \ninner\n is evaluated a single parameter \nx\n.\n\n\nAttributes[Function] := {HoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nFunction\n[\n1\n \n+\n \n#\n][\nx\n]\n\n\nOut\n[\n1\n]\n=\n \n1\n \n+\n \nx\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFunction\n[\n1\n \n+\n \n#\n \n+\n \n2\n#2\n][\nx\n,\n \ny\n]\n\n\nOut\n[\n2\n]\n=\n \n1\n \n+\n \nx\n \n+\n \n2\ny\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nFunction\n[\nx\n,\n \nx\n^\n2\n][\na\n]\n\n\nOut\n[\n3\n]\n=\n \na\n^\n2\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nFunction\n[\nx\n,\n \nx\n^\n2\n][\na\n,\n \nb\n]\n\n\nOut\n[\n4\n]\n=\n \na\n^\n2\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nFunction\n[\nx\n,\n \nx\n^\n2\n][\nx\n]\n\n\nOut\n[\n5\n]\n=\n \nx\n^\n2\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nFunction\n[\nx\n,\n \nx\n^\n2\n][\n-\n2\n]\n\n\nOut\n[\n6\n]\n=\n \n4", 
             "title": "Function "
         }, 
         {
             "location": "/builtin/expression/function/#function", 
-            "text": "Attributes[Function] := {HoldAll, Protected}", 
+            "text": "Function[inner]  defines a pure function where  inner  is evaluated with  Slot  parameters.  Function[x, inner]  defines a pure function where  inner  is evaluated a single parameter  x .  Attributes[Function] := {HoldAll, Protected}", 
             "title": "Function"
         }, 
         {
+            "location": "/builtin/expression/function/#simple-examples", 
+            "text": "In [ 1 ] :=   Function [ 1   +   # ][ x ]  Out [ 1 ] =   1   +   x   In [ 2 ] :=   Function [ 1   +   #   +   2 #2 ][ x ,   y ]  Out [ 2 ] =   1   +   x   +   2 y   In [ 3 ] :=   Function [ x ,   x ^ 2 ][ a ]  Out [ 3 ] =   a ^ 2   In [ 4 ] :=   Function [ x ,   x ^ 2 ][ a ,   b ]  Out [ 4 ] =   a ^ 2   In [ 5 ] :=   Function [ x ,   x ^ 2 ][ x ]  Out [ 5 ] =   x ^ 2   In [ 6 ] :=   Function [ x ,   x ^ 2 ][ - 2 ]  Out [ 6 ] =   4", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/expression/slot/", 
+            "text": "Slot\n\n\n#\n serves as a pure function's first parameter.\n\n\n#n\n serves as a pure function's \nn\n'th parameter.\n\n\nAttributes[Slot] := {NHoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nFunction\n[\n1\n \n+\n \n#\n][\nx\n]\n\n\nOut\n[\n1\n]\n=\n \n1\n \n+\n \nx\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFunction\n[\n1\n \n+\n \n#\n \n+\n \n2\n#2\n][\nx\n,\n \ny\n]\n\n\nOut\n[\n2\n]\n=\n \n1\n \n+\n \nx\n \n+\n \n2\ny\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n#\n \n===\n \nSlot\n[\n1\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \n#2\n \n===\n \nSlot\n[\n2\n]\n\n\nOut\n[\n4\n]\n=\n \nTrue", 
+            "title": "Slot "
+        }, 
+        {
+            "location": "/builtin/expression/slot/#slot", 
+            "text": "#  serves as a pure function's first parameter.  #n  serves as a pure function's  n 'th parameter.  Attributes[Slot] := {NHoldAll, Protected}", 
+            "title": "Slot"
+        }, 
+        {
+            "location": "/builtin/expression/slot/#simple-examples", 
+            "text": "In [ 1 ] :=   Function [ 1   +   # ][ x ]  Out [ 1 ] =   1   +   x   In [ 2 ] :=   Function [ 1   +   #   +   2 #2 ][ x ,   y ]  Out [ 2 ] =   1   +   x   +   2 y   In [ 3 ] :=   #   ===   Slot [ 1 ]  Out [ 3 ] =   True   In [ 4 ] :=   #2   ===   Slot [ 2 ]  Out [ 4 ] =   True", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/expression/hold/", 
-            "text": "Hold\n\n\nAttributes[Hold] := {HoldAll, Protected}", 
+            "text": "Hold\n\n\nHold[expr]\n prevents automatic evaluation of \nexpr\n.\n\n\nAttributes[Hold] := {HoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nHold\n[\nPower\n[\n5\n,\n \n3\n]]\n\n\nOut\n[\n1\n]\n=\n \nHold\n[\n5\n^\n3\n]\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nHold\n[\nPower\n[\n5.\n,\n \n3.\n]]\n\n\nOut\n[\n2\n]\n=\n \nHold\n[\n5.\n^\n3.\n]", 
             "title": "Hold "
         }, 
         {
             "location": "/builtin/expression/hold/#hold", 
-            "text": "Attributes[Hold] := {HoldAll, Protected}", 
+            "text": "Hold[expr]  prevents automatic evaluation of  expr .  Attributes[Hold] := {HoldAll, Protected}", 
             "title": "Hold"
         }, 
         {
+            "location": "/builtin/expression/hold/#simple-examples", 
+            "text": "In [ 1 ] :=   Hold [ Power [ 5 ,   3 ]]  Out [ 1 ] =   Hold [ 5 ^ 3 ]   In [ 2 ] :=   Hold [ Power [ 5. ,   3. ]]  Out [ 2 ] =   Hold [ 5. ^ 3. ]", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/flowcontrol/", 
-            "text": "flowcontrol documentation\n\n\nIf\n\n\nWhile\n\n\nKroneckerDelta", 
+            "text": "flowcontrol documentation\n\n\nIf\n\n\nWhile", 
             "title": "flowcontrol"
         }, 
         {
             "location": "/builtin/flowcontrol/#flowcontrol-documentation", 
-            "text": "If  While  KroneckerDelta", 
+            "text": "If  While", 
             "title": "flowcontrol documentation"
         }, 
         {
             "location": "/builtin/flowcontrol/if/", 
-            "text": "If\n\n\nAttributes[If] := {HoldRest, Protected}", 
+            "text": "If\n\n\nIf[cond, iftrue, iffalse]\n returns \niftrue\n if \ncond\n is True, and \niffalse\n if \ncond\n is False.\n\n\nAttributes[If] := {HoldRest, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nx\n=\n9\n\n\nOut\n[\n1\n]\n=\n \n9\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nIf\n[\nx\n+\n3\n==\n12\n,\n \nx\n*\n2\n,\n \nx\n+\n3\n]\n\n\nOut\n[\n2\n]\n=\n \n18\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nIf\n[\nx\n+\n3\n==\n11\n,\n \nx\n*\n2\n,\n \nx\n+\n3\n]\n\n\nOut\n[\n3\n]\n=\n \n12\n\n\n\n\n\n\nFurther examples\n\n\nUndefined conditions leave the statement unevaluated.\n\n\nIn\n[\n1\n]\n:=\n \nIf\n[\nundefined\n,\n \na\n,\n \nb\n]\n\n\nOut\n[\n1\n]\n=\n \nIf\n[\nundefined\n,\n \na\n,\n \nb\n]", 
             "title": "If "
         }, 
         {
             "location": "/builtin/flowcontrol/if/#if", 
-            "text": "Attributes[If] := {HoldRest, Protected}", 
+            "text": "If[cond, iftrue, iffalse]  returns  iftrue  if  cond  is True, and  iffalse  if  cond  is False.  Attributes[If] := {HoldRest, Protected}", 
             "title": "If"
         }, 
         {
+            "location": "/builtin/flowcontrol/if/#simple-examples", 
+            "text": "In [ 1 ] :=   x = 9  Out [ 1 ] =   9   In [ 2 ] :=   If [ x + 3 == 12 ,   x * 2 ,   x + 3 ]  Out [ 2 ] =   18   In [ 3 ] :=   If [ x + 3 == 11 ,   x * 2 ,   x + 3 ]  Out [ 3 ] =   12", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/flowcontrol/if/#further-examples", 
+            "text": "Undefined conditions leave the statement unevaluated.  In [ 1 ] :=   If [ undefined ,   a ,   b ]  Out [ 1 ] =   If [ undefined ,   a ,   b ]", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/flowcontrol/while/", 
-            "text": "While\n\n\nAttributes[While] := {HoldAll, Protected}", 
+            "text": "While\n\n\nWhile[cond, body]\n evaluates \ncond\n, and if it returns True, evaluates \nbody\n. This happens repeatedly.\n\n\nAttributes[While] := {HoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \na\n=\n1\n\n\nOut\n[\n1\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nWhile\n[\na\n \n!=\n \n5\n,\n \na\n \n=\n \na\n \n+\n \n1\n]\n\n\nOut\n[\n2\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \na\n\n\nOut\n[\n3\n]\n=\n \n5", 
             "title": "While "
         }, 
         {
             "location": "/builtin/flowcontrol/while/#while", 
-            "text": "Attributes[While] := {HoldAll, Protected}", 
+            "text": "While[cond, body]  evaluates  cond , and if it returns True, evaluates  body . This happens repeatedly.  Attributes[While] := {HoldAll, Protected}", 
             "title": "While"
         }, 
         {
-            "location": "/builtin/flowcontrol/kroneckerdelta/", 
-            "text": "KroneckerDelta\n\n\nAttributes[KroneckerDelta] := {NumericFunction, Orderless, Protected, ReadProtected}\n\n\nRules\n\n\nKroneckerDelta\n[\nx_Integer\n]\n \n:=\n \nIf\n[\nx\n \n==\n \n0\n,\n \n1\n,\n \n0\n]", 
-            "title": "KroneckerDelta "
-        }, 
-        {
-            "location": "/builtin/flowcontrol/kroneckerdelta/#kroneckerdelta", 
-            "text": "Attributes[KroneckerDelta] := {NumericFunction, Orderless, Protected, ReadProtected}", 
-            "title": "KroneckerDelta"
-        }, 
-        {
-            "location": "/builtin/flowcontrol/kroneckerdelta/#rules", 
-            "text": "KroneckerDelta [ x_Integer ]   :=   If [ x   ==   0 ,   1 ,   0 ]", 
-            "title": "Rules"
+            "location": "/builtin/flowcontrol/while/#simple-examples", 
+            "text": "In [ 1 ] :=   a = 1  Out [ 1 ] =   1   In [ 2 ] :=   While [ a   !=   5 ,   a   =   a   +   1 ]  Out [ 2 ] =   Null   In [ 3 ] :=   a  Out [ 3 ] =   5", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/list/", 
@@ -422,13 +477,18 @@
         }, 
         {
             "location": "/builtin/list/list/", 
-            "text": "List\n\n\nAttributes[List] := {Locked, Protected}", 
+            "text": "List\n\n\n{e1, e2, ...}\n groups expressions together.\n\n\nAttributes[List] := {Locked, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nList\n[\n1\n,\n2\n,\na\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n1\n,\n \n2\n,\n \na\n}", 
             "title": "List "
         }, 
         {
             "location": "/builtin/list/list/#list", 
-            "text": "Attributes[List] := {Locked, Protected}", 
+            "text": "{e1, e2, ...}  groups expressions together.  Attributes[List] := {Locked, Protected}", 
             "title": "List"
+        }, 
+        {
+            "location": "/builtin/list/list/#simple-examples", 
+            "text": "In [ 1 ] :=   List [ 1 , 2 , a ]  Out [ 1 ] =   { 1 ,   2 ,   a }", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/list/total/", 
@@ -457,13 +517,18 @@
         }, 
         {
             "location": "/builtin/list/mean/", 
-            "text": "Mean\n\n\nCalculate the statistical mean of the list.\n\n\nAttributes[Mean] := {Protected}\n\n\nRules\n\n\nMean\n[\nl__List\n]\n \n:=\n \nTotal\n[\nl\n]\n/\nLength\n[\nl\n]", 
+            "text": "Mean\n\n\nMean[list]\n calculates the statistical mean of \nlist\n.\n\n\nAttributes[Mean] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nMean\n[{\n5\n,\n6\n}]\n\n\nOut\n[\n1\n]\n=\n \n11\n/\n2\n\n\n\n\n\n\nRules\n\n\nMean\n[\nl__List\n]\n \n:=\n \nTotal\n[\nl\n]\n/\nLength\n[\nl\n]", 
             "title": "Mean "
         }, 
         {
             "location": "/builtin/list/mean/#mean", 
-            "text": "Calculate the statistical mean of the list.  Attributes[Mean] := {Protected}", 
+            "text": "Mean[list]  calculates the statistical mean of  list .  Attributes[Mean] := {Protected}", 
             "title": "Mean"
+        }, 
+        {
+            "location": "/builtin/list/mean/#simple-examples", 
+            "text": "In [ 1 ] :=   Mean [{ 5 , 6 }]  Out [ 1 ] =   11 / 2", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/list/mean/#rules", 
@@ -472,48 +537,78 @@
         }, 
         {
             "location": "/builtin/list/depth/", 
-            "text": "Depth\n\n\nReturn the depth of an expression.\n\n\nAttributes[Depth] := {Protected}", 
+            "text": "Depth\n\n\nDepth[expr]\n returns the depth of \nexpr\n.\n\n\nAttributes[Depth] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nDepth\n[\nfoo\n]\n\n\nOut\n[\n1\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nDepth\n[{\nfoo\n}]\n\n\nOut\n[\n2\n]\n=\n \n2\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nDepth\n[\nbar\n[\nfoo\n,\n \nbar\n]]\n\n\nOut\n[\n3\n]\n=\n \n2\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nDepth\n[\nfoo\n[\nfoo\n[]]]\n\n\nOut\n[\n4\n]\n=\n \n3\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nDepth\n[\n3\n]\n\n\nOut\n[\n5\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nDepth\n[\n3.5\n]\n\n\nOut\n[\n6\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nDepth\n[\n3\n/\n5\n]\n\n\nOut\n[\n7\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nDepth\n[\nfoo\n[{{{}}}][]]\n\n\nOut\n[\n8\n]\n=\n \n2", 
             "title": "Depth "
         }, 
         {
             "location": "/builtin/list/depth/#depth", 
-            "text": "Return the depth of an expression.  Attributes[Depth] := {Protected}", 
+            "text": "Depth[expr]  returns the depth of  expr .  Attributes[Depth] := {Protected}", 
             "title": "Depth"
         }, 
         {
+            "location": "/builtin/list/depth/#simple-examples", 
+            "text": "In [ 1 ] :=   Depth [ foo ]  Out [ 1 ] =   1   In [ 2 ] :=   Depth [{ foo }]  Out [ 2 ] =   2   In [ 3 ] :=   Depth [ bar [ foo ,   bar ]]  Out [ 3 ] =   2   In [ 4 ] :=   Depth [ foo [ foo []]]  Out [ 4 ] =   3   In [ 5 ] :=   Depth [ 3 ]  Out [ 5 ] =   1   In [ 6 ] :=   Depth [ 3.5 ]  Out [ 6 ] =   1   In [ 7 ] :=   Depth [ 3 / 5 ]  Out [ 7 ] =   1   In [ 8 ] :=   Depth [ foo [{{{}}}][]]  Out [ 8 ] =   2", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/list/length/", 
-            "text": "Length\n\n\nAttributes[Length] := {Protected}", 
+            "text": "Length\n\n\nLength[expr]\n returns the length of \nexpr\n.\n\n\nAttributes[Length] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nLength\n[{\n1\n,\n2\n,\n3\n,\n4\n}]\n\n\nOut\n[\n1\n]\n=\n \n4\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nLength\n[{}]\n\n\nOut\n[\n2\n]\n=\n \n0\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nLength\n[{\n5\n}]\n\n\nOut\n[\n3\n]\n=\n \n1\n\n\n\n\n\n\nFurther examples\n\n\nexpr\n need not have a \nList\n head:\n\n\nIn\n[\n1\n]\n:=\n \nLength\n[\nfoo\n[\n1\n,\n \n2\n]]\n\n\nOut\n[\n1\n]\n=\n \n2", 
             "title": "Length "
         }, 
         {
             "location": "/builtin/list/length/#length", 
-            "text": "Attributes[Length] := {Protected}", 
+            "text": "Length[expr]  returns the length of  expr .  Attributes[Length] := {Protected}", 
             "title": "Length"
         }, 
         {
+            "location": "/builtin/list/length/#simple-examples", 
+            "text": "In [ 1 ] :=   Length [{ 1 , 2 , 3 , 4 }]  Out [ 1 ] =   4   In [ 2 ] :=   Length [{}]  Out [ 2 ] =   0   In [ 3 ] :=   Length [{ 5 }]  Out [ 3 ] =   1", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/list/length/#further-examples", 
+            "text": "expr  need not have a  List  head:  In [ 1 ] :=   Length [ foo [ 1 ,   2 ]]  Out [ 1 ] =   2", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/list/table/", 
-            "text": "Table\n\n\nAttributes[Table] := {HoldAll, Protected}\n\n\nRules\n\n\nTable\n[\na_\n,\n \nb_Integer\n]\n \n:=\n \nTable\n[\na\n,\n \n{\ni\n,\n \n1\n,\n \nb\n}]", 
+            "text": "Table\n\n\nTable[expr, n]\n returns a list with \nn\n copies of \nexpr\n.\n\n\nTable[expr, {sym, n}]\n returns a list with \nexpr\n evaluated with \nsym\n = 1 to \nn\n.\n\n\nTable[expr, {sym, m, n}]\n returns a list with \nexpr\n evaluated with \nsym\n = \nm\n to \nn\n.\n\n\nAttributes[Table] := {HoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nTable\n[\na\n,\n \n5\n]\n\n\nOut\n[\n1\n]\n=\n \n{\na\n,\n \na\n,\n \na\n,\n \na\n,\n \na\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nTable\n[\ni\n,\n \n{\ni\n,\n \n5\n,\n \n10\n}]\n\n\nOut\n[\n2\n]\n=\n \n{\n5\n,\n \n6\n,\n \n7\n,\n \n8\n,\n \n9\n,\n \n10\n}\n\n\n\n\n\n\nCreate a list of the first 10 squares:\n\n\nIn\n[\n3\n]\n:=\n \nTable\n[\nn\n^\n2\n,\n \n{\nn\n,\n \n1\n,\n \n10\n}]\n\n\nOut\n[\n3\n]\n=\n \n{\n1\n,\n \n4\n,\n \n9\n,\n \n16\n,\n \n25\n,\n \n36\n,\n \n49\n,\n \n64\n,\n \n81\n,\n \n100\n}\n\n\n\n\n\n\nIteration definitions do not have side effects:\n\n\nIn\n[\n4\n]\n:=\n \ni\n\n\nOut\n[\n4\n]\n=\n \ni\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \ni\n \n=\n \n22\n\n\nOut\n[\n5\n]\n=\n \n22\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nTable\n[\ni\n,\n \n{\ni\n,\n \n5\n,\n \n10\n}]\n\n\nOut\n[\n6\n]\n=\n \n{\n5\n,\n \n6\n,\n \n7\n,\n \n8\n,\n \n9\n,\n \n10\n}\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \ni\n\n\nOut\n[\n7\n]\n=\n \n22\n\n\n\n\n\n\nFurther examples\n\n\nIn\n[\n1\n]\n:=\n \nTable\n[\nx\n[\n99\n],\n \n{\nx\n[\n_\n],\n \n0\n,\n \n2\n}]\n\n\nOut\n[\n1\n]\n=\n \n{\n0\n,\n1\n,\n2\n}\n\n\n\n\n\n\nRules\n\n\nTable\n[\na_\n,\n \nb_Integer\n]\n \n:=\n \nTable\n[\na\n,\n \n{\nUniqueDefined`i\n,\n \n1\n,\n \nb\n}]", 
             "title": "Table "
         }, 
         {
             "location": "/builtin/list/table/#table", 
-            "text": "Attributes[Table] := {HoldAll, Protected}", 
+            "text": "Table[expr, n]  returns a list with  n  copies of  expr .  Table[expr, {sym, n}]  returns a list with  expr  evaluated with  sym  = 1 to  n .  Table[expr, {sym, m, n}]  returns a list with  expr  evaluated with  sym  =  m  to  n .  Attributes[Table] := {HoldAll, Protected}", 
             "title": "Table"
         }, 
         {
+            "location": "/builtin/list/table/#simple-examples", 
+            "text": "In [ 1 ] :=   Table [ a ,   5 ]  Out [ 1 ] =   { a ,   a ,   a ,   a ,   a }   In [ 2 ] :=   Table [ i ,   { i ,   5 ,   10 }]  Out [ 2 ] =   { 5 ,   6 ,   7 ,   8 ,   9 ,   10 }   Create a list of the first 10 squares:  In [ 3 ] :=   Table [ n ^ 2 ,   { n ,   1 ,   10 }]  Out [ 3 ] =   { 1 ,   4 ,   9 ,   16 ,   25 ,   36 ,   49 ,   64 ,   81 ,   100 }   Iteration definitions do not have side effects:  In [ 4 ] :=   i  Out [ 4 ] =   i   In [ 5 ] :=   i   =   22  Out [ 5 ] =   22   In [ 6 ] :=   Table [ i ,   { i ,   5 ,   10 }]  Out [ 6 ] =   { 5 ,   6 ,   7 ,   8 ,   9 ,   10 }   In [ 7 ] :=   i  Out [ 7 ] =   22", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/list/table/#further-examples", 
+            "text": "In [ 1 ] :=   Table [ x [ 99 ],   { x [ _ ],   0 ,   2 }]  Out [ 1 ] =   { 0 , 1 , 2 }", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/list/table/#rules", 
-            "text": "Table [ a_ ,   b_Integer ]   :=   Table [ a ,   { i ,   1 ,   b }]", 
+            "text": "Table [ a_ ,   b_Integer ]   :=   Table [ a ,   { UniqueDefined`i ,   1 ,   b }]", 
             "title": "Rules"
         }, 
         {
             "location": "/builtin/list/sum/", 
-            "text": "Sum\n\n\nAttributes[Sum] := {HoldAll, Protected, ReadProtected}\n\n\nRules\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)", 
+            "text": "Sum\n\n\nSum[expr, n]\n returns the sum of \nn\n copies of \nexpr\n.\n\n\nSum[expr, {sym, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = 1 to \nn\n.\n\n\nSum[expr, {sym, m, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = \nm\n to \nn\n.\n\n\nAttributes[Sum] := {HoldAll, Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n5\n,\n \n10\n}]\n\n\nOut\n[\n1\n]\n=\n \n45\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n10\n}]\n\n\nOut\n[\n2\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n10\n}]\n\n\nOut\n[\n3\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n30000\n}]\n\n\nOut\n[\n4\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n30000\n}]\n\n\nOut\n[\n5\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \nn\n}]\n\n\nOut\n[\n6\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \nn\n}]\n\n\nOut\n[\n7\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nSum\n[\na\n \n+\n \nb\n,\n \n{\na\n,\n \n0\n,\n \n2\n},\n \n{\nb\n,\n \n0\n,\n \n3\n}]\n\n\nOut\n[\n8\n]\n=\n \n30\n\n\n\n\n\n\nRules\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)", 
             "title": "Sum "
         }, 
         {
             "location": "/builtin/list/sum/#sum", 
-            "text": "Attributes[Sum] := {HoldAll, Protected, ReadProtected}", 
+            "text": "Sum[expr, n]  returns the sum of  n  copies of  expr .  Sum[expr, {sym, n}]  returns the sum of  expr  evaluated with  sym  = 1 to  n .  Sum[expr, {sym, m, n}]  returns the sum of  expr  evaluated with  sym  =  m  to  n .  Attributes[Sum] := {HoldAll, Protected, ReadProtected}", 
             "title": "Sum"
+        }, 
+        {
+            "location": "/builtin/list/sum/#simple-examples", 
+            "text": "In [ 1 ] :=   Sum [ i ,   { i ,   5 ,   10 }]  Out [ 1 ] =   45   In [ 2 ] :=   Sum [ i ,   { i ,   1 ,   10 }]  Out [ 2 ] =   55   In [ 3 ] :=   Sum [ i ,   { i ,   0 ,   10 }]  Out [ 3 ] =   55   In [ 4 ] :=   Sum [ i ,   { i ,   1 ,   30000 }]  Out [ 4 ] =   450015000   In [ 5 ] :=   Sum [ i ,   { i ,   0 ,   30000 }]  Out [ 5 ] =   450015000   In [ 6 ] :=   Sum [ i ,   { i ,   0 ,   n }]  Out [ 6 ] =   1 / 2 * n * ( 1   +   n )   In [ 7 ] :=   Sum [ i ,   { i ,   1 ,   n }]  Out [ 7 ] =   1 / 2 * n * ( 1   +   n )   In [ 8 ] :=   Sum [ a   +   b ,   { a ,   0 ,   2 },   { b ,   0 ,   3 }]  Out [ 8 ] =   30", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/list/sum/#rules", 
@@ -522,57 +617,92 @@
         }, 
         {
             "location": "/builtin/list/product/", 
-            "text": "Product\n\n\nAttributes[Product] := {HoldAll, Protected, ReadProtected}", 
+            "text": "Product\n\n\nProduct[expr, n]\n returns the product of \nn\n copies of \nexpr\n.\n\n\nProduct[expr, {sym, n}]\n returns the product of \nexpr\n evaluated with \nsym\n = 1 to \nn\n.\n\n\nProduct[expr, {sym, m, n}]\n returns the product of \nexpr\n evaluated with \nsym\n = \nm\n to \nn\n.\n\n\nAttributes[Product] := {HoldAll, Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nProduct\n[\na\n,\n \n{\na\n,\n \n1\n,\n \n5\n}]\n\n\nOut\n[\n1\n]\n=\n \n120\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nProduct\n[\nf\n[\na\n],\n \n{\na\n,\n \n1\n,\n \n5\n}]\n\n\nOut\n[\n2\n]\n=\n \nf\n[\n1\n]\n \n*\n \nf\n[\n2\n]\n \n*\n \nf\n[\n3\n]\n \n*\n \nf\n[\n4\n]\n \n*\n \nf\n[\n5\n]\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nProduct\n[\na\n^\n2\n,\n \n{\na\n,\n \n4\n}]\n\n\nOut\n[\n3\n]\n=\n \n576\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nProduct\n[\na\n \n+\n \nb\n,\n \n{\na\n,\n \n1\n,\n \n2\n},\n \n{\nb\n,\n \n1\n,\n \n3\n}]\n\n\nOut\n[\n4\n]\n=\n \n1440", 
             "title": "Product "
         }, 
         {
             "location": "/builtin/list/product/#product", 
-            "text": "Attributes[Product] := {HoldAll, Protected, ReadProtected}", 
+            "text": "Product[expr, n]  returns the product of  n  copies of  expr .  Product[expr, {sym, n}]  returns the product of  expr  evaluated with  sym  = 1 to  n .  Product[expr, {sym, m, n}]  returns the product of  expr  evaluated with  sym  =  m  to  n .  Attributes[Product] := {HoldAll, Protected, ReadProtected}", 
             "title": "Product"
         }, 
         {
+            "location": "/builtin/list/product/#simple-examples", 
+            "text": "In [ 1 ] :=   Product [ a ,   { a ,   1 ,   5 }]  Out [ 1 ] =   120   In [ 2 ] :=   Product [ f [ a ],   { a ,   1 ,   5 }]  Out [ 2 ] =   f [ 1 ]   *   f [ 2 ]   *   f [ 3 ]   *   f [ 4 ]   *   f [ 5 ]   In [ 3 ] :=   Product [ a ^ 2 ,   { a ,   4 }]  Out [ 3 ] =   576   In [ 4 ] :=   Product [ a   +   b ,   { a ,   1 ,   2 },   { b ,   1 ,   3 }]  Out [ 4 ] =   1440", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/list/memberq/", 
-            "text": "MemberQ\n\n\nAttributes[MemberQ] := {Protected}", 
+            "text": "MemberQ\n\n\nMemberQ[expr, pat]\n returns True if any of the elements in \nexpr\n match \npat\n, otherwise returns False.\n\n\nAttributes[MemberQ] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nMemberQ\n[{\n1\n,\n \n2\n,\n \n3\n},\n \n0\n]\n\n\nOut\n[\n1\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nMemberQ\n[{\n1\n,\n \n2\n,\n \n3\n},\n \n1\n]\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nMemberQ\n[{\n1\n,\n \n2\n,\n \n3\n},\n \n{\n1\n}]\n\n\nOut\n[\n3\n]\n=\n \nFalse\n\n\n\n\n\n\nMemberQ\n works with patterns:\n\n\nIn\n[\n4\n]\n:=\n \nMemberQ\n[{\n1\n,\n \n2\n,\n \n3\n},\n \n_Integer\n]\n\n\nOut\n[\n4\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nMemberQ\n[{\n1\n,\n \n2\n,\n \n3\n},\n \n_\n]\n\n\nOut\n[\n5\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nMemberQ\n[{\n1\n,\n \n2\n,\n \n3\n},\n \n_Real\n]\n\n\nOut\n[\n6\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nMemberQ\n[{\n1\n,\n \n2\n,\n \n3\n},\n \ntestmatch_Integer\n]\n\n\nOut\n[\n7\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \ntestmatch\n\n\nOut\n[\n8\n]\n=\n \ntestmatch\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \nMemberQ\n[\na\n,\n \na\n]\n\n\nOut\n[\n9\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n10\n]\n:=\n \nMemberQ\n[\na\n,\n \n_\n]\n\n\nOut\n[\n10\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n11\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n},\n \nc\n]\n\n\nOut\n[\n11\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n12\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n},\n \na\n]\n\n\nOut\n[\n12\n]\n=\n \nTrue\n\n\n\n\n\n\nFurther examples\n\n\nMemberQ\n works with BlankSequences:\n\n\nIn\n[\n1\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n},\n \n___\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n},\n \n__\n]\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n},\n \n__Integer\n]\n\n\nOut\n[\n3\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n},\n \n___Integer\n]\n\n\nOut\n[\n4\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n},\n \n___Symbol\n]\n\n\nOut\n[\n5\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n},\n \n__Symbol\n]\n\n\nOut\n[\n6\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n,\n \n1\n},\n \n__Symbol\n]\n\n\nOut\n[\n7\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nMemberQ\n[{\na\n,\n \nb\n,\n \n1\n},\n \n__Integer\n]\n\n\nOut\n[\n8\n]\n=\n \nTrue\n\n\n\n\n\n\nexpr\n need not be a List:\n\n\nIn\n[\n9\n]\n:=\n \nMemberQ\n[\nbar\n[\na\n,\n \nb\n,\n \nc\n],\n \na\n]\n\n\nOut\n[\n9\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n10\n]\n:=\n \nMemberQ\n[\nbar\n[\na\n,\n \nb\n,\n \nc\n],\n \nbar\n]\n\n\nOut\n[\n10\n]\n=\n \nFalse", 
             "title": "MemberQ "
         }, 
         {
             "location": "/builtin/list/memberq/#memberq", 
-            "text": "Attributes[MemberQ] := {Protected}", 
+            "text": "MemberQ[expr, pat]  returns True if any of the elements in  expr  match  pat , otherwise returns False.  Attributes[MemberQ] := {Protected}", 
             "title": "MemberQ"
         }, 
         {
+            "location": "/builtin/list/memberq/#simple-examples", 
+            "text": "In [ 1 ] :=   MemberQ [{ 1 ,   2 ,   3 },   0 ]  Out [ 1 ] =   False   In [ 2 ] :=   MemberQ [{ 1 ,   2 ,   3 },   1 ]  Out [ 2 ] =   True   In [ 3 ] :=   MemberQ [{ 1 ,   2 ,   3 },   { 1 }]  Out [ 3 ] =   False   MemberQ  works with patterns:  In [ 4 ] :=   MemberQ [{ 1 ,   2 ,   3 },   _Integer ]  Out [ 4 ] =   True   In [ 5 ] :=   MemberQ [{ 1 ,   2 ,   3 },   _ ]  Out [ 5 ] =   True   In [ 6 ] :=   MemberQ [{ 1 ,   2 ,   3 },   _Real ]  Out [ 6 ] =   False   In [ 7 ] :=   MemberQ [{ 1 ,   2 ,   3 },   testmatch_Integer ]  Out [ 7 ] =   True   In [ 8 ] :=   testmatch  Out [ 8 ] =   testmatch   In [ 9 ] :=   MemberQ [ a ,   a ]  Out [ 9 ] =   False   In [ 10 ] :=   MemberQ [ a ,   _ ]  Out [ 10 ] =   False   In [ 11 ] :=   MemberQ [{ a ,   b },   c ]  Out [ 11 ] =   False   In [ 12 ] :=   MemberQ [{ a ,   b },   a ]  Out [ 12 ] =   True", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/list/memberq/#further-examples", 
+            "text": "MemberQ  works with BlankSequences:  In [ 1 ] :=   MemberQ [{ a ,   b },   ___ ]  Out [ 1 ] =   True   In [ 2 ] :=   MemberQ [{ a ,   b },   __ ]  Out [ 2 ] =   True   In [ 3 ] :=   MemberQ [{ a ,   b },   __Integer ]  Out [ 3 ] =   False   In [ 4 ] :=   MemberQ [{ a ,   b },   ___Integer ]  Out [ 4 ] =   False   In [ 5 ] :=   MemberQ [{ a ,   b },   ___Symbol ]  Out [ 5 ] =   True   In [ 6 ] :=   MemberQ [{ a ,   b },   __Symbol ]  Out [ 6 ] =   True   In [ 7 ] :=   MemberQ [{ a ,   b ,   1 },   __Symbol ]  Out [ 7 ] =   True   In [ 8 ] :=   MemberQ [{ a ,   b ,   1 },   __Integer ]  Out [ 8 ] =   True   expr  need not be a List:  In [ 9 ] :=   MemberQ [ bar [ a ,   b ,   c ],   a ]  Out [ 9 ] =   True   In [ 10 ] :=   MemberQ [ bar [ a ,   b ,   c ],   bar ]  Out [ 10 ] =   False", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/list/map/", 
-            "text": "Map\n\n\nAttributes[Map] := {Protected}", 
+            "text": "Map\n\n\nMap[f, expr]\n returns a new expression with the same head as \nexpr\n, but with \nf\n mapped to each of the arguments.\n\n\nAttributes[Map] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nMap\n[\nfoo\n,\n \n{\na\n,\n \nb\n,\n \nc\n}]\n\n\nOut\n[\n1\n]\n=\n \n{\nfoo\n[\na\n],\n \nfoo\n[\nb\n],\n \nfoo\n[\nc\n]}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nfoo\n \n/@\n \n{\na\n,\n \nb\n,\n \nc\n}\n\n\nOut\n[\n2\n]\n=\n \n{\nfoo\n[\na\n],\n \nfoo\n[\nb\n],\n \nfoo\n[\nc\n]}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nTimes\n \n/@\n \n{\n2\n,\n \n4\n,\n \n9\n}\n\n\nOut\n[\n3\n]\n=\n \n{\n2\n,\n \n4\n,\n \n9\n}\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nMap\n[\nfoo\n,\n \n{{\na\n,\n \nb\n},\n \nc\n}]\n\n\nOut\n[\n4\n]\n=\n \n{\nfoo\n[{\na\n,\n \nb\n}],\n \nfoo\n[\nc\n]}\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nMap\n[\nfoo\n]\n\n\nOut\n[\n5\n]\n=\n \nMap\n[\nfoo\n]\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nMap\n[\nfoo\n,\n \nfoo\n]\n\n\nOut\n[\n6\n]\n=\n \nfoo\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nMap\n[\nfoo\n,\n \nfoo\n,\n \nfoo\n]\n\n\nOut\n[\n7\n]\n=\n \nMap\n[\nfoo\n,\n \nfoo\n,\n \nfoo\n]\n\n\n\n\n\n\nPure functions are useful with \nMap\n:\n\n\nIn\n[\n8\n]\n:=\n \nFunction\n[\nx\n,\n \nx\n^\n2\n]\n \n/@\n \n{\n2\n,\n4\n}\n\n\nOut\n[\n8\n]\n=\n \n{\n4\n,\n16\n}\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \nFunction\n[\n#\n^\n2\n]\n \n/@\n \n{\n2\n,\n4\n}\n\n\nOut\n[\n9\n]\n=\n \n{\n4\n,\n16\n}", 
             "title": "Map "
         }, 
         {
             "location": "/builtin/list/map/#map", 
-            "text": "Attributes[Map] := {Protected}", 
+            "text": "Map[f, expr]  returns a new expression with the same head as  expr , but with  f  mapped to each of the arguments.  Attributes[Map] := {Protected}", 
             "title": "Map"
         }, 
         {
+            "location": "/builtin/list/map/#simple-examples", 
+            "text": "In [ 1 ] :=   Map [ foo ,   { a ,   b ,   c }]  Out [ 1 ] =   { foo [ a ],   foo [ b ],   foo [ c ]}   In [ 2 ] :=   foo   /@   { a ,   b ,   c }  Out [ 2 ] =   { foo [ a ],   foo [ b ],   foo [ c ]}   In [ 3 ] :=   Times   /@   { 2 ,   4 ,   9 }  Out [ 3 ] =   { 2 ,   4 ,   9 }   In [ 4 ] :=   Map [ foo ,   {{ a ,   b },   c }]  Out [ 4 ] =   { foo [{ a ,   b }],   foo [ c ]}   In [ 5 ] :=   Map [ foo ]  Out [ 5 ] =   Map [ foo ]   In [ 6 ] :=   Map [ foo ,   foo ]  Out [ 6 ] =   foo   In [ 7 ] :=   Map [ foo ,   foo ,   foo ]  Out [ 7 ] =   Map [ foo ,   foo ,   foo ]   Pure functions are useful with  Map :  In [ 8 ] :=   Function [ x ,   x ^ 2 ]   /@   { 2 , 4 }  Out [ 8 ] =   { 4 , 16 }   In [ 9 ] :=   Function [ # ^ 2 ]   /@   { 2 , 4 }  Out [ 9 ] =   { 4 , 16 }", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/list/array/", 
-            "text": "Array\n\n\nAttributes[Array] := {Protected}", 
+            "text": "Array\n\n\nArray[f, n]\n creates a list of \nf[i]\n, with \ni\n = 1 to \nn\n.\n\n\nAttributes[Array] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nArray\n[\nf\n,\n \n3\n]\n\n\nOut\n[\n1\n]\n=\n \n{\nf\n[\n1\n],\n \nf\n[\n2\n],\n \nf\n[\n3\n]}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nmytest\n[\nx_\n]\n \n:=\n \n5\n\n\nOut\n[\n2\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nArray\n[\nmytest\n,\n \n3\n]\n\n\nOut\n[\n3\n]\n=\n \n{\n5\n,\n \n5\n,\n \n5\n}\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nArray\n[\na\n \n+\n \nb\n,\n \n3\n]\n\n\nOut\n[\n4\n]\n=\n \n{(\na\n \n+\n \nb\n)[\n1\n],\n \n(\na\n \n+\n \nb\n)[\n2\n],\n \n(\na\n \n+\n \nb\n)[\n3\n]}\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nArray\n[\na\n,\n \na\n]\n\n\nOut\n[\n5\n]\n=\n \nArray\n[\na\n,\n \na\n]", 
             "title": "Array "
         }, 
         {
             "location": "/builtin/list/array/#array", 
-            "text": "Attributes[Array] := {Protected}", 
+            "text": "Array[f, n]  creates a list of  f[i] , with  i  = 1 to  n .  Attributes[Array] := {Protected}", 
             "title": "Array"
         }, 
         {
+            "location": "/builtin/list/array/#simple-examples", 
+            "text": "In [ 1 ] :=   Array [ f ,   3 ]  Out [ 1 ] =   { f [ 1 ],   f [ 2 ],   f [ 3 ]}   In [ 2 ] :=   mytest [ x_ ]   :=   5  Out [ 2 ] =   Null   In [ 3 ] :=   Array [ mytest ,   3 ]  Out [ 3 ] =   { 5 ,   5 ,   5 }   In [ 4 ] :=   Array [ a   +   b ,   3 ]  Out [ 4 ] =   {( a   +   b )[ 1 ],   ( a   +   b )[ 2 ],   ( a   +   b )[ 3 ]}   In [ 5 ] :=   Array [ a ,   a ]  Out [ 5 ] =   Array [ a ,   a ]", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/list/cases/", 
-            "text": "Cases\n\n\nAttributes[Cases] := {Protected}", 
+            "text": "Cases\n\n\nCases[expr, pat]\n returns a new \nList\n of all elements in \nexpr\n that match \npat\n.\n\n\nAttributes[Cases] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nCases\n[{\n5\n,\n \n2\n,\n \n3.5\n,\n \nx\n,\n \ny\n,\n \n4\n},\n \n_\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n5\n,\n \n2\n,\n \n3.5\n,\n \nx\n,\n \ny\n,\n \n4\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nCases\n[{\n5\n,\n \n2\n,\n \n3.5\n,\n \nx\n,\n \ny\n,\n \n4\n},\n \n_Integer\n]\n\n\nOut\n[\n2\n]\n=\n \n{\n5\n,\n2\n,\n4\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nCases\n[{\n5\n,\n \n2\n,\n \n3.5\n,\n \nx\n,\n \ny\n,\n \n4\n},\n \n_Real\n]\n\n\nOut\n[\n3\n]\n=\n \n{\n3.5\n}\n\n\n\n\n\n\nFurther examples\n\n\nexpr\n need not be a list:\n\n\nIn\n[\n1\n]\n:=\n \nCases\n[\nbar\n[\na\n,\n \nb\n,\n \nc\n],\n \na\n]\n\n\nOut\n[\n1\n]\n=\n \n{\na\n}", 
             "title": "Cases "
         }, 
         {
             "location": "/builtin/list/cases/#cases", 
-            "text": "Attributes[Cases] := {Protected}", 
+            "text": "Cases[expr, pat]  returns a new  List  of all elements in  expr  that match  pat .  Attributes[Cases] := {Protected}", 
             "title": "Cases"
         }, 
         {
+            "location": "/builtin/list/cases/#simple-examples", 
+            "text": "In [ 1 ] :=   Cases [{ 5 ,   2 ,   3.5 ,   x ,   y ,   4 },   _ ]  Out [ 1 ] =   { 5 ,   2 ,   3.5 ,   x ,   y ,   4 }   In [ 2 ] :=   Cases [{ 5 ,   2 ,   3.5 ,   x ,   y ,   4 },   _Integer ]  Out [ 2 ] =   { 5 , 2 , 4 }   In [ 3 ] :=   Cases [{ 5 ,   2 ,   3.5 ,   x ,   y ,   4 },   _Real ]  Out [ 3 ] =   { 3.5 }", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/list/cases/#further-examples", 
+            "text": "expr  need not be a list:  In [ 1 ] :=   Cases [ bar [ a ,   b ,   c ],   a ]  Out [ 1 ] =   { a }", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/list/padright/", 
-            "text": "PadRight\n\n\nAttributes[PadRight] := {Protected}", 
+            "text": "PadRight\n\n\nAttributes[PadRight] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPadRight\n[{\n1\n,\n \n2\n},\n \n5\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n1\n,\n \n2\n,\n \n0\n,\n \n0\n,\n \n0\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPadRight\n[{\n1\n,\n \n2\n},\n \n5\n,\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n{\n1\n,\n \n2\n,\n \nx\n,\n \nx\n,\n \nx\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPadRight\n[{\n1\n,\n \n2\n},\n \n1\n,\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n{\n1\n}", 
             "title": "PadRight "
         }, 
         {
@@ -581,8 +711,13 @@
             "title": "PadRight"
         }, 
         {
+            "location": "/builtin/list/padright/#simple-examples", 
+            "text": "In [ 1 ] :=   PadRight [{ 1 ,   2 },   5 ]  Out [ 1 ] =   { 1 ,   2 ,   0 ,   0 ,   0 }   In [ 2 ] :=   PadRight [{ 1 ,   2 },   5 ,   x ]  Out [ 2 ] =   { 1 ,   2 ,   x ,   x ,   x }   In [ 3 ] :=   PadRight [{ 1 ,   2 },   1 ,   x ]  Out [ 3 ] =   { 1 }", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/list/padleft/", 
-            "text": "PadLeft\n\n\nAttributes[PadLeft] := {Protected}", 
+            "text": "PadLeft\n\n\nAttributes[PadLeft] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPadLeft\n[{\n1\n,\n \n2\n},\n \n5\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n0\n,\n \n0\n,\n \n0\n,\n \n1\n,\n \n2\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPadLeft\n[{\n1\n,\n \n2\n},\n \n5\n,\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n{\nx\n,\n \nx\n,\n \nx\n,\n \n1\n,\n \n2\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPadLeft\n[{\n1\n,\n \n2\n},\n \n1\n,\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n{\n2\n}\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nPadLeft\n[\na\n[],\n \n5\n,\n \nx\n]\n\n\nOut\n[\n4\n]\n=\n \na\n[\nx\n,\n \nx\n,\n \nx\n,\n \nx\n,\n \nx\n]", 
             "title": "PadLeft "
         }, 
         {
@@ -591,14 +726,24 @@
             "title": "PadLeft"
         }, 
         {
+            "location": "/builtin/list/padleft/#simple-examples", 
+            "text": "In [ 1 ] :=   PadLeft [{ 1 ,   2 },   5 ]  Out [ 1 ] =   { 0 ,   0 ,   0 ,   1 ,   2 }   In [ 2 ] :=   PadLeft [{ 1 ,   2 },   5 ,   x ]  Out [ 2 ] =   { x ,   x ,   x ,   1 ,   2 }   In [ 3 ] :=   PadLeft [{ 1 ,   2 },   1 ,   x ]  Out [ 3 ] =   { 2 }   In [ 4 ] :=   PadLeft [ a [],   5 ,   x ]  Out [ 4 ] =   a [ x ,   x ,   x ,   x ,   x ]", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/list/range/", 
-            "text": "Range\n\n\nAttributes[Range] := {Listable, Protected}", 
+            "text": "Range\n\n\nRange[n]\n returns a \nList\n of integers from 1 to \nn\n.\n\n\nRange[m, n]\n returns a \nList\n of integers from \nm\n to \nn\n.\n\n\nAttributes[Range] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nRange\n[\n3\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n1\n,\n \n2\n,\n \n3\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nRange\n[\n2\n,\n \n5\n]\n\n\nOut\n[\n2\n]\n=\n \n{\n2\n,\n \n3\n,\n \n4\n,\n \n5\n}", 
             "title": "Range "
         }, 
         {
             "location": "/builtin/list/range/#range", 
-            "text": "Attributes[Range] := {Listable, Protected}", 
+            "text": "Range[n]  returns a  List  of integers from 1 to  n .  Range[m, n]  returns a  List  of integers from  m  to  n .  Attributes[Range] := {Listable, Protected}", 
             "title": "Range"
+        }, 
+        {
+            "location": "/builtin/list/range/#simple-examples", 
+            "text": "In [ 1 ] :=   Range [ 3 ]  Out [ 1 ] =   { 1 ,   2 ,   3 }   In [ 2 ] :=   Range [ 2 ,   5 ]  Out [ 2 ] =   { 2 ,   3 ,   4 ,   5 }", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/order/", 
@@ -612,13 +757,18 @@
         }, 
         {
             "location": "/builtin/order/order/", 
-            "text": "Order\n\n\nAttributes[Order] := {Protected}", 
+            "text": "Order\n\n\nOrder[e1, e2]\n returns 1 if \ne1\n should come before \ne2\n in canonical ordering, -1 if it should come after, and 0 if the two expressions are equal.\n\n\nAttributes[Order] := {Protected}\n\n\nSimple examples\n\n\nFind the relative order of symbols:\n\n\nIn\n[\n1\n]\n:=\n \nOrder\n[\na\n,\n \nb\n]\n\n\nOut\n[\n1\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nOrder\n[\nb\n,\n \na\n]\n\n\nOut\n[\n2\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nOrder\n[\na\n,\n \naa\n]\n\n\nOut\n[\n3\n]\n=\n \n1\n\n\n\n\n\n\nFind the relative order of numbers:\n\n\nIn\n[\n4\n]\n:=\n \nOrder\n[\n2\n,\n \n1.\n]\n\n\nOut\n[\n4\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nOrder\n[\n1\n,\n \n2\n]\n\n\nOut\n[\n5\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nOrder\n[\n1\n,\n \n1\n]\n\n\nOut\n[\n6\n]\n=\n \n0\n\n\n\n\n\n\nFind the relative order of heterogenous types:\n\n\nIn\n[\n7\n]\n:=\n \nOrder\n[\nab\n,\n \n1\n]\n\n\nOut\n[\n7\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nOrder\n[\n1\n,\n \nab\n]\n\n\nOut\n[\n8\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \nOrder\n[\ny\n[\na\n],\n \nx\n]\n\n\nOut\n[\n9\n]\n=\n \n-\n1\n\n\n\n\n\n\nFind the relative order of rationals:\n\n\nIn\n[\n10\n]\n:=\n \nOrder\n[\nRational\n[\n-\n5\n,\n \n3\n],\n \nRational\n[\n-\n4\n,\n \n6\n]]\n\n\nOut\n[\n10\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n11\n]\n:=\n \nOrder\n[\nRational\n[\n4\n,\n \n6\n],\n \n.6\n]\n\n\nOut\n[\n11\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n12\n]\n:=\n \nOrder\n[\n.6\n,\n \nRational\n[\n4\n,\n \n6\n]]\n\n\nOut\n[\n12\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n13\n]\n:=\n \nOrder\n[\nRational\n[\n4\n,\n \n6\n],\n \n.7\n]\n\n\nOut\n[\n13\n]\n=\n \n1\n\n\n\n\n\n\nFind the relative order of expressions:\n\n\nIn\n[\n14\n]\n:=\n \nOrder\n[\nbar\n[\nx\n,\n \ny\n],\n \nbar\n[\nx\n,\n \ny\n]]\n\n\nOut\n[\n14\n]\n=\n \n0\n\n\n\n\n\n\nIn\n[\n15\n]\n:=\n \nOrder\n[\nfizz\n[\nbar\n[\nx\n,\n \ny\n]],\n \nfizz\n[\nbar\n[\nx\n,\n \ny\n,\n \na\n]]]\n\n\nOut\n[\n15\n]\n=\n \n1", 
             "title": "Order "
         }, 
         {
             "location": "/builtin/order/order/#order", 
-            "text": "Attributes[Order] := {Protected}", 
+            "text": "Order[e1, e2]  returns 1 if  e1  should come before  e2  in canonical ordering, -1 if it should come after, and 0 if the two expressions are equal.  Attributes[Order] := {Protected}", 
             "title": "Order"
+        }, 
+        {
+            "location": "/builtin/order/order/#simple-examples", 
+            "text": "Find the relative order of symbols:  In [ 1 ] :=   Order [ a ,   b ]  Out [ 1 ] =   1   In [ 2 ] :=   Order [ b ,   a ]  Out [ 2 ] =   - 1   In [ 3 ] :=   Order [ a ,   aa ]  Out [ 3 ] =   1   Find the relative order of numbers:  In [ 4 ] :=   Order [ 2 ,   1. ]  Out [ 4 ] =   - 1   In [ 5 ] :=   Order [ 1 ,   2 ]  Out [ 5 ] =   1   In [ 6 ] :=   Order [ 1 ,   1 ]  Out [ 6 ] =   0   Find the relative order of heterogenous types:  In [ 7 ] :=   Order [ ab ,   1 ]  Out [ 7 ] =   - 1   In [ 8 ] :=   Order [ 1 ,   ab ]  Out [ 8 ] =   1   In [ 9 ] :=   Order [ y [ a ],   x ]  Out [ 9 ] =   - 1   Find the relative order of rationals:  In [ 10 ] :=   Order [ Rational [ - 5 ,   3 ],   Rational [ - 4 ,   6 ]]  Out [ 10 ] =   1   In [ 11 ] :=   Order [ Rational [ 4 ,   6 ],   .6 ]  Out [ 11 ] =   - 1   In [ 12 ] :=   Order [ .6 ,   Rational [ 4 ,   6 ]]  Out [ 12 ] =   1   In [ 13 ] :=   Order [ Rational [ 4 ,   6 ],   .7 ]  Out [ 13 ] =   1   Find the relative order of expressions:  In [ 14 ] :=   Order [ bar [ x ,   y ],   bar [ x ,   y ]]  Out [ 14 ] =   0   In [ 15 ] :=   Order [ fizz [ bar [ x ,   y ]],   fizz [ bar [ x ,   y ,   a ]]]  Out [ 15 ] =   1", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/plus/", 
@@ -632,13 +782,18 @@
         }, 
         {
             "location": "/builtin/plus/plus/", 
-            "text": "Plus\n\n\nAttributes[Plus] := {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}\n\n\nRules\n\n\nPlus\n[\na_\n,\n \n-\na_\n,\n \nrest___\n]\n \n:=\n \nPlus\n[\nrest\n]\n\n\nPlus\n[\nc1_Integer\n*\na_\n,\n \nc2_Integer\n*\na_\n,\n \nrest___\n]\n \n:=\n \n((\nc1\n+\nc2\n)\n*\na\n \n+\n \nrest\n)\n\n\nPlus\n[\nc1_Rational\n*\na_\n,\n \nc2_Rational\n*\na_\n,\n \nrest___\n]\n \n:=\n \n((\nc1\n+\nc2\n)\n*\na\n \n+\n \nrest\n)\n\n\nPlus\n[\nc1_Integer\n*\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \n(\nc1\n+\n1\n)\n*\na\n+\nrest\n\n\nPlus\n[\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \n2\n*\na\n \n+\n \nrest\n\n\nPlus\n[\nc1_Real\n*\na_\n,\n \nc2_Integer\n*\na_\n,\n \nrest___\n]\n \n:=\n \n(\nc1\n+\nc2\n)\n*\na\n \n+\n \nrest\n\n\nPlus\n[\nc_Real\n*\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \n(\nc\n+\n1\n)\n*\na\n \n+\n \nrest", 
+            "text": "Plus\n\n\n(e1 + e2 + ...)\n computes the sum of all expressions in the function.\n\n\nAttributes[Plus] := {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n1\n \n+\n \n1\n\n\nOut\n[\n1\n]\n=\n \n2\n\n\n\n\n\n\nIf Reals are present, other Integers are demoted to Reals:\n\n\nIn\n[\n2\n]\n:=\n \n(\n5.2\n \n-\n \n.2\n)\n \n-\n \n5\n\n\nOut\n[\n2\n]\n=\n \n0.\n\n\n\n\n\n\nPlus automatically combines like terms:\n\n\nIn\n[\n3\n]\n:=\n \na\n \n+\n \nb\n^\n2\n \n+\n \n5\n*\nb\n^\n2\n\n\nOut\n[\n3\n]\n=\n \na\n+\n6\n*\nb\n^\n2\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \n(\na\n+\nb\n)\n-\n(\na\n+\nb\n)\n+\nc\n-\nc\n+\n2\n*\nc\n^\na\n+\n2\n*\nd\n+\n5\n*\nd\n+\nd\n-\n5\n*\nd\n+\n3\n*\nc\n^\na\n\n\nOut\n[\n4\n]\n=\n \n((\n5\n \n*\n \nc\n^\na\n)\n \n+\n \n(\n3\n \n*\n \nd\n))\n\n\n\n\n\n\nRules\n\n\nPlus\n[\na_\n,\n \n-\na_\n,\n \nrest___\n]\n \n:=\n \nPlus\n[\nrest\n]\n\n\nPlus\n[\nc1_Integer\n*\na_\n,\n \nc2_Integer\n*\na_\n,\n \nrest___\n]\n \n:=\n \n((\nc1\n+\nc2\n)\n*\na\n \n+\n \nrest\n)\n\n\nPlus\n[\nc1_Rational\n*\na_\n,\n \nc2_Rational\n*\na_\n,\n \nrest___\n]\n \n:=\n \n((\nc1\n+\nc2\n)\n*\na\n \n+\n \nrest\n)\n\n\nPlus\n[\nc1_Integer\n*\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \n(\nc1\n+\n1\n)\n*\na\n+\nrest\n\n\nPlus\n[\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \n2\n*\na\n \n+\n \nrest\n\n\nPlus\n[\nc1_Real\n*\na_\n,\n \nc2_Integer\n*\na_\n,\n \nrest___\n]\n \n:=\n \n(\nc1\n+\nc2\n)\n*\na\n \n+\n \nrest\n\n\nPlus\n[\nc_Real\n*\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \n(\nc\n+\n1\n)\n*\na\n \n+\n \nrest", 
             "title": "Plus "
         }, 
         {
             "location": "/builtin/plus/plus/#plus", 
-            "text": "Attributes[Plus] := {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}", 
+            "text": "(e1 + e2 + ...)  computes the sum of all expressions in the function.  Attributes[Plus] := {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}", 
             "title": "Plus"
+        }, 
+        {
+            "location": "/builtin/plus/plus/#simple-examples", 
+            "text": "In [ 1 ] :=   1   +   1  Out [ 1 ] =   2   If Reals are present, other Integers are demoted to Reals:  In [ 2 ] :=   ( 5.2   -   .2 )   -   5  Out [ 2 ] =   0.   Plus automatically combines like terms:  In [ 3 ] :=   a   +   b ^ 2   +   5 * b ^ 2  Out [ 3 ] =   a + 6 * b ^ 2   In [ 4 ] :=   ( a + b ) - ( a + b ) + c - c + 2 * c ^ a + 2 * d + 5 * d + d - 5 * d + 3 * c ^ a  Out [ 4 ] =   (( 5   *   c ^ a )   +   ( 3   *   d ))", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/plus/plus/#rules", 
@@ -647,13 +802,18 @@
         }, 
         {
             "location": "/builtin/plus/infinity/", 
-            "text": "Infinity\n\n\nAttributes[Infinity] := {Protected, ReadProtected}\n\n\nRules\n\n\nPlus\n[\nInfinity\n,\n \n_Integer\n,\n \nrest___\n]\n \n:=\n \nInfinity\n \n+\n \nrest\n\n\nPlus\n[\nInfinity\n,\n \n_Real\n,\n \nrest___\n]\n \n:=\n \nInfinity\n \n+\n \nrest\n\n\nPlus\n[\n-\nInfinity\n,\n \n_Integer\n,\n \nrest___\n]\n \n:=\n \n-\nInfinity\n \n+\n \nrest\n\n\nPlus\n[\n-\nInfinity\n,\n \n_Real\n,\n \nrest___\n]\n \n:=\n \n-\nInfinity\n \n+\n \nrest\n\n\nPlus\n[\nInfinity\n,\n \n-\nInfinity\n,\n \nrest___\n]\n \n:=\n \nIndeterminate\n \n+\n \nrest", 
+            "text": "Infinity\n\n\nInfinity\n represents the mathematical concept of infinity.\n\n\nAttributes[Infinity] := {Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nInfinity\n \n-\n \n1\n\n\nOut\n[\n1\n]\n=\n \nInfinity\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nInfinity\n \n-\n \n990999999\n\n\nOut\n[\n2\n]\n=\n \nInfinity\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nInfinity\n \n-\n \n990999999.\n\n\nOut\n[\n3\n]\n=\n \nInfinity\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nInfinity\n \n-\n \nInfinity\n\n\nOut\n[\n4\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nInfinity\n*-\n1\n\n\nOut\n[\n5\n]\n=\n \n-\nInfinity\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \n-\nInfinity\n \n+\n \n1\n\n\nOut\n[\n6\n]\n=\n \n-\nInfinity\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \n-\nInfinity\n \n+\n \n999\n\n\nOut\n[\n7\n]\n=\n \n-\nInfinity\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \n-\nInfinity\n*-\n1\n\n\nOut\n[\n8\n]\n=\n \nInfinity\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \n1\n/\nInfinity\n\n\nOut\n[\n9\n]\n=\n \n0\n\n\n\n\n\n\nRules\n\n\nPlus\n[\nInfinity\n,\n \n_Integer\n,\n \nrest___\n]\n \n:=\n \nInfinity\n \n+\n \nrest\n\n\nPlus\n[\nInfinity\n,\n \n_Real\n,\n \nrest___\n]\n \n:=\n \nInfinity\n \n+\n \nrest\n\n\nPlus\n[\n-\nInfinity\n,\n \n_Integer\n,\n \nrest___\n]\n \n:=\n \n-\nInfinity\n \n+\n \nrest\n\n\nPlus\n[\n-\nInfinity\n,\n \n_Real\n,\n \nrest___\n]\n \n:=\n \n-\nInfinity\n \n+\n \nrest\n\n\nPlus\n[\nInfinity\n,\n \n-\nInfinity\n,\n \nrest___\n]\n \n:=\n \nIndeterminate\n \n+\n \nrest", 
             "title": "Infinity "
         }, 
         {
             "location": "/builtin/plus/infinity/#infinity", 
-            "text": "Attributes[Infinity] := {Protected, ReadProtected}", 
+            "text": "Infinity  represents the mathematical concept of infinity.  Attributes[Infinity] := {Protected, ReadProtected}", 
             "title": "Infinity"
+        }, 
+        {
+            "location": "/builtin/plus/infinity/#simple-examples", 
+            "text": "In [ 1 ] :=   Infinity   -   1  Out [ 1 ] =   Infinity   In [ 2 ] :=   Infinity   -   990999999  Out [ 2 ] =   Infinity   In [ 3 ] :=   Infinity   -   990999999.  Out [ 3 ] =   Infinity   In [ 4 ] :=   Infinity   -   Infinity  Out [ 4 ] =   Indeterminate   In [ 5 ] :=   Infinity *- 1  Out [ 5 ] =   - Infinity   In [ 6 ] :=   - Infinity   +   1  Out [ 6 ] =   - Infinity   In [ 7 ] :=   - Infinity   +   999  Out [ 7 ] =   - Infinity   In [ 8 ] :=   - Infinity *- 1  Out [ 8 ] =   Infinity   In [ 9 ] :=   1 / Infinity  Out [ 9 ] =   0", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/plus/infinity/#rules", 
@@ -662,23 +822,33 @@
         }, 
         {
             "location": "/builtin/plus/complexinfinity/", 
-            "text": "ComplexInfinity\n\n\nAttributes[ComplexInfinity] := {Protected}", 
+            "text": "ComplexInfinity\n\n\nComplexInfinity\n represents an an infinite quantity that extends in an unknown direction in the complex plane.\n\n\nAttributes[ComplexInfinity] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n0\n^\n(\n-\n1\n)\n\n\nOut\n[\n1\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFactorial\n[\n-\n1\n]\n\n\nOut\n[\n2\n]\n=\n \nComplexInfinity", 
             "title": "ComplexInfinity "
         }, 
         {
             "location": "/builtin/plus/complexinfinity/#complexinfinity", 
-            "text": "Attributes[ComplexInfinity] := {Protected}", 
+            "text": "ComplexInfinity  represents an an infinite quantity that extends in an unknown direction in the complex plane.  Attributes[ComplexInfinity] := {Protected}", 
             "title": "ComplexInfinity"
         }, 
         {
+            "location": "/builtin/plus/complexinfinity/#simple-examples", 
+            "text": "In [ 1 ] :=   0 ^ ( - 1 )  Out [ 1 ] =   ComplexInfinity   In [ 2 ] :=   Factorial [ - 1 ]  Out [ 2 ] =   ComplexInfinity", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/plus/indeterminate/", 
-            "text": "Indeterminate\n\n\nAttributes[Indeterminate] := {Protected}", 
+            "text": "Indeterminate\n\n\nIndeterminate\n represents an indeterminate form.\n\n\nAttributes[Indeterminate] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n0\n/\n0\n\n\nOut\n[\n1\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nInfinity\n \n-\n \nInfinity\n\n\nOut\n[\n2\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n0\n \n*\n \nInfinity\n\n\nOut\n[\n3\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \n0\n \n*\n \nComplexInfinity\n\n\nOut\n[\n4\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \n0\n^\n0\n\n\nOut\n[\n5\n]\n=\n \nIndeterminate", 
             "title": "Indeterminate "
         }, 
         {
             "location": "/builtin/plus/indeterminate/#indeterminate", 
-            "text": "Attributes[Indeterminate] := {Protected}", 
+            "text": "Indeterminate  represents an indeterminate form.  Attributes[Indeterminate] := {Protected}", 
             "title": "Indeterminate"
+        }, 
+        {
+            "location": "/builtin/plus/indeterminate/#simple-examples", 
+            "text": "In [ 1 ] :=   0 / 0  Out [ 1 ] =   Indeterminate   In [ 2 ] :=   Infinity   -   Infinity  Out [ 2 ] =   Indeterminate   In [ 3 ] :=   0   *   Infinity  Out [ 3 ] =   Indeterminate   In [ 4 ] :=   0   *   ComplexInfinity  Out [ 4 ] =   Indeterminate   In [ 5 ] :=   0 ^ 0  Out [ 5 ] =   Indeterminate", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/power/", 

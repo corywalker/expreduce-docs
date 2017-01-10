@@ -254,6 +254,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="constants" href="../../constants/">
         constants
@@ -326,10 +330,6 @@
       </a>
       
     </li>
-  
-
-      
-        
   
 
       
@@ -715,7 +715,87 @@
         <div class="wrapper">
           
           <h1 id="order">Order</h1>
+<p><code>Order[e1, e2]</code> returns 1 if <code>e1</code> should come before <code>e2</code> in canonical ordering, -1 if it should come after, and 0 if the two expressions are equal.</p>
 <p><code>Attributes[Order] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<p>Find the relative order of symbols:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">aa</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<p>Find the relative order of numbers:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1.</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="w"></span>
+</pre></div>
+
+
+<p>Find the relative order of heterogenous types:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nv">ab</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">ab</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nv">y</span><span class="p">[</span><span class="nv">a</span><span class="p">],</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<p>Find the relative order of rationals:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nb">Rational</span><span class="p">[</span><span class="o">-</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">],</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="o">-</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nb">Rational</span><span class="p">[</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">],</span><span class="w"> </span><span class="m">.6</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">12</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="m">.6</span><span class="p">,</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">12</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">13</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nb">Rational</span><span class="p">[</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">],</span><span class="w"> </span><span class="m">.7</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">13</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
+</pre></div>
+
+
+<p>Find the relative order of expressions:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">14</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nv">bar</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">],</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">14</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">15</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Order</span><span class="p">[</span><span class="nv">fizz</span><span class="p">[</span><span class="nv">bar</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">]],</span><span class="w"> </span><span class="nv">fizz</span><span class="p">[</span><span class="nv">bar</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="p">]]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">15</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

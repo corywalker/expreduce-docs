@@ -254,6 +254,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="constants" href="../../constants/">
         constants
@@ -326,10 +330,6 @@
       </a>
       
     </li>
-  
-
-      
-        
   
 
       
@@ -715,7 +715,38 @@
         <div class="wrapper">
           
           <h1 id="function">Function</h1>
+<p><code>Function[inner]</code> defines a pure function where <code>inner</code> is evaluated with <code>Slot</code> parameters.</p>
+<p><code>Function[x, inner]</code> defines a pure function where <code>inner</code> is evaluated a single parameter <code>x</code>.</p>
 <p><code>Attributes[Function] := {HoldAll, Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">#</span><span class="p">][</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">#</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="nf">#2</span><span class="p">][</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="nv">y</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">][</span><span class="nv">a</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">][</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">][</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">][</span><span class="o">-</span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -751,14 +782,14 @@
     </div>
     <div class="next">
       
-        <a href="../hold/" title="Hold ">
+        <a href="../slot/" title="Slot ">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Hold 
+                Slot 
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

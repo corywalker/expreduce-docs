@@ -254,6 +254,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="constants" href="../../constants/">
         constants
@@ -326,10 +330,6 @@
       </a>
       
     </li>
-  
-
-      
-        
   
 
       
@@ -715,9 +715,56 @@
         <div class="wrapper">
           
           <h1 id="table">Table</h1>
+<p><code>Table[expr, n]</code> returns a list with <code>n</code> copies of <code>expr</code>.</p>
+<p><code>Table[expr, {sym, n}]</code> returns a list with <code>expr</code> evaluated with <code>sym</code> = 1 to <code>n</code>.</p>
+<p><code>Table[expr, {sym, m, n}]</code> returns a list with <code>expr</code> evaluated with <code>sym</code> = <code>m</code> to <code>n</code>.</p>
 <p><code>Attributes[Table] := {HoldAll, Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<p>Create a list of the first 10 squares:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nv">n</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">n</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">36</span><span class="p">,</span><span class="w"> </span><span class="m">49</span><span class="p">,</span><span class="w"> </span><span class="m">64</span><span class="p">,</span><span class="w"> </span><span class="m">81</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<p>Iteration definitions do not have side effects:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">i</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">i</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">22</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">22</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">i</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">22</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nv">x</span><span class="p">[</span><span class="m">99</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="nv">x</span><span class="p">[</span><span class="o">_</span><span class="p">],</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
 <h2 id="rules">Rules</h2>
-<div class="language-wl"><pre><span></span><span class="nb">Table</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nt">b_Integer</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">}]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">Table</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nt">b_Integer</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">UniqueDefined`i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">}]</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             

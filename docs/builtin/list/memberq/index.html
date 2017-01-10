@@ -254,6 +254,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="constants" href="../../constants/">
         constants
@@ -326,10 +330,6 @@
       </a>
       
     </li>
-  
-
-      
-        
   
 
       
@@ -715,7 +715,121 @@
         <div class="wrapper">
           
           <h1 id="memberq">MemberQ</h1>
+<p><code>MemberQ[expr, pat]</code> returns True if any of the elements in <code>expr</code> match <code>pat</code>, otherwise returns False.</p>
 <p><code>Attributes[MemberQ] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="m">0</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<p><code>MemberQ</code> works with patterns:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="nt">_Integer</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="o">_</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="nt">_Real</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="nt">testmatch_Integer</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">testmatch</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">testmatch</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="o">_</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="nv">c</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">12</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="nv">a</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">12</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<p><code>MemberQ</code> works with BlankSequences:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="o">___</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="o">__</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="nt">__Integer</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="nt">___Integer</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="nt">___Symbol</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="nt">__Symbol</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">},</span><span class="w"> </span><span class="nt">__Symbol</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">},</span><span class="w"> </span><span class="nt">__Integer</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<p><code>expr</code> need not be a List:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[</span><span class="nv">bar</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">],</span><span class="w"> </span><span class="nv">a</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MemberQ</span><span class="p">[</span><span class="nv">bar</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">],</span><span class="w"> </span><span class="nv">bar</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

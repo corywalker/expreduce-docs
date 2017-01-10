@@ -254,6 +254,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="constants" href="../../constants/">
         constants
@@ -326,10 +330,6 @@
       </a>
       
     </li>
-  
-
-      
-        
   
 
       
@@ -715,7 +715,36 @@
         <div class="wrapper">
           
           <h1 id="sequence">Sequence</h1>
+<p><code>Sequence[e1, e2, ...]</code> holds a list of expressions to be automatically inserted into another function.</p>
 <p><code>Attributes[Sequence] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<p>Sequence arguments are automatically inserted into the parent functions:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nb">Sequence</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+
+
+<p>Outside of the context of functions, Sequence objects do not merge:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Sequence</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Sequence</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Sequence</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Sequence</span><span class="p">[</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">14</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Sequence</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="o">*</span><span class="nb">Sequence</span><span class="p">[</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">120</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<p>Empty <code>Sequence[]</code> objects effectively disappear:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nb">Sequence</span><span class="p">[]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[]</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -751,14 +780,14 @@
     </div>
     <div class="next">
       
-        <a href="../apply/" title="Apply ">
+        <a href="../evaluate/" title="Evaluate ">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Apply 
+                Evaluate 
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

@@ -254,6 +254,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="constants" href="../../constants/">
         constants
@@ -326,10 +330,6 @@
       </a>
       
     </li>
-  
-
-      
-        
   
 
       
@@ -715,7 +715,31 @@
         <div class="wrapper">
           
           <h1 id="plus">Plus</h1>
+<p><code>(e1 + e2 + ...)</code> computes the sum of all expressions in the function.</p>
 <p><code>Attributes[Plus] := {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"></span>
+</pre></div>
+
+
+<p>If Reals are present, other Integers are demoted to Reals:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="m">5.2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">.2</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">5</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">0.</span><span class="w"></span>
+</pre></div>
+
+
+<p>Plus automatically combines like terms:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="o">*</span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">a</span><span class="o">+</span><span class="m">6</span><span class="o">*</span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="o">+</span><span class="nv">b</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="nv">a</span><span class="o">+</span><span class="nv">b</span><span class="p">)</span><span class="o">+</span><span class="nv">c</span><span class="o">-</span><span class="nv">c</span><span class="o">+</span><span class="m">2</span><span class="o">*</span><span class="nv">c</span><span class="o">^</span><span class="nv">a</span><span class="o">+</span><span class="m">2</span><span class="o">*</span><span class="nv">d</span><span class="o">+</span><span class="m">5</span><span class="o">*</span><span class="nv">d</span><span class="o">+</span><span class="nv">d</span><span class="o">-</span><span class="m">5</span><span class="o">*</span><span class="nv">d</span><span class="o">+</span><span class="m">3</span><span class="o">*</span><span class="nv">c</span><span class="o">^</span><span class="nv">a</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="m">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">c</span><span class="o">^</span><span class="nv">a</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">d</span><span class="p">))</span><span class="w"></span>
+</pre></div>
+
+
 <h2 id="rules">Rules</h2>
 <div class="language-wl"><pre><span></span><span class="nb">Plus</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nt">rest___</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Plus</span><span class="p">[</span><span class="nv">rest</span><span class="p">]</span><span class="w"></span>
 <span class="nb">Plus</span><span class="p">[</span><span class="nt">c1_Integer</span><span class="o">*</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nt">c2_Integer</span><span class="o">*</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nt">rest___</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">((</span><span class="nv">c1</span><span class="o">+</span><span class="nv">c2</span><span class="p">)</span><span class="o">*</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">rest</span><span class="p">)</span><span class="w"></span>

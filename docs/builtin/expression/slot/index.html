@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>KroneckerDelta  - Expreduce</title>
+        <title>Slot  - Expreduce</title>
       
       
       
@@ -99,7 +99,7 @@
             
           </span>
         
-        KroneckerDelta 
+        Slot 
       </div>
     </div>
     
@@ -254,6 +254,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="constants" href="../../constants/">
         constants
@@ -286,7 +290,7 @@
         
   
     <li>
-      <a class="" title="expression" href="../../expression/">
+      <a class="" title="expression" href="../">
         expression
       </a>
       
@@ -321,15 +325,11 @@
         
   
     <li>
-      <a class="" title="flowcontrol" href="../">
+      <a class="" title="flowcontrol" href="../../flowcontrol/">
         flowcontrol
       </a>
       
     </li>
-  
-
-      
-        
   
 
       
@@ -714,10 +714,28 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="kroneckerdelta">KroneckerDelta</h1>
-<p><code>Attributes[KroneckerDelta] := {NumericFunction, Orderless, Protected, ReadProtected}</code></p>
-<h2 id="rules">Rules</h2>
-<div class="language-wl"><pre><span></span><span class="nb">KroneckerDelta</span><span class="p">[</span><span class="nt">x_Integer</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">If</span><span class="p">[</span><span class="nv">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">]</span><span class="w"></span>
+          <h1 id="slot">Slot</h1>
+<p><code>#</code> serves as a pure function's first parameter.</p>
+<p><code>#n</code> serves as a pure function's <code>n</code>'th parameter.</p>
+<p><code>Attributes[Slot] := {NHoldAll, Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">#</span><span class="p">][</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">#</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="nf">#2</span><span class="p">][</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="nv">y</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nf">#</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nb">Slot</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nf">#2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nb">Slot</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             
@@ -735,7 +753,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../while/" title="While ">
+        <a href="../function/" title="Function ">
           <span class="direction">
             Previous
           </span>
@@ -745,7 +763,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                While 
+                Function 
               </div>
             </div>
           </div>
@@ -754,14 +772,14 @@
     </div>
     <div class="next">
       
-        <a href="../../list/" title="list">
+        <a href="../hold/" title="Hold ">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                list
+                Hold 
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
