@@ -471,10 +471,6 @@
       
         
   
-
-      
-        
-  
     <li>
       <a class="" title="random" href="../">
         random
@@ -542,6 +538,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -715,7 +715,45 @@
         <div class="wrapper">
           
           <h1 id="randomreal">RandomReal</h1>
+<p><code>RandomReal[]</code> generates a random floating point from 0 to 1.</p>
+<p><code>RandomReal[max]</code> generates a random floating point from 0 to <code>max</code>.</p>
+<p><code>RandomReal[min, max]</code> generates a random floating point from <code>min</code> to `max.</p>
 <p><code>Attributes[RandomReal] := {Protected}</code></p>
+<h2 id="details">Details</h2>
+<p><code>SeedRandom[UnixTime[]]</code> is called automatically upon initialization of Expreduce, so random number sequences will not repeat over subsequent sessions.</p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">RandomReal</span><span class="p">[]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">0.0750914</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<p>Use <code>SeedRandom</code> to seed the RNG:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">SeedRandom</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Null</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">RandomReal</span><span class="p">[]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">0.719983</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">RandomReal</span><span class="p">[]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">0.652631</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">SeedRandom</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Null</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">RandomReal</span><span class="p">[]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">0.719983</span><span class="w"></span>
+</pre></div>
+
+
 <h2 id="rules">Rules</h2>
 <div class="language-wl"><pre><span></span><span class="nb">RandomReal</span><span class="p">[{</span><span class="nt">min_</span><span class="p">,</span><span class="w"> </span><span class="nt">max_</span><span class="p">}]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">RandomReal</span><span class="p">[]</span><span class="o">*</span><span class="p">(</span><span class="nv">max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">min</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">min</span><span class="w"></span>
 <span class="nb">RandomReal</span><span class="p">[</span><span class="nt">max_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">RandomReal</span><span class="p">[]</span><span class="o">*</span><span class="nv">max</span><span class="w"></span>

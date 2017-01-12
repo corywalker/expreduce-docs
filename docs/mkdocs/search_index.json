@@ -822,7 +822,7 @@
         }, 
         {
             "location": "/builtin/plus/complexinfinity/", 
-            "text": "ComplexInfinity\n\n\nComplexInfinity\n represents an an infinite quantity that extends in an unknown direction in the complex plane.\n\n\nAttributes[ComplexInfinity] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n0\n^\n(\n-\n1\n)\n\n\nOut\n[\n1\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFactorial\n[\n-\n1\n]\n\n\nOut\n[\n2\n]\n=\n \nComplexInfinity", 
+            "text": "ComplexInfinity\n\n\nComplexInfinity\n represents an an infinite quantity that extends in an unknown direction in the complex plane.\n\n\nAttributes[ComplexInfinity] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n0\n^\n(\n-\n1\n)\n\n\nOut\n[\n1\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \na\n/\n0\n\n\nOut\n[\n2\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nComplexInfinity\n \n*\n \nfoo\n[\nx\n]\n\n\nOut\n[\n3\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nFactorial\n[\n-\n1\n]\n\n\nOut\n[\n4\n]\n=\n \nComplexInfinity", 
             "title": "ComplexInfinity "
         }, 
         {
@@ -832,7 +832,7 @@
         }, 
         {
             "location": "/builtin/plus/complexinfinity/#simple-examples", 
-            "text": "In [ 1 ] :=   0 ^ ( - 1 )  Out [ 1 ] =   ComplexInfinity   In [ 2 ] :=   Factorial [ - 1 ]  Out [ 2 ] =   ComplexInfinity", 
+            "text": "In [ 1 ] :=   0 ^ ( - 1 )  Out [ 1 ] =   ComplexInfinity   In [ 2 ] :=   a / 0  Out [ 2 ] =   ComplexInfinity   In [ 3 ] :=   ComplexInfinity   *   foo [ x ]  Out [ 3 ] =   ComplexInfinity   In [ 4 ] :=   Factorial [ - 1 ]  Out [ 4 ] =   ComplexInfinity", 
             "title": "Simple examples"
         }, 
         {
@@ -852,17 +852,17 @@
         }, 
         {
             "location": "/builtin/power/", 
-            "text": "power documentation\n\n\nPower\n\n\nPowerExpand", 
+            "text": "power documentation\n\n\nPower", 
             "title": "power"
         }, 
         {
             "location": "/builtin/power/#power-documentation", 
-            "text": "Power  PowerExpand", 
+            "text": "Power", 
             "title": "power documentation"
         }, 
         {
             "location": "/builtin/power/power/", 
-            "text": "Power\n\n\nAttributes[Power] := {Listable, NumericFunction, OneIdentity, Protected}\n\n\nRules\n\n\nPower\n[\nPower\n[\na_\n,\nb_Integer\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Real\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nTimes\n[\nExcept\n[\n_Symbol\n,\n \nfirst_\n],\n \ninner___\n],\n \npow_\n]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nTimes\n[\nfirst_\n,\n \ninner___\n],\n \nExcept\n[\n_Symbol\n,\n \npow_\n]]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nRational\n[\na_\n,\nb_\n],\n \n-\n1\n]\n \n:=\n \nRational\n[\nb\n,\na\n]", 
+            "text": "Power\n\n\nAttributes[Power] := {Listable, NumericFunction, OneIdentity, Protected}\n\n\nSimple examples\n\n\nExponents of integers are computed exactly:\n\n\nIn\n[\n1\n]\n:=\n \n(\n-\n5\n)\n^-\n3\n\n\nOut\n[\n1\n]\n=\n \n-\n1\n/\n125\n\n\n\n\n\n\nFloating point exponents are handled with floating point precision:\n\n\nIn\n[\n2\n]\n:=\n \n.5\n^-\n10000.\n\n\nOut\n[\n2\n]\n=\n \n1.99506\ne\n+\n3010\n\n\n\n\n\n\nAutomatically apply some basic simplification rules:\n\n\nIn\n[\n3\n]\n:=\n \n(\nm\n^\n2.\n)\n^\n2\n\n\nOut\n[\n3\n]\n=\n \nm\n^\n4.\n\n\n\n\n\n\nFurther examples\n\n\nExpreduce handles problematic exponents accordingly:\n\n\nIn\n[\n1\n]\n:=\n \n0\n^\n0\n\n\nOut\n[\n1\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n0\n^\n(\n-\n1\n)\n\n\nOut\n[\n2\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nRules\n\n\nPower\n[\nPower\n[\na_\n,\nb_Integer\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Real\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nTimes\n[\nExcept\n[\n_Symbol\n,\n \nfirst_\n],\n \ninner___\n],\n \npow_\n]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nTimes\n[\nfirst_\n,\n \ninner___\n],\n \nExcept\n[\n_Symbol\n,\n \npow_\n]]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nRational\n[\na_\n,\nb_\n],\n \n-\n1\n]\n \n:=\n \nRational\n[\nb\n,\na\n]", 
             "title": "Power "
         }, 
         {
@@ -871,23 +871,18 @@
             "title": "Power"
         }, 
         {
+            "location": "/builtin/power/power/#simple-examples", 
+            "text": "Exponents of integers are computed exactly:  In [ 1 ] :=   ( - 5 ) ^- 3  Out [ 1 ] =   - 1 / 125   Floating point exponents are handled with floating point precision:  In [ 2 ] :=   .5 ^- 10000.  Out [ 2 ] =   1.99506 e + 3010   Automatically apply some basic simplification rules:  In [ 3 ] :=   ( m ^ 2. ) ^ 2  Out [ 3 ] =   m ^ 4.", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/power/power/#further-examples", 
+            "text": "Expreduce handles problematic exponents accordingly:  In [ 1 ] :=   0 ^ 0  Out [ 1 ] =   Indeterminate   In [ 2 ] :=   0 ^ ( - 1 )  Out [ 2 ] =   ComplexInfinity", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/power/power/#rules", 
             "text": "Power [ Power [ a_ , b_Integer ], c_Integer ]   :=   a ^ ( b * c )  Power [ Power [ a_ , b_Real ], c_Integer ]   :=   a ^ ( b * c )  Power [ Times [ Except [ _Symbol ,   first_ ],   inner___ ],   pow_ ]   :=   first ^ pow * Power [ Times [ inner ], pow ]  Power [ Times [ first_ ,   inner___ ],   Except [ _Symbol ,   pow_ ]]   :=   first ^ pow * Power [ Times [ inner ], pow ]  Power [ Rational [ a_ , b_ ],   - 1 ]   :=   Rational [ b , a ]", 
-            "title": "Rules"
-        }, 
-        {
-            "location": "/builtin/power/powerexpand/", 
-            "text": "PowerExpand\n\n\nAttributes[PowerExpand] := {Protected}\n\n\nRules\n\n\nPowerExpand\n[\nexp_\n]\n \n:=\n \nexp\n \n//.\n \n{\nLog\n[\nx_\n \ny_\n]\n:\nLog\n[\nx\n]\n+\nLog\n[\ny\n],\nLog\n[\nx_\n^\nk_\n]\n:\nk\n \nLog\n[\nx\n]}", 
-            "title": "PowerExpand "
-        }, 
-        {
-            "location": "/builtin/power/powerexpand/#powerexpand", 
-            "text": "Attributes[PowerExpand] := {Protected}", 
-            "title": "PowerExpand"
-        }, 
-        {
-            "location": "/builtin/power/powerexpand/#rules", 
-            "text": "PowerExpand [ exp_ ]   :=   exp   //.   { Log [ x_   y_ ] : Log [ x ] + Log [ y ], Log [ x_ ^ k_ ] : k   Log [ x ]}", 
             "title": "Rules"
         }, 
         {
@@ -902,13 +897,28 @@
         }, 
         {
             "location": "/builtin/random/randomreal/", 
-            "text": "RandomReal\n\n\nAttributes[RandomReal] := {Protected}\n\n\nRules\n\n\nRandomReal\n[{\nmin_\n,\n \nmax_\n}]\n \n:=\n \nRandomReal\n[]\n*\n(\nmax\n \n-\n \nmin\n)\n \n+\n \nmin\n\n\nRandomReal\n[\nmax_\n]\n \n:=\n \nRandomReal\n[]\n*\nmax", 
+            "text": "RandomReal\n\n\nRandomReal[]\n generates a random floating point from 0 to 1.\n\n\nRandomReal[max]\n generates a random floating point from 0 to \nmax\n.\n\n\nRandomReal[min, max]\n generates a random floating point from \nmin\n to `max.\n\n\nAttributes[RandomReal] := {Protected}\n\n\nDetails\n\n\nSeedRandom[UnixTime[]]\n is called automatically upon initialization of Expreduce, so random number sequences will not repeat over subsequent sessions.\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nRandomReal\n[]\n\n\nOut\n[\n1\n]\n=\n \n0.0750914\n\n\n\n\n\n\nFurther examples\n\n\nUse \nSeedRandom\n to seed the RNG:\n\n\nIn\n[\n1\n]\n:=\n \nSeedRandom\n[\n3\n]\n\n\nOut\n[\n1\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nRandomReal\n[]\n\n\nOut\n[\n2\n]\n=\n \n0.719983\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nRandomReal\n[]\n\n\nOut\n[\n3\n]\n=\n \n0.652631\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSeedRandom\n[\n3\n]\n\n\nOut\n[\n4\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nRandomReal\n[]\n\n\nOut\n[\n5\n]\n=\n \n0.719983\n\n\n\n\n\n\nRules\n\n\nRandomReal\n[{\nmin_\n,\n \nmax_\n}]\n \n:=\n \nRandomReal\n[]\n*\n(\nmax\n \n-\n \nmin\n)\n \n+\n \nmin\n\n\nRandomReal\n[\nmax_\n]\n \n:=\n \nRandomReal\n[]\n*\nmax", 
             "title": "RandomReal "
         }, 
         {
             "location": "/builtin/random/randomreal/#randomreal", 
-            "text": "Attributes[RandomReal] := {Protected}", 
+            "text": "RandomReal[]  generates a random floating point from 0 to 1.  RandomReal[max]  generates a random floating point from 0 to  max .  RandomReal[min, max]  generates a random floating point from  min  to `max.  Attributes[RandomReal] := {Protected}", 
             "title": "RandomReal"
+        }, 
+        {
+            "location": "/builtin/random/randomreal/#details", 
+            "text": "SeedRandom[UnixTime[]]  is called automatically upon initialization of Expreduce, so random number sequences will not repeat over subsequent sessions.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/builtin/random/randomreal/#simple-examples", 
+            "text": "In [ 1 ] :=   RandomReal []  Out [ 1 ] =   0.0750914", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/random/randomreal/#further-examples", 
+            "text": "Use  SeedRandom  to seed the RNG:  In [ 1 ] :=   SeedRandom [ 3 ]  Out [ 1 ] =   Null   In [ 2 ] :=   RandomReal []  Out [ 2 ] =   0.719983   In [ 3 ] :=   RandomReal []  Out [ 3 ] =   0.652631   In [ 4 ] :=   SeedRandom [ 3 ]  Out [ 4 ] =   Null   In [ 5 ] :=   RandomReal []  Out [ 5 ] =   0.719983", 
+            "title": "Further examples"
         }, 
         {
             "location": "/builtin/random/randomreal/#rules", 
@@ -917,13 +927,23 @@
         }, 
         {
             "location": "/builtin/random/seedrandom/", 
-            "text": "SeedRandom\n\n\nAttributes[SeedRandom] := {Protected}", 
+            "text": "SeedRandom\n\n\nSeedRandom[seed]\n seeds the internal random number generator with a given integer \nseed\n.\n\n\nAttributes[SeedRandom] := {Protected}\n\n\nDetails\n\n\nSeedRandom[UnixTime[]]\n is called automatically upon initialization of Expreduce, so random number sequences will not repeat over subsequent sessions.\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nRandomReal\n[]\n\n\nOut\n[\n1\n]\n=\n \n0.0750914\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nSeedRandom\n[\n3\n]\n\n\nOut\n[\n2\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nRandomReal\n[]\n\n\nOut\n[\n3\n]\n=\n \n0.719983\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nRandomReal\n[]\n\n\nOut\n[\n4\n]\n=\n \n0.652631\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nSeedRandom\n[\n3\n]\n\n\nOut\n[\n5\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nRandomReal\n[]\n\n\nOut\n[\n6\n]\n=\n \n0.719983", 
             "title": "SeedRandom "
         }, 
         {
             "location": "/builtin/random/seedrandom/#seedrandom", 
-            "text": "Attributes[SeedRandom] := {Protected}", 
+            "text": "SeedRandom[seed]  seeds the internal random number generator with a given integer  seed .  Attributes[SeedRandom] := {Protected}", 
             "title": "SeedRandom"
+        }, 
+        {
+            "location": "/builtin/random/seedrandom/#details", 
+            "text": "SeedRandom[UnixTime[]]  is called automatically upon initialization of Expreduce, so random number sequences will not repeat over subsequent sessions.", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/builtin/random/seedrandom/#simple-examples", 
+            "text": "In [ 1 ] :=   RandomReal []  Out [ 1 ] =   0.0750914   In [ 2 ] :=   SeedRandom [ 3 ]  Out [ 2 ] =   Null   In [ 3 ] :=   RandomReal []  Out [ 3 ] =   0.719983   In [ 4 ] :=   RandomReal []  Out [ 4 ] =   0.652631   In [ 5 ] :=   SeedRandom [ 3 ]  Out [ 5 ] =   Null   In [ 6 ] :=   RandomReal []  Out [ 6 ] =   0.719983", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/replacement/", 
@@ -997,12 +1017,12 @@
         }, 
         {
             "location": "/builtin/symbol/", 
-            "text": "symbol documentation\n\n\nSet\n\n\nSetDelayed\n\n\nAttributes\n\n\nClear", 
+            "text": "symbol documentation\n\n\nSet\n\n\nSetDelayed\n\n\nAttributes\n\n\nClear\n\n\nAtomQ", 
             "title": "symbol"
         }, 
         {
             "location": "/builtin/symbol/#symbol-documentation", 
-            "text": "Set  SetDelayed  Attributes  Clear", 
+            "text": "Set  SetDelayed  Attributes  Clear  AtomQ", 
             "title": "symbol documentation"
         }, 
         {
@@ -1044,6 +1064,21 @@
             "location": "/builtin/symbol/clear/#clear", 
             "text": "Attributes[Clear] := {HoldAll, Protected}", 
             "title": "Clear"
+        }, 
+        {
+            "location": "/builtin/symbol/atomq/", 
+            "text": "AtomQ\n\n\nAtomQ[expr]\n returns True if \nexpr\n is an atomic type, and False if \nexpr\n is a full expression.\n\n\nAttributes[AtomQ] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nAtomQ\n[\nhello\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nAtomQ\n[\n5\n/\n3\n]\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nAtomQ\n[\nhello\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nAtomQ\n[\na\n/\nb\n]\n\n\nOut\n[\n4\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nAtomQ\n[\nbar\n[\nx\n]]\n\n\nOut\n[\n5\n]\n=\n \nFalse", 
+            "title": "AtomQ "
+        }, 
+        {
+            "location": "/builtin/symbol/atomq/#atomq", 
+            "text": "AtomQ[expr]  returns True if  expr  is an atomic type, and False if  expr  is a full expression.  Attributes[AtomQ] := {Protected}", 
+            "title": "AtomQ"
+        }, 
+        {
+            "location": "/builtin/symbol/atomq/#simple-examples", 
+            "text": "In [ 1 ] :=   AtomQ [ hello ]  Out [ 1 ] =   True   In [ 2 ] :=   AtomQ [ 5 / 3 ]  Out [ 2 ] =   True   In [ 3 ] :=   AtomQ [ hello ]  Out [ 3 ] =   True   In [ 4 ] :=   AtomQ [ a / b ]  Out [ 4 ] =   False   In [ 5 ] :=   AtomQ [ bar [ x ]]  Out [ 5 ] =   False", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/system/", 
@@ -1107,12 +1142,12 @@
         }, 
         {
             "location": "/builtin/system/head/", 
-            "text": "Head\n\n\nHead[expr] returns the head of the expression.\n\n\nAttributes[Head] := {Protected}", 
+            "text": "Head\n\n\nHead[expr]\n returns the head of the expression.\n\n\nAttributes[Head] := {Protected}", 
             "title": "Head "
         }, 
         {
             "location": "/builtin/system/head/#head", 
-            "text": "Head[expr] returns the head of the expression.  Attributes[Head] := {Protected}", 
+            "text": "Head[expr]  returns the head of the expression.  Attributes[Head] := {Protected}", 
             "title": "Head"
         }, 
         {
@@ -1207,7 +1242,7 @@
         }, 
         {
             "location": "/builtin/times/times/", 
-            "text": "Times\n\n\nAttributes[Times] := {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}\n\n\nRules\n\n\nTimes\n[\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \na\n^\n2\n \n*\n \nrest\n\n\nTimes\n[\na_\n^\nn_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \na\n^\n(\nn\n+\n1\n)\n \n*\n \nrest\n\n\nTimes\n[\na_\n^\nn_\n,\n \na_\n^\nm_\n,\n \nrest___\n]\n \n:=\n \na\n^\n(\nn\n+\nm\n)\n \n*\n \nrest\n\n\nTimes\n[\nden_Integer\n^\n(\n-\n1\n),\n \nnum_Integer\n,\n \nrest___\n]\n \n:=\n \nRational\n[\nnum\n,\nden\n]\n \n*\n \nrest\n\n\nTimes\n[\na_\n,\n \nPower\n[\na_\n,\n \n-\n1\n],\n \nrest___\n]\n \n:=\n \nrest\n\n\nTimes\n[\na_\n^\nb_\n,\n \nPower\n[\na_\n,\n \n-\n1\n],\n \nrest___\n]\n \n:=\n \na\n^\n(\nb\n-\n1\n)\n \n*\n \nrest\n\n\n(\n1\n/\nInfinity\n)\n \n:=\n \n0", 
+            "text": "Times\n\n\nAttributes[Times] := {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}\n\n\nRules\n\n\nTimes\n[\na_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \na\n^\n2\n \n*\n \nrest\n\n\nTimes\n[\na_\n^\nn_\n,\n \na_\n,\n \nrest___\n]\n \n:=\n \na\n^\n(\nn\n+\n1\n)\n \n*\n \nrest\n\n\nTimes\n[\na_\n^\nn_\n,\n \na_\n^\nm_\n,\n \nrest___\n]\n \n:=\n \na\n^\n(\nn\n+\nm\n)\n \n*\n \nrest\n\n\nTimes\n[\nden_Integer\n^\n(\n-\n1\n),\n \nnum_Integer\n,\n \nrest___\n]\n \n:=\n \nRational\n[\nnum\n,\nden\n]\n \n*\n \nrest\n\n\nTimes\n[\na_\n,\n \nPower\n[\na_\n,\n \n-\n1\n],\n \nrest___\n]\n \n:=\n \nrest\n\n\nTimes\n[\na_\n^\nb_\n,\n \nPower\n[\na_\n,\n \n-\n1\n],\n \nrest___\n]\n \n:=\n \na\n^\n(\nb\n-\n1\n)\n \n*\n \nrest\n\n\n(\n1\n/\nInfinity\n)\n \n:=\n \n0\n\n\nTimes\n[\nComplexInfinity\n,\n \n(\n_?\n(\nFunction\n[\nAtomQ\n[\n#\n]\n \n==\n \nFalse\n]))\n|\n(\n_Symbol\n),\n \nrest___\n]\n \n:=\n \nComplexInfinity\n \n*\n \nrest", 
             "title": "Times "
         }, 
         {
@@ -1217,7 +1252,7 @@
         }, 
         {
             "location": "/builtin/times/times/#rules", 
-            "text": "Times [ a_ ,   a_ ,   rest___ ]   :=   a ^ 2   *   rest  Times [ a_ ^ n_ ,   a_ ,   rest___ ]   :=   a ^ ( n + 1 )   *   rest  Times [ a_ ^ n_ ,   a_ ^ m_ ,   rest___ ]   :=   a ^ ( n + m )   *   rest  Times [ den_Integer ^ ( - 1 ),   num_Integer ,   rest___ ]   :=   Rational [ num , den ]   *   rest  Times [ a_ ,   Power [ a_ ,   - 1 ],   rest___ ]   :=   rest  Times [ a_ ^ b_ ,   Power [ a_ ,   - 1 ],   rest___ ]   :=   a ^ ( b - 1 )   *   rest  ( 1 / Infinity )   :=   0", 
+            "text": "Times [ a_ ,   a_ ,   rest___ ]   :=   a ^ 2   *   rest  Times [ a_ ^ n_ ,   a_ ,   rest___ ]   :=   a ^ ( n + 1 )   *   rest  Times [ a_ ^ n_ ,   a_ ^ m_ ,   rest___ ]   :=   a ^ ( n + m )   *   rest  Times [ den_Integer ^ ( - 1 ),   num_Integer ,   rest___ ]   :=   Rational [ num , den ]   *   rest  Times [ a_ ,   Power [ a_ ,   - 1 ],   rest___ ]   :=   rest  Times [ a_ ^ b_ ,   Power [ a_ ,   - 1 ],   rest___ ]   :=   a ^ ( b - 1 )   *   rest  ( 1 / Infinity )   :=   0  Times [ ComplexInfinity ,   ( _? ( Function [ AtomQ [ # ]   ==   False ])) | ( _Symbol ),   rest___ ]   :=   ComplexInfinity   *   rest", 
             "title": "Rules"
         }, 
         {

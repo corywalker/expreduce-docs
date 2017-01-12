@@ -44,6 +44,9 @@ func writeCategoryIndex(fn string, defSet expreduce.NamedDefSet) {
 	f.WriteString(fmt.Sprintf("#%v documentation\n", defSet.Name))
 
 	for _, def := range defSet.Defs {
+		if def.OmitDocumentation{
+			continue
+		}
 		f.WriteString(fmt.Sprintf("[%v](%v.md)\n\n", def.Name, strings.ToLower(def.Name)))
 	}
 
@@ -70,7 +73,7 @@ func renderRules(f *os.File, def expreduce.Definition) {
 }
 
 func renderExamples(f *os.File, category string, examples []expreduce.TestInstruction) {
-	f.WriteString(fmt.Sprintf("##%v\n", category))
+	f.WriteString(fmt.Sprintf("##%v\n\n", category))
 	count := 1
 	for _, ti := range examples {
 		comment, isComment := ti.(*expreduce.TestComment)
@@ -93,6 +96,14 @@ func renderExamples(f *os.File, category string, examples []expreduce.TestInstru
 			f.WriteString("```\n")
 			count += 1
 		}
+		exampleOnlyTest, isExampleOnlyInstruction := ti.(*expreduce.ExampleOnlyInstruction)
+		if isExampleOnlyInstruction {
+			f.WriteString("```wl\n")
+			f.WriteString(fmt.Sprintf("In[%d]:= %v\n", count, exampleOnlyTest.In))
+			f.WriteString(fmt.Sprintf("Out[%d]= %v\n", count, exampleOnlyTest.Out))
+			f.WriteString("```\n")
+			count += 1
+		}
 	}
 }
 
@@ -106,9 +117,13 @@ func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definiti
 	// after opening a file.
 	defer f.Close()
 
-	f.WriteString(fmt.Sprintf("#%v\n", def.Name))
+	f.WriteString(fmt.Sprintf("#%v\n\n", def.Name))
 
 	renderUsage(f, def, es)
+
+	if len(def.Details) > 0 {
+		f.WriteString(fmt.Sprintf("##Details\n\n%v\n\n", def.Details))
+	}
 
 	if len(def.SimpleExamples) > 0 {
 		renderExamples(f, "Simple examples", def.SimpleExamples)
@@ -163,6 +178,9 @@ func main() {
 		f.WriteString(categoryDef)
 
 		for _, def := range defSet.Defs {
+			if def.OmitDocumentation{
+				continue
+			}
 			symbolFn := fmt.Sprintf(
 				"builtin/%s/%s.md",
 				defSet.Name,
