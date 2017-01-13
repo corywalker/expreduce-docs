@@ -602,10 +602,6 @@
       
         
   
-
-      
-        
-  
     <li>
       <a class="" title="string" href="../../string/">
         string
@@ -715,7 +711,80 @@
         <div class="wrapper">
           
           <h1 id="set">Set</h1>
+<p><code>lhs = rhs</code> sets <code>lhs</code> to stand for <code>rhs</code>.</p>
 <p><code>Attributes[Set] := {HoldFirst, Protected, SequenceHold}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">x</span><span class="o">=</span><span class="m">1</span><span class="o">+</span><span class="m">2</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">x</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">x</span><span class="o">+</span><span class="m">1</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">x</span><span class="o">+</span><span class="m">1</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">x</span><span class="o">=</span><span class="m">1</span><span class="o">+</span><span class="m">2</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">x</span><span class="o">*</span><span class="m">2</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">x</span><span class="o">=</span><span class="nv">x</span><span class="o">*</span><span class="m">2</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">x</span><span class="o">=</span><span class="nv">x</span><span class="o">*</span><span class="nv">x</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">36</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">y</span><span class="o">=</span><span class="nv">a</span><span class="o">*</span><span class="nv">a</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">y</span><span class="o">=</span><span class="nv">y</span><span class="o">*</span><span class="nv">y</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">a</span><span class="o">^</span><span class="m">4</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">a</span><span class="o">=</span><span class="m">2</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">12</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">y</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">12</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<p><code>Set</code> has the <code>HoldFirst</code> attribute, meaning <code>rhs</code> is evaluated before assignment:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nb">Set</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nb">HoldFirst</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">,</span><span class="w"> </span><span class="nb">SequenceHold</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<p><code>SetDelayed</code> has the <code>HoldAll</code> attribute, meaning <code>rhs</code> is not evaluated during assignment:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nb">SetDelayed</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nb">HoldAll</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">,</span><span class="w"> </span><span class="nb">SequenceHold</span><span class="p">}</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

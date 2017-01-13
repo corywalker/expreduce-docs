@@ -602,10 +602,6 @@
       
         
   
-
-      
-        
-  
     <li>
       <a class="" title="string" href="../../string/">
         string
@@ -717,6 +713,55 @@
           <h1 id="head">Head</h1>
 <p><code>Head[expr]</code> returns the head of the expression.</p>
 <p><code>Attributes[Head] := {Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="nv">f</span><span class="p">[</span><span class="nv">x</span><span class="p">]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">f</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Symbol</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[{</span><span class="nv">x</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">List</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Plus</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Integer</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="m">1.</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Real</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="m">2</span><span class="o">/</span><span class="m">7</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Rational</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="m">1</span><span class="o">/</span><span class="m">7</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Rational</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="s">&quot;1&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Head</span><span class="p">[</span><span class="nb">Head</span><span class="p">[(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">)[</span><span class="nv">x</span><span class="p">]]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Plus</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

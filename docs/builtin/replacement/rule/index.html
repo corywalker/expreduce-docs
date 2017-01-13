@@ -602,10 +602,6 @@
       
         
   
-
-      
-        
-  
     <li>
       <a class="" title="string" href="../../string/">
         string
@@ -715,7 +711,23 @@
         <div class="wrapper">
           
           <h1 id="rule">Rule</h1>
+<p><code>lhs -&gt; rhs</code> can be used in replacement functions to say that instances of <code>lhs</code> should be replaced with <code>rhs</code>.</p>
 <p><code>Attributes[Rule] := {Protected, SequenceHold}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">2</span><span class="o">^</span><span class="p">(</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="o">+</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">y</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">^</span><span class="p">(</span><span class="nv">y</span><span class="o">+</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">y</span><span class="w"></span>
+</pre></div>
+
+
+<p>To demonstrate the difference between <code>Rule</code> and <code>RuleDelayed</code>:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Equal</span><span class="w"> </span><span class="o">@@</span><span class="w"> </span><span class="p">({</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">}</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb">RandomReal</span><span class="p">[])</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Equal</span><span class="w"> </span><span class="o">@@</span><span class="w"> </span><span class="p">({</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">}</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">:&gt;</span><span class="w"> </span><span class="nb">RandomReal</span><span class="p">[])</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

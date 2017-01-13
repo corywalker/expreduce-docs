@@ -602,10 +602,6 @@
       
         
   
-
-      
-        
-  
     <li>
       <a class="" title="string" href="../../string/">
         string
@@ -715,7 +711,12 @@
         <div class="wrapper">
           
           <h1 id="timing">Timing</h1>
+<p><code>Timing[expr]</code> returns a <code>List</code> with the first element being the time in seconds for the evaluation of <code>expr</code>, and the second element being the result.</p>
 <p><code>Attributes[Timing] := {HoldAll, Protected, SequenceHold}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Timing</span><span class="p">[</span><span class="nb">Sum</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="m">100000000</span><span class="p">}]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">0.00167509</span><span class="p">,</span><span class="w"> </span><span class="m">5000000050000000</span><span class="p">}</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -732,7 +733,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../definition/" title="Definition ">
+        <a href="../expreducesetlogging/" title="ExpreduceSetLogging ">
           <span class="direction">
             Previous
           </span>
@@ -742,7 +743,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                Definition 
+                ExpreduceSetLogging 
               </div>
             </div>
           </div>

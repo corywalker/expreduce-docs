@@ -31,6 +31,16 @@ func writeMainIndex(fn string) {
 	fmt.Printf("Finished writing %v.\n", fn)
 }
 
+func defNamePrint(name string) string {
+	//return strings.Replace(name, "`", "\\`", -1)
+	return name
+}
+
+func defNameFile(name string) string {
+	//return strings.ToLower(strings.Replace(name, "`", "_", -1))
+	return strings.ToLower(name)
+}
+
 func writeCategoryIndex(fn string, defSet expreduce.NamedDefSet) {
 	// For more granular writes, open a file for writing.
 	os.MkdirAll(path.Dir(fn), os.ModePerm)
@@ -47,7 +57,7 @@ func writeCategoryIndex(fn string, defSet expreduce.NamedDefSet) {
 		if def.OmitDocumentation{
 			continue
 		}
-		f.WriteString(fmt.Sprintf("[%v](%v.md)\n\n", def.Name, strings.ToLower(def.Name)))
+		f.WriteString(fmt.Sprintf("[%v](%v.md)\n\n", defNamePrint(def.Name), defNameFile(def.Name)))
 	}
 
 	f.Sync()
@@ -58,7 +68,7 @@ func renderUsage(f *os.File, def expreduce.Definition, es *expreduce.EvalState) 
 	if len(def.Usage) > 0 {
 		f.WriteString(fmt.Sprintf("%v\n\n", def.Usage))
 	}
-	attrLookup := fmt.Sprintf("Attributes[%s]", def.Name)
+	attrLookup := fmt.Sprintf("Attributes[%s]", defNamePrint(def.Name))
 	attrs := expreduce.EasyRun(attrLookup, es)
 	f.WriteString(fmt.Sprintf("`%v := %v`\n\n", attrLookup, attrs))
 }
@@ -117,7 +127,7 @@ func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definiti
 	// after opening a file.
 	defer f.Close()
 
-	f.WriteString(fmt.Sprintf("#%v\n\n", def.Name))
+	f.WriteString(fmt.Sprintf("#%v\n\n", defNamePrint(def.Name)))
 
 	renderUsage(f, def, es)
 
@@ -184,12 +194,12 @@ func main() {
 			symbolFn := fmt.Sprintf(
 				"builtin/%s/%s.md",
 				defSet.Name,
-				strings.ToLower(def.Name),
+				defNameFile(def.Name),
 			)
 			writeSymbol(path.Join(*docs_location, symbolFn), defSet, def, es)
 			symbolDef := fmt.Sprintf(
 				"    - '%s ': '%s'\n",
-				def.Name,
+				defNamePrint(def.Name),
 				symbolFn,
 			)
 			f.WriteString(symbolDef)

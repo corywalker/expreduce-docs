@@ -597,7 +597,7 @@
         }, 
         {
             "location": "/builtin/list/sum/", 
-            "text": "Sum\n\n\nSum[expr, n]\n returns the sum of \nn\n copies of \nexpr\n.\n\n\nSum[expr, {sym, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = 1 to \nn\n.\n\n\nSum[expr, {sym, m, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = \nm\n to \nn\n.\n\n\nAttributes[Sum] := {HoldAll, Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n5\n,\n \n10\n}]\n\n\nOut\n[\n1\n]\n=\n \n45\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n10\n}]\n\n\nOut\n[\n2\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n10\n}]\n\n\nOut\n[\n3\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n30000\n}]\n\n\nOut\n[\n4\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n30000\n}]\n\n\nOut\n[\n5\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \nn\n}]\n\n\nOut\n[\n6\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \nn\n}]\n\n\nOut\n[\n7\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nSum\n[\na\n \n+\n \nb\n,\n \n{\na\n,\n \n0\n,\n \n2\n},\n \n{\nb\n,\n \n0\n,\n \n3\n}]\n\n\nOut\n[\n8\n]\n=\n \n30\n\n\n\n\n\n\nRules\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)", 
+            "text": "Sum\n\n\nSum[expr, n]\n returns the sum of \nn\n copies of \nexpr\n.\n\n\nSum[expr, {sym, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = 1 to \nn\n.\n\n\nSum[expr, {sym, m, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = \nm\n to \nn\n.\n\n\nAttributes[Sum] := {HoldAll, Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n5\n,\n \n10\n}]\n\n\nOut\n[\n1\n]\n=\n \n45\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n10\n}]\n\n\nOut\n[\n2\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n10\n}]\n\n\nOut\n[\n3\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n30000\n}]\n\n\nOut\n[\n4\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n30000\n}]\n\n\nOut\n[\n5\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \nn\n}]\n\n\nOut\n[\n6\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \nn\n}]\n\n\nOut\n[\n7\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nSum\n[\na\n \n+\n \nb\n,\n \n{\na\n,\n \n0\n,\n \n2\n},\n \n{\nb\n,\n \n0\n,\n \n3\n}]\n\n\nOut\n[\n8\n]\n=\n \n30\n\n\n\n\n\n\nRules\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)", 
             "title": "Sum "
         }, 
         {
@@ -612,7 +612,7 @@
         }, 
         {
             "location": "/builtin/list/sum/#rules", 
-            "text": "Sum [ i_Symbol ,   { i_Symbol ,   0 ,   n_Integer }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   1 ,   n_Integer }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   0 ,   n_Symbol }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   1 ,   n_Symbol }]   :=   1 / 2 * n * ( 1   +   n )", 
+            "text": "Sum [ i_Symbol ,   { i_Symbol ,   0 ,   n_Integer }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   1 ,   n_Integer }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   n_Integer }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   0 ,   n_Symbol }]   :=   1 / 2 * n * ( 1   +   n )  Sum [ i_Symbol ,   { i_Symbol ,   1 ,   n_Symbol }]   :=   1 / 2 * n * ( 1   +   n )", 
             "title": "Rules"
         }, 
         {
@@ -757,7 +757,7 @@
         }, 
         {
             "location": "/builtin/order/order/", 
-            "text": "Order\n\n\nOrder[e1, e2]\n returns 1 if \ne1\n should come before \ne2\n in canonical ordering, -1 if it should come after, and 0 if the two expressions are equal.\n\n\nAttributes[Order] := {Protected}\n\n\nSimple examples\n\n\nFind the relative order of symbols:\n\n\nIn\n[\n1\n]\n:=\n \nOrder\n[\na\n,\n \nb\n]\n\n\nOut\n[\n1\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nOrder\n[\nb\n,\n \na\n]\n\n\nOut\n[\n2\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nOrder\n[\na\n,\n \naa\n]\n\n\nOut\n[\n3\n]\n=\n \n1\n\n\n\n\n\n\nFind the relative order of numbers:\n\n\nIn\n[\n4\n]\n:=\n \nOrder\n[\n2\n,\n \n1.\n]\n\n\nOut\n[\n4\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nOrder\n[\n1\n,\n \n2\n]\n\n\nOut\n[\n5\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nOrder\n[\n1\n,\n \n1\n]\n\n\nOut\n[\n6\n]\n=\n \n0\n\n\n\n\n\n\nFind the relative order of heterogenous types:\n\n\nIn\n[\n7\n]\n:=\n \nOrder\n[\nab\n,\n \n1\n]\n\n\nOut\n[\n7\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nOrder\n[\n1\n,\n \nab\n]\n\n\nOut\n[\n8\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \nOrder\n[\ny\n[\na\n],\n \nx\n]\n\n\nOut\n[\n9\n]\n=\n \n-\n1\n\n\n\n\n\n\nFind the relative order of rationals:\n\n\nIn\n[\n10\n]\n:=\n \nOrder\n[\nRational\n[\n-\n5\n,\n \n3\n],\n \nRational\n[\n-\n4\n,\n \n6\n]]\n\n\nOut\n[\n10\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n11\n]\n:=\n \nOrder\n[\nRational\n[\n4\n,\n \n6\n],\n \n.6\n]\n\n\nOut\n[\n11\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n12\n]\n:=\n \nOrder\n[\n.6\n,\n \nRational\n[\n4\n,\n \n6\n]]\n\n\nOut\n[\n12\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n13\n]\n:=\n \nOrder\n[\nRational\n[\n4\n,\n \n6\n],\n \n.7\n]\n\n\nOut\n[\n13\n]\n=\n \n1\n\n\n\n\n\n\nFind the relative order of expressions:\n\n\nIn\n[\n14\n]\n:=\n \nOrder\n[\nbar\n[\nx\n,\n \ny\n],\n \nbar\n[\nx\n,\n \ny\n]]\n\n\nOut\n[\n14\n]\n=\n \n0\n\n\n\n\n\n\nIn\n[\n15\n]\n:=\n \nOrder\n[\nfizz\n[\nbar\n[\nx\n,\n \ny\n]],\n \nfizz\n[\nbar\n[\nx\n,\n \ny\n,\n \na\n]]]\n\n\nOut\n[\n15\n]\n=\n \n1", 
+            "text": "Order\n\n\nOrder[e1, e2]\n returns 1 if \ne1\n should come before \ne2\n in canonical ordering, -1 if it should come after, and 0 if the two expressions are equal.\n\n\nAttributes[Order] := {Protected}\n\n\nSimple examples\n\n\nFind the relative order of symbols:\n\n\nIn\n[\n1\n]\n:=\n \nOrder\n[\na\n,\n \nb\n]\n\n\nOut\n[\n1\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nOrder\n[\nb\n,\n \na\n]\n\n\nOut\n[\n2\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nOrder\n[\na\n,\n \naa\n]\n\n\nOut\n[\n3\n]\n=\n \n1\n\n\n\n\n\n\nFind the relative order of numbers:\n\n\nIn\n[\n4\n]\n:=\n \nOrder\n[\n2\n,\n \n1.\n]\n\n\nOut\n[\n4\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nOrder\n[\n1\n,\n \n2\n]\n\n\nOut\n[\n5\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nOrder\n[\n1\n,\n \n1\n]\n\n\nOut\n[\n6\n]\n=\n \n0\n\n\n\n\n\n\nFind the relative order of strings:\n\n\nIn\n[\n7\n]\n:=\n \nOrder\n[\na\n,\n \nb\n]\n\n\nOut\n[\n7\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nOrder\n[\nb\n,\n \na\n]\n\n\nOut\n[\n8\n]\n=\n \n-\n1\n\n\n\n\n\n\nFind the relative order of heterogenous types:\n\n\nIn\n[\n9\n]\n:=\n \nOrder\n[\nab\n,\n \n1\n]\n\n\nOut\n[\n9\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n10\n]\n:=\n \nOrder\n[\n1\n,\n \nab\n]\n\n\nOut\n[\n10\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n11\n]\n:=\n \nOrder\n[\ny\n[\na\n],\n \nx\n]\n\n\nOut\n[\n11\n]\n=\n \n-\n1\n\n\n\n\n\n\nFind the relative order of rationals:\n\n\nIn\n[\n12\n]\n:=\n \nOrder\n[\nRational\n[\n-\n5\n,\n \n3\n],\n \nRational\n[\n-\n4\n,\n \n6\n]]\n\n\nOut\n[\n12\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n13\n]\n:=\n \nOrder\n[\nRational\n[\n4\n,\n \n6\n],\n \n.6\n]\n\n\nOut\n[\n13\n]\n=\n \n-\n1\n\n\n\n\n\n\nIn\n[\n14\n]\n:=\n \nOrder\n[\n.6\n,\n \nRational\n[\n4\n,\n \n6\n]]\n\n\nOut\n[\n14\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n15\n]\n:=\n \nOrder\n[\nRational\n[\n4\n,\n \n6\n],\n \n.7\n]\n\n\nOut\n[\n15\n]\n=\n \n1\n\n\n\n\n\n\nFind the relative order of expressions:\n\n\nIn\n[\n16\n]\n:=\n \nOrder\n[\nbar\n[\nx\n,\n \ny\n],\n \nbar\n[\nx\n,\n \ny\n]]\n\n\nOut\n[\n16\n]\n=\n \n0\n\n\n\n\n\n\nIn\n[\n17\n]\n:=\n \nOrder\n[\nfizz\n[\nbar\n[\nx\n,\n \ny\n]],\n \nfizz\n[\nbar\n[\nx\n,\n \ny\n,\n \na\n]]]\n\n\nOut\n[\n17\n]\n=\n \n1", 
             "title": "Order "
         }, 
         {
@@ -767,7 +767,7 @@
         }, 
         {
             "location": "/builtin/order/order/#simple-examples", 
-            "text": "Find the relative order of symbols:  In [ 1 ] :=   Order [ a ,   b ]  Out [ 1 ] =   1   In [ 2 ] :=   Order [ b ,   a ]  Out [ 2 ] =   - 1   In [ 3 ] :=   Order [ a ,   aa ]  Out [ 3 ] =   1   Find the relative order of numbers:  In [ 4 ] :=   Order [ 2 ,   1. ]  Out [ 4 ] =   - 1   In [ 5 ] :=   Order [ 1 ,   2 ]  Out [ 5 ] =   1   In [ 6 ] :=   Order [ 1 ,   1 ]  Out [ 6 ] =   0   Find the relative order of heterogenous types:  In [ 7 ] :=   Order [ ab ,   1 ]  Out [ 7 ] =   - 1   In [ 8 ] :=   Order [ 1 ,   ab ]  Out [ 8 ] =   1   In [ 9 ] :=   Order [ y [ a ],   x ]  Out [ 9 ] =   - 1   Find the relative order of rationals:  In [ 10 ] :=   Order [ Rational [ - 5 ,   3 ],   Rational [ - 4 ,   6 ]]  Out [ 10 ] =   1   In [ 11 ] :=   Order [ Rational [ 4 ,   6 ],   .6 ]  Out [ 11 ] =   - 1   In [ 12 ] :=   Order [ .6 ,   Rational [ 4 ,   6 ]]  Out [ 12 ] =   1   In [ 13 ] :=   Order [ Rational [ 4 ,   6 ],   .7 ]  Out [ 13 ] =   1   Find the relative order of expressions:  In [ 14 ] :=   Order [ bar [ x ,   y ],   bar [ x ,   y ]]  Out [ 14 ] =   0   In [ 15 ] :=   Order [ fizz [ bar [ x ,   y ]],   fizz [ bar [ x ,   y ,   a ]]]  Out [ 15 ] =   1", 
+            "text": "Find the relative order of symbols:  In [ 1 ] :=   Order [ a ,   b ]  Out [ 1 ] =   1   In [ 2 ] :=   Order [ b ,   a ]  Out [ 2 ] =   - 1   In [ 3 ] :=   Order [ a ,   aa ]  Out [ 3 ] =   1   Find the relative order of numbers:  In [ 4 ] :=   Order [ 2 ,   1. ]  Out [ 4 ] =   - 1   In [ 5 ] :=   Order [ 1 ,   2 ]  Out [ 5 ] =   1   In [ 6 ] :=   Order [ 1 ,   1 ]  Out [ 6 ] =   0   Find the relative order of strings:  In [ 7 ] :=   Order [ a ,   b ]  Out [ 7 ] =   1   In [ 8 ] :=   Order [ b ,   a ]  Out [ 8 ] =   - 1   Find the relative order of heterogenous types:  In [ 9 ] :=   Order [ ab ,   1 ]  Out [ 9 ] =   - 1   In [ 10 ] :=   Order [ 1 ,   ab ]  Out [ 10 ] =   1   In [ 11 ] :=   Order [ y [ a ],   x ]  Out [ 11 ] =   - 1   Find the relative order of rationals:  In [ 12 ] :=   Order [ Rational [ - 5 ,   3 ],   Rational [ - 4 ,   6 ]]  Out [ 12 ] =   1   In [ 13 ] :=   Order [ Rational [ 4 ,   6 ],   .6 ]  Out [ 13 ] =   - 1   In [ 14 ] :=   Order [ .6 ,   Rational [ 4 ,   6 ]]  Out [ 14 ] =   1   In [ 15 ] :=   Order [ Rational [ 4 ,   6 ],   .7 ]  Out [ 15 ] =   1   Find the relative order of expressions:  In [ 16 ] :=   Order [ bar [ x ,   y ],   bar [ x ,   y ]]  Out [ 16 ] =   0   In [ 17 ] :=   Order [ fizz [ bar [ x ,   y ]],   fizz [ bar [ x ,   y ,   a ]]]  Out [ 17 ] =   1", 
             "title": "Simple examples"
         }, 
         {
@@ -957,43 +957,68 @@
         }, 
         {
             "location": "/builtin/replacement/replaceall/", 
-            "text": "ReplaceAll\n\n\nAttributes[ReplaceAll] := {Protected}", 
+            "text": "ReplaceAll\n\n\nexpr /. rule\n replaces all occurences of the LHS of \nrule\n with the RHS of \nrule\n in \nexpr\n.\n\n\nexpr /. {r1, r2, ...}\n performes the same operation as \nexpr /. rule\n, but evaluating each \nr_n\n in sequence.\n\n\nAttributes[ReplaceAll] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n2\n^\n(\nx\n^\n2\n+\n1\n)\n \n+\n \nx\n^\n2\n \n/.\n \nx\n^\n2\n-\ny\n\n\nOut\n[\n1\n]\n=\n \n2\n^\n(\ny\n+\n1\n)\n \n+\n \ny\n\n\n\n\n\n\nIf no match is found, \nReplaceAll\n evaluates to an unchanged \nexpr\n:\n\n\nIn\n[\n2\n]\n:=\n \n2\n^\n(\nx\n^\n2\n+\n1\n)\n \n+\n \nx\n^\n2\n \n/.\n \nz\n^\n2\n-\ny\n\n\nOut\n[\n2\n]\n=\n \n2\n^\n(\nx\n^\n2\n+\n1\n)\n \n+\n \nx\n^\n2\n\n\n\n\n\n\nReplaceAll\n works within Orderless expressions as well (such as \nPlus\n):\n\n\nIn\n[\n3\n]\n:=\n \na\n \n+\n \nb\n \n+\n \nc\n \n+\n \nc\n^\n2\n \n/.\n \nc\n^\n2\n \n+\n \na\n \n-\n \nd\n\n\nOut\n[\n3\n]\n=\n \nb\n \n+\n \nc\n \n+\n \nd\n\n\n\n\n\n\nReplaceAll\n can use named patterns:\n\n\nIn\n[\n4\n]\n:=\n \na\n \n+\n \nb\n \n+\n \nc\n \n+\n \nd\n/.\n \nx_Symbol\n \n+\n \ny_Symbol\n \n-\n \nx\n^\ny\n\n\nOut\n[\n4\n]\n=\n \na\n^\nb\n \n+\n \nc\n \n+\n \nd\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \na\n \n+\n \n2\n*\nb\n \n+\n \n5\n*\nc\n \n/.\n \n(\nc1_Integer\n*\na_Symbol\n)\n \n-\n \n99\n*\na\n\n\nOut\n[\n5\n]\n=\n \na\n \n+\n \n99\n \n*\n \nb\n \n+\n \n99\n \n*\n \nc\n\n\n\n\n\n\nFurther examples\n\n\nReplaceAll\n can be used to replace sequences of expressions:\n\n\nIn\n[\n1\n]\n:=\n \na\n \n+\n \nb\n \n+\n \nc\n \n+\n \nd\n \n/.\n \na\n \n+\n \namatch___\n \n-\n \nfoo\n[\namatch\n]\n\n\nOut\n[\n1\n]\n=\n \nfoo\n[\nb\n,\n \nc\n,\n \nd\n]\n\n\n\n\n\n\nThe \nHead\n of functions can be replaced just as the subexpressions:\n\n\nIn\n[\n2\n]\n:=\n \n(\nx\n \n+\n \n2\n)[\n5\n,\n \n6\n]\n \n/.\n \n(\n2\n \n+\n \nx\n)\n \n-\n \nPlus\n\n\nOut\n[\n2\n]\n=\n \n11\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \na\n*\nb\n*\nc\n*\nd\n \n/.\n \n_Symbol\n \n-\n \n2\n\n\nOut\n[\n3\n]\n=\n \n2\n[\n2\n,\n \n2\n,\n \n2\n,\n \n2\n]", 
             "title": "ReplaceAll "
         }, 
         {
             "location": "/builtin/replacement/replaceall/#replaceall", 
-            "text": "Attributes[ReplaceAll] := {Protected}", 
+            "text": "expr /. rule  replaces all occurences of the LHS of  rule  with the RHS of  rule  in  expr .  expr /. {r1, r2, ...}  performes the same operation as  expr /. rule , but evaluating each  r_n  in sequence.  Attributes[ReplaceAll] := {Protected}", 
             "title": "ReplaceAll"
         }, 
         {
+            "location": "/builtin/replacement/replaceall/#simple-examples", 
+            "text": "In [ 1 ] :=   2 ^ ( x ^ 2 + 1 )   +   x ^ 2   /.   x ^ 2 - y  Out [ 1 ] =   2 ^ ( y + 1 )   +   y   If no match is found,  ReplaceAll  evaluates to an unchanged  expr :  In [ 2 ] :=   2 ^ ( x ^ 2 + 1 )   +   x ^ 2   /.   z ^ 2 - y  Out [ 2 ] =   2 ^ ( x ^ 2 + 1 )   +   x ^ 2   ReplaceAll  works within Orderless expressions as well (such as  Plus ):  In [ 3 ] :=   a   +   b   +   c   +   c ^ 2   /.   c ^ 2   +   a   -   d  Out [ 3 ] =   b   +   c   +   d   ReplaceAll  can use named patterns:  In [ 4 ] :=   a   +   b   +   c   +   d /.   x_Symbol   +   y_Symbol   -   x ^ y  Out [ 4 ] =   a ^ b   +   c   +   d   In [ 5 ] :=   a   +   2 * b   +   5 * c   /.   ( c1_Integer * a_Symbol )   -   99 * a  Out [ 5 ] =   a   +   99   *   b   +   99   *   c", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/replacement/replaceall/#further-examples", 
+            "text": "ReplaceAll  can be used to replace sequences of expressions:  In [ 1 ] :=   a   +   b   +   c   +   d   /.   a   +   amatch___   -   foo [ amatch ]  Out [ 1 ] =   foo [ b ,   c ,   d ]   The  Head  of functions can be replaced just as the subexpressions:  In [ 2 ] :=   ( x   +   2 )[ 5 ,   6 ]   /.   ( 2   +   x )   -   Plus  Out [ 2 ] =   11   In [ 3 ] :=   a * b * c * d   /.   _Symbol   -   2  Out [ 3 ] =   2 [ 2 ,   2 ,   2 ,   2 ]", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/replacement/replacerepeated/", 
-            "text": "ReplaceRepeated\n\n\nAttributes[ReplaceRepeated] := {Protected}", 
+            "text": "ReplaceRepeated\n\n\nexpr //. rule\n replaces all occurences of the LHS of \nrule\n with the RHS of \nrule\n in \nexpr\n repeatedly until the expression stabilizes.\n\n\nexpr //. {r1, r2, ...}\n performes the same operation as \nexpr //. rule\n, but evaluating each \nr_n\n in sequence.\n\n\nAttributes[ReplaceRepeated] := {Protected}\n\n\nSimple examples\n\n\nReplaceRepeated\n can be used to implement logarithm expansion:\n\n\nIn\n[\n1\n]\n:=\n \nlogRules\n \n:=\n \n{\nLog\n[\nx_\n \ny_\n]\n \n:\n \nLog\n[\nx\n]\n \n+\n \nLog\n[\ny\n],\n \nLog\n[\nx_\n^\nk_\n]\n \n:\n \nk\n \nLog\n[\nx\n]}\n\n\nOut\n[\n1\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nLog\n[\na\n^\nb\n*\nb\n^\n(\nc\n^\nd\n)]\n \n//.\n \nlogRules\n\n\nOut\n[\n2\n]\n=\n \nb\n \nLog\n[\na\n]\n \n+\n \n(\nc\n^\nd\n)\n \nLog\n[\nb\n]", 
             "title": "ReplaceRepeated "
         }, 
         {
             "location": "/builtin/replacement/replacerepeated/#replacerepeated", 
-            "text": "Attributes[ReplaceRepeated] := {Protected}", 
+            "text": "expr //. rule  replaces all occurences of the LHS of  rule  with the RHS of  rule  in  expr  repeatedly until the expression stabilizes.  expr //. {r1, r2, ...}  performes the same operation as  expr //. rule , but evaluating each  r_n  in sequence.  Attributes[ReplaceRepeated] := {Protected}", 
             "title": "ReplaceRepeated"
         }, 
         {
+            "location": "/builtin/replacement/replacerepeated/#simple-examples", 
+            "text": "ReplaceRepeated  can be used to implement logarithm expansion:  In [ 1 ] :=   logRules   :=   { Log [ x_   y_ ]   :   Log [ x ]   +   Log [ y ],   Log [ x_ ^ k_ ]   :   k   Log [ x ]}  Out [ 1 ] =   Null   In [ 2 ] :=   Log [ a ^ b * b ^ ( c ^ d )]   //.   logRules  Out [ 2 ] =   b   Log [ a ]   +   ( c ^ d )   Log [ b ]", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/replacement/rule/", 
-            "text": "Rule\n\n\nAttributes[Rule] := {Protected, SequenceHold}", 
+            "text": "Rule\n\n\nlhs -\n rhs\n can be used in replacement functions to say that instances of \nlhs\n should be replaced with \nrhs\n.\n\n\nAttributes[Rule] := {Protected, SequenceHold}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n2\n^\n(\nx\n^\n2\n+\n1\n)\n \n+\n \nx\n^\n2\n \n/.\n \nx\n^\n2\n \n-\n \ny\n\n\nOut\n[\n1\n]\n=\n \n2\n^\n(\ny\n+\n1\n)\n \n+\n \ny\n\n\n\n\n\n\nTo demonstrate the difference between \nRule\n and \nRuleDelayed\n:\n\n\nIn\n[\n2\n]\n:=\n \nEqual\n \n@@\n \n({\n1\n,\n \n1\n}\n \n/.\n \n1\n \n-\n \nRandomReal\n[])\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nEqual\n \n@@\n \n({\n1\n,\n \n1\n}\n \n/.\n \n1\n \n:\n \nRandomReal\n[])\n\n\nOut\n[\n3\n]\n=\n \nFalse", 
             "title": "Rule "
         }, 
         {
             "location": "/builtin/replacement/rule/#rule", 
-            "text": "Attributes[Rule] := {Protected, SequenceHold}", 
+            "text": "lhs -  rhs  can be used in replacement functions to say that instances of  lhs  should be replaced with  rhs .  Attributes[Rule] := {Protected, SequenceHold}", 
             "title": "Rule"
         }, 
         {
+            "location": "/builtin/replacement/rule/#simple-examples", 
+            "text": "In [ 1 ] :=   2 ^ ( x ^ 2 + 1 )   +   x ^ 2   /.   x ^ 2   -   y  Out [ 1 ] =   2 ^ ( y + 1 )   +   y   To demonstrate the difference between  Rule  and  RuleDelayed :  In [ 2 ] :=   Equal   @@   ({ 1 ,   1 }   /.   1   -   RandomReal [])  Out [ 2 ] =   True   In [ 3 ] :=   Equal   @@   ({ 1 ,   1 }   /.   1   :   RandomReal [])  Out [ 3 ] =   False", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/replacement/ruledelayed/", 
-            "text": "RuleDelayed\n\n\nAttributes[RuleDelayed] := {HoldRest, Protected, SequenceHold}", 
+            "text": "RuleDelayed\n\n\nlhs :\n rhs\n can be used in replacement functions to say that instances of \nlhs\n should be replaced with \nrhs\n, evaluating \nrhs\n only after replacement.\n\n\nAttributes[RuleDelayed] := {HoldRest, Protected, SequenceHold}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n2\n^\n(\nx\n^\n2\n+\n1\n)\n \n+\n \nx\n^\n2\n \n/.\n \nx\n^\n2\n \n:\n \ny\n\n\nOut\n[\n1\n]\n=\n \n2\n^\n(\ny\n+\n1\n)\n \n+\n \ny\n\n\n\n\n\n\nTo demonstrate the difference between \nRule\n and \nRuleDelayed\n:\n\n\nIn\n[\n2\n]\n:=\n \nEqual\n \n@@\n \n({\n1\n,\n \n1\n}\n \n/.\n \n1\n \n-\n \nRandomReal\n[])\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nEqual\n \n@@\n \n({\n1\n,\n \n1\n}\n \n/.\n \n1\n \n:\n \nRandomReal\n[])\n\n\nOut\n[\n3\n]\n=\n \nFalse", 
             "title": "RuleDelayed "
         }, 
         {
             "location": "/builtin/replacement/ruledelayed/#ruledelayed", 
-            "text": "Attributes[RuleDelayed] := {HoldRest, Protected, SequenceHold}", 
+            "text": "lhs :  rhs  can be used in replacement functions to say that instances of  lhs  should be replaced with  rhs , evaluating  rhs  only after replacement.  Attributes[RuleDelayed] := {HoldRest, Protected, SequenceHold}", 
             "title": "RuleDelayed"
+        }, 
+        {
+            "location": "/builtin/replacement/ruledelayed/#simple-examples", 
+            "text": "In [ 1 ] :=   2 ^ ( x ^ 2 + 1 )   +   x ^ 2   /.   x ^ 2   :   y  Out [ 1 ] =   2 ^ ( y + 1 )   +   y   To demonstrate the difference between  Rule  and  RuleDelayed :  In [ 2 ] :=   Equal   @@   ({ 1 ,   1 }   /.   1   -   RandomReal [])  Out [ 2 ] =   True   In [ 3 ] :=   Equal   @@   ({ 1 ,   1 }   /.   1   :   RandomReal [])  Out [ 3 ] =   False", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/sort/", 
@@ -1007,13 +1032,23 @@
         }, 
         {
             "location": "/builtin/sort/sort/", 
-            "text": "Sort\n\n\nAttributes[Sort] := {Protected}", 
+            "text": "Sort\n\n\nSort[list]\n sorts the elements in list according to \nOrder\n.\n\n\nAttributes[Sort] := {Protected}\n\n\nSimple examples\n\n\nSort a list of numbers:\n\n\nIn\n[\n1\n]\n:=\n \nSort\n[{\n6\n,\n \n2\n,\n \n3.2\n,\n \n-\n5.1\n}]\n\n\nOut\n[\n1\n]\n=\n \n{\n-\n5.1\n,\n \n2\n,\n \n3.2\n,\n \n6\n}\n\n\n\n\n\n\nSort a list of strings:\n\n\nIn\n[\n2\n]\n:=\n \nSort\n[{\nhello\n,\n \na\n,\n \naa\n,\n \nzzz\n}]\n\n\nOut\n[\n2\n]\n=\n \n{\na\n,\n \naa\n,\n \nhello\n,\n \nzzz\n}\n\n\n\n\n\n\nSort a list of symbols:\n\n\nIn\n[\n3\n]\n:=\n \nSort\n[{\nd\n,\n \na\n,\n \nb\n,\n \nc\n}]\n\n\nOut\n[\n3\n]\n=\n \n{\na\n,\n \nb\n,\n \nc\n,\n \nd\n}\n\n\n\n\n\n\nSort a list of heterogenous expressions:\n\n\nIn\n[\n4\n]\n:=\n \nSort\n[{\n5\n,\n \nh\n,\n \nfoo\n[\ny\n,\n \n2\n],\n \nbar\n[\na\n^\nx\n]}]\n\n\nOut\n[\n4\n]\n=\n \n{\n5\n,\n \nh\n,\n \nbar\n[\na\n^\nx\n],\n \nfoo\n[\ny\n,\n \n2\n]}\n\n\n\n\n\n\nFurther examples\n\n\nThe object to sort need not be a list:\n\n\nIn\n[\n1\n]\n:=\n \nSort\n[\nfoo\n[\nd\n,\n \na\n,\n \nb\n,\n \nc\n]]\n\n\nOut\n[\n1\n]\n=\n \nfoo\n[\na\n,\n \nb\n,\n \nc\n,\n \nd\n]", 
             "title": "Sort "
         }, 
         {
             "location": "/builtin/sort/sort/#sort", 
-            "text": "Attributes[Sort] := {Protected}", 
+            "text": "Sort[list]  sorts the elements in list according to  Order .  Attributes[Sort] := {Protected}", 
             "title": "Sort"
+        }, 
+        {
+            "location": "/builtin/sort/sort/#simple-examples", 
+            "text": "Sort a list of numbers:  In [ 1 ] :=   Sort [{ 6 ,   2 ,   3.2 ,   - 5.1 }]  Out [ 1 ] =   { - 5.1 ,   2 ,   3.2 ,   6 }   Sort a list of strings:  In [ 2 ] :=   Sort [{ hello ,   a ,   aa ,   zzz }]  Out [ 2 ] =   { a ,   aa ,   hello ,   zzz }   Sort a list of symbols:  In [ 3 ] :=   Sort [{ d ,   a ,   b ,   c }]  Out [ 3 ] =   { a ,   b ,   c ,   d }   Sort a list of heterogenous expressions:  In [ 4 ] :=   Sort [{ 5 ,   h ,   foo [ y ,   2 ],   bar [ a ^ x ]}]  Out [ 4 ] =   { 5 ,   h ,   bar [ a ^ x ],   foo [ y ,   2 ]}", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/sort/sort/#further-examples", 
+            "text": "The object to sort need not be a list:  In [ 1 ] :=   Sort [ foo [ d ,   a ,   b ,   c ]]  Out [ 1 ] =   foo [ a ,   b ,   c ,   d ]", 
+            "title": "Further examples"
         }, 
         {
             "location": "/builtin/symbol/", 
@@ -1027,43 +1062,78 @@
         }, 
         {
             "location": "/builtin/symbol/set/", 
-            "text": "Set\n\n\nAttributes[Set] := {HoldFirst, Protected, SequenceHold}", 
+            "text": "Set\n\n\nlhs = rhs\n sets \nlhs\n to stand for \nrhs\n.\n\n\nAttributes[Set] := {HoldFirst, Protected, SequenceHold}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nx\n=\n1\n+\n2\n\n\nOut\n[\n1\n]\n=\n \n3\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nx\n\n\nOut\n[\n2\n]\n=\n \n3\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nx\n+\n1\n\n\nOut\n[\n3\n]\n=\n \n4\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nx\n+\n1\n\n\nOut\n[\n4\n]\n=\n \n4\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nx\n=\n1\n+\n2\n\n\nOut\n[\n5\n]\n=\n \n3\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nx\n*\n2\n\n\nOut\n[\n6\n]\n=\n \n6\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nx\n=\nx\n*\n2\n\n\nOut\n[\n7\n]\n=\n \n6\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nx\n=\nx\n*\nx\n\n\nOut\n[\n8\n]\n=\n \n36\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \ny\n=\na\n*\na\n\n\nOut\n[\n9\n]\n=\n \na\n^\n2\n\n\n\n\n\n\nIn\n[\n10\n]\n:=\n \ny\n=\ny\n*\ny\n\n\nOut\n[\n10\n]\n=\n \na\n^\n4\n\n\n\n\n\n\nIn\n[\n11\n]\n:=\n \na\n=\n2\n\n\nOut\n[\n11\n]\n=\n \n2\n\n\n\n\n\n\nIn\n[\n12\n]\n:=\n \ny\n\n\nOut\n[\n12\n]\n=\n \n16\n\n\n\n\n\n\nFurther examples\n\n\nSet\n has the \nHoldFirst\n attribute, meaning \nrhs\n is evaluated before assignment:\n\n\nIn\n[\n1\n]\n:=\n \nAttributes\n[\nSet\n]\n\n\nOut\n[\n1\n]\n=\n \n{\nHoldFirst\n,\n \nProtected\n,\n \nSequenceHold\n}\n\n\n\n\n\n\nSetDelayed\n has the \nHoldAll\n attribute, meaning \nrhs\n is not evaluated during assignment:\n\n\nIn\n[\n2\n]\n:=\n \nAttributes\n[\nSetDelayed\n]\n\n\nOut\n[\n2\n]\n=\n \n{\nHoldAll\n,\n \nProtected\n,\n \nSequenceHold\n}", 
             "title": "Set "
         }, 
         {
             "location": "/builtin/symbol/set/#set", 
-            "text": "Attributes[Set] := {HoldFirst, Protected, SequenceHold}", 
+            "text": "lhs = rhs  sets  lhs  to stand for  rhs .  Attributes[Set] := {HoldFirst, Protected, SequenceHold}", 
             "title": "Set"
         }, 
         {
+            "location": "/builtin/symbol/set/#simple-examples", 
+            "text": "In [ 1 ] :=   x = 1 + 2  Out [ 1 ] =   3   In [ 2 ] :=   x  Out [ 2 ] =   3   In [ 3 ] :=   x + 1  Out [ 3 ] =   4   In [ 4 ] :=   x + 1  Out [ 4 ] =   4   In [ 5 ] :=   x = 1 + 2  Out [ 5 ] =   3   In [ 6 ] :=   x * 2  Out [ 6 ] =   6   In [ 7 ] :=   x = x * 2  Out [ 7 ] =   6   In [ 8 ] :=   x = x * x  Out [ 8 ] =   36   In [ 9 ] :=   y = a * a  Out [ 9 ] =   a ^ 2   In [ 10 ] :=   y = y * y  Out [ 10 ] =   a ^ 4   In [ 11 ] :=   a = 2  Out [ 11 ] =   2   In [ 12 ] :=   y  Out [ 12 ] =   16", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/symbol/set/#further-examples", 
+            "text": "Set  has the  HoldFirst  attribute, meaning  rhs  is evaluated before assignment:  In [ 1 ] :=   Attributes [ Set ]  Out [ 1 ] =   { HoldFirst ,   Protected ,   SequenceHold }   SetDelayed  has the  HoldAll  attribute, meaning  rhs  is not evaluated during assignment:  In [ 2 ] :=   Attributes [ SetDelayed ]  Out [ 2 ] =   { HoldAll ,   Protected ,   SequenceHold }", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/symbol/setdelayed/", 
-            "text": "SetDelayed\n\n\nAttributes[SetDelayed] := {HoldAll, Protected, SequenceHold}", 
+            "text": "SetDelayed\n\n\nlhs := rhs\n sets \nlhs\n to stand for \nrhs\n, with \nrhs\n not being evaluated until it is referenced by \nlhs\n.\n\n\nAttributes[SetDelayed] := {HoldAll, Protected, SequenceHold}\n\n\nSimple examples\n\n\nSetDelayed\n can be used to define functions:\n\n\nIn\n[\n1\n]\n:=\n \ntesta\n[\nx_\n]\n \n:=\n \nx\n*\n2\n\n\nOut\n[\n1\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \ntesta\n[\nx_Integer\n]\n \n:=\n \nx\n*\n3\n\n\nOut\n[\n2\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \ntesta\n[\nx_Real\n]\n \n:=\n \nx\n*\n4\n\n\nOut\n[\n3\n]\n=\n \nNull\n\n\n\n\n\n\nThe more \"specific\" definitions match first:\n\n\nIn\n[\n4\n]\n:=\n \ntesta\n[\n2.\n]\n\n\nOut\n[\n4\n]\n=\n \n8.\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \ntesta\n[\n2\n]\n\n\nOut\n[\n5\n]\n=\n \n6\n\n\n\n\n\n\nThere is no specific match for \ntesta[k]\n, so the general case matches:\n\n\nIn\n[\n6\n]\n:=\n \ntesta\n[\nk\n]\n\n\nOut\n[\n6\n]\n=\n \n2\n \n*\n \nk\n\n\n\n\n\n\nFurther examples\n\n\nSet\n has the \nHoldFirst\n attribute, meaning \nrhs\n is evaluated before assignment:\n\n\nIn\n[\n1\n]\n:=\n \nAttributes\n[\nSet\n]\n\n\nOut\n[\n1\n]\n=\n \n{\nHoldFirst\n,\n \nProtected\n,\n \nSequenceHold\n}\n\n\n\n\n\n\nSetDelayed\n has the \nHoldAll\n attribute, meaning \nrhs\n is not evaluated during assignment:\n\n\nIn\n[\n2\n]\n:=\n \nAttributes\n[\nSetDelayed\n]\n\n\nOut\n[\n2\n]\n=\n \n{\nHoldAll\n,\n \nProtected\n,\n \nSequenceHold\n}", 
             "title": "SetDelayed "
         }, 
         {
             "location": "/builtin/symbol/setdelayed/#setdelayed", 
-            "text": "Attributes[SetDelayed] := {HoldAll, Protected, SequenceHold}", 
+            "text": "lhs := rhs  sets  lhs  to stand for  rhs , with  rhs  not being evaluated until it is referenced by  lhs .  Attributes[SetDelayed] := {HoldAll, Protected, SequenceHold}", 
             "title": "SetDelayed"
         }, 
         {
+            "location": "/builtin/symbol/setdelayed/#simple-examples", 
+            "text": "SetDelayed  can be used to define functions:  In [ 1 ] :=   testa [ x_ ]   :=   x * 2  Out [ 1 ] =   Null   In [ 2 ] :=   testa [ x_Integer ]   :=   x * 3  Out [ 2 ] =   Null   In [ 3 ] :=   testa [ x_Real ]   :=   x * 4  Out [ 3 ] =   Null   The more \"specific\" definitions match first:  In [ 4 ] :=   testa [ 2. ]  Out [ 4 ] =   8.   In [ 5 ] :=   testa [ 2 ]  Out [ 5 ] =   6   There is no specific match for  testa[k] , so the general case matches:  In [ 6 ] :=   testa [ k ]  Out [ 6 ] =   2   *   k", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/symbol/setdelayed/#further-examples", 
+            "text": "Set  has the  HoldFirst  attribute, meaning  rhs  is evaluated before assignment:  In [ 1 ] :=   Attributes [ Set ]  Out [ 1 ] =   { HoldFirst ,   Protected ,   SequenceHold }   SetDelayed  has the  HoldAll  attribute, meaning  rhs  is not evaluated during assignment:  In [ 2 ] :=   Attributes [ SetDelayed ]  Out [ 2 ] =   { HoldAll ,   Protected ,   SequenceHold }", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/symbol/attributes/", 
-            "text": "Attributes\n\n\nAttributes[Attributes] := {HoldAll, Listable, Protected}", 
+            "text": "Attributes\n\n\nAttributes[sym]\n returns a \nList\n of attributes for \nsym\n.\n\n\nAttributes[Attributes] := {HoldAll, Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nAttributes\n[\nInfinity\n]\n\n\nOut\n[\n1\n]\n=\n \n{\nProtected\n,\n \nReadProtected\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nAttributes\n[\nAttributes\n]\n\n\nOut\n[\n2\n]\n=\n \n{\nHoldAll\n,\n \nListable\n,\n \nProtected\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nAttributes\n[\nPlus\n]\n\n\nOut\n[\n3\n]\n=\n \n{\nFlat\n,\n \nListable\n,\n \nNumericFunction\n,\n \nOneIdentity\n,\n \nOrderless\n,\n \nProtected\n}\n\n\n\n\n\n\nThe default set of attributes is the empty list:\n\n\nIn\n[\n4\n]\n:=\n \nAttributes\n[\nundefinedSym\n]\n\n\nOut\n[\n4\n]\n=\n \n{}\n\n\n\n\n\n\nFurther examples\n\n\nOnly symbols can have attributes:\n\n\nIn\n[\n1\n]\n:=\n \nAttributes\n[\n2\n]\n\n\nOut\n[\n1\n]\n=\n \nAttributes\n[\n2\n]\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nAttributes\n[\na\n^\n2\n]\n\n\nOut\n[\n2\n]\n=\n \nAttributes\n[\na\n^\n2\n]", 
             "title": "Attributes "
         }, 
         {
             "location": "/builtin/symbol/attributes/#attributes", 
-            "text": "Attributes[Attributes] := {HoldAll, Listable, Protected}", 
+            "text": "Attributes[sym]  returns a  List  of attributes for  sym .  Attributes[Attributes] := {HoldAll, Listable, Protected}", 
             "title": "Attributes"
         }, 
         {
+            "location": "/builtin/symbol/attributes/#simple-examples", 
+            "text": "In [ 1 ] :=   Attributes [ Infinity ]  Out [ 1 ] =   { Protected ,   ReadProtected }   In [ 2 ] :=   Attributes [ Attributes ]  Out [ 2 ] =   { HoldAll ,   Listable ,   Protected }   In [ 3 ] :=   Attributes [ Plus ]  Out [ 3 ] =   { Flat ,   Listable ,   NumericFunction ,   OneIdentity ,   Orderless ,   Protected }   The default set of attributes is the empty list:  In [ 4 ] :=   Attributes [ undefinedSym ]  Out [ 4 ] =   {}", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/symbol/attributes/#further-examples", 
+            "text": "Only symbols can have attributes:  In [ 1 ] :=   Attributes [ 2 ]  Out [ 1 ] =   Attributes [ 2 ]   In [ 2 ] :=   Attributes [ a ^ 2 ]  Out [ 2 ] =   Attributes [ a ^ 2 ]", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/symbol/clear/", 
-            "text": "Clear\n\n\nAttributes[Clear] := {HoldAll, Protected}", 
+            "text": "Clear\n\n\nClear[sym1, sym2, ...]\n clears the symbol definitions from the evaluation context.\n\n\nAttributes[Clear] := {HoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \na\n\n\nOut\n[\n1\n]\n=\n \na\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \na\n \n=\n \n5\n\n\nOut\n[\n2\n]\n=\n \n5\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nb\n \n=\n \n6\n\n\nOut\n[\n3\n]\n=\n \n6\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nc\n \n=\n \n7\n\n\nOut\n[\n4\n]\n=\n \n7\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \na\n\n\nOut\n[\n5\n]\n=\n \n5\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nClear\n[\na\n,\n \n99\n,\n \nb\n]\n\n\nOut\n[\n6\n]\n=\n \nNull\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \na\n\n\nOut\n[\n7\n]\n=\n \na\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nb\n\n\nOut\n[\n8\n]\n=\n \nb\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \nc\n\n\nOut\n[\n9\n]\n=\n \n7", 
             "title": "Clear "
         }, 
         {
             "location": "/builtin/symbol/clear/#clear", 
-            "text": "Attributes[Clear] := {HoldAll, Protected}", 
+            "text": "Clear[sym1, sym2, ...]  clears the symbol definitions from the evaluation context.  Attributes[Clear] := {HoldAll, Protected}", 
             "title": "Clear"
+        }, 
+        {
+            "location": "/builtin/symbol/clear/#simple-examples", 
+            "text": "In [ 1 ] :=   a  Out [ 1 ] =   a   In [ 2 ] :=   a   =   5  Out [ 2 ] =   5   In [ 3 ] :=   b   =   6  Out [ 3 ] =   6   In [ 4 ] :=   c   =   7  Out [ 4 ] =   7   In [ 5 ] :=   a  Out [ 5 ] =   5   In [ 6 ] :=   Clear [ a ,   99 ,   b ]  Out [ 6 ] =   Null   In [ 7 ] :=   a  Out [ 7 ] =   a   In [ 8 ] :=   b  Out [ 8 ] =   b   In [ 9 ] :=   c  Out [ 9 ] =   7", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/symbol/atomq/", 
@@ -1082,67 +1152,67 @@
         }, 
         {
             "location": "/builtin/system/", 
-            "text": "system documentation\n\n\nSetLogging\n\n\nDefinition\n\n\nTiming\n\n\nPrint\n\n\nCompoundExpression\n\n\nHead\n\n\nMessageName\n\n\nInfix", 
+            "text": "system documentation\n\n\nExpreduceSetLogging\n\n\nTiming\n\n\nPrint\n\n\nCompoundExpression\n\n\nHead\n\n\nMessageName\n\n\nInfix", 
             "title": "system"
         }, 
         {
             "location": "/builtin/system/#system-documentation", 
-            "text": "SetLogging  Definition  Timing  Print  CompoundExpression  Head  MessageName  Infix", 
+            "text": "ExpreduceSetLogging  Timing  Print  CompoundExpression  Head  MessageName  Infix", 
             "title": "system documentation"
         }, 
         {
-            "location": "/builtin/system/setlogging/", 
-            "text": "SetLogging\n\n\nAttributes[SetLogging] := {Protected}", 
-            "title": "SetLogging "
+            "location": "/builtin/system/expreducesetlogging/", 
+            "text": "ExpreduceSetLogging\n\n\nExpreduceSetLogging[bool]\n sets the logging state to \nbool\n.\n\n\nAttributes[ExpreduceSetLogging] := {Protected}\n\n\nDetails\n\n\nLogging output prints to the console. There can be a lot of logging output, especially for more complicated pattern matches.", 
+            "title": "ExpreduceSetLogging "
         }, 
         {
-            "location": "/builtin/system/setlogging/#setlogging", 
-            "text": "Attributes[SetLogging] := {Protected}", 
-            "title": "SetLogging"
+            "location": "/builtin/system/expreducesetlogging/#expreducesetlogging", 
+            "text": "ExpreduceSetLogging[bool]  sets the logging state to  bool .  Attributes[ExpreduceSetLogging] := {Protected}", 
+            "title": "ExpreduceSetLogging"
         }, 
         {
-            "location": "/builtin/system/definition/", 
-            "text": "Definition\n\n\nAttributes[Definition] := {HoldAll, Protected}", 
-            "title": "Definition "
-        }, 
-        {
-            "location": "/builtin/system/definition/#definition", 
-            "text": "Attributes[Definition] := {HoldAll, Protected}", 
-            "title": "Definition"
+            "location": "/builtin/system/expreducesetlogging/#details", 
+            "text": "Logging output prints to the console. There can be a lot of logging output, especially for more complicated pattern matches.", 
+            "title": "Details"
         }, 
         {
             "location": "/builtin/system/timing/", 
-            "text": "Timing\n\n\nAttributes[Timing] := {HoldAll, Protected, SequenceHold}", 
+            "text": "Timing\n\n\nTiming[expr]\n returns a \nList\n with the first element being the time in seconds for the evaluation of \nexpr\n, and the second element being the result.\n\n\nAttributes[Timing] := {HoldAll, Protected, SequenceHold}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nTiming\n[\nSum\n[\na\n,\n \n{\na\n,\n \n100000000\n}]]\n\n\nOut\n[\n1\n]\n=\n \n{\n0.00167509\n,\n \n5000000050000000\n}", 
             "title": "Timing "
         }, 
         {
             "location": "/builtin/system/timing/#timing", 
-            "text": "Attributes[Timing] := {HoldAll, Protected, SequenceHold}", 
+            "text": "Timing[expr]  returns a  List  with the first element being the time in seconds for the evaluation of  expr , and the second element being the result.  Attributes[Timing] := {HoldAll, Protected, SequenceHold}", 
             "title": "Timing"
         }, 
         {
+            "location": "/builtin/system/timing/#simple-examples", 
+            "text": "In [ 1 ] :=   Timing [ Sum [ a ,   { a ,   100000000 }]]  Out [ 1 ] =   { 0.00167509 ,   5000000050000000 }", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/system/print/", 
-            "text": "Print\n\n\nAttributes[Print] := {Protected}", 
+            "text": "Print\n\n\nPrint[expr]\n prints the string representation of \nexpr\n to the console and returns \nNull\n.\n\n\nAttributes[Print] := {Protected}", 
             "title": "Print "
         }, 
         {
             "location": "/builtin/system/print/#print", 
-            "text": "Attributes[Print] := {Protected}", 
+            "text": "Print[expr]  prints the string representation of  expr  to the console and returns  Null .  Attributes[Print] := {Protected}", 
             "title": "Print"
         }, 
         {
             "location": "/builtin/system/compoundexpression/", 
-            "text": "CompoundExpression\n\n\nAttributes[CompoundExpression] := {HoldAll, Protected, ReadProtected}", 
+            "text": "CompoundExpression\n\n\nCompoundExpression[e1, e2, ...]\n evaluates each expression in order and returns the result of the last one.\n\n\nAttributes[CompoundExpression] := {HoldAll, Protected, ReadProtected}", 
             "title": "CompoundExpression "
         }, 
         {
             "location": "/builtin/system/compoundexpression/#compoundexpression", 
-            "text": "Attributes[CompoundExpression] := {HoldAll, Protected, ReadProtected}", 
+            "text": "CompoundExpression[e1, e2, ...]  evaluates each expression in order and returns the result of the last one.  Attributes[CompoundExpression] := {HoldAll, Protected, ReadProtected}", 
             "title": "CompoundExpression"
         }, 
         {
             "location": "/builtin/system/head/", 
-            "text": "Head\n\n\nHead[expr]\n returns the head of the expression.\n\n\nAttributes[Head] := {Protected}", 
+            "text": "Head\n\n\nHead[expr]\n returns the head of the expression.\n\n\nAttributes[Head] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nHead\n[\nf\n[\nx\n]]\n\n\nOut\n[\n1\n]\n=\n \nf\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nHead\n[\nx\n]\n\n\nOut\n[\n2\n]\n=\n \nSymbol\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nHead\n[{\nx\n}]\n\n\nOut\n[\n3\n]\n=\n \nList\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nHead\n[\na\n \n+\n \nb\n]\n\n\nOut\n[\n4\n]\n=\n \nPlus\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nHead\n[\n1\n]\n\n\nOut\n[\n5\n]\n=\n \nInteger\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nHead\n[\n1.\n]\n\n\nOut\n[\n6\n]\n=\n \nReal\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nHead\n[\n2\n/\n7\n]\n\n\nOut\n[\n7\n]\n=\n \nRational\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nHead\n[\n1\n/\n7\n]\n\n\nOut\n[\n8\n]\n=\n \nRational\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \nHead\n[\n1\n]\n\n\nOut\n[\n9\n]\n=\n \nString\n\n\n\n\n\n\nIn\n[\n10\n]\n:=\n \nHead\n[\nHead\n[(\na\n \n+\n \nb\n)[\nx\n]]]\n\n\nOut\n[\n10\n]\n=\n \nPlus", 
             "title": "Head "
         }, 
         {
@@ -1151,24 +1221,34 @@
             "title": "Head"
         }, 
         {
+            "location": "/builtin/system/head/#simple-examples", 
+            "text": "In [ 1 ] :=   Head [ f [ x ]]  Out [ 1 ] =   f   In [ 2 ] :=   Head [ x ]  Out [ 2 ] =   Symbol   In [ 3 ] :=   Head [{ x }]  Out [ 3 ] =   List   In [ 4 ] :=   Head [ a   +   b ]  Out [ 4 ] =   Plus   In [ 5 ] :=   Head [ 1 ]  Out [ 5 ] =   Integer   In [ 6 ] :=   Head [ 1. ]  Out [ 6 ] =   Real   In [ 7 ] :=   Head [ 2 / 7 ]  Out [ 7 ] =   Rational   In [ 8 ] :=   Head [ 1 / 7 ]  Out [ 8 ] =   Rational   In [ 9 ] :=   Head [ 1 ]  Out [ 9 ] =   String   In [ 10 ] :=   Head [ Head [( a   +   b )[ x ]]]  Out [ 10 ] =   Plus", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/system/messagename/", 
-            "text": "MessageName\n\n\nAttributes[MessageName] := {HoldFirst, Protected, ReadProtected}", 
+            "text": "MessageName\n\n\nsym::msg\n references a particular message for \nsym\n.\n\n\nAttributes[MessageName] := {HoldFirst, Protected, ReadProtected}", 
             "title": "MessageName "
         }, 
         {
             "location": "/builtin/system/messagename/#messagename", 
-            "text": "Attributes[MessageName] := {HoldFirst, Protected, ReadProtected}", 
+            "text": "sym::msg  references a particular message for  sym .  Attributes[MessageName] := {HoldFirst, Protected, ReadProtected}", 
             "title": "MessageName"
         }, 
         {
             "location": "/builtin/system/infix/", 
-            "text": "Infix\n\n\nAttributes[Infix] := {Protected}", 
+            "text": "Infix\n\n\nInfix[expr, sep]\n represents \nexpr\n in infix form with separator \nsep\n when converted to a string.\n\n\nAttributes[Infix] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nInfix\n[\nfoo\n[\nbar\n,\n \nfuzz\n,\n \nzip\n],\n \n|\n]\n \n//\n \nToString\n\n\nOut\n[\n1\n]\n=\n \n(bar|fuzz|zip)", 
             "title": "Infix "
         }, 
         {
             "location": "/builtin/system/infix/#infix", 
-            "text": "Attributes[Infix] := {Protected}", 
+            "text": "Infix[expr, sep]  represents  expr  in infix form with separator  sep  when converted to a string.  Attributes[Infix] := {Protected}", 
             "title": "Infix"
+        }, 
+        {
+            "location": "/builtin/system/infix/#simple-examples", 
+            "text": "In [ 1 ] :=   Infix [ foo [ bar ,   fuzz ,   zip ],   | ]   //   ToString  Out [ 1 ] =   (bar|fuzz|zip)", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/string/", 

@@ -602,10 +602,6 @@
       
         
   
-
-      
-        
-  
     <li>
       <a class="" title="string" href="../../string/">
         string
@@ -715,7 +711,40 @@
         <div class="wrapper">
           
           <h1 id="attributes">Attributes</h1>
+<p><code>Attributes[sym]</code> returns a <code>List</code> of attributes for <code>sym</code>.</p>
 <p><code>Attributes[Attributes] := {HoldAll, Listable, Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nb">Infinity</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nb">Protected</span><span class="p">,</span><span class="w"> </span><span class="nb">ReadProtected</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nb">Attributes</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nb">HoldAll</span><span class="p">,</span><span class="w"> </span><span class="nb">Listable</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nb">Plus</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nb">Flat</span><span class="p">,</span><span class="w"> </span><span class="nb">Listable</span><span class="p">,</span><span class="w"> </span><span class="nb">NumericFunction</span><span class="p">,</span><span class="w"> </span><span class="nb">OneIdentity</span><span class="p">,</span><span class="w"> </span><span class="nb">Orderless</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+
+
+<p>The default set of attributes is the empty list:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nv">undefinedSym</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<p>Only symbols can have attributes:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
