@@ -711,7 +711,43 @@
         <div class="wrapper">
           
           <h1 id="pattern">Pattern</h1>
+<p><code>name{BLANKFORM}</code> is equivalent to <code>Pattern[name, {BLANKFORM}]</code> and can be used in pattern matching to refer to the matched expression as <code>name</code>, where <code>{BLANKFORM}</code> is one of <code>{_, __, ___}</code>.</p>
+<p><code>name{BLANKFORM}head</code> is equivalent to <code>Pattern[name, {BLANKFORM}head]</code> and can be used in pattern matching to refer to the matched expression as <code>name</code>, where <code>{BLANKFORM}</code> is one of <code>{_, __, ___}</code>.</p>
 <p><code>Attributes[Pattern] := {HoldFirst, Protected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<p>To demonstrate referencing <code>name</code> in the replacement RHS:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nt">b_</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">a</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"></span>
+</pre></div>
+
+
+<p>If two matches share the same name, they must be equivalent:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nt">a_</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">a</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nt">a_</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">a</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"></span>
+</pre></div>
+
+
+<p>To demonstrate the head matching capability:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nt">a_Integer</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nt">a_Real</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<p>To demonstrate patterns matching a sequence of expressions:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nt">a___Integer</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="nv">a</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"></span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
