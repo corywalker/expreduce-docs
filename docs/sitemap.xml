@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,565 +13,559 @@
         
     <url>
      <loc>/builtin/combinatorics/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/combinatorics/integerpartitions/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/combinatorics/permutations/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/combinatorics/multinomial/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/combinatorics/factorial/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/calculus/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/calculus/d/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/calculus/integrate/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/equal/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/unequal/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/sameq/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/comparison/matchq/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/comparison/atomq/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/constants/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/comparison/numberq/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/constants/rational/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/atoms/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/constants/numberq/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/atoms/rational/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/constants/string/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/atoms/string/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/constants/real/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/atoms/real/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/constants/integer/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/atoms/integer/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/functional/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/functional/function/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/functional/slot/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/functional/apply/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/functional/map/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/functional/array/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/expression/apply/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/expression/head/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/expression/depth/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/expression/length/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/sequence/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/evaluate/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/expression/function/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/expression/slot/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/hold/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/flowcontrol/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/flowcontrol/if/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/flowcontrol/while/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/flowcontrol/compoundexpression/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/list/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/total/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/mean/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/list/depth/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/list/length/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/table/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/list/sum/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/list/product/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/memberq/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/list/map/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/list/array/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/cases/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/padright/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/padleft/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/range/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/order/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/arithmetic/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/order/order/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/arithmetic/plus/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/plus/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/arithmetic/sum/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/plus/plus/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/arithmetic/times/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/plus/infinity/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/arithmetic/product/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/plus/complexinfinity/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/specialsyms/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/plus/indeterminate/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/specialsyms/infinity/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/specialsyms/complexinfinity/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/specialsyms/indeterminate/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/power/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/random/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/random/randomreal/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/random/seedrandom/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/replaceall/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/replacerepeated/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/rule/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/ruledelayed/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/sort/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/sort/sort/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/builtin/symbol/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/symbol/set/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/symbol/setdelayed/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/symbol/attributes/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/symbol/clear/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/symbol/atomq/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <loc>/builtin/sort/order/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/expreducesetlogging/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/system/attributes/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/system/clear/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/system/set/</loc>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/system/setdelayed/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/timing/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/print/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/system/compoundexpression/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/system/head/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/messagename/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/system/infix/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/string/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/string/tostring/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/string/stringjoin/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/string/infix/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/time/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/time/unixtime/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/times/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/times/times/</loc>
-     <lastmod>2017-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/builtin/times/factorial/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/pattern/matchq/</loc>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/pattern/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/blank/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/blanksequence/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/blanknullsequence/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/except/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/patterntest/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/condition/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/alternatives/</loc>
-     <lastmod>2017-01-18</lastmod>
+     <lastmod>2017-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
