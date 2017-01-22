@@ -204,6 +204,30 @@
     </url>
         
     <url>
+     <loc>/builtin/expression/holdform/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/expression/flatten/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/solve/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/solve/solve/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/builtin/flowcontrol/</loc>
      <lastmod>2017-01-21</lastmod>
      <changefreq>daily</changefreq>
@@ -288,6 +312,18 @@
     </url>
         
     <url>
+     <loc>/builtin/list/part/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/list/all/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/builtin/arithmetic/</loc>
      <lastmod>2017-01-21</lastmod>
      <changefreq>daily</changefreq>
@@ -349,6 +385,12 @@
         
     <url>
      <loc>/builtin/power/power/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/power/expand/</loc>
      <lastmod>2017-01-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -469,6 +511,12 @@
         
     <url>
      <loc>/builtin/system/messagename/</loc>
+     <lastmod>2017-01-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/system/trace/</loc>
      <lastmod>2017-01-21</lastmod>
      <changefreq>daily</changefreq>
     </url>

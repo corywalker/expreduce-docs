@@ -417,12 +417,12 @@
         }, 
         {
             "location": "/builtin/expression/", 
-            "text": "expression documentation\n\n\nHead\n\n\nDepth\n\n\nLength\n\n\nSequence\n\n\nEvaluate\n\n\nHold", 
+            "text": "expression documentation\n\n\nHead\n\n\nDepth\n\n\nLength\n\n\nSequence\n\n\nEvaluate\n\n\nHold\n\n\nHoldForm\n\n\nFlatten", 
             "title": "expression"
         }, 
         {
             "location": "/builtin/expression/#expression-documentation", 
-            "text": "Head  Depth  Length  Sequence  Evaluate  Hold", 
+            "text": "Head  Depth  Length  Sequence  Evaluate  Hold  HoldForm  Flatten", 
             "title": "expression documentation"
         }, 
         {
@@ -526,6 +526,66 @@
             "title": "Simple examples"
         }, 
         {
+            "location": "/builtin/expression/holdform/", 
+            "text": "HoldForm\n\n\nHoldForm[expr]\n prevents automatic evaluation of \nexpr\n. Prints as \nexpr\n.\n\n\nAttributes[HoldForm] := {HoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nHoldForm\n[\nPower\n[\n5\n,\n \n3\n]]\n\n\nOut\n[\n1\n]\n=\n \n5\n^\n3\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nHoldForm\n[\nPower\n[\n5.\n,\n \n3.\n]]\n\n\nOut\n[\n2\n]\n=\n \n5.\n^\n3.", 
+            "title": "HoldForm "
+        }, 
+        {
+            "location": "/builtin/expression/holdform/#holdform", 
+            "text": "HoldForm[expr]  prevents automatic evaluation of  expr . Prints as  expr .  Attributes[HoldForm] := {HoldAll, Protected}", 
+            "title": "HoldForm"
+        }, 
+        {
+            "location": "/builtin/expression/holdform/#simple-examples", 
+            "text": "In [ 1 ] :=   HoldForm [ Power [ 5 ,   3 ]]  Out [ 1 ] =   5 ^ 3   In [ 2 ] :=   HoldForm [ Power [ 5. ,   3. ]]  Out [ 2 ] =   5. ^ 3.", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/expression/flatten/", 
+            "text": "Flatten\n\n\nFlatten[list]\n flattens out lists in \nlist\n.\n\n\nAttributes[Flatten] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nFlatten\n[\n1\n]\n\n\nOut\n[\n1\n]\n=\n \nFlatten\n[\n1\n]\n\n\n\n\n\n\nInput must be nonatomic:\n\n\nIn\n[\n2\n]\n:=\n \nFlatten\n[{\n1\n}]\n\n\nOut\n[\n2\n]\n=\n \n{\n1\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nFlatten\n[{{{{\n1\n}}}}]\n\n\nOut\n[\n3\n]\n=\n \n{\n1\n}\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nFlatten\n[{{{{\n1\n},\n \n2\n}},\n \n3\n}]\n\n\nOut\n[\n4\n]\n=\n \n{\n1\n,\n \n2\n,\n \n3\n}\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nFlatten\n[{{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n}]\n\n\nOut\n[\n5\n]\n=\n \n{\n1\n,\n \n2\n,\n \n3\n,\n \n4\n}\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n}]\n\n\nOut\n[\n6\n]\n=\n \n{\n-\n1\n,\n \n1\n,\n \n2\n,\n \n3\n,\n \n4\n}\n\n\n\n\n\n\nA level of zero means no change:\n\n\nIn\n[\n7\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n},\n \n0\n]\n\n\nOut\n[\n7\n]\n=\n \n{\n-\n1\n,\n \n{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n}\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n},\n \n1\n]\n\n\nOut\n[\n8\n]\n=\n \n{\n-\n1\n,\n \n{{\n1\n},\n \n2\n},\n \n3\n,\n \n4\n}\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n},\n \n2\n]\n\n\nOut\n[\n9\n]\n=\n \n{\n-\n1\n,\n \n{\n1\n},\n \n2\n,\n \n3\n,\n \n4\n}\n\n\n\n\n\n\nIn\n[\n10\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n},\n \n3\n]\n\n\nOut\n[\n10\n]\n=\n \n{\n-\n1\n,\n \n1\n,\n \n2\n,\n \n3\n,\n \n4\n}\n\n\n\n\n\n\nIn\n[\n11\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n},\n \n4\n]\n\n\nOut\n[\n11\n]\n=\n \n{\n-\n1\n,\n \n1\n,\n \n2\n,\n \n3\n,\n \n4\n}\n\n\n\n\n\n\nIn\n[\n12\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n},\n \na\n]\n\n\nOut\n[\n12\n]\n=\n \nFlatten\n[{\n-\n1\n,\n \n{{{\n1\n},\n \n2\n}},\n \n3\n,\n \n4\n},\n \na\n]\n\n\n\n\n\n\nIn\n[\n13\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{\nfoo\n[{{\n1\n},\n \n2\n}]},\n \n3\n,\n \n4\n},\n \n999\n]\n\n\nOut\n[\n13\n]\n=\n \n{\n-\n1\n,\n \nfoo\n[{{\n1\n},\n \n2\n}],\n \n3\n,\n \n4\n}\n\n\n\n\n\n\nIn\n[\n14\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{\nfoo\n[{{\n1\n},\n \n2\n}]},\n \n3\n,\n \n4\n},\n \n999\n]\n\n\nOut\n[\n14\n]\n=\n \n{\n-\n1\n,\n \nfoo\n[{{\n1\n},\n \n2\n}],\n \n3\n,\n \n4\n}\n\n\n\n\n\n\nIn\n[\n15\n]\n:=\n \nFlatten\n[{\n-\n1\n,\n \n{\n1\n[{{\n1\n},\n \n2\n}]},\n \n3\n,\n \n4\n},\n \n999\n]\n\n\nOut\n[\n15\n]\n=\n \n{\n-\n1\n,\n \n1\n[{{\n1\n},\n \n2\n}],\n \n3\n,\n \n4\n}", 
+            "title": "Flatten "
+        }, 
+        {
+            "location": "/builtin/expression/flatten/#flatten", 
+            "text": "Flatten[list]  flattens out lists in  list .  Attributes[Flatten] := {Protected}", 
+            "title": "Flatten"
+        }, 
+        {
+            "location": "/builtin/expression/flatten/#simple-examples", 
+            "text": "In [ 1 ] :=   Flatten [ 1 ]  Out [ 1 ] =   Flatten [ 1 ]   Input must be nonatomic:  In [ 2 ] :=   Flatten [{ 1 }]  Out [ 2 ] =   { 1 }   In [ 3 ] :=   Flatten [{{{{ 1 }}}}]  Out [ 3 ] =   { 1 }   In [ 4 ] :=   Flatten [{{{{ 1 },   2 }},   3 }]  Out [ 4 ] =   { 1 ,   2 ,   3 }   In [ 5 ] :=   Flatten [{{{{ 1 },   2 }},   3 ,   4 }]  Out [ 5 ] =   { 1 ,   2 ,   3 ,   4 }   In [ 6 ] :=   Flatten [{ - 1 ,   {{{ 1 },   2 }},   3 ,   4 }]  Out [ 6 ] =   { - 1 ,   1 ,   2 ,   3 ,   4 }   A level of zero means no change:  In [ 7 ] :=   Flatten [{ - 1 ,   {{{ 1 },   2 }},   3 ,   4 },   0 ]  Out [ 7 ] =   { - 1 ,   {{{ 1 },   2 }},   3 ,   4 }   In [ 8 ] :=   Flatten [{ - 1 ,   {{{ 1 },   2 }},   3 ,   4 },   1 ]  Out [ 8 ] =   { - 1 ,   {{ 1 },   2 },   3 ,   4 }   In [ 9 ] :=   Flatten [{ - 1 ,   {{{ 1 },   2 }},   3 ,   4 },   2 ]  Out [ 9 ] =   { - 1 ,   { 1 },   2 ,   3 ,   4 }   In [ 10 ] :=   Flatten [{ - 1 ,   {{{ 1 },   2 }},   3 ,   4 },   3 ]  Out [ 10 ] =   { - 1 ,   1 ,   2 ,   3 ,   4 }   In [ 11 ] :=   Flatten [{ - 1 ,   {{{ 1 },   2 }},   3 ,   4 },   4 ]  Out [ 11 ] =   { - 1 ,   1 ,   2 ,   3 ,   4 }   In [ 12 ] :=   Flatten [{ - 1 ,   {{{ 1 },   2 }},   3 ,   4 },   a ]  Out [ 12 ] =   Flatten [{ - 1 ,   {{{ 1 },   2 }},   3 ,   4 },   a ]   In [ 13 ] :=   Flatten [{ - 1 ,   { foo [{{ 1 },   2 }]},   3 ,   4 },   999 ]  Out [ 13 ] =   { - 1 ,   foo [{{ 1 },   2 }],   3 ,   4 }   In [ 14 ] :=   Flatten [{ - 1 ,   { foo [{{ 1 },   2 }]},   3 ,   4 },   999 ]  Out [ 14 ] =   { - 1 ,   foo [{{ 1 },   2 }],   3 ,   4 }   In [ 15 ] :=   Flatten [{ - 1 ,   { 1 [{{ 1 },   2 }]},   3 ,   4 },   999 ]  Out [ 15 ] =   { - 1 ,   1 [{{ 1 },   2 }],   3 ,   4 }", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/solve/", 
+            "text": "solve documentation\n\n\nSolve", 
+            "title": "solve"
+        }, 
+        {
+            "location": "/builtin/solve/#solve-documentation", 
+            "text": "Solve", 
+            "title": "solve documentation"
+        }, 
+        {
+            "location": "/builtin/solve/solve/", 
+            "text": "Solve\n\n\nSolve[var, eqn]\n solves \neqn\n for \nvar\n.\n\n\nAttributes[Solve] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nSolve\n[\nx\n,\n \nx\n \n==\n \n0\n]\n\n\nOut\n[\n1\n]\n=\n \n{{\nx\n \n-\n \n0\n}}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nSolve\n[\nx\n,\n \nx\n \n==\n \nb\n]\n\n\nOut\n[\n2\n]\n=\n \n{{\nx\n \n-\n \nb\n}}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nSolve\n[\nx\n,\n \nx\n/\na\n \n==\n \nb\n]\n\n\nOut\n[\n3\n]\n=\n \n{{\nx\n \n-\n \na\n \nb\n}}\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSolve\n[\nx\n,\n \nx\n*\na\n \n==\n \nb\n]\n\n\nOut\n[\n4\n]\n=\n \n{{\nx\n \n-\n \nb\n/\na\n}}\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nSolve\n[\nx\n,\n \nm\n*\nx\n \n+\n \nb\n \n==\n \n0\n]\n\n\nOut\n[\n5\n]\n=\n \n{{\nx\n \n-\n \n-\n(\nb\n/\nm\n)}}\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nSolve\n[\nx\n,\n \nm\n*\nx\n \n+\n \nb\n \n==\n \nc\n]\n\n\nOut\n[\n6\n]\n=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n+\n \nc\n)\n/\nm\n}}\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nSolve\n[\nx\n,\n \na\n*\nx\n^\n2\n \n+\n \nb\n*\nx\n \n+\n \nc\n \n==\n \n0\n]\n\n\nOut\n[\n7\n]\n=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n-\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n])\n/\n(\n2\n \na\n)},\n \n{\nx\n \n-\n \n(\n-\nb\n \n+\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n])\n/\n(\n2\n \na\n)}}\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nSolve\n[\nx\n,\n \na\n*\nx\n^\n2\n \n+\n \nb\n*\nx\n \n+\n \nc\n \n==\n \nd\n]\n\n\nOut\n[\n8\n]\n=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n-\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)},\n \n{\nx\n \n-\n \n(\n-\nb\n \n+\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)}}\n\n\n\n\n\n\nRules\n\n\nSolve\n[\nx_\n,\n \nx_\n \n==\n \nexpr_\n]\n \n:=\n \n{{\nx\n \n-\n \nexpr\n}}\n\n\nSolve\n[\nx_\n,\n \nx_\n \n*\n \nexprB__\n \n==\n \nexprA_\n]\n \n:=\n \n{{\nx\n \n-\n \nexprA\n \n/\n \nTimes\n[\nexprB\n]}}\n\n\nSolve\n[\nx_\n,\n \nx_\n \n*\n \nexprB__\n \n+\n \nexprC_\n \n==\n \nexprA_\n]\n \n:=\n \n{{\nx\n \n-\n \n(\nexprA\n-\nexprC\n)\n \n/\n \nTimes\n[\nexprB\n]}}\n\n\nSolve\n[\nx_\n,\n \na_\n*\nx_\n^\n2\n \n+\n \nb_\n*\nx_\n \n+\n \nc_\n \n==\n \nd_\n]\n \n:=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n-\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)},\n \n{\nx\n \n-\n \n(\n-\nb\n \n+\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)}}", 
+            "title": "Solve "
+        }, 
+        {
+            "location": "/builtin/solve/solve/#solve", 
+            "text": "Solve[var, eqn]  solves  eqn  for  var .  Attributes[Solve] := {Protected}", 
+            "title": "Solve"
+        }, 
+        {
+            "location": "/builtin/solve/solve/#simple-examples", 
+            "text": "In [ 1 ] :=   Solve [ x ,   x   ==   0 ]  Out [ 1 ] =   {{ x   -   0 }}   In [ 2 ] :=   Solve [ x ,   x   ==   b ]  Out [ 2 ] =   {{ x   -   b }}   In [ 3 ] :=   Solve [ x ,   x / a   ==   b ]  Out [ 3 ] =   {{ x   -   a   b }}   In [ 4 ] :=   Solve [ x ,   x * a   ==   b ]  Out [ 4 ] =   {{ x   -   b / a }}   In [ 5 ] :=   Solve [ x ,   m * x   +   b   ==   0 ]  Out [ 5 ] =   {{ x   -   - ( b / m )}}   In [ 6 ] :=   Solve [ x ,   m * x   +   b   ==   c ]  Out [ 6 ] =   {{ x   -   ( - b   +   c ) / m }}   In [ 7 ] :=   Solve [ x ,   a * x ^ 2   +   b * x   +   c   ==   0 ]  Out [ 7 ] =   {{ x   -   ( - b   -   Sqrt [ b ^ 2   -   4   a   c ]) / ( 2   a )},   { x   -   ( - b   +   Sqrt [ b ^ 2   -   4   a   c ]) / ( 2   a )}}   In [ 8 ] :=   Solve [ x ,   a * x ^ 2   +   b * x   +   c   ==   d ]  Out [ 8 ] =   {{ x   -   ( - b   -   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )},   { x   -   ( - b   +   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )}}", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/solve/solve/#rules", 
+            "text": "Solve [ x_ ,   x_   ==   expr_ ]   :=   {{ x   -   expr }}  Solve [ x_ ,   x_   *   exprB__   ==   exprA_ ]   :=   {{ x   -   exprA   /   Times [ exprB ]}}  Solve [ x_ ,   x_   *   exprB__   +   exprC_   ==   exprA_ ]   :=   {{ x   -   ( exprA - exprC )   /   Times [ exprB ]}}  Solve [ x_ ,   a_ * x_ ^ 2   +   b_ * x_   +   c_   ==   d_ ]   :=   {{ x   -   ( - b   -   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )},   { x   -   ( - b   +   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )}}", 
+            "title": "Rules"
+        }, 
+        {
             "location": "/builtin/flowcontrol/", 
             "text": "flowcontrol documentation\n\n\nIf\n\n\nWhile\n\n\nCompoundExpression", 
             "title": "flowcontrol"
@@ -587,12 +647,12 @@
         }, 
         {
             "location": "/builtin/list/", 
-            "text": "list documentation\n\n\nList\n\n\nTotal\n\n\nMean\n\n\nTable\n\n\nMemberQ\n\n\nCases\n\n\nPadRight\n\n\nPadLeft\n\n\nRange", 
+            "text": "list documentation\n\n\nList\n\n\nTotal\n\n\nMean\n\n\nTable\n\n\nMemberQ\n\n\nCases\n\n\nPadRight\n\n\nPadLeft\n\n\nRange\n\n\nPart\n\n\nAll", 
             "title": "list"
         }, 
         {
             "location": "/builtin/list/#list-documentation", 
-            "text": "List  Total  Mean  Table  MemberQ  Cases  PadRight  PadLeft  Range", 
+            "text": "List  Total  Mean  Table  MemberQ  Cases  PadRight  PadLeft  Range  Part  All", 
             "title": "list documentation"
         }, 
         {
@@ -766,6 +826,41 @@
             "title": "Simple examples"
         }, 
         {
+            "location": "/builtin/list/part/", 
+            "text": "Part\n\n\nexpr[[i]]\n or \nPart[expr, i]\n returns the \ni\nth element of \nexpr\n.\n\n\nAttributes[Part] := {NHoldRest, Protected, ReadProtected}\n\n\nSimple examples\n\n\nReturn the second item in a list:\n\n\nIn\n[\n1\n]\n:=\n \n{\na\n,\n \nb\n,\n \nc\n,\n \nd\n}[[\n2\n]]\n\n\nOut\n[\n1\n]\n=\n \nb\n\n\n\n\n\n\nMulti-dimensional indices are supported:\n\n\nIn\n[\n2\n]\n:=\n \nmat\n \n=\n \nTable\n[\nTable\n[\na\n*\nb\n^\n2\n,\n \n{\nb\n,\n \n5\n}],\n \n{\na\n,\n \n5\n}]\n\n\nOut\n[\n2\n]\n=\n \n{{\n1\n,\n \n4\n,\n \n9\n,\n \n16\n,\n \n25\n},\n \n{\n2\n,\n \n8\n,\n \n18\n,\n \n32\n,\n \n50\n},\n \n{\n3\n,\n \n12\n,\n \n27\n,\n \n48\n,\n \n75\n},\n \n{\n4\n,\n \n16\n,\n \n36\n,\n \n64\n,\n \n100\n},\n \n{\n5\n,\n \n20\n,\n \n45\n,\n \n80\n,\n \n125\n}}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nmat\n[[\n5\n,\n \n2\n]]\n\n\nOut\n[\n3\n]\n=\n \n20\n\n\n\n\n\n\nUse \nAll\n to select along the entire dimension:\n\n\nIn\n[\n4\n]\n:=\n \nmat\n[[\n5\n,\n \nAll\n]]\n\n\nOut\n[\n4\n]\n=\n \n{\n5\n,\n \n20\n,\n \n45\n,\n \n80\n,\n \n125\n}\n\n\n\n\n\n\nFurther examples\n\n\nOut of bounds issues will prevent the expression from evaluating:\n\n\nIn\n[\n1\n]\n:=\n \nPart\n[{\na\n},\n \n2\n]\n\n\nOut\n[\n1\n]\n=\n \n{\na\n}[[\n2\n]]\n\n\n\n\n\n\nThe input need not be a \nList\n:\n\n\nIn\n[\n2\n]\n:=\n \nPart\n[\nfoo\n[\na\n],\n \n0\n]\n\n\nOut\n[\n2\n]\n=\n \nfoo\n\n\n\n\n\n\nOmitting an index will return the original expression:\n\n\nIn\n[\n3\n]\n:=\n \nPart\n[\ni\n]\n\n\nOut\n[\n3\n]\n=\n \ni", 
+            "title": "Part "
+        }, 
+        {
+            "location": "/builtin/list/part/#part", 
+            "text": "expr[[i]]  or  Part[expr, i]  returns the  i th element of  expr .  Attributes[Part] := {NHoldRest, Protected, ReadProtected}", 
+            "title": "Part"
+        }, 
+        {
+            "location": "/builtin/list/part/#simple-examples", 
+            "text": "Return the second item in a list:  In [ 1 ] :=   { a ,   b ,   c ,   d }[[ 2 ]]  Out [ 1 ] =   b   Multi-dimensional indices are supported:  In [ 2 ] :=   mat   =   Table [ Table [ a * b ^ 2 ,   { b ,   5 }],   { a ,   5 }]  Out [ 2 ] =   {{ 1 ,   4 ,   9 ,   16 ,   25 },   { 2 ,   8 ,   18 ,   32 ,   50 },   { 3 ,   12 ,   27 ,   48 ,   75 },   { 4 ,   16 ,   36 ,   64 ,   100 },   { 5 ,   20 ,   45 ,   80 ,   125 }}   In [ 3 ] :=   mat [[ 5 ,   2 ]]  Out [ 3 ] =   20   Use  All  to select along the entire dimension:  In [ 4 ] :=   mat [[ 5 ,   All ]]  Out [ 4 ] =   { 5 ,   20 ,   45 ,   80 ,   125 }", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/list/part/#further-examples", 
+            "text": "Out of bounds issues will prevent the expression from evaluating:  In [ 1 ] :=   Part [{ a },   2 ]  Out [ 1 ] =   { a }[[ 2 ]]   The input need not be a  List :  In [ 2 ] :=   Part [ foo [ a ],   0 ]  Out [ 2 ] =   foo   Omitting an index will return the original expression:  In [ 3 ] :=   Part [ i ]  Out [ 3 ] =   i", 
+            "title": "Further examples"
+        }, 
+        {
+            "location": "/builtin/list/all/", 
+            "text": "All\n\n\nAll\n allows selection along a dimension in \nPart\n.\n\n\nAttributes[All] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nmat\n \n=\n \nTable\n[\nTable\n[\na\n*\nb\n^\n2\n,\n \n{\nb\n,\n \n5\n}],\n \n{\na\n,\n \n5\n}]\n\n\nOut\n[\n1\n]\n=\n \n{{\n1\n,\n \n4\n,\n \n9\n,\n \n16\n,\n \n25\n},\n \n{\n2\n,\n \n8\n,\n \n18\n,\n \n32\n,\n \n50\n},\n \n{\n3\n,\n \n12\n,\n \n27\n,\n \n48\n,\n \n75\n},\n \n{\n4\n,\n \n16\n,\n \n36\n,\n \n64\n,\n \n100\n},\n \n{\n5\n,\n \n20\n,\n \n45\n,\n \n80\n,\n \n125\n}}\n\n\n\n\n\n\nUse \nAll\n to select along the entire dimension:\n\n\nIn\n[\n2\n]\n:=\n \nmat\n[[\n5\n,\n \nAll\n]]\n\n\nOut\n[\n2\n]\n=\n \n{\n5\n,\n \n20\n,\n \n45\n,\n \n80\n,\n \n125\n}", 
+            "title": "All "
+        }, 
+        {
+            "location": "/builtin/list/all/#all", 
+            "text": "All  allows selection along a dimension in  Part .  Attributes[All] := {Protected}", 
+            "title": "All"
+        }, 
+        {
+            "location": "/builtin/list/all/#simple-examples", 
+            "text": "In [ 1 ] :=   mat   =   Table [ Table [ a * b ^ 2 ,   { b ,   5 }],   { a ,   5 }]  Out [ 1 ] =   {{ 1 ,   4 ,   9 ,   16 ,   25 },   { 2 ,   8 ,   18 ,   32 ,   50 },   { 3 ,   12 ,   27 ,   48 ,   75 },   { 4 ,   16 ,   36 ,   64 ,   100 },   { 5 ,   20 ,   45 ,   80 ,   125 }}   Use  All  to select along the entire dimension:  In [ 2 ] :=   mat [[ 5 ,   All ]]  Out [ 2 ] =   { 5 ,   20 ,   45 ,   80 ,   125 }", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/arithmetic/", 
             "text": "arithmetic documentation\n\n\nPlus\n\n\nSum\n\n\nTimes\n\n\nProduct", 
             "title": "arithmetic"
@@ -797,7 +892,7 @@
         }, 
         {
             "location": "/builtin/arithmetic/sum/", 
-            "text": "Sum\n\n\nSum[expr, n]\n returns the sum of \nn\n copies of \nexpr\n.\n\n\nSum[expr, {sym, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = 1 to \nn\n.\n\n\nSum[expr, {sym, m, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = \nm\n to \nn\n.\n\n\nAttributes[Sum] := {HoldAll, Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n5\n,\n \n10\n}]\n\n\nOut\n[\n1\n]\n=\n \n45\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n10\n}]\n\n\nOut\n[\n2\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n10\n}]\n\n\nOut\n[\n3\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n30000\n}]\n\n\nOut\n[\n4\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n30000\n}]\n\n\nOut\n[\n5\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \nn\n}]\n\n\nOut\n[\n6\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \nn\n}]\n\n\nOut\n[\n7\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nSum\n[\na\n \n+\n \nb\n,\n \n{\na\n,\n \n0\n,\n \n2\n},\n \n{\nb\n,\n \n0\n,\n \n3\n}]\n\n\nOut\n[\n8\n]\n=\n \n30\n\n\n\n\n\n\nRules\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)", 
+            "text": "Sum\n\n\nSum[expr, n]\n returns the sum of \nn\n copies of \nexpr\n.\n\n\nSum[expr, {sym, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = 1 to \nn\n.\n\n\nSum[expr, {sym, m, n}]\n returns the sum of \nexpr\n evaluated with \nsym\n = \nm\n to \nn\n.\n\n\nAttributes[Sum] := {HoldAll, Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n5\n,\n \n10\n}]\n\n\nOut\n[\n1\n]\n=\n \n45\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n10\n}]\n\n\nOut\n[\n2\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n10\n}]\n\n\nOut\n[\n3\n]\n=\n \n55\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \n30000\n}]\n\n\nOut\n[\n4\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \n30000\n}]\n\n\nOut\n[\n5\n]\n=\n \n450015000\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n0\n,\n \nn\n}]\n\n\nOut\n[\n6\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nSum\n[\ni\n,\n \n{\ni\n,\n \n1\n,\n \nn\n}]\n\n\nOut\n[\n7\n]\n=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nSum\n[\na\n \n+\n \nb\n,\n \n{\na\n,\n \n0\n,\n \n2\n},\n \n{\nb\n,\n \n0\n,\n \n3\n}]\n\n\nOut\n[\n8\n]\n=\n \n30\n\n\n\n\n\n\nIn\n[\n9\n]\n:=\n \nSum\n[\na\n,\n \n{\na\n,\n \n{\nb\n,\n \nc\n,\n \nd\n,\n \ne\n}}]\n\n\nOut\n[\n9\n]\n=\n \nb\n+\nc\n+\nd\n+\ne\n\n\n\n\n\n\nIn\n[\n10\n]\n:=\n \nSum\n[\na\n*\nf\n,\n \n{\na\n,\n \n{\nb\n,\n \nc\n,\n \nd\n,\n \ne\n}},\n \n{\nf\n,\n \n{\ng\n,\n \nh\n}}]\n\n\nOut\n[\n10\n]\n=\n \nb\n \ng\n \n+\n \nc\n \ng\n \n+\n \nd\n \ng\n \n+\n \ne\n \ng\n \n+\n \nb\n \nh\n \n+\n \nc\n \nh\n \n+\n \nd\n \nh\n \n+\n \ne\n \nh\n\n\n\n\n\n\nRules\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \nn_Integer\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n0\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)\n\n\nSum\n[\ni_Symbol\n,\n \n{\ni_Symbol\n,\n \n1\n,\n \nn_Symbol\n}]\n \n:=\n \n1\n/\n2\n*\nn\n*\n(\n1\n \n+\n \nn\n)", 
             "title": "Sum "
         }, 
         {
@@ -807,7 +902,7 @@
         }, 
         {
             "location": "/builtin/arithmetic/sum/#simple-examples", 
-            "text": "In [ 1 ] :=   Sum [ i ,   { i ,   5 ,   10 }]  Out [ 1 ] =   45   In [ 2 ] :=   Sum [ i ,   { i ,   1 ,   10 }]  Out [ 2 ] =   55   In [ 3 ] :=   Sum [ i ,   { i ,   0 ,   10 }]  Out [ 3 ] =   55   In [ 4 ] :=   Sum [ i ,   { i ,   1 ,   30000 }]  Out [ 4 ] =   450015000   In [ 5 ] :=   Sum [ i ,   { i ,   0 ,   30000 }]  Out [ 5 ] =   450015000   In [ 6 ] :=   Sum [ i ,   { i ,   0 ,   n }]  Out [ 6 ] =   1 / 2 * n * ( 1   +   n )   In [ 7 ] :=   Sum [ i ,   { i ,   1 ,   n }]  Out [ 7 ] =   1 / 2 * n * ( 1   +   n )   In [ 8 ] :=   Sum [ a   +   b ,   { a ,   0 ,   2 },   { b ,   0 ,   3 }]  Out [ 8 ] =   30", 
+            "text": "In [ 1 ] :=   Sum [ i ,   { i ,   5 ,   10 }]  Out [ 1 ] =   45   In [ 2 ] :=   Sum [ i ,   { i ,   1 ,   10 }]  Out [ 2 ] =   55   In [ 3 ] :=   Sum [ i ,   { i ,   0 ,   10 }]  Out [ 3 ] =   55   In [ 4 ] :=   Sum [ i ,   { i ,   1 ,   30000 }]  Out [ 4 ] =   450015000   In [ 5 ] :=   Sum [ i ,   { i ,   0 ,   30000 }]  Out [ 5 ] =   450015000   In [ 6 ] :=   Sum [ i ,   { i ,   0 ,   n }]  Out [ 6 ] =   1 / 2 * n * ( 1   +   n )   In [ 7 ] :=   Sum [ i ,   { i ,   1 ,   n }]  Out [ 7 ] =   1 / 2 * n * ( 1   +   n )   In [ 8 ] :=   Sum [ a   +   b ,   { a ,   0 ,   2 },   { b ,   0 ,   3 }]  Out [ 8 ] =   30   In [ 9 ] :=   Sum [ a ,   { a ,   { b ,   c ,   d ,   e }}]  Out [ 9 ] =   b + c + d + e   In [ 10 ] :=   Sum [ a * f ,   { a ,   { b ,   c ,   d ,   e }},   { f ,   { g ,   h }}]  Out [ 10 ] =   b   g   +   c   g   +   d   g   +   e   g   +   b   h   +   c   h   +   d   h   +   e   h", 
             "title": "Simple examples"
         }, 
         {
@@ -917,17 +1012,17 @@
         }, 
         {
             "location": "/builtin/power/", 
-            "text": "power documentation\n\n\nPower", 
+            "text": "power documentation\n\n\nPower\n\n\nExpand", 
             "title": "power"
         }, 
         {
             "location": "/builtin/power/#power-documentation", 
-            "text": "Power", 
+            "text": "Power  Expand", 
             "title": "power documentation"
         }, 
         {
             "location": "/builtin/power/power/", 
-            "text": "Power\n\n\nAttributes[Power] := {Listable, NumericFunction, OneIdentity, Protected}\n\n\nSimple examples\n\n\nExponents of integers are computed exactly:\n\n\nIn\n[\n1\n]\n:=\n \n(\n-\n5\n)\n^-\n3\n\n\nOut\n[\n1\n]\n=\n \n-\n1\n/\n125\n\n\n\n\n\n\nFloating point exponents are handled with floating point precision:\n\n\nIn\n[\n2\n]\n:=\n \n.5\n^-\n10000.\n\n\nOut\n[\n2\n]\n=\n \n1.99506\ne\n+\n3010\n\n\n\n\n\n\nAutomatically apply some basic simplification rules:\n\n\nIn\n[\n3\n]\n:=\n \n(\nm\n^\n2.\n)\n^\n2\n\n\nOut\n[\n3\n]\n=\n \nm\n^\n4.\n\n\n\n\n\n\nFurther examples\n\n\nExpreduce handles problematic exponents accordingly:\n\n\nIn\n[\n1\n]\n:=\n \n0\n^\n0\n\n\nOut\n[\n1\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n0\n^\n(\n-\n1\n)\n\n\nOut\n[\n2\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nRules\n\n\nPower\n[\nPower\n[\na_\n,\nb_Integer\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Real\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nTimes\n[\nExcept\n[\n_Symbol\n,\n \nfirst_\n],\n \ninner___\n],\n \npow_\n]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nTimes\n[\nfirst_\n,\n \ninner___\n],\n \nExcept\n[\n_Symbol\n,\n \npow_\n]]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nRational\n[\na_\n,\nb_\n],\n \n-\n1\n]\n \n:=\n \nRational\n[\nb\n,\na\n]", 
+            "text": "Power\n\n\nAttributes[Power] := {Listable, NumericFunction, OneIdentity, Protected}\n\n\nSimple examples\n\n\nExponents of integers are computed exactly:\n\n\nIn\n[\n1\n]\n:=\n \n(\n-\n5\n)\n^-\n3\n\n\nOut\n[\n1\n]\n=\n \n-\n1\n/\n125\n\n\n\n\n\n\nFloating point exponents are handled with floating point precision:\n\n\nIn\n[\n2\n]\n:=\n \n.5\n^-\n10000.\n\n\nOut\n[\n2\n]\n=\n \n1.99506\ne\n+\n3010\n\n\n\n\n\n\nAutomatically apply some basic simplification rules:\n\n\nIn\n[\n3\n]\n:=\n \n(\nm\n^\n2.\n)\n^\n2\n\n\nOut\n[\n3\n]\n=\n \nm\n^\n4.\n\n\n\n\n\n\nFurther examples\n\n\nExpreduce handles problematic exponents accordingly:\n\n\nIn\n[\n1\n]\n:=\n \n0\n^\n0\n\n\nOut\n[\n1\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n0\n^\n(\n-\n1\n)\n\n\nOut\n[\n2\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nRules\n\n\nPower\n[\nPower\n[\na_\n,\nb_Integer\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Real\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Symbol\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nTimes\n[\nExcept\n[\n_Symbol\n,\n \nfirst_\n],\n \ninner___\n],\n \npow_\n]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nTimes\n[\nfirst_\n,\n \ninner___\n],\n \nExcept\n[\n_Symbol\n,\n \npow_\n]]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nRational\n[\na_\n,\nb_\n],\n \n-\n1\n]\n \n:=\n \nRational\n[\nb\n,\na\n]", 
             "title": "Power "
         }, 
         {
@@ -947,7 +1042,27 @@
         }, 
         {
             "location": "/builtin/power/power/#rules", 
-            "text": "Power [ Power [ a_ , b_Integer ], c_Integer ]   :=   a ^ ( b * c )  Power [ Power [ a_ , b_Real ], c_Integer ]   :=   a ^ ( b * c )  Power [ Times [ Except [ _Symbol ,   first_ ],   inner___ ],   pow_ ]   :=   first ^ pow * Power [ Times [ inner ], pow ]  Power [ Times [ first_ ,   inner___ ],   Except [ _Symbol ,   pow_ ]]   :=   first ^ pow * Power [ Times [ inner ], pow ]  Power [ Rational [ a_ , b_ ],   - 1 ]   :=   Rational [ b , a ]", 
+            "text": "Power [ Power [ a_ , b_Integer ], c_Integer ]   :=   a ^ ( b * c )  Power [ Power [ a_ , b_Real ], c_Integer ]   :=   a ^ ( b * c )  Power [ Power [ a_ , b_Symbol ], c_Integer ]   :=   a ^ ( b * c )  Power [ Times [ Except [ _Symbol ,   first_ ],   inner___ ],   pow_ ]   :=   first ^ pow * Power [ Times [ inner ], pow ]  Power [ Times [ first_ ,   inner___ ],   Except [ _Symbol ,   pow_ ]]   :=   first ^ pow * Power [ Times [ inner ], pow ]  Power [ Rational [ a_ , b_ ],   - 1 ]   :=   Rational [ b , a ]", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/power/expand/", 
+            "text": "Expand\n\n\nAttributes[Expand] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nExpand\n[(\na\n \n+\n \nb\n \n+\n \nc\n)\n^\n3\n]\n\n\nOut\n[\n1\n]\n=\n \na\n^\n3\n \n+\n \n3\n \na\n^\n2\n \n*\n \nb\n \n+\n \n3\n \na\n \nb\n^\n2\n \n+\n \nb\n^\n3\n \n+\n \n3\n \na\n^\n2\n \n*\n \nc\n \n+\n \n6\n \na\n \nb\n \nc\n \n+\n \n3\n \nb\n^\n2\n \n*\n \nc\n \n+\n \n3\n \na\n \nc\n^\n2\n \n+\n \n3\n \nb\n \nc\n^\n2\n \n+\n \nc\n^\n3\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n(\na\n \n+\n \nb\n)\n \n*\n \n(\nc\n \n+\n \nd\n \n+\n \ne\n)\n \n//\n \nExpand\n\n\nOut\n[\n2\n]\n=\n \na\n \nc\n \n+\n \nb\n \nc\n \n+\n \na\n \nd\n \n+\n \nb\n \nd\n \n+\n \na\n \ne\n \n+\n \nb\n \ne\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n(\na\n \n+\n \nb\n \n+\n \nc\n)\n*\n(\nd\n \n+\n \ne\n)\n^\n2\n \n//\n \nExpand\n\n\nOut\n[\n3\n]\n=\n \na\n \nd\n^\n2\n \n+\n \nb\n \nd\n^\n2\n \n+\n \nc\n \nd\n^\n2\n \n+\n \n2\n \na\n \nd\n \ne\n \n+\n \n2\n \nb\n \nd\n \ne\n \n+\n \n2\n \nc\n \nd\n \ne\n \n+\n \na\n \ne\n^\n2\n \n+\n \nb\n \ne\n^\n2\n \n+\n \nc\n \ne\n^\n2\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nExpand\n[(\na\n^\nb\n \n+\n \nc\n^\nd\n)\n^\n2\n]\n\n\nOut\n[\n4\n]\n=\n \na\n^\n(\n2\n \nb\n)\n \n+\n \n2\n \na\n^\nb\n \n*\n \nc\n^\nd\n \n+\n \nc\n^\n(\n2\n \nd\n)\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nExpand\n[(\na\n \n+\n \nb\n \n+\n \nc\n)\n/\nd\n]\n\n\nOut\n[\n5\n]\n=\n \na\n/\nd\n \n+\n \nb\n/\nd\n \n+\n \nc\n/\nd\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nExpand\n[((\na\n \n+\n \n1\n)\n^\n2\n \n+\n \nb\n \n+\n \nc\n)\n/\nd\n]\n\n\nOut\n[\n6\n]\n=\n \n1\n/\nd\n \n+\n \n(\n2\n \na\n)\n/\nd\n \n+\n \na\n^\n2\n/\nd\n \n+\n \nb\n/\nd\n \n+\n \nc\n/\nd\n\n\n\n\n\n\nRules\n\n\npossibleExponents\n[\nn_Integer\n,\n \nm_Integer\n]\n \n:=\n \nFlatten\n[\nPermutations\n \n/@\n \n((\nPadRight\n[\n#\n,\n \nm\n])\n \n \n/@\n \nIntegerPartitions\n[\nn\n,\n \nm\n]),\n \n1\n]\n\n\ngenVars\n[\naddends_List\n,\n \nexponents_List\n]\n \n:=\n \nProduct\n[\naddends\n[[\nExpandUnique`i\n]]\n^\nexponents\n[[\nExpandUnique`i\n]],\n \n{\nExpandUnique`i\n,\n \n1\n,\n \nLength\n[\naddends\n]}]\n\n\ngenExpand\n[\naddends_List\n,\n \nexponents_List\n]\n \n:=\n \nSum\n[(\nMultinomial\n \n@@\n \nexponents\n[[\nExpandUnique`i\n]])\n*\ngenVars\n[\naddends\n,\n \nexponents\n[[\nExpandUnique`i\n]]],\n \n{\nExpandUnique`i\n,\n \n1\n,\n \nLength\n[\nexponents\n]}]\n\n\nExpand\n[(\nPlus\n[\naddends__\n])\n^\n(\nnmatch_Integer\n)]\n \n:=\n \ngenExpand\n[\nList\n[\naddends\n],\n \npossibleExponents\n[\nnmatch\n,\n \nLength\n[\nList\n[\naddends\n]]]]\n\n\nExpand\n[(\nPlus\n[\naddends__\n])\n^\n(\nnmatch_Integer\n)\n*\nrest___\n]\n \n:=\n \nExpand\n[\nExpand\n[\nPlus\n[\naddends\n]\n^\nnmatch\n]\n \n*\n \nrest\n]\n\n\nExpand\n[\nPlus\n[\na1s__\n]\n*\nPlus\n[\na2s__\n]\n*\nrest___\n]\n \n:=\n \nExpand\n[\nSum\n[\nExpandUnique`a1\n*\nExpandUnique`a2\n,\n \n{\nExpandUnique`a1\n,\n \nList\n[\na1s\n]},\n \n{\nExpandUnique`a2\n,\n \nList\n[\na2s\n]}]\n*\nrest\n]\n\n\nExpand\n[\nPlus\n[\naddends__\n]\n/\nden_\n]\n \n:=\n \nSum\n[\nExpand\n[\nExpandUnique`a\n/\nden\n],\n \n{\nExpandUnique`a\n,\n \n{\naddends\n}}]\n\n\nExpand\n[\na_\n]\n \n:=\n \na", 
+            "title": "Expand "
+        }, 
+        {
+            "location": "/builtin/power/expand/#expand", 
+            "text": "Attributes[Expand] := {Protected}", 
+            "title": "Expand"
+        }, 
+        {
+            "location": "/builtin/power/expand/#simple-examples", 
+            "text": "In [ 1 ] :=   Expand [( a   +   b   +   c ) ^ 3 ]  Out [ 1 ] =   a ^ 3   +   3   a ^ 2   *   b   +   3   a   b ^ 2   +   b ^ 3   +   3   a ^ 2   *   c   +   6   a   b   c   +   3   b ^ 2   *   c   +   3   a   c ^ 2   +   3   b   c ^ 2   +   c ^ 3   In [ 2 ] :=   ( a   +   b )   *   ( c   +   d   +   e )   //   Expand  Out [ 2 ] =   a   c   +   b   c   +   a   d   +   b   d   +   a   e   +   b   e   In [ 3 ] :=   ( a   +   b   +   c ) * ( d   +   e ) ^ 2   //   Expand  Out [ 3 ] =   a   d ^ 2   +   b   d ^ 2   +   c   d ^ 2   +   2   a   d   e   +   2   b   d   e   +   2   c   d   e   +   a   e ^ 2   +   b   e ^ 2   +   c   e ^ 2   In [ 4 ] :=   Expand [( a ^ b   +   c ^ d ) ^ 2 ]  Out [ 4 ] =   a ^ ( 2   b )   +   2   a ^ b   *   c ^ d   +   c ^ ( 2   d )   In [ 5 ] :=   Expand [( a   +   b   +   c ) / d ]  Out [ 5 ] =   a / d   +   b / d   +   c / d   In [ 6 ] :=   Expand [(( a   +   1 ) ^ 2   +   b   +   c ) / d ]  Out [ 6 ] =   1 / d   +   ( 2   a ) / d   +   a ^ 2 / d   +   b / d   +   c / d", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/power/expand/#rules", 
+            "text": "possibleExponents [ n_Integer ,   m_Integer ]   :=   Flatten [ Permutations   /@   (( PadRight [ # ,   m ])     /@   IntegerPartitions [ n ,   m ]),   1 ]  genVars [ addends_List ,   exponents_List ]   :=   Product [ addends [[ ExpandUnique`i ]] ^ exponents [[ ExpandUnique`i ]],   { ExpandUnique`i ,   1 ,   Length [ addends ]}]  genExpand [ addends_List ,   exponents_List ]   :=   Sum [( Multinomial   @@   exponents [[ ExpandUnique`i ]]) * genVars [ addends ,   exponents [[ ExpandUnique`i ]]],   { ExpandUnique`i ,   1 ,   Length [ exponents ]}]  Expand [( Plus [ addends__ ]) ^ ( nmatch_Integer )]   :=   genExpand [ List [ addends ],   possibleExponents [ nmatch ,   Length [ List [ addends ]]]]  Expand [( Plus [ addends__ ]) ^ ( nmatch_Integer ) * rest___ ]   :=   Expand [ Expand [ Plus [ addends ] ^ nmatch ]   *   rest ]  Expand [ Plus [ a1s__ ] * Plus [ a2s__ ] * rest___ ]   :=   Expand [ Sum [ ExpandUnique`a1 * ExpandUnique`a2 ,   { ExpandUnique`a1 ,   List [ a1s ]},   { ExpandUnique`a2 ,   List [ a2s ]}] * rest ]  Expand [ Plus [ addends__ ] / den_ ]   :=   Sum [ Expand [ ExpandUnique`a / den ],   { ExpandUnique`a ,   { addends }}]  Expand [ a_ ]   :=   a", 
             "title": "Rules"
         }, 
         {
@@ -1132,12 +1247,12 @@
         }, 
         {
             "location": "/builtin/system/", 
-            "text": "system documentation\n\n\nExpreduceSetLogging\n\n\nAttributes\n\n\nClear\n\n\nSet\n\n\nSetDelayed\n\n\nTiming\n\n\nPrint\n\n\nMessageName", 
+            "text": "system documentation\n\n\nExpreduceSetLogging\n\n\nAttributes\n\n\nClear\n\n\nSet\n\n\nSetDelayed\n\n\nTiming\n\n\nPrint\n\n\nMessageName\n\n\nTrace", 
             "title": "system"
         }, 
         {
             "location": "/builtin/system/#system-documentation", 
-            "text": "ExpreduceSetLogging  Attributes  Clear  Set  SetDelayed  Timing  Print  MessageName", 
+            "text": "ExpreduceSetLogging  Attributes  Clear  Set  SetDelayed  Timing  Print  MessageName  Trace", 
             "title": "system documentation"
         }, 
         {
@@ -1268,6 +1383,21 @@
         {
             "location": "/builtin/system/messagename/#simple-examples", 
             "text": "MessageName  is used to store the usage messages of built-in symbols:  In [ 1 ] :=   MessageName :: usage  Out [ 1 ] =   `sym::msg` references a particular message for `sym`.", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/system/trace/", 
+            "text": "Trace\n\n\nTrace[expr]\n traces the evaluation of \nexpr\n.\n\n\nAttributes[Trace] := {HoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n1\n \n+\n \n2\n \n//\n \nTrace\n\n\nOut\n[\n1\n]\n=\n \nList\n[\nHoldForm\n[\nPlus\n[\n1\n,\n \n2\n]],\n \nHoldForm\n[\n3\n]]\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n(\n1\n \n+\n \n3\n)\n \n+\n \n2\n \n//\n \nTrace\n\n\nOut\n[\n2\n]\n=\n \nList\n[\nList\n[\nHoldForm\n[\nPlus\n[\n1\n,\n \n3\n]],\n \nHoldForm\n[\n4\n]],\n \nHoldForm\n[\nPlus\n[\n4\n,\n \n2\n]],\n \nHoldForm\n[\n6\n]]\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n2\n \n+\n \n(\n1\n \n+\n \n3\n)\n \n//\n \nTrace\n\n\nOut\n[\n3\n]\n=\n \nList\n[\nList\n[\nHoldForm\n[\nPlus\n[\n1\n,\n \n3\n]],\n \nHoldForm\n[\n4\n]],\n \nHoldForm\n[\nPlus\n[\n2\n,\n \n4\n]],\n \nHoldForm\n[\n6\n]]", 
+            "title": "Trace "
+        }, 
+        {
+            "location": "/builtin/system/trace/#trace", 
+            "text": "Trace[expr]  traces the evaluation of  expr .  Attributes[Trace] := {HoldAll, Protected}", 
+            "title": "Trace"
+        }, 
+        {
+            "location": "/builtin/system/trace/#simple-examples", 
+            "text": "In [ 1 ] :=   1   +   2   //   Trace  Out [ 1 ] =   List [ HoldForm [ Plus [ 1 ,   2 ]],   HoldForm [ 3 ]]   In [ 2 ] :=   ( 1   +   3 )   +   2   //   Trace  Out [ 2 ] =   List [ List [ HoldForm [ Plus [ 1 ,   3 ]],   HoldForm [ 4 ]],   HoldForm [ Plus [ 4 ,   2 ]],   HoldForm [ 6 ]]   In [ 3 ] :=   2   +   ( 1   +   3 )   //   Trace  Out [ 3 ] =   List [ List [ HoldForm [ Plus [ 1 ,   3 ]],   HoldForm [ 4 ]],   HoldForm [ Plus [ 2 ,   4 ]],   HoldForm [ 6 ]]", 
             "title": "Simple examples"
         }, 
         {
