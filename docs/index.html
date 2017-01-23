@@ -178,6 +178,16 @@
           
         
         
+          <ul>
+            
+              <li class="anchor">
+                <a title="Source code" href="#source-code">
+                  Source code
+                </a>
+              </li>
+            
+          </ul>
+        
       
     </li>
   
@@ -833,7 +843,80 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="expreduce-documentation">Expreduce documentation</h1>
+          <h1 id="expreduce">Expreduce</h1>
+<p>Expreduce is a language with specialized constructs for term rewriting. It is a neat language for a computer algebra system because it is able to express expression manipulation steps in a form very similar to standard math equations. For example, the product rule in calculus can be expressed as:</p>
+<div class="language-wl"><pre><span></span><span class="nb">D</span><span class="p">[</span><span class="nt">a_</span><span class="o">*</span><span class="nt">b__</span><span class="p">,</span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="o">*</span><span class="nv">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">a</span><span class="o">*</span><span class="nb">D</span><span class="p">[</span><span class="nb">Times</span><span class="p">[</span><span class="nv">b</span><span class="p">],</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+
+
+<p>The term rewriting system and pattern matching engine is fairly advanced. The computer algebra system at this stage is extremely limited, but fairly simple calculus and algebraic manipulation is certainly supported (see examples below). If you are looking for a more mature computer algebra system, please consider using Mathematica (proprietary) or Mathics (open source, Sympy-backed).</p>
+<h2 id="source-code">Source code</h2>
+<p>Expreduce is <a href="https://github.com/corywalker/expreduce">on GitHub</a>.</p>
+<h1 id="setup">Setup</h1>
+<p><code>go generate</code> is required to generate source files from lex and yacc:</p>
+<div class="language-wl"><pre><span></span>go get -d ./...
+go get golang.org/x/tools/cmd/goyacc
+go get github.com/cznic/golex
+go generate ./...
+go get ./...
+</pre></div>
+
+
+<h1 id="example">Example</h1>
+<p>This must be done after running "go generate". To run the example CAS prompt:</p>
+<div class="language-wl"><pre><span></span>cd example
+go run calc.go
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nf">#</span><span class="w"> </span><span class="nv">go</span><span class="w"> </span><span class="nv">run</span><span class="w"> </span><span class="nv">calc</span><span class="o">.</span><span class="nv">go</span><span class="w"></span>
+
+<span class="nv">Welcome</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">Expreduce</span><span class="o">!</span><span class="w"></span>
+
+<span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nb">Sin</span><span class="p">[</span><span class="nv">x</span><span class="p">]</span><span class="o">/</span><span class="nv">x</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="m">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="o">^-</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Sin</span><span class="p">[</span><span class="nv">x</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nb">Cos</span><span class="p">[</span><span class="nv">x</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="o">^-</span><span class="m">1</span><span class="p">))</span><span class="w"></span>
+
+<span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="p">,{</span><span class="nv">a</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">}]</span><span class="w"></span>
+
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">36</span><span class="p">,</span><span class="w"> </span><span class="m">49</span><span class="p">,</span><span class="w"> </span><span class="m">64</span><span class="p">,</span><span class="w"> </span><span class="m">81</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">}</span><span class="w"></span>
+
+<span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Sum</span><span class="p">[</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="p">}]</span><span class="w"></span>
+
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span><span class="w"></span>
+
+<span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">n</span><span class="p">))</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">n</span><span class="o">-&gt;</span><span class="m">5</span><span class="w"></span>
+
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="w"></span>
+
+<span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Total</span><span class="p">[</span><span class="nb">Table</span><span class="p">[</span><span class="nv">i</span><span class="p">,{</span><span class="nv">i</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">}]]</span><span class="w"></span>
+
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="w"></span>
+
+<span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">]]</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="nt">amatch_Integer</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nt">cmatch__</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="nt">bmatch_Integer</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nt">cmatch__</span><span class="p">]]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="nv">amatch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">bmatch</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">cmatch</span><span class="p">]]</span><span class="w"></span>
+
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">]]</span><span class="w"></span>
+</pre></div>
+
+
+<h1 id="other-projects">Other projects</h1>
+<p>Expreduce is indeed very similar to Mathics, a similar term rewriting system that uses Sympy as a backend for CAS operations. I created expreduce for a few reasons. The first is that I wanted to learn everything I could about term rewriting systems. The second is that I believe the syntax implemented in here is better suited for building a computer algebra system than using Python to manipulate expressions (as Sympy, and thus Mathics does). Using a language with first-class support for pattern matching and replacement across expression trees is ideal for writing a computer algebra system. This combined with an optimized core can lead to efficient and informed evaluation without much translation work for the programmer when translating equations to code.</p>
+<h1 id="current-limitations">Current limitations</h1>
+<p>When the engine applies rules for a given symbol, it tries to match the most "specific" rules first. The current definition of specificity is fairly basic now, but can certainly be improved upon. It works in most cases but I can envision cases where it will be wrong. Right now there is no way to override the order of rule application, but it should be fairly simple to add in the future.</p>
+<p>The pattern matching system can be very slow, especially when working with <code>Orderless</code> expressions with many terms. This is because correctly matching such terms often involves checking many different permutations of a pattern until one finds a match. My theory right now is that the current matching system is behaving naively and that it can be modified to speed things up.</p>
+<h1 id="future-directions">Future directions</h1>
+<p>I'm interested in trying to apply Golang's concurrency paradigms to the evaluation sequence. Some low hanging fruit would be to have parallel computation of mapping pure functions onto Lists or other expressions (computing the derivative of a list expressions). Similarly, supporting automatic threading of Listable functions would be nice (computing sin(x) of a large array). The evaluation of an expression often starts with evaluating each of the parameters at the beginning. This could potentially be made concurrent as well. A more complicated but very interesting application would be to break down the pattern matching engine into concurrent components. We would have to be very careful about side effects here, so we might need to overhaul our scoping constructs or somehow restrict access to the EvalState. Another option would be to create a function that predicts if another function has side effects (is this feasible?). A true prediction could allow the system to fall back to non-concurrent evaluation.</p>
+<p>Since there are at least two other replacement engines that implement the same syntax that I know of (<a href="https://github.com/jyh1/mmaclone">another one here</a>), it would could be useful to decide on a standard link protocol such that the replacement engine is independent of the rules that run on top of it. Another layer of abstraction is the frontend. Really the hierarchy goes as follows: core &lt;- rules &lt;- frontend. It would be nice to see all of these functions factored out and interchangeable.</p>
+<p>Also of interest is to build up some formal theory on the rule definitions. There should be some pre-existing literature on this, as term-rewriting is a studied field. Some interesting questions to answer are:</p>
+<ol>
+<li>Given a set of rules for a symbol (or the universe of rules?), can we find duplicates or reduce the set of rules to the most fundamental ones? Answering such a question would improve the efficiency and clarity of the system.</li>
+<li>Given a set of rules for a symbol (or the universe of rules?), can we prove that the recursive rewrites will terminate? It is fairly easy to write a rule that loops on itself or in cooperation with other rules. Of course, we should remove from consideration some of the imperative symbols such as <code>While</code> and <code>For</code>. Even with these imperative functions removed, is this question still the halting problem? Can we restrict our considerations enough such that the problem is not the halting problem? Answering this question would improve the stability of the system.</li>
+</ol>
+<h1 id="development">Development</h1>
+<p>To run the tests:</p>
+<div class="language-wl"><pre><span></span>cd expreduce
+go test
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
