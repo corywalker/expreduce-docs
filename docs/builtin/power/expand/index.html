@@ -266,6 +266,30 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="atoms" href="../../atoms/">
         atoms
@@ -461,6 +485,41 @@
         
   
     <li>
+      <a class="" title="matrix" href="../../matrix/">
+        matrix
+      </a>
+      
+    </li>
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+    <li>
       <a class="" title="arithmetic" href="../../arithmetic/">
         arithmetic
       </a>
@@ -493,6 +552,14 @@
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -641,6 +708,33 @@
       
         
   
+
+      
+        
+  
+    <li>
+      <a class="" title="trig" href="../../trig/">
+        trig
+      </a>
+      
+    </li>
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="string" href="../../string/">
         string
@@ -739,6 +833,7 @@
         <div class="wrapper">
           
           <h1 id="expand">Expand</h1>
+<p><code>Expand[expr]</code> attempts to expand <code>expr</code>.</p>
 <p><code>Attributes[Expand] := {Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Expand</span><span class="p">[(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">c</span><span class="p">)</span><span class="o">^</span><span class="m">3</span><span class="p">]</span><span class="w"></span>
@@ -771,6 +866,11 @@
 </pre></div>
 
 
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Expand</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nv">a</span><span class="w"></span>
+</pre></div>
+
+
 <h2 id="rules">Rules</h2>
 <div class="language-wl"><pre><span></span><span class="nv">possibleExponents</span><span class="p">[</span><span class="nt">n_Integer</span><span class="p">,</span><span class="w"> </span><span class="nt">m_Integer</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Flatten</span><span class="p">[</span><span class="nb">Permutations</span><span class="w"> </span><span class="o">/@</span><span class="w"> </span><span class="p">((</span><span class="nb">PadRight</span><span class="p">[</span><span class="nf">#</span><span class="p">,</span><span class="w"> </span><span class="nv">m</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">/@</span><span class="w"> </span><span class="nb">IntegerPartitions</span><span class="p">[</span><span class="nv">n</span><span class="p">,</span><span class="w"> </span><span class="nv">m</span><span class="p">]),</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"></span>
 <span class="nv">genVars</span><span class="p">[</span><span class="nt">addends_List</span><span class="p">,</span><span class="w"> </span><span class="nt">exponents_List</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Product</span><span class="p">[</span><span class="nv">addends</span><span class="p">[[</span><span class="nv">ExpandUnique`i</span><span class="p">]]</span><span class="o">^</span><span class="nv">exponents</span><span class="p">[[</span><span class="nv">ExpandUnique`i</span><span class="p">]],</span><span class="w"> </span><span class="p">{</span><span class="nv">ExpandUnique`i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nb">Length</span><span class="p">[</span><span class="nv">addends</span><span class="p">]}]</span><span class="w"></span>
@@ -779,6 +879,7 @@
 <span class="nb">Expand</span><span class="p">[(</span><span class="nb">Plus</span><span class="p">[</span><span class="nt">addends__</span><span class="p">])</span><span class="o">^</span><span class="p">(</span><span class="nt">nmatch_Integer</span><span class="p">)</span><span class="o">*</span><span class="nt">rest___</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Expand</span><span class="p">[</span><span class="nb">Expand</span><span class="p">[</span><span class="nb">Plus</span><span class="p">[</span><span class="nv">addends</span><span class="p">]</span><span class="o">^</span><span class="nv">nmatch</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">rest</span><span class="p">]</span><span class="w"></span>
 <span class="nb">Expand</span><span class="p">[</span><span class="nb">Plus</span><span class="p">[</span><span class="nt">a1s__</span><span class="p">]</span><span class="o">*</span><span class="nb">Plus</span><span class="p">[</span><span class="nt">a2s__</span><span class="p">]</span><span class="o">*</span><span class="nt">rest___</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Expand</span><span class="p">[</span><span class="nb">Sum</span><span class="p">[</span><span class="nv">ExpandUnique`a1</span><span class="o">*</span><span class="nv">ExpandUnique`a2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">ExpandUnique`a1</span><span class="p">,</span><span class="w"> </span><span class="nb">List</span><span class="p">[</span><span class="nv">a1s</span><span class="p">]},</span><span class="w"> </span><span class="p">{</span><span class="nv">ExpandUnique`a2</span><span class="p">,</span><span class="w"> </span><span class="nb">List</span><span class="p">[</span><span class="nv">a2s</span><span class="p">]}]</span><span class="o">*</span><span class="nv">rest</span><span class="p">]</span><span class="w"></span>
 <span class="nb">Expand</span><span class="p">[</span><span class="nb">Plus</span><span class="p">[</span><span class="nt">addends__</span><span class="p">]</span><span class="o">/</span><span class="nt">den_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Sum</span><span class="p">[</span><span class="nb">Expand</span><span class="p">[</span><span class="nv">ExpandUnique`a</span><span class="o">/</span><span class="nv">den</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="nv">ExpandUnique`a</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">addends</span><span class="p">}}]</span><span class="w"></span>
+<span class="nb">Expand</span><span class="p">[</span><span class="nt">c_</span><span class="o">?</span><span class="nb">AtomQ</span><span class="o">*</span><span class="nb">Plus</span><span class="p">[</span><span class="nt">addends__</span><span class="p">]]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Sum</span><span class="p">[</span><span class="nb">Expand</span><span class="p">[</span><span class="nv">c</span><span class="o">*</span><span class="nv">ExpandUnique`a</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="nv">ExpandUnique`a</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">addends</span><span class="p">}}]</span><span class="w"></span>
 <span class="nb">Expand</span><span class="p">[</span><span class="nt">a_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">a</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
