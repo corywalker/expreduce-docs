@@ -2004,6 +2004,171 @@
             "location": "/builtin/pattern/alternatives/#simple-examples", 
             "text": "In [ 1 ] :=   c   |   d  Out [ 1 ] =   Alternatives [ c , d ]   In [ 2 ] :=   MatchQ [ b ,   c   |   d ]  Out [ 2 ] =   False   In [ 3 ] :=   MatchQ [ c ,   c   |   d ]  Out [ 3 ] =   True   In [ 4 ] :=   MatchQ [ d ,   c   |   d ]  Out [ 4 ] =   True   In [ 5 ] :=   Cases [{ a ,   b ,   c ,   1 ,   2 },   c   |   _Integer ]  Out [ 5 ] =   { c ,   1 ,   2 }   In [ 6 ] :=   { a ,   b ,   c ,   1. ,   2 }   /.   amatch_Symbol   |   amatch_Integer   -   amatch   +   1  Out [ 6 ] =   ( 1   +   List )[ 1   +   a ,   1   +   b ,   1   +   c ,   1. ,   3 ]   In [ 7 ] :=   Cases [{ a ,   b ,   c ,   d ,   e ,   f },   b   |   c   |   d   |   e ]  Out [ 7 ] =   { b ,   c ,   d ,   e }", 
             "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/boolean/", 
+            "text": "boolean documentation\n\n\nAnd\n\n\nOr\n\n\nNot\n\n\nTrueQ\n\n\nBooleanQ\n\n\nLogicalExpand", 
+            "title": "boolean"
+        }, 
+        {
+            "location": "/builtin/boolean/#boolean-documentation", 
+            "text": "And  Or  Not  TrueQ  BooleanQ  LogicalExpand", 
+            "title": "boolean documentation"
+        }, 
+        {
+            "location": "/builtin/boolean/and/", 
+            "text": "And\n\n\ne1 \n e2 \n ...\n returns \nTrue\n if all expressions evaluate to \nTrue\n.\n\n\nAttributes[And] := {Flat, HoldAll, OneIdentity, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nTrue\n \n \nFalse\n\n\nOut\n[\n1\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nTrue\n \n \nTrue\n \n \nTrue\n\n\nOut\n[\n2\n]\n=\n \nTrue", 
+            "title": "And "
+        }, 
+        {
+            "location": "/builtin/boolean/and/#and", 
+            "text": "e1   e2   ...  returns  True  if all expressions evaluate to  True .  Attributes[And] := {Flat, HoldAll, OneIdentity, Protected}", 
+            "title": "And"
+        }, 
+        {
+            "location": "/builtin/boolean/and/#simple-examples", 
+            "text": "In [ 1 ] :=   True     False  Out [ 1 ] =   False   In [ 2 ] :=   True     True     True  Out [ 2 ] =   True", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/boolean/or/", 
+            "text": "Or\n\n\ne1 || e2 || ...\n returns \nTrue\n if any expressions evaluate to \nTrue\n.\n\n\nAttributes[Or] := {Flat, HoldAll, OneIdentity, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nTrue\n \n||\n \nFalse\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFalse\n \n||\n \nFalse\n \n||\n \nFalse\n\n\nOut\n[\n2\n]\n=\n \nFalse", 
+            "title": "Or "
+        }, 
+        {
+            "location": "/builtin/boolean/or/#or", 
+            "text": "e1 || e2 || ...  returns  True  if any expressions evaluate to  True .  Attributes[Or] := {Flat, HoldAll, OneIdentity, Protected}", 
+            "title": "Or"
+        }, 
+        {
+            "location": "/builtin/boolean/or/#simple-examples", 
+            "text": "In [ 1 ] :=   True   ||   False  Out [ 1 ] =   True   In [ 2 ] :=   False   ||   False   ||   False  Out [ 2 ] =   False", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/boolean/not/", 
+            "text": "Not\n\n\n!e\n returns \nTrue\n if \ne\n is \nFalse\n and \nFalse\n if \ne\n is \nTrue\n.\n\n\nAttributes[Not] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n!\nTrue\n\n\nOut\n[\n1\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n!\nFalse\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n!\na\n\n\nOut\n[\n3\n]\n=\n \n!\na", 
+            "title": "Not "
+        }, 
+        {
+            "location": "/builtin/boolean/not/#not", 
+            "text": "!e  returns  True  if  e  is  False  and  False  if  e  is  True .  Attributes[Not] := {Protected}", 
+            "title": "Not"
+        }, 
+        {
+            "location": "/builtin/boolean/not/#simple-examples", 
+            "text": "In [ 1 ] :=   ! True  Out [ 1 ] =   False   In [ 2 ] :=   ! False  Out [ 2 ] =   True   In [ 3 ] :=   ! a  Out [ 3 ] =   ! a", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/boolean/trueq/", 
+            "text": "TrueQ\n\n\nTrueQ[expr]\n returns True if \nexpr\n is True, False otherwise.\n\n\nAttributes[TrueQ] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nTrueQ\n[\nTrue\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nTrueQ\n[\nFalse\n]\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nTrueQ\n[\n1\n]\n\n\nOut\n[\n3\n]\n=\n \nFalse", 
+            "title": "TrueQ "
+        }, 
+        {
+            "location": "/builtin/boolean/trueq/#trueq", 
+            "text": "TrueQ[expr]  returns True if  expr  is True, False otherwise.  Attributes[TrueQ] := {Protected}", 
+            "title": "TrueQ"
+        }, 
+        {
+            "location": "/builtin/boolean/trueq/#simple-examples", 
+            "text": "In [ 1 ] :=   TrueQ [ True ]  Out [ 1 ] =   True   In [ 2 ] :=   TrueQ [ False ]  Out [ 2 ] =   False   In [ 3 ] :=   TrueQ [ 1 ]  Out [ 3 ] =   False", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/boolean/booleanq/", 
+            "text": "BooleanQ\n\n\nBooleanQ[expr]\n returns True if \nexpr\n is True or False, False otherwise.\n\n\nAttributes[BooleanQ] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nBooleanQ\n[\nTrue\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nBooleanQ\n[\nFalse\n]\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nBooleanQ\n[\n1\n]\n\n\nOut\n[\n3\n]\n=\n \nFalse", 
+            "title": "BooleanQ "
+        }, 
+        {
+            "location": "/builtin/boolean/booleanq/#booleanq", 
+            "text": "BooleanQ[expr]  returns True if  expr  is True or False, False otherwise.  Attributes[BooleanQ] := {Protected}", 
+            "title": "BooleanQ"
+        }, 
+        {
+            "location": "/builtin/boolean/booleanq/#simple-examples", 
+            "text": "In [ 1 ] :=   BooleanQ [ True ]  Out [ 1 ] =   True   In [ 2 ] :=   BooleanQ [ False ]  Out [ 2 ] =   True   In [ 3 ] :=   BooleanQ [ 1 ]  Out [ 3 ] =   False", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/boolean/logicalexpand/", 
+            "text": "LogicalExpand\n\n\nAttributes[LogicalExpand] := {Protected}\n\n\nSimple examples\n\n\nLogicalExpand\n can expand logic expressions.\n\n\nRules\n\n\nLogicalExpand\n[\nexp_\n]\n \n:=\n \nexp\n \n//.\n \n{\nAnd\n[\nbegin___\n,\ne_\n,\n!\ne_\n,\nend___\n]\n:\nAnd\n[\nbegin\n,\n \nend\n]}", 
+            "title": "LogicalExpand "
+        }, 
+        {
+            "location": "/builtin/boolean/logicalexpand/#logicalexpand", 
+            "text": "Attributes[LogicalExpand] := {Protected}", 
+            "title": "LogicalExpand"
+        }, 
+        {
+            "location": "/builtin/boolean/logicalexpand/#simple-examples", 
+            "text": "LogicalExpand  can expand logic expressions.", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/boolean/logicalexpand/#rules", 
+            "text": "LogicalExpand [ exp_ ]   :=   exp   //.   { And [ begin___ , e_ , ! e_ , end___ ] : And [ begin ,   end ]}", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/simplify/", 
+            "text": "simplify documentation\n\n\nSimplify", 
+            "title": "simplify"
+        }, 
+        {
+            "location": "/builtin/simplify/#simplify-documentation", 
+            "text": "Simplify", 
+            "title": "simplify documentation"
+        }, 
+        {
+            "location": "/builtin/simplify/simplify/", 
+            "text": "Simplify\n\n\nSimplify[expr]\n attempts to perform simplification operations on \nexpr\n.\n\n\nAttributes[Simplify] := {Protected}\n\n\nSimple examples\n\n\nSimplify\n can simplify some boolean expressions.\n\n\nIn\n[\n1\n]\n:=\n \nb\n \n \nb\n \n//\n \nSimplify\n\n\nOut\n[\n1\n]\n=\n \nb\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \na\n \n \nb\n \n \n!\nb\n \n//\n \nSimplify\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nRules\n\n\nSimplify\n[\nexp_\n]\n \n:=\n \nexp\n \n//.\n \n{\na_\n \n \n!\na_\n \n:\n \nFalse\n,\n \n!\na_\n \n \na_\n \n:\n \nFalse\n,\n \na_\n \n \na_\n  \n:\n \na\n,\n \na_\n \n||\n \na_\n  \n:\n \na\n,\n \na_\n \n||\n \n!\na_\n \n:\n \nTrue\n,\n \n!\na_\n \n||\n \na_\n \n:\n \nTrue\n}", 
+            "title": "Simplify "
+        }, 
+        {
+            "location": "/builtin/simplify/simplify/#simplify", 
+            "text": "Simplify[expr]  attempts to perform simplification operations on  expr .  Attributes[Simplify] := {Protected}", 
+            "title": "Simplify"
+        }, 
+        {
+            "location": "/builtin/simplify/simplify/#simple-examples", 
+            "text": "Simplify  can simplify some boolean expressions.  In [ 1 ] :=   b     b   //   Simplify  Out [ 1 ] =   b   In [ 2 ] :=   a     b     ! b   //   Simplify  Out [ 2 ] =   False", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/simplify/simplify/#rules", 
+            "text": "Simplify [ exp_ ]   :=   exp   //.   { a_     ! a_   :   False ,   ! a_     a_   :   False ,   a_     a_    :   a ,   a_   ||   a_    :   a ,   a_   ||   ! a_   :   True ,   ! a_   ||   a_   :   True }", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/numbertheory/", 
+            "text": "numbertheory documentation\n\n\nPrimeQ", 
+            "title": "numbertheory"
+        }, 
+        {
+            "location": "/builtin/numbertheory/#numbertheory-documentation", 
+            "text": "PrimeQ", 
+            "title": "numbertheory documentation"
+        }, 
+        {
+            "location": "/builtin/numbertheory/primeq/", 
+            "text": "PrimeQ\n\n\nPrimeQ[n]\n returns True if \nn\n is prime, False otherwise.\n\n\nAttributes[PrimeQ] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPrimeQ\n[\n5\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPrimeQ\n[\n100\n]\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPrimeQ\n[\n982451653\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nPrimeQ\n[\n-\n2\n]\n\n\nOut\n[\n4\n]\n=\n \nTrue\n\n\n\n\n\n\nFurther examples\n\n\nPrimeQ\n only works for Integers:\n\n\nIn\n[\n1\n]\n:=\n \nPrimeQ\n[\n5.\n]\n\n\nOut\n[\n1\n]\n=\n \nFalse", 
+            "title": "PrimeQ "
+        }, 
+        {
+            "location": "/builtin/numbertheory/primeq/#primeq", 
+            "text": "PrimeQ[n]  returns True if  n  is prime, False otherwise.  Attributes[PrimeQ] := {Protected}", 
+            "title": "PrimeQ"
+        }, 
+        {
+            "location": "/builtin/numbertheory/primeq/#simple-examples", 
+            "text": "In [ 1 ] :=   PrimeQ [ 5 ]  Out [ 1 ] =   True   In [ 2 ] :=   PrimeQ [ 100 ]  Out [ 2 ] =   False   In [ 3 ] :=   PrimeQ [ 982451653 ]  Out [ 3 ] =   True   In [ 4 ] :=   PrimeQ [ - 2 ]  Out [ 4 ] =   True", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/numbertheory/primeq/#further-examples", 
+            "text": "PrimeQ  only works for Integers:  In [ 1 ] :=   PrimeQ [ 5. ]  Out [ 1 ] =   False", 
+            "title": "Further examples"
         }
     ]
 }
