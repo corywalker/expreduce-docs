@@ -142,7 +142,7 @@
         }, 
         {
             "location": "/builtin/calculus/d/", 
-            "text": "D\n\n\nD[f, x]\n finds the partial derivative of \nf\n with respect to \nx\n.\n\n\nAttributes[D] := {Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nD\n[\n2\n/\n3\n*\nx\n^\n(\n3\n/\n2\n)\n \n+\n \n2\n/\n5\n*\nx\n^\n(\n5\n/\n2\n),\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \nSqrt\n[\nx\n]\n \n+\n \nx\n^\n(\n3\n/\n2\n)\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nD\n[\nLog\n[\n5\n \nx\n^\n2\n],\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n2\n/\nx\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nD\n[\nCos\n[\nLog\n[\nx\n]],\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n-\n(\nSin\n[\nLog\n[\nx\n]]\n/\nx\n)\n\n\n\n\n\n\nRules\n\n\nD\n[\nx_\n,\nx_\n]\n \n:=\n \n1\n\n\nD\n[\na_\n,\nx_\n]\n \n:=\n \n0\n\n\nD\n[\na_\n+\nb__\n,\nx_\n]\n \n:=\n \nD\n[\na\n,\nx\n]\n+\nD\n[\nPlus\n[\nb\n],\nx\n]\n\n\nD\n[\na_\n \nb__\n,\nx_\n]\n \n:=\n \nD\n[\na\n,\nx\n]\n*\nb\n \n+\n \na\n*\nD\n[\nTimes\n[\nb\n],\nx\n]\n\n\nD\n[\na_\n^\n(\nb_\n),\n \nx_\n]\n \n:=\n \na\n^\nb\n*\n(\nD\n[\nb\n,\nx\n]\n \nLog\n[\na\n]\n+\nD\n[\na\n,\nx\n]\n/\na\n*\nb\n)\n\n\nD\n[\nLog\n[\na_\n],\n \nx_\n]\n \n:=\n \nD\n[\na\n,\n \nx\n]\n/\na\n\n\nD\n[\nSin\n[\na_\n],\n \nx_\n]\n \n:=\n \nD\n[\na\n,\nx\n]\n \nCos\n[\na\n]\n\n\nD\n[\nCos\n[\na_\n],\n \nx_\n]\n \n:=\n \n-\nD\n[\na\n,\nx\n]\n \nSin\n[\na\n]", 
+            "text": "D\n\n\nD[f, x]\n finds the partial derivative of \nf\n with respect to \nx\n.\n\n\nAttributes[D] := {Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nD\n[\n2\n/\n3\n*\nx\n^\n(\n3\n/\n2\n)\n \n+\n \n2\n/\n5\n*\nx\n^\n(\n5\n/\n2\n),\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \nSqrt\n[\nx\n]\n \n+\n \nx\n^\n(\n3\n/\n2\n)\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nD\n[\nLog\n[\n5\n \nx\n^\n2\n],\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n2\n/\nx\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nD\n[\nCos\n[\nLog\n[\nx\n]],\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n-\n(\nSin\n[\nLog\n[\nx\n]]\n/\nx\n)\n\n\n\n\n\n\nRules\n\n\nD\n[\nx_\n,\nx_\n]\n \n:=\n \n1\n\n\nD\n[\na_\n,\nx_\n]\n \n:=\n \n0\n\n\nD\n[\na_\n+\nb_\n,\nx_\n]\n \n:=\n \nD\n[\na\n,\nx\n]\n+\nD\n[\nb\n,\nx\n]\n\n\nD\n[\na_\n \nb_\n,\nx_\n]\n \n:=\n \nD\n[\na\n,\nx\n]\n*\nb\n \n+\n \na\n*\nD\n[\nb\n,\nx\n]\n\n\nD\n[\na_\n^\n(\nb_\n),\n \nx_\n]\n \n:=\n \na\n^\nb\n*\n(\nD\n[\nb\n,\nx\n]\n \nLog\n[\na\n]\n+\nD\n[\na\n,\nx\n]\n/\na\n*\nb\n)\n\n\nD\n[\nLog\n[\na_\n],\n \nx_\n]\n \n:=\n \nD\n[\na\n,\n \nx\n]\n/\na\n\n\nD\n[\nSin\n[\na_\n],\n \nx_\n]\n \n:=\n \nD\n[\na\n,\nx\n]\n \nCos\n[\na\n]\n\n\nD\n[\nCos\n[\na_\n],\n \nx_\n]\n \n:=\n \n-\nD\n[\na\n,\nx\n]\n \nSin\n[\na\n]", 
             "title": "D "
         }, 
         {
@@ -157,7 +157,7 @@
         }, 
         {
             "location": "/builtin/calculus/d/#rules", 
-            "text": "D [ x_ , x_ ]   :=   1  D [ a_ , x_ ]   :=   0  D [ a_ + b__ , x_ ]   :=   D [ a , x ] + D [ Plus [ b ], x ]  D [ a_   b__ , x_ ]   :=   D [ a , x ] * b   +   a * D [ Times [ b ], x ]  D [ a_ ^ ( b_ ),   x_ ]   :=   a ^ b * ( D [ b , x ]   Log [ a ] + D [ a , x ] / a * b )  D [ Log [ a_ ],   x_ ]   :=   D [ a ,   x ] / a  D [ Sin [ a_ ],   x_ ]   :=   D [ a , x ]   Cos [ a ]  D [ Cos [ a_ ],   x_ ]   :=   - D [ a , x ]   Sin [ a ]", 
+            "text": "D [ x_ , x_ ]   :=   1  D [ a_ , x_ ]   :=   0  D [ a_ + b_ , x_ ]   :=   D [ a , x ] + D [ b , x ]  D [ a_   b_ , x_ ]   :=   D [ a , x ] * b   +   a * D [ b , x ]  D [ a_ ^ ( b_ ),   x_ ]   :=   a ^ b * ( D [ b , x ]   Log [ a ] + D [ a , x ] / a * b )  D [ Log [ a_ ],   x_ ]   :=   D [ a ,   x ] / a  D [ Sin [ a_ ],   x_ ]   :=   D [ a , x ]   Cos [ a ]  D [ Cos [ a_ ],   x_ ]   :=   - D [ a , x ]   Sin [ a ]", 
             "title": "Rules"
         }, 
         {
@@ -462,12 +462,12 @@
         }, 
         {
             "location": "/builtin/functional/", 
-            "text": "functional documentation\n\n\nFunction\n\n\nSlot\n\n\nApply\n\n\nMap\n\n\nArray", 
+            "text": "functional documentation\n\n\nFunction\n\n\nSlot\n\n\nApply\n\n\nMap\n\n\nArray\n\n\nIdentity", 
             "title": "functional"
         }, 
         {
             "location": "/builtin/functional/#functional-documentation", 
-            "text": "Function  Slot  Apply  Map  Array", 
+            "text": "Function  Slot  Apply  Map  Array  Identity", 
             "title": "functional documentation"
         }, 
         {
@@ -487,7 +487,7 @@
         }, 
         {
             "location": "/builtin/functional/slot/", 
-            "text": "Slot\n\n\n#\n serves as a pure function's first parameter.\n\n\n#n\n serves as a pure function's \nn\n'th parameter.\n\n\nAttributes[Slot] := {NHoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nFunction\n[\n1\n \n+\n \n#\n][\nx\n]\n\n\nOut\n[\n1\n]\n=\n \n1\n \n+\n \nx\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFunction\n[\n1\n \n+\n \n#\n \n+\n \n2\n#2\n][\nx\n,\n \ny\n]\n\n\nOut\n[\n2\n]\n=\n \n1\n \n+\n \nx\n \n+\n \n2\ny\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n#\n \n===\n \nSlot\n[\n1\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \n#2\n \n===\n \nSlot\n[\n2\n]\n\n\nOut\n[\n4\n]\n=\n \nTrue", 
+            "text": "Slot\n\n\n#\n serves as a pure function's first parameter.\n\n\n#n\n serves as a pure function's \nn\n'th parameter.\n\n\nAttributes[Slot] := {NHoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nFunction\n[\n1\n \n+\n \n#\n][\nx\n]\n\n\nOut\n[\n1\n]\n=\n \n1\n \n+\n \nx\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFunction\n[\n1\n \n+\n \n#\n \n+\n \n2\n#2\n][\nx\n,\n \ny\n]\n\n\nOut\n[\n2\n]\n=\n \n1\n \n+\n \nx\n \n+\n \n2\ny\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n#\n \n===\n \nSlot\n[\n1\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \n#2\n \n===\n \nSlot\n[\n2\n]\n\n\nOut\n[\n4\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \n(\n4\n \n#\n \n+\n \n(\n2\n \n#\n \n)[\na\n]\n \n)[\nb\n]\n\n\nOut\n[\n5\n]\n=\n \n2\na\n \n+\n \n4\nb", 
             "title": "Slot "
         }, 
         {
@@ -497,7 +497,7 @@
         }, 
         {
             "location": "/builtin/functional/slot/#simple-examples", 
-            "text": "In [ 1 ] :=   Function [ 1   +   # ][ x ]  Out [ 1 ] =   1   +   x   In [ 2 ] :=   Function [ 1   +   #   +   2 #2 ][ x ,   y ]  Out [ 2 ] =   1   +   x   +   2 y   In [ 3 ] :=   #   ===   Slot [ 1 ]  Out [ 3 ] =   True   In [ 4 ] :=   #2   ===   Slot [ 2 ]  Out [ 4 ] =   True", 
+            "text": "In [ 1 ] :=   Function [ 1   +   # ][ x ]  Out [ 1 ] =   1   +   x   In [ 2 ] :=   Function [ 1   +   #   +   2 #2 ][ x ,   y ]  Out [ 2 ] =   1   +   x   +   2 y   In [ 3 ] :=   #   ===   Slot [ 1 ]  Out [ 3 ] =   True   In [ 4 ] :=   #2   ===   Slot [ 2 ]  Out [ 4 ] =   True   In [ 5 ] :=   ( 4   #   +   ( 2   #   )[ a ]   )[ b ]  Out [ 5 ] =   2 a   +   4 b", 
             "title": "Simple examples"
         }, 
         {
@@ -549,6 +549,26 @@
             "location": "/builtin/functional/array/#simple-examples", 
             "text": "In [ 1 ] :=   Array [ f ,   3 ]  Out [ 1 ] =   { f [ 1 ],   f [ 2 ],   f [ 3 ]}   In [ 2 ] :=   mytest [ x_ ]   :=   5  Out [ 2 ] =   Null   In [ 3 ] :=   Array [ mytest ,   3 ]  Out [ 3 ] =   { 5 ,   5 ,   5 }   In [ 4 ] :=   Array [ a   +   b ,   3 ]  Out [ 4 ] =   {( a   +   b )[ 1 ],   ( a   +   b )[ 2 ],   ( a   +   b )[ 3 ]}   In [ 5 ] :=   Array [ a ,   a ]  Out [ 5 ] =   Array [ a ,   a ]", 
             "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/functional/identity/", 
+            "text": "Identity\n\n\nIdentity[expr_]\n returns \nexpr\n.\n\n\nAttributes[Identity] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nIdentity\n[\n5\n]\n\n\nOut\n[\n1\n]\n=\n \n5\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nIdentity\n[\nIdentity\n[\na\n]]\n\n\nOut\n[\n2\n]\n=\n \na\n\n\n\n\n\n\nRules\n\n\nIdentity\n[\nexpr_\n]\n \n:=\n \nexpr", 
+            "title": "Identity "
+        }, 
+        {
+            "location": "/builtin/functional/identity/#identity", 
+            "text": "Identity[expr_]  returns  expr .  Attributes[Identity] := {Protected}", 
+            "title": "Identity"
+        }, 
+        {
+            "location": "/builtin/functional/identity/#simple-examples", 
+            "text": "In [ 1 ] :=   Identity [ 5 ]  Out [ 1 ] =   5   In [ 2 ] :=   Identity [ Identity [ a ]]  Out [ 2 ] =   a", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/functional/identity/#rules", 
+            "text": "Identity [ expr_ ]   :=   expr", 
+            "title": "Rules"
         }, 
         {
             "location": "/builtin/expression/", 
@@ -702,12 +722,12 @@
         }, 
         {
             "location": "/builtin/solve/solve/", 
-            "text": "Solve\n\n\nSolve[var, eqn]\n solves \neqn\n for \nvar\n.\n\n\nAttributes[Solve] := {Protected}\n\n\nDetails\n\n\n\n\nUnder development\n\n\nThis function is under development, and as such will be incomplete and inaccurate. The function currently only knows how to solve a few example forms of equations.\n\n\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nSolve\n[\nx\n,\n \nx\n \n==\n \n0\n]\n\n\nOut\n[\n1\n]\n=\n \n{{\nx\n \n-\n \n0\n}}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nSolve\n[\nx\n,\n \nx\n \n==\n \nb\n]\n\n\nOut\n[\n2\n]\n=\n \n{{\nx\n \n-\n \nb\n}}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nSolve\n[\nx\n,\n \nx\n/\na\n \n==\n \nb\n]\n\n\nOut\n[\n3\n]\n=\n \n{{\nx\n \n-\n \na\n \nb\n}}\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSolve\n[\nx\n,\n \nx\n*\na\n \n==\n \nb\n]\n\n\nOut\n[\n4\n]\n=\n \n{{\nx\n \n-\n \nb\n/\na\n}}\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nSolve\n[\nx\n,\n \nm\n*\nx\n \n+\n \nb\n \n==\n \n0\n]\n\n\nOut\n[\n5\n]\n=\n \n{{\nx\n \n-\n \n-\n(\nb\n/\nm\n)}}\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nSolve\n[\nx\n,\n \nm\n*\nx\n \n+\n \nb\n \n==\n \nc\n]\n\n\nOut\n[\n6\n]\n=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n+\n \nc\n)\n/\nm\n}}\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nSolve\n[\nx\n,\n \na\n*\nx\n^\n2\n \n+\n \nb\n*\nx\n \n+\n \nc\n \n==\n \n0\n]\n\n\nOut\n[\n7\n]\n=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n-\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n])\n/\n(\n2\n \na\n)},\n \n{\nx\n \n-\n \n(\n-\nb\n \n+\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n])\n/\n(\n2\n \na\n)}}\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nSolve\n[\nx\n,\n \na\n*\nx\n^\n2\n \n+\n \nb\n*\nx\n \n+\n \nc\n \n==\n \nd\n]\n\n\nOut\n[\n8\n]\n=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n-\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)},\n \n{\nx\n \n-\n \n(\n-\nb\n \n+\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)}}\n\n\n\n\n\n\nRules\n\n\nSolve\n[\nx_\n,\n \nx_\n \n==\n \nexpr_\n]\n \n:=\n \n{{\nx\n \n-\n \nexpr\n}}\n\n\nSolve\n[\nx_\n,\n \nx_\n \n*\n \nexprB__\n \n==\n \nexprA_\n]\n \n:=\n \n{{\nx\n \n-\n \nexprA\n \n/\n \nTimes\n[\nexprB\n]}}\n\n\nSolve\n[\nx_\n,\n \nx_\n \n*\n \nexprB__\n \n+\n \nexprC_\n \n==\n \nexprA_\n]\n \n:=\n \n{{\nx\n \n-\n \n(\nexprA\n-\nexprC\n)\n \n/\n \nTimes\n[\nexprB\n]}}\n\n\nSolve\n[\nx_\n,\n \na_\n*\nx_\n^\n2\n \n+\n \nb_\n*\nx_\n \n+\n \nc_\n \n==\n \nd_\n]\n \n:=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n-\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)},\n \n{\nx\n \n-\n \n(\n-\nb\n \n+\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)}}", 
+            "text": "Solve\n\n\nSolve[eqn, var]\n solves \neqn\n for \nvar\n.\n\n\nAttributes[Solve] := {Protected}\n\n\nDetails\n\n\n\n\nUnder development\n\n\nThis function is under development, and as such will be incomplete and inaccurate. The function currently only knows how to solve a few example forms of equations.\n\n\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nSolve\n[\nx\n \n==\n \n0\n,\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n{{\nx\n \n-\n \n0\n}}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nSolve\n[\nx\n \n==\n \nb\n,\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n{{\nx\n \n-\n \nb\n}}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nSolve\n[\nx\n/\na\n \n==\n \nb\n,\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n{{\nx\n \n-\n \na\n \nb\n}}\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nSolve\n[\nx\n*\na\n \n==\n \nb\n,\n \nx\n]\n\n\nOut\n[\n4\n]\n=\n \n{{\nx\n \n-\n \nb\n/\na\n}}\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nSolve\n[\nm\n*\nx\n \n+\n \nb\n \n==\n \n0\n,\n \nx\n]\n\n\nOut\n[\n5\n]\n=\n \n{{\nx\n \n-\n \n-\n(\nb\n/\nm\n)}}\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nSolve\n[\nm\n*\nx\n \n+\n \nb\n \n==\n \nc\n,\n \nx\n]\n\n\nOut\n[\n6\n]\n=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n+\n \nc\n)\n/\nm\n}}\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nSolve\n[\na\n*\nx\n^\n2\n \n+\n \nb\n*\nx\n \n+\n \nc\n \n==\n \n0\n,\n \nx\n]\n\n\nOut\n[\n7\n]\n=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n-\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n])\n/\n(\n2\n \na\n)},\n \n{\nx\n \n-\n \n(\n-\nb\n \n+\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n])\n/\n(\n2\n \na\n)}}\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nSolve\n[\na\n*\nx\n^\n2\n \n+\n \nb\n*\nx\n \n+\n \nc\n \n==\n \nd\n,\n \nx\n]\n\n\nOut\n[\n8\n]\n=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n-\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)},\n \n{\nx\n \n-\n \n(\n-\nb\n \n+\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)}}\n\n\n\n\n\n\nRules\n\n\nSolve\n[\nx_\n \n==\n \nexpr_\n,\n \nx_\n]\n \n:=\n \n{{\nx\n \n-\n \nexpr\n}}\n\n\nSolve\n[\nx_\n \n*\n \nexprB__\n \n==\n \nexprA_\n,\n \nx_\n]\n \n:=\n \n{{\nx\n \n-\n \nexprA\n \n/\n \nTimes\n[\nexprB\n]}}\n\n\nSolve\n[\nx_\n \n*\n \nexprB__\n \n+\n \nexprC_\n \n==\n \nexprA_\n,\n \nx_\n]\n \n:=\n \n{{\nx\n \n-\n \n(\nexprA\n-\nexprC\n)\n \n/\n \nTimes\n[\nexprB\n]}}\n\n\nSolve\n[\na_\n*\nx_\n^\n2\n \n+\n \nb_\n*\nx_\n \n+\n \nc_\n \n==\n \nd_\n,\n \nx_\n]\n \n:=\n \n{{\nx\n \n-\n \n(\n-\nb\n \n-\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)},\n \n{\nx\n \n-\n \n(\n-\nb\n \n+\n \nSqrt\n[\nb\n^\n2\n \n-\n \n4\n \na\n \nc\n \n+\n \n4\n \na\n \nd\n])\n/\n(\n2\n \na\n)}}", 
             "title": "Solve "
         }, 
         {
             "location": "/builtin/solve/solve/#solve", 
-            "text": "Solve[var, eqn]  solves  eqn  for  var .  Attributes[Solve] := {Protected}", 
+            "text": "Solve[eqn, var]  solves  eqn  for  var .  Attributes[Solve] := {Protected}", 
             "title": "Solve"
         }, 
         {
@@ -717,12 +737,12 @@
         }, 
         {
             "location": "/builtin/solve/solve/#simple-examples", 
-            "text": "In [ 1 ] :=   Solve [ x ,   x   ==   0 ]  Out [ 1 ] =   {{ x   -   0 }}   In [ 2 ] :=   Solve [ x ,   x   ==   b ]  Out [ 2 ] =   {{ x   -   b }}   In [ 3 ] :=   Solve [ x ,   x / a   ==   b ]  Out [ 3 ] =   {{ x   -   a   b }}   In [ 4 ] :=   Solve [ x ,   x * a   ==   b ]  Out [ 4 ] =   {{ x   -   b / a }}   In [ 5 ] :=   Solve [ x ,   m * x   +   b   ==   0 ]  Out [ 5 ] =   {{ x   -   - ( b / m )}}   In [ 6 ] :=   Solve [ x ,   m * x   +   b   ==   c ]  Out [ 6 ] =   {{ x   -   ( - b   +   c ) / m }}   In [ 7 ] :=   Solve [ x ,   a * x ^ 2   +   b * x   +   c   ==   0 ]  Out [ 7 ] =   {{ x   -   ( - b   -   Sqrt [ b ^ 2   -   4   a   c ]) / ( 2   a )},   { x   -   ( - b   +   Sqrt [ b ^ 2   -   4   a   c ]) / ( 2   a )}}   In [ 8 ] :=   Solve [ x ,   a * x ^ 2   +   b * x   +   c   ==   d ]  Out [ 8 ] =   {{ x   -   ( - b   -   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )},   { x   -   ( - b   +   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )}}", 
+            "text": "In [ 1 ] :=   Solve [ x   ==   0 ,   x ]  Out [ 1 ] =   {{ x   -   0 }}   In [ 2 ] :=   Solve [ x   ==   b ,   x ]  Out [ 2 ] =   {{ x   -   b }}   In [ 3 ] :=   Solve [ x / a   ==   b ,   x ]  Out [ 3 ] =   {{ x   -   a   b }}   In [ 4 ] :=   Solve [ x * a   ==   b ,   x ]  Out [ 4 ] =   {{ x   -   b / a }}   In [ 5 ] :=   Solve [ m * x   +   b   ==   0 ,   x ]  Out [ 5 ] =   {{ x   -   - ( b / m )}}   In [ 6 ] :=   Solve [ m * x   +   b   ==   c ,   x ]  Out [ 6 ] =   {{ x   -   ( - b   +   c ) / m }}   In [ 7 ] :=   Solve [ a * x ^ 2   +   b * x   +   c   ==   0 ,   x ]  Out [ 7 ] =   {{ x   -   ( - b   -   Sqrt [ b ^ 2   -   4   a   c ]) / ( 2   a )},   { x   -   ( - b   +   Sqrt [ b ^ 2   -   4   a   c ]) / ( 2   a )}}   In [ 8 ] :=   Solve [ a * x ^ 2   +   b * x   +   c   ==   d ,   x ]  Out [ 8 ] =   {{ x   -   ( - b   -   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )},   { x   -   ( - b   +   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )}}", 
             "title": "Simple examples"
         }, 
         {
             "location": "/builtin/solve/solve/#rules", 
-            "text": "Solve [ x_ ,   x_   ==   expr_ ]   :=   {{ x   -   expr }}  Solve [ x_ ,   x_   *   exprB__   ==   exprA_ ]   :=   {{ x   -   exprA   /   Times [ exprB ]}}  Solve [ x_ ,   x_   *   exprB__   +   exprC_   ==   exprA_ ]   :=   {{ x   -   ( exprA - exprC )   /   Times [ exprB ]}}  Solve [ x_ ,   a_ * x_ ^ 2   +   b_ * x_   +   c_   ==   d_ ]   :=   {{ x   -   ( - b   -   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )},   { x   -   ( - b   +   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )}}", 
+            "text": "Solve [ x_   ==   expr_ ,   x_ ]   :=   {{ x   -   expr }}  Solve [ x_   *   exprB__   ==   exprA_ ,   x_ ]   :=   {{ x   -   exprA   /   Times [ exprB ]}}  Solve [ x_   *   exprB__   +   exprC_   ==   exprA_ ,   x_ ]   :=   {{ x   -   ( exprA - exprC )   /   Times [ exprB ]}}  Solve [ a_ * x_ ^ 2   +   b_ * x_   +   c_   ==   d_ ,   x_ ]   :=   {{ x   -   ( - b   -   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )},   { x   -   ( - b   +   Sqrt [ b ^ 2   -   4   a   c   +   4   a   d ]) / ( 2   a )}}", 
             "title": "Rules"
         }, 
         {
@@ -787,12 +807,12 @@
         }, 
         {
             "location": "/builtin/list/", 
-            "text": "list documentation\n\n\nList\n\n\nTotal\n\n\nMean\n\n\nTable\n\n\nMemberQ\n\n\nCases\n\n\nPadRight\n\n\nPadLeft\n\n\nRange\n\n\nPart\n\n\nAll", 
+            "text": "list documentation\n\n\nList\n\n\nTotal\n\n\nMean\n\n\nTable\n\n\nMemberQ\n\n\nCases\n\n\nPadRight\n\n\nPadLeft\n\n\nRange\n\n\nPart\n\n\nAll\n\n\nThread", 
             "title": "list"
         }, 
         {
             "location": "/builtin/list/#list-documentation", 
-            "text": "List  Total  Mean  Table  MemberQ  Cases  PadRight  PadLeft  Range  Part  All", 
+            "text": "List  Total  Mean  Table  MemberQ  Cases  PadRight  PadLeft  Range  Part  All  Thread", 
             "title": "list documentation"
         }, 
         {
@@ -952,7 +972,7 @@
         }, 
         {
             "location": "/builtin/list/range/", 
-            "text": "Range\n\n\nRange[n]\n returns a \nList\n of integers from 1 to \nn\n.\n\n\nRange[m, n]\n returns a \nList\n of integers from \nm\n to \nn\n.\n\n\nAttributes[Range] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nRange\n[\n3\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n1\n,\n \n2\n,\n \n3\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nRange\n[\n2\n,\n \n5\n]\n\n\nOut\n[\n2\n]\n=\n \n{\n2\n,\n \n3\n,\n \n4\n,\n \n5\n}", 
+            "text": "Range\n\n\nRange[n]\n returns a \nList\n of integers from 1 to \nn\n.\n\n\nRange[m, n]\n returns a \nList\n of integers from \nm\n to \nn\n.\n\n\nAttributes[Range] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nRange\n[\n3\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n1\n,\n \n2\n,\n \n3\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nRange\n[\n2\n,\n \n5\n]\n\n\nOut\n[\n2\n]\n=\n \n{\n2\n,\n \n3\n,\n \n4\n,\n \n5\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nRange\n[\n2\n,\n \n-\n5\n]\n\n\nOut\n[\n3\n]\n=\n \n{}", 
             "title": "Range "
         }, 
         {
@@ -962,7 +982,7 @@
         }, 
         {
             "location": "/builtin/list/range/#simple-examples", 
-            "text": "In [ 1 ] :=   Range [ 3 ]  Out [ 1 ] =   { 1 ,   2 ,   3 }   In [ 2 ] :=   Range [ 2 ,   5 ]  Out [ 2 ] =   { 2 ,   3 ,   4 ,   5 }", 
+            "text": "In [ 1 ] :=   Range [ 3 ]  Out [ 1 ] =   { 1 ,   2 ,   3 }   In [ 2 ] :=   Range [ 2 ,   5 ]  Out [ 2 ] =   { 2 ,   3 ,   4 ,   5 }   In [ 3 ] :=   Range [ 2 ,   - 5 ]  Out [ 3 ] =   {}", 
             "title": "Simple examples"
         }, 
         {
@@ -999,6 +1019,16 @@
             "location": "/builtin/list/all/#simple-examples", 
             "text": "In [ 1 ] :=   mat   =   Table [ Table [ a * b ^ 2 ,   { b ,   5 }],   { a ,   5 }]  Out [ 1 ] =   {{ 1 ,   4 ,   9 ,   16 ,   25 },   { 2 ,   8 ,   18 ,   32 ,   50 },   { 3 ,   12 ,   27 ,   48 ,   75 },   { 4 ,   16 ,   36 ,   64 ,   100 },   { 5 ,   20 ,   45 ,   80 ,   125 }}   Use  All  to select along the entire dimension:  In [ 2 ] :=   mat [[ 5 ,   All ]]  Out [ 2 ] =   { 5 ,   20 ,   45 ,   80 ,   125 }", 
             "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/list/thread/", 
+            "text": "Thread\n\n\nThread[f[a1, a2, ...}]]\n applies f over the arguments, expanding out any lists.\n\n\nAttributes[Thread] := {Protected}", 
+            "title": "Thread "
+        }, 
+        {
+            "location": "/builtin/list/thread/#thread", 
+            "text": "Thread[f[a1, a2, ...}]]  applies f over the arguments, expanding out any lists.  Attributes[Thread] := {Protected}", 
+            "title": "Thread"
         }, 
         {
             "location": "/builtin/matrix/", 
@@ -1302,17 +1332,17 @@
         }, 
         {
             "location": "/builtin/power/", 
-            "text": "power documentation\n\n\nPower\n\n\nExpand", 
+            "text": "power documentation\n\n\nPower\n\n\nExpand\n\n\nPolynomialQ", 
             "title": "power"
         }, 
         {
             "location": "/builtin/power/#power-documentation", 
-            "text": "Power  Expand", 
+            "text": "Power  Expand  PolynomialQ", 
             "title": "power documentation"
         }, 
         {
             "location": "/builtin/power/power/", 
-            "text": "Power\n\n\nbase^exp\n finds \nbase\n raised to the power of \nexp\n.\n\n\nAttributes[Power] := {Listable, NumericFunction, OneIdentity, Protected}\n\n\nSimple examples\n\n\nExponents of integers are computed exactly:\n\n\nIn\n[\n1\n]\n:=\n \n(\n-\n5\n)\n^-\n3\n\n\nOut\n[\n1\n]\n=\n \n-\n1\n/\n125\n\n\n\n\n\n\nFloating point exponents are handled with floating point precision:\n\n\nIn\n[\n2\n]\n:=\n \n.5\n^-\n10000.\n\n\nOut\n[\n2\n]\n=\n \n1.99506\ne\n+\n3010\n\n\n\n\n\n\nAutomatically apply some basic simplification rules:\n\n\nIn\n[\n3\n]\n:=\n \n(\nm\n^\n2.\n)\n^\n2\n\n\nOut\n[\n3\n]\n=\n \nm\n^\n4.\n\n\n\n\n\n\nFurther examples\n\n\nExpreduce handles problematic exponents accordingly:\n\n\nIn\n[\n1\n]\n:=\n \n0\n^\n0\n\n\nOut\n[\n1\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n0\n^\n(\n-\n1\n)\n\n\nOut\n[\n2\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nRules\n\n\nPower\n[\nPower\n[\na_\n,\nb_Integer\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Real\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Symbol\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nTimes\n[\nExcept\n[\n_Symbol\n,\n \nfirst_\n],\n \ninner___\n],\n \npow_\n]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nTimes\n[\nfirst_\n,\n \ninner___\n],\n \nExcept\n[\n_Symbol\n,\n \npow_\n]]\n \n:=\n \nfirst\n^\npow\n*\nPower\n[\nTimes\n[\ninner\n],\npow\n]\n\n\nPower\n[\nRational\n[\na_\n,\nb_\n],\n \n-\n1\n]\n \n:=\n \nRational\n[\nb\n,\na\n]\n\n\nPower\n[\nRational\n[\na_\n,\nb_\n],\n \ne_\n?\nPositive\n]\n \n:=\n \nRational\n[\na\n^\ne\n,\nb\n^\ne\n]", 
+            "text": "Power\n\n\nbase^exp\n finds \nbase\n raised to the power of \nexp\n.\n\n\nAttributes[Power] := {Listable, NumericFunction, OneIdentity, Protected}\n\n\nSimple examples\n\n\nExponents of integers are computed exactly:\n\n\nIn\n[\n1\n]\n:=\n \n(\n-\n5\n)\n^-\n3\n\n\nOut\n[\n1\n]\n=\n \n-\n1\n/\n125\n\n\n\n\n\n\nFloating point exponents are handled with floating point precision:\n\n\nIn\n[\n2\n]\n:=\n \n.5\n^-\n10000.\n\n\nOut\n[\n2\n]\n=\n \n1.99506\ne\n+\n3010\n\n\n\n\n\n\nAutomatically apply some basic simplification rules:\n\n\nIn\n[\n3\n]\n:=\n \n(\nm\n^\n2.\n)\n^\n2\n\n\nOut\n[\n3\n]\n=\n \nm\n^\n4.\n\n\n\n\n\n\nFurther examples\n\n\nExpreduce handles problematic exponents accordingly:\n\n\nIn\n[\n1\n]\n:=\n \n0\n^\n0\n\n\nOut\n[\n1\n]\n=\n \nIndeterminate\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n0\n^\n(\n-\n1\n)\n\n\nOut\n[\n2\n]\n=\n \nComplexInfinity\n\n\n\n\n\n\nRules\n\n\nPower\n[\nPower\n[\na_\n,\nb_Integer\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Real\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\nPower\n[\nPower\n[\na_\n,\nb_Symbol\n],\nc_Integer\n]\n \n:=\n \na\n^\n(\nb\n*\nc\n)\n\n\n(\nExcept\n[\n_Symbol\n,\n \nfirst_\n]\n \n*\n \ninner___\n)\n^\nExcept\n[\n_Symbol\n,\n \npow_\n]\n \n:=\n \nfirst\n^\npow\n \n*\n \nTimes\n[\ninner\n]\n^\npow\n\n\n(\nfirst_\n \n*\n \ninner___\n)\n^\nExcept\n[\n_Symbol\n,\n \npow_\n]\n \n:=\n \nfirst\n^\npow\n \n*\n \nTimes\n[\ninner\n]\n^\npow\n\n\nPower\n[\nRational\n[\na_\n,\nb_\n],\n \n-\n1\n]\n \n:=\n \nRational\n[\nb\n,\na\n]\n\n\nPower\n[\nRational\n[\na_\n,\nb_\n],\n \ne_\n?\nPositive\n]\n \n:=\n \nRational\n[\na\n^\ne\n,\nb\n^\ne\n]", 
             "title": "Power "
         }, 
         {
@@ -1332,7 +1362,7 @@
         }, 
         {
             "location": "/builtin/power/power/#rules", 
-            "text": "Power [ Power [ a_ , b_Integer ], c_Integer ]   :=   a ^ ( b * c )  Power [ Power [ a_ , b_Real ], c_Integer ]   :=   a ^ ( b * c )  Power [ Power [ a_ , b_Symbol ], c_Integer ]   :=   a ^ ( b * c )  Power [ Times [ Except [ _Symbol ,   first_ ],   inner___ ],   pow_ ]   :=   first ^ pow * Power [ Times [ inner ], pow ]  Power [ Times [ first_ ,   inner___ ],   Except [ _Symbol ,   pow_ ]]   :=   first ^ pow * Power [ Times [ inner ], pow ]  Power [ Rational [ a_ , b_ ],   - 1 ]   :=   Rational [ b , a ]  Power [ Rational [ a_ , b_ ],   e_ ? Positive ]   :=   Rational [ a ^ e , b ^ e ]", 
+            "text": "Power [ Power [ a_ , b_Integer ], c_Integer ]   :=   a ^ ( b * c )  Power [ Power [ a_ , b_Real ], c_Integer ]   :=   a ^ ( b * c )  Power [ Power [ a_ , b_Symbol ], c_Integer ]   :=   a ^ ( b * c )  ( Except [ _Symbol ,   first_ ]   *   inner___ ) ^ Except [ _Symbol ,   pow_ ]   :=   first ^ pow   *   Times [ inner ] ^ pow  ( first_   *   inner___ ) ^ Except [ _Symbol ,   pow_ ]   :=   first ^ pow   *   Times [ inner ] ^ pow  Power [ Rational [ a_ , b_ ],   - 1 ]   :=   Rational [ b , a ]  Power [ Rational [ a_ , b_ ],   e_ ? Positive ]   :=   Rational [ a ^ e , b ^ e ]", 
             "title": "Rules"
         }, 
         {
@@ -1353,6 +1383,21 @@
         {
             "location": "/builtin/power/expand/#rules", 
             "text": "possibleExponents [ n_Integer ,   m_Integer ]   :=   Flatten [ Permutations   /@   (( PadRight [ # ,   m ])     /@   IntegerPartitions [ n ,   m ]),   1 ]  genVars [ addends_List ,   exponents_List ]   :=   Product [ addends [[ ExpandUnique`i ]] ^ exponents [[ ExpandUnique`i ]],   { ExpandUnique`i ,   1 ,   Length [ addends ]}]  genExpand [ addends_List ,   exponents_List ]   :=   Sum [( Multinomial   @@   exponents [[ ExpandUnique`i ]]) * genVars [ addends ,   exponents [[ ExpandUnique`i ]]],   { ExpandUnique`i ,   1 ,   Length [ exponents ]}]  Expand [( Plus [ addends__ ]) ^ ( nmatch_Integer )]   :=   genExpand [ List [ addends ],   possibleExponents [ nmatch ,   Length [ List [ addends ]]]]  Expand [( Plus [ addends__ ]) ^ ( nmatch_Integer ) * rest___ ]   :=   Expand [ Expand [ Plus [ addends ] ^ nmatch ]   *   rest ]  Expand [ Plus [ a1s__ ] * Plus [ a2s__ ] * rest___ ]   :=   Expand [ Sum [ ExpandUnique`a1 * ExpandUnique`a2 ,   { ExpandUnique`a1 ,   List [ a1s ]},   { ExpandUnique`a2 ,   List [ a2s ]}] * rest ]  Expand [ Plus [ addends__ ] / den_ ]   :=   Sum [ Expand [ ExpandUnique`a / den ],   { ExpandUnique`a ,   { addends }}]  Expand [ c_ ? AtomQ * Plus [ addends__ ]]   :=   Sum [ Expand [ c * ExpandUnique`a ],   { ExpandUnique`a ,   { addends }}]  Expand [ a_ ]   :=   a", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/power/polynomialq/", 
+            "text": "PolynomialQ\n\n\nPolynomialQ[e, var]\n returns True if \ne\n is a polynomial in \nvar\n.\n\n\nAttributes[PolynomialQ] := {Protected}\n\n\nRules\n\n\nPolynomialQ\n[\np_Plus\n,\nv_\n]\n \n:=\n \nAllTrue\n[\nList\n@@\np\n,(\nPolynomialQ\n[\n#\n,\nv\n])\n]\n\n\nPolynomialQ\n[\np_\n*\nv_\n^\nexp_Integer\n,\nv_\n]\n \n:=\n \nIf\n[\nFreeQ\n[\np\n,\nv\n]\nPositive\n[\nexp\n],\nTrue\n,\nFalse\n]\n\n\nPolynomialQ\n[\n_\n,\nv_Integer\n]\n \n:=\n \nTrue\n\n\nPolynomialQ\n[\nv_\n,\nv_\n]\n \n:=\n \nTrue\n\n\nPolynomialQ\n[\np_\n*\nv_\n,\nv_\n]\n \n:=\n \nIf\n[\nFreeQ\n[\np\n,\nv\n],\nTrue\n,\nFalse\n]\n\n\nPolynomialQ\n[\np_\n,\nv_\n]\n \n:=\n \nIf\n[\nFreeQ\n[\np\n,\nv\n],\nTrue\n,\nFalse\n]", 
+            "title": "PolynomialQ "
+        }, 
+        {
+            "location": "/builtin/power/polynomialq/#polynomialq", 
+            "text": "PolynomialQ[e, var]  returns True if  e  is a polynomial in  var .  Attributes[PolynomialQ] := {Protected}", 
+            "title": "PolynomialQ"
+        }, 
+        {
+            "location": "/builtin/power/polynomialq/#rules", 
+            "text": "PolynomialQ [ p_Plus , v_ ]   :=   AllTrue [ List @@ p ,( PolynomialQ [ # , v ]) ]  PolynomialQ [ p_ * v_ ^ exp_Integer , v_ ]   :=   If [ FreeQ [ p , v ] Positive [ exp ], True , False ]  PolynomialQ [ _ , v_Integer ]   :=   True  PolynomialQ [ v_ , v_ ]   :=   True  PolynomialQ [ p_ * v_ , v_ ]   :=   If [ FreeQ [ p , v ], True , False ]  PolynomialQ [ p_ , v_ ]   :=   If [ FreeQ [ p , v ], True , False ]", 
             "title": "Rules"
         }, 
         {
@@ -1537,27 +1582,42 @@
         }, 
         {
             "location": "/builtin/system/", 
-            "text": "system documentation\n\n\nExpreduceSetLogging\n\n\nAttributes\n\n\nClear\n\n\nSet\n\n\nSetDelayed\n\n\nTiming\n\n\nPrint\n\n\nMessageName\n\n\nTrace\n\n\nN", 
+            "text": "system documentation\n\n\nExpreduceSetLogging\n\n\nExpreduceDefinitionTimes\n\n\nAttributes\n\n\nClear\n\n\nSet\n\n\nSetDelayed\n\n\nTiming\n\n\nPrint\n\n\nMessageName\n\n\nTrace\n\n\nN\n\n\nListable", 
             "title": "system"
         }, 
         {
             "location": "/builtin/system/#system-documentation", 
-            "text": "ExpreduceSetLogging  Attributes  Clear  Set  SetDelayed  Timing  Print  MessageName  Trace  N", 
+            "text": "ExpreduceSetLogging  ExpreduceDefinitionTimes  Attributes  Clear  Set  SetDelayed  Timing  Print  MessageName  Trace  N  Listable", 
             "title": "system documentation"
         }, 
         {
             "location": "/builtin/system/expreducesetlogging/", 
-            "text": "ExpreduceSetLogging\n\n\nExpreduceSetLogging[bool]\n sets the logging state to \nbool\n.\n\n\nAttributes[ExpreduceSetLogging] := {Protected}\n\n\nDetails\n\n\nLogging output prints to the console. There can be a lot of logging output, especially for more complicated pattern matches.", 
+            "text": "ExpreduceSetLogging\n\n\nExpreduceSetLogging[bool, level]\n sets the logging state to \nbool\n and the level to \nlevel\n.\n\n\nAttributes[ExpreduceSetLogging] := {Protected}\n\n\nDetails\n\n\nLogging output prints to the console. There can be a lot of logging output, especially for more complicated pattern matches. Valid levels are \nDebug\n, \nInfo\n, \nNotice\n, \nWarning\n, \nError\n, and \nCritical\n.", 
             "title": "ExpreduceSetLogging "
         }, 
         {
             "location": "/builtin/system/expreducesetlogging/#expreducesetlogging", 
-            "text": "ExpreduceSetLogging[bool]  sets the logging state to  bool .  Attributes[ExpreduceSetLogging] := {Protected}", 
+            "text": "ExpreduceSetLogging[bool, level]  sets the logging state to  bool  and the level to  level .  Attributes[ExpreduceSetLogging] := {Protected}", 
             "title": "ExpreduceSetLogging"
         }, 
         {
             "location": "/builtin/system/expreducesetlogging/#details", 
-            "text": "Logging output prints to the console. There can be a lot of logging output, especially for more complicated pattern matches.", 
+            "text": "Logging output prints to the console. There can be a lot of logging output, especially for more complicated pattern matches. Valid levels are  Debug ,  Info ,  Notice ,  Warning ,  Error , and  Critical .", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/builtin/system/expreducedefinitiontimes/", 
+            "text": "ExpreduceDefinitionTimes\n\n\nExpreduceDefinitionTimes[]\n prints the time in seconds evaluating various definitions.\n\n\nAttributes[ExpreduceDefinitionTimes] := {Protected}\n\n\nDetails\n\n\nFor timing information to record, debug mode must be enabled through \nExpreduceSetLogging\n.", 
+            "title": "ExpreduceDefinitionTimes "
+        }, 
+        {
+            "location": "/builtin/system/expreducedefinitiontimes/#expreducedefinitiontimes", 
+            "text": "ExpreduceDefinitionTimes[]  prints the time in seconds evaluating various definitions.  Attributes[ExpreduceDefinitionTimes] := {Protected}", 
+            "title": "ExpreduceDefinitionTimes"
+        }, 
+        {
+            "location": "/builtin/system/expreducedefinitiontimes/#details", 
+            "text": "For timing information to record, debug mode must be enabled through  ExpreduceSetLogging .", 
             "title": "Details"
         }, 
         {
@@ -1652,12 +1712,12 @@
         }, 
         {
             "location": "/builtin/system/print/", 
-            "text": "Print\n\n\nPrint[expr]\n prints the string representation of \nexpr\n to the console and returns \nNull\n.\n\n\nAttributes[Print] := {Protected}", 
+            "text": "Print\n\n\nPrint[expr1, expr2, ...]\n prints the string representation of the expressions to the console and returns \nNull\n.\n\n\nAttributes[Print] := {Protected}", 
             "title": "Print "
         }, 
         {
             "location": "/builtin/system/print/#print", 
-            "text": "Print[expr]  prints the string representation of  expr  to the console and returns  Null .  Attributes[Print] := {Protected}", 
+            "text": "Print[expr1, expr2, ...]  prints the string representation of the expressions to the console and returns  Null .  Attributes[Print] := {Protected}", 
             "title": "Print"
         }, 
         {
@@ -1699,6 +1759,21 @@
             "location": "/builtin/system/n/#n", 
             "text": "N[expr]  attempts to convert  expr  to a numeric value.  Attributes[N] := {Protected}", 
             "title": "N"
+        }, 
+        {
+            "location": "/builtin/system/listable/", 
+            "text": "Listable\n\n\nListable\n is an attribute that calls for functions to automatically map over lists.\n\n\nAttributes[Listable] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nBoole\n[{\nTrue\n,\n \nTrue\n,\n \nTrue\n,\n \nFalse\n}]\n\n\nOut\n[\n1\n]\n=\n \n{\n1\n,\n \n1\n,\n \n1\n,\n \n0\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPositive\n[{\n-\n1\n,\n \n4\n,\n \n5\n}]\n\n\nOut\n[\n2\n]\n=\n \n{\nFalse\n,\n \nTrue\n,\n \nTrue\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPositive\n[{{\n-\n1\n,\n \n4\n,\n \n5\n}}]\n\n\nOut\n[\n3\n]\n=\n \n{{\nFalse\n,\n \nTrue\n,\n \nTrue\n}}\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nPositive\n[{{\n-\n1\n,\n \n4\n,\n \n5\n},\n \n{\n6\n,\n \n-\n1\n}}]\n\n\nOut\n[\n4\n]\n=\n \n{{\nFalse\n,\n \nTrue\n,\n \nTrue\n},\n \n{\nTrue\n,\n \nFalse\n}}", 
+            "title": "Listable "
+        }, 
+        {
+            "location": "/builtin/system/listable/#listable", 
+            "text": "Listable  is an attribute that calls for functions to automatically map over lists.  Attributes[Listable] := {Protected}", 
+            "title": "Listable"
+        }, 
+        {
+            "location": "/builtin/system/listable/#simple-examples", 
+            "text": "In [ 1 ] :=   Boole [{ True ,   True ,   True ,   False }]  Out [ 1 ] =   { 1 ,   1 ,   1 ,   0 }   In [ 2 ] :=   Positive [{ - 1 ,   4 ,   5 }]  Out [ 2 ] =   { False ,   True ,   True }   In [ 3 ] :=   Positive [{{ - 1 ,   4 ,   5 }}]  Out [ 3 ] =   {{ False ,   True ,   True }}   In [ 4 ] :=   Positive [{{ - 1 ,   4 ,   5 },   { 6 ,   - 1 }}]  Out [ 4 ] =   {{ False ,   True ,   True },   { True ,   False }}", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/trig/", 
@@ -1837,12 +1912,12 @@
         }, 
         {
             "location": "/builtin/pattern/", 
-            "text": "pattern documentation\n\n\nMatchQ\n\n\nPattern\n\n\nBlank\n\n\nBlankSequence\n\n\nBlankNullSequence\n\n\nExcept\n\n\nPatternTest\n\n\nCondition\n\n\nAlternatives", 
+            "text": "pattern documentation\n\n\nMatchQ\n\n\nPattern\n\n\nBlank\n\n\nBlankSequence\n\n\nBlankNullSequence\n\n\nExcept\n\n\nPatternTest\n\n\nCondition\n\n\nAlternatives\n\n\nFreeQ\n\n\nReplaceList\n\n\nRepeated", 
             "title": "pattern"
         }, 
         {
             "location": "/builtin/pattern/#pattern-documentation", 
-            "text": "MatchQ  Pattern  Blank  BlankSequence  BlankNullSequence  Except  PatternTest  Condition  Alternatives", 
+            "text": "MatchQ  Pattern  Blank  BlankSequence  BlankNullSequence  Except  PatternTest  Condition  Alternatives  FreeQ  ReplaceList  Repeated", 
             "title": "pattern documentation"
         }, 
         {
@@ -1977,7 +2052,7 @@
         }, 
         {
             "location": "/builtin/pattern/condition/", 
-            "text": "Condition\n\n\npat /; cond\n matches an expression if the expression matches \npat\n, and if \ncond\n evaluates to \nTrue\n with all the named patterns substituted in.\n\n\nAttributes[Condition] := {HoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nMatchQ\n[\n5\n,\n \n_\n \n/;\n \nTrue\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nMatchQ\n[\n5\n,\n \n_\n \n/;\n \nFalse\n]\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_\n \n/;\n \nTrue\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_Real\n \n/;\n \nTrue\n]\n\n\nOut\n[\n4\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_Integer\n \n/;\n \nTrue\n]\n\n\nOut\n[\n5\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_\n \n/;\n \ny\n \n==\n \n0\n]\n\n\nOut\n[\n6\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_\n \n/;\n \ny\n \n==\n \n5\n]\n\n\nOut\n[\n7\n]\n=\n \nTrue", 
+            "text": "Condition\n\n\npat /; cond\n matches an expression if the expression matches \npat\n, and if \ncond\n evaluates to \nTrue\n with all the named patterns substituted in.\n\n\nAttributes[Condition] := {HoldAll, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nMatchQ\n[\n5\n,\n \n_\n \n/;\n \nTrue\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nMatchQ\n[\n5\n,\n \n_\n \n/;\n \nFalse\n]\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_\n \n/;\n \nTrue\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_Real\n \n/;\n \nTrue\n]\n\n\nOut\n[\n4\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_Integer\n \n/;\n \nTrue\n]\n\n\nOut\n[\n5\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_\n \n/;\n \ny\n \n==\n \n0\n]\n\n\nOut\n[\n6\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nMatchQ\n[\n5\n,\n \ny_\n \n/;\n \ny\n \n==\n \n5\n]\n\n\nOut\n[\n7\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \n{\n3\n,\n \n5\n,\n \n2\n,\n \n1\n}\n \n//.\n \n{\nx___\n,\n \ny_\n,\n \nz_\n,\n \nk___\n}\n \n/;\n \n(\nOrder\n[\ny\n,\n \nz\n]\n \n==\n \n-\n1\n)\n \n-\n \n{\nx\n,\n \nz\n,\n \ny\n,\n \nk\n}\n\n\nOut\n[\n8\n]\n=\n \n{\n1\n,\n2\n,\n3\n,\n5\n}", 
             "title": "Condition "
         }, 
         {
@@ -1987,12 +2062,12 @@
         }, 
         {
             "location": "/builtin/pattern/condition/#simple-examples", 
-            "text": "In [ 1 ] :=   MatchQ [ 5 ,   _   /;   True ]  Out [ 1 ] =   True   In [ 2 ] :=   MatchQ [ 5 ,   _   /;   False ]  Out [ 2 ] =   False   In [ 3 ] :=   MatchQ [ 5 ,   y_   /;   True ]  Out [ 3 ] =   True   In [ 4 ] :=   MatchQ [ 5 ,   y_Real   /;   True ]  Out [ 4 ] =   False   In [ 5 ] :=   MatchQ [ 5 ,   y_Integer   /;   True ]  Out [ 5 ] =   True   In [ 6 ] :=   MatchQ [ 5 ,   y_   /;   y   ==   0 ]  Out [ 6 ] =   False   In [ 7 ] :=   MatchQ [ 5 ,   y_   /;   y   ==   5 ]  Out [ 7 ] =   True", 
+            "text": "In [ 1 ] :=   MatchQ [ 5 ,   _   /;   True ]  Out [ 1 ] =   True   In [ 2 ] :=   MatchQ [ 5 ,   _   /;   False ]  Out [ 2 ] =   False   In [ 3 ] :=   MatchQ [ 5 ,   y_   /;   True ]  Out [ 3 ] =   True   In [ 4 ] :=   MatchQ [ 5 ,   y_Real   /;   True ]  Out [ 4 ] =   False   In [ 5 ] :=   MatchQ [ 5 ,   y_Integer   /;   True ]  Out [ 5 ] =   True   In [ 6 ] :=   MatchQ [ 5 ,   y_   /;   y   ==   0 ]  Out [ 6 ] =   False   In [ 7 ] :=   MatchQ [ 5 ,   y_   /;   y   ==   5 ]  Out [ 7 ] =   True   In [ 8 ] :=   { 3 ,   5 ,   2 ,   1 }   //.   { x___ ,   y_ ,   z_ ,   k___ }   /;   ( Order [ y ,   z ]   ==   - 1 )   -   { x ,   z ,   y ,   k }  Out [ 8 ] =   { 1 , 2 , 3 , 5 }", 
             "title": "Simple examples"
         }, 
         {
             "location": "/builtin/pattern/alternatives/", 
-            "text": "Alternatives\n\n\nalt1 | alt2 | ...\n matches an expression if it matches any pattern in the list of alternatives.\n\n\nAttributes[Alternatives] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nc\n \n|\n \nd\n\n\nOut\n[\n1\n]\n=\n \nAlternatives\n[\nc\n,\nd\n]\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nMatchQ\n[\nb\n,\n \nc\n \n|\n \nd\n]\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nMatchQ\n[\nc\n,\n \nc\n \n|\n \nd\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nMatchQ\n[\nd\n,\n \nc\n \n|\n \nd\n]\n\n\nOut\n[\n4\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nCases\n[{\na\n,\n \nb\n,\n \nc\n,\n \n1\n,\n \n2\n},\n \nc\n \n|\n \n_Integer\n]\n\n\nOut\n[\n5\n]\n=\n \n{\nc\n,\n \n1\n,\n \n2\n}\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \n{\na\n,\n \nb\n,\n \nc\n,\n \n1.\n,\n \n2\n}\n \n/.\n \namatch_Symbol\n \n|\n \namatch_Integer\n \n-\n \namatch\n \n+\n \n1\n\n\nOut\n[\n6\n]\n=\n \n(\n1\n \n+\n \nList\n)[\n1\n \n+\n \na\n,\n \n1\n \n+\n \nb\n,\n \n1\n \n+\n \nc\n,\n \n1.\n,\n \n3\n]\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nCases\n[{\na\n,\n \nb\n,\n \nc\n,\n \nd\n,\n \ne\n,\n \nf\n},\n \nb\n \n|\n \nc\n \n|\n \nd\n \n|\n \ne\n]\n\n\nOut\n[\n7\n]\n=\n \n{\nb\n,\n \nc\n,\n \nd\n,\n \ne\n}", 
+            "text": "Alternatives\n\n\nalt1 | alt2 | ...\n matches an expression if it matches any pattern in the list of alternatives.\n\n\nAttributes[Alternatives] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nc\n \n|\n \nd\n\n\nOut\n[\n1\n]\n=\n \nAlternatives\n[\nc\n,\nd\n]\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nMatchQ\n[\nb\n,\n \nc\n \n|\n \nd\n]\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nMatchQ\n[\nc\n,\n \nc\n \n|\n \nd\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nMatchQ\n[\nd\n,\n \nc\n \n|\n \nd\n]\n\n\nOut\n[\n4\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nCases\n[{\na\n,\n \nb\n,\n \nc\n,\n \n1\n,\n \n2\n},\n \nc\n \n|\n \n_Integer\n]\n\n\nOut\n[\n5\n]\n=\n \n{\nc\n,\n \n1\n,\n \n2\n}\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \n{\na\n,\n \nb\n,\n \nc\n,\n \n1.\n,\n \n2\n}\n \n/.\n \namatch_Symbol\n \n|\n \namatch_Integer\n \n-\n \namatch\n \n+\n \n1\n\n\nOut\n[\n6\n]\n=\n \n(\n1\n \n+\n \nList\n)[\n1\n \n+\n \na\n,\n \n1\n \n+\n \nb\n,\n \n1\n \n+\n \nc\n,\n \n1.\n,\n \n3\n]\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nCases\n[{\na\n,\n \nb\n,\n \nc\n,\n \nd\n,\n \ne\n,\n \nf\n},\n \nb\n \n|\n \nc\n \n|\n \nd\n \n|\n \ne\n]\n\n\nOut\n[\n7\n]\n=\n \n{\nb\n,\n \nc\n,\n \nd\n,\n \ne\n}\n\n\n\n\n\n\nIn\n[\n8\n]\n:=\n \nMatchQ\n[{\na\n,\n \nb\n},\n \n{\na_\n,\n \nk\n \n|\n \na_\n}]\n\n\nOut\n[\n8\n]\n=\n \nFalse", 
             "title": "Alternatives "
         }, 
         {
@@ -2002,17 +2077,57 @@
         }, 
         {
             "location": "/builtin/pattern/alternatives/#simple-examples", 
-            "text": "In [ 1 ] :=   c   |   d  Out [ 1 ] =   Alternatives [ c , d ]   In [ 2 ] :=   MatchQ [ b ,   c   |   d ]  Out [ 2 ] =   False   In [ 3 ] :=   MatchQ [ c ,   c   |   d ]  Out [ 3 ] =   True   In [ 4 ] :=   MatchQ [ d ,   c   |   d ]  Out [ 4 ] =   True   In [ 5 ] :=   Cases [{ a ,   b ,   c ,   1 ,   2 },   c   |   _Integer ]  Out [ 5 ] =   { c ,   1 ,   2 }   In [ 6 ] :=   { a ,   b ,   c ,   1. ,   2 }   /.   amatch_Symbol   |   amatch_Integer   -   amatch   +   1  Out [ 6 ] =   ( 1   +   List )[ 1   +   a ,   1   +   b ,   1   +   c ,   1. ,   3 ]   In [ 7 ] :=   Cases [{ a ,   b ,   c ,   d ,   e ,   f },   b   |   c   |   d   |   e ]  Out [ 7 ] =   { b ,   c ,   d ,   e }", 
+            "text": "In [ 1 ] :=   c   |   d  Out [ 1 ] =   Alternatives [ c , d ]   In [ 2 ] :=   MatchQ [ b ,   c   |   d ]  Out [ 2 ] =   False   In [ 3 ] :=   MatchQ [ c ,   c   |   d ]  Out [ 3 ] =   True   In [ 4 ] :=   MatchQ [ d ,   c   |   d ]  Out [ 4 ] =   True   In [ 5 ] :=   Cases [{ a ,   b ,   c ,   1 ,   2 },   c   |   _Integer ]  Out [ 5 ] =   { c ,   1 ,   2 }   In [ 6 ] :=   { a ,   b ,   c ,   1. ,   2 }   /.   amatch_Symbol   |   amatch_Integer   -   amatch   +   1  Out [ 6 ] =   ( 1   +   List )[ 1   +   a ,   1   +   b ,   1   +   c ,   1. ,   3 ]   In [ 7 ] :=   Cases [{ a ,   b ,   c ,   d ,   e ,   f },   b   |   c   |   d   |   e ]  Out [ 7 ] =   { b ,   c ,   d ,   e }   In [ 8 ] :=   MatchQ [{ a ,   b },   { a_ ,   k   |   a_ }]  Out [ 8 ] =   False", 
             "title": "Simple examples"
         }, 
         {
+            "location": "/builtin/pattern/freeq/", 
+            "text": "FreeQ\n\n\nFreeQ[e, var]\n returns True if \ne\n is free from any occurences of \nvar\n.\n\n\nAttributes[FreeQ] := {Protected}\n\n\nRules\n\n\nFreeQ\n[\nexpr_\n,\n \nval_\n]\n \n:=\n \nexpr\n \n===\n \n(\nexpr\n \n/.\n \nval\n \n-\n \nInternal`DummyReplace\n)", 
+            "title": "FreeQ "
+        }, 
+        {
+            "location": "/builtin/pattern/freeq/#freeq", 
+            "text": "FreeQ[e, var]  returns True if  e  is free from any occurences of  var .  Attributes[FreeQ] := {Protected}", 
+            "title": "FreeQ"
+        }, 
+        {
+            "location": "/builtin/pattern/freeq/#rules", 
+            "text": "FreeQ [ expr_ ,   val_ ]   :=   expr   ===   ( expr   /.   val   -   Internal`DummyReplace )", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/pattern/replacelist/", 
+            "text": "ReplaceList\n\n\nReplaceList[expr, rule]\n returns all the possible replacements using \nrule\n on \nexpr\n.\n\n\nAttributes[ReplaceList] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nReplaceList\n[\na\n \n+\n \nb\n,\n \nx_\n \n+\n \ny_\n \n-\n \n{\nx\n,\n \ny\n}]\n\n\nOut\n[\n1\n]\n=\n \n{{\na\n,\n \nb\n},\n \n{\nb\n,\n \na\n}}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nReplaceList\n[\nfoo\n[\na\n \n+\n \nb\n,\n \nb\n],\n \nfoo\n[\nj_\n \n+\n \nk_\n,\n \nj_\n]\n \n-\n \n{\nj\n,\n \nk\n}]\n\n\nOut\n[\n2\n]\n=\n \n{{\nb\n,\n \na\n}}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nReplaceList\n[\nfoo\n[\na\n \n+\n \nb\n],\n \nfoo\n[\nx_\n \n+\n \ny_\n]\n \n-\n \n{\nx\n,\n \ny\n}]\n\n\nOut\n[\n3\n]\n=\n \n{{\na\n,\n \nb\n},\n \n{\nb\n,\n \na\n}}\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nReplaceList\n[\nbar\n[\nfoo\n[\na\n \n+\n \nb\n]\n \n+\n \nc\n],\n \nbar\n[\nfoo\n[\nx_\n \n+\n \ny_\n]\n \n+\n \nz_\n]\n \n-\n \n{\nx\n,\n \ny\n,\n \nz\n}]\n\n\nOut\n[\n4\n]\n=\n \n{{\na\n,\n \nb\n,\n \nc\n},\n \n{\nb\n,\n \na\n,\n \nc\n}}\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nReplaceList\n[\nbar\n[\nfoo\n[\na\n \n+\n \nb\n]\n \n+\n \nc\n \n+\n \nd\n],\n \nbar\n[\nw_\n \n+\n \nx_\n \n+\n \nfoo\n[\ny_\n \n+\n \nz_\n]]\n \n-\n \n{\nw\n,\n \nx\n,\n \ny\n,\n \nz\n}]\n\n\nOut\n[\n5\n]\n=\n \n{{\nc\n,\n \nd\n,\n \na\n,\n \nb\n},\n \n{\nc\n,\n \nd\n,\n \nb\n,\n \na\n},\n \n{\nd\n,\n \nc\n,\n \na\n,\n \nb\n},\n \n{\nd\n,\n \nc\n,\n \nb\n,\n \na\n}}\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nReplaceList\n[\nfoo\n[\na\n \n+\n \nb\n,\n \nc\n],\n \nfoo\n[\nj_\n \n+\n \nk_\n,\n \nj_\n]\n \n-\n \n{\nj\n,\n \nk\n}]\n\n\nOut\n[\n6\n]\n=\n \n{}", 
+            "title": "ReplaceList "
+        }, 
+        {
+            "location": "/builtin/pattern/replacelist/#replacelist", 
+            "text": "ReplaceList[expr, rule]  returns all the possible replacements using  rule  on  expr .  Attributes[ReplaceList] := {Protected}", 
+            "title": "ReplaceList"
+        }, 
+        {
+            "location": "/builtin/pattern/replacelist/#simple-examples", 
+            "text": "In [ 1 ] :=   ReplaceList [ a   +   b ,   x_   +   y_   -   { x ,   y }]  Out [ 1 ] =   {{ a ,   b },   { b ,   a }}   In [ 2 ] :=   ReplaceList [ foo [ a   +   b ,   b ],   foo [ j_   +   k_ ,   j_ ]   -   { j ,   k }]  Out [ 2 ] =   {{ b ,   a }}   In [ 3 ] :=   ReplaceList [ foo [ a   +   b ],   foo [ x_   +   y_ ]   -   { x ,   y }]  Out [ 3 ] =   {{ a ,   b },   { b ,   a }}   In [ 4 ] :=   ReplaceList [ bar [ foo [ a   +   b ]   +   c ],   bar [ foo [ x_   +   y_ ]   +   z_ ]   -   { x ,   y ,   z }]  Out [ 4 ] =   {{ a ,   b ,   c },   { b ,   a ,   c }}   In [ 5 ] :=   ReplaceList [ bar [ foo [ a   +   b ]   +   c   +   d ],   bar [ w_   +   x_   +   foo [ y_   +   z_ ]]   -   { w ,   x ,   y ,   z }]  Out [ 5 ] =   {{ c ,   d ,   a ,   b },   { c ,   d ,   b ,   a },   { d ,   c ,   a ,   b },   { d ,   c ,   b ,   a }}   In [ 6 ] :=   ReplaceList [ foo [ a   +   b ,   c ],   foo [ j_   +   k_ ,   j_ ]   -   { j ,   k }]  Out [ 6 ] =   {}", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/pattern/repeated/", 
+            "text": "Repeated\n\n\nRepeated[p_]\n matches a sequence of expressions that match the pattern \np\n.\n\n\nAttributes[Repeated] := {Protected}", 
+            "title": "Repeated "
+        }, 
+        {
+            "location": "/builtin/pattern/repeated/#repeated", 
+            "text": "Repeated[p_]  matches a sequence of expressions that match the pattern  p .  Attributes[Repeated] := {Protected}", 
+            "title": "Repeated"
+        }, 
+        {
             "location": "/builtin/boolean/", 
-            "text": "boolean documentation\n\n\nAnd\n\n\nOr\n\n\nNot\n\n\nTrueQ\n\n\nBooleanQ\n\n\nLogicalExpand", 
+            "text": "boolean documentation\n\n\nAnd\n\n\nOr\n\n\nNot\n\n\nTrueQ\n\n\nBooleanQ\n\n\nAllTrue\n\n\nBoole", 
             "title": "boolean"
         }, 
         {
             "location": "/builtin/boolean/#boolean-documentation", 
-            "text": "And  Or  Not  TrueQ  BooleanQ  LogicalExpand", 
+            "text": "And  Or  Not  TrueQ  BooleanQ  AllTrue  Boole", 
             "title": "boolean documentation"
         }, 
         {
@@ -2047,7 +2162,7 @@
         }, 
         {
             "location": "/builtin/boolean/not/", 
-            "text": "Not\n\n\n!e\n returns \nTrue\n if \ne\n is \nFalse\n and \nFalse\n if \ne\n is \nTrue\n.\n\n\nAttributes[Not] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n!\nTrue\n\n\nOut\n[\n1\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n!\nFalse\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n!\na\n\n\nOut\n[\n3\n]\n=\n \n!\na", 
+            "text": "Not\n\n\n!e\n returns \nTrue\n if \ne\n is \nFalse\n and \nFalse\n if \ne\n is \nTrue\n.\n\n\nAttributes[Not] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \n!\nTrue\n\n\nOut\n[\n1\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n!\nFalse\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n!\na\n\n\nOut\n[\n3\n]\n=\n \n!\na\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \n!!\na\n\n\nOut\n[\n4\n]\n=\n \na\n\n\n\n\n\n\nRules\n\n\n!!\ne_\n \n:=\n \ne", 
             "title": "Not "
         }, 
         {
@@ -2057,8 +2172,13 @@
         }, 
         {
             "location": "/builtin/boolean/not/#simple-examples", 
-            "text": "In [ 1 ] :=   ! True  Out [ 1 ] =   False   In [ 2 ] :=   ! False  Out [ 2 ] =   True   In [ 3 ] :=   ! a  Out [ 3 ] =   ! a", 
+            "text": "In [ 1 ] :=   ! True  Out [ 1 ] =   False   In [ 2 ] :=   ! False  Out [ 2 ] =   True   In [ 3 ] :=   ! a  Out [ 3 ] =   ! a   In [ 4 ] :=   !! a  Out [ 4 ] =   a", 
             "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/boolean/not/#rules", 
+            "text": "!! e_   :=   e", 
+            "title": "Rules"
         }, 
         {
             "location": "/builtin/boolean/trueq/", 
@@ -2091,23 +2211,43 @@
             "title": "Simple examples"
         }, 
         {
-            "location": "/builtin/boolean/logicalexpand/", 
-            "text": "LogicalExpand\n\n\nAttributes[LogicalExpand] := {Protected}\n\n\nSimple examples\n\n\nLogicalExpand\n can expand logic expressions.\n\n\nRules\n\n\nLogicalExpand\n[\nexp_\n]\n \n:=\n \nexp\n \n//.\n \n{\nAnd\n[\nbegin___\n,\ne_\n,\n!\ne_\n,\nend___\n]\n:\nAnd\n[\nbegin\n,\n \nend\n]}", 
-            "title": "LogicalExpand "
+            "location": "/builtin/boolean/alltrue/", 
+            "text": "AllTrue\n\n\nAllTrue[list, condition]\n returns True if all parts of \nlist\n satisfy \ncondition\n.\n\n\nAttributes[AllTrue] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nAllTrue\n[{\n1\n,\n \na\n},\n \nNumberQ\n]\n\n\nOut\n[\n1\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nAllTrue\n[{\n1\n,\n \n2\n},\n \nNumberQ\n]\n\n\nOut\n[\n2\n]\n=\n \nTrue\n\n\n\n\n\n\nRules\n\n\nAllTrue\n[\n_\n[\nelems___\n],\n \ncond_\n]\n \n:=\n \nAnd\n \n@@\n \n(\ncond\n \n/@\n \n{\nelems\n})", 
+            "title": "AllTrue "
         }, 
         {
-            "location": "/builtin/boolean/logicalexpand/#logicalexpand", 
-            "text": "Attributes[LogicalExpand] := {Protected}", 
-            "title": "LogicalExpand"
+            "location": "/builtin/boolean/alltrue/#alltrue", 
+            "text": "AllTrue[list, condition]  returns True if all parts of  list  satisfy  condition .  Attributes[AllTrue] := {Protected}", 
+            "title": "AllTrue"
         }, 
         {
-            "location": "/builtin/boolean/logicalexpand/#simple-examples", 
-            "text": "LogicalExpand  can expand logic expressions.", 
+            "location": "/builtin/boolean/alltrue/#simple-examples", 
+            "text": "In [ 1 ] :=   AllTrue [{ 1 ,   a },   NumberQ ]  Out [ 1 ] =   False   In [ 2 ] :=   AllTrue [{ 1 ,   2 },   NumberQ ]  Out [ 2 ] =   True", 
             "title": "Simple examples"
         }, 
         {
-            "location": "/builtin/boolean/logicalexpand/#rules", 
-            "text": "LogicalExpand [ exp_ ]   :=   exp   //.   { And [ begin___ , e_ , ! e_ , end___ ] : And [ begin ,   end ]}", 
+            "location": "/builtin/boolean/alltrue/#rules", 
+            "text": "AllTrue [ _ [ elems___ ],   cond_ ]   :=   And   @@   ( cond   /@   { elems })", 
+            "title": "Rules"
+        }, 
+        {
+            "location": "/builtin/boolean/boole/", 
+            "text": "Boole\n\n\nBoole[e]\n returns 0 if \ne\n is False and 1 if \ne\n is True.\n\n\nAttributes[Boole] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nBoole\n[\nTrue\n]\n\n\nOut\n[\n1\n]\n=\n \n1\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nBoole\n[\nFalse\n]\n\n\nOut\n[\n2\n]\n=\n \n0\n\n\n\n\n\n\nRules\n\n\nBoole\n[\nTrue\n]\n \n:=\n \n1\n\n\nBoole\n[\nFalse\n]\n \n:=\n \n0", 
+            "title": "Boole "
+        }, 
+        {
+            "location": "/builtin/boolean/boole/#boole", 
+            "text": "Boole[e]  returns 0 if  e  is False and 1 if  e  is True.  Attributes[Boole] := {Listable, Protected}", 
+            "title": "Boole"
+        }, 
+        {
+            "location": "/builtin/boolean/boole/#simple-examples", 
+            "text": "In [ 1 ] :=   Boole [ True ]  Out [ 1 ] =   1   In [ 2 ] :=   Boole [ False ]  Out [ 2 ] =   0", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/boolean/boole/#rules", 
+            "text": "Boole [ True ]   :=   1  Boole [ False ]   :=   0", 
             "title": "Rules"
         }, 
         {
@@ -2122,7 +2262,7 @@
         }, 
         {
             "location": "/builtin/simplify/simplify/", 
-            "text": "Simplify\n\n\nSimplify[expr]\n attempts to perform simplification operations on \nexpr\n.\n\n\nAttributes[Simplify] := {Protected}\n\n\nSimple examples\n\n\nSimplify\n can simplify some boolean expressions.\n\n\nIn\n[\n1\n]\n:=\n \nb\n \n \nb\n \n//\n \nSimplify\n\n\nOut\n[\n1\n]\n=\n \nb\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \na\n \n \nb\n \n \n!\nb\n \n//\n \nSimplify\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nRules\n\n\nSimplify\n[\nexp_\n]\n \n:=\n \nexp\n \n//.\n \n{\na_\n \n \n!\na_\n \n:\n \nFalse\n,\n \n!\na_\n \n \na_\n \n:\n \nFalse\n,\n \na_\n \n \na_\n  \n:\n \na\n,\n \na_\n \n||\n \na_\n  \n:\n \na\n,\n \na_\n \n||\n \n!\na_\n \n:\n \nTrue\n,\n \n!\na_\n \n||\n \na_\n \n:\n \nTrue\n}", 
+            "text": "Simplify\n\n\nSimplify[expr]\n attempts to perform simplification operations on \nexpr\n.\n\n\nAttributes[Simplify] := {Protected}\n\n\nSimple examples\n\n\nSimplify\n can simplify some boolean expressions.\n\n\nIn\n[\n1\n]\n:=\n \nb\n \n \nb\n \n//\n \nSimplify\n\n\nOut\n[\n1\n]\n=\n \nb\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \na\n \n \nb\n \n \n!\nb\n \n//\n \nSimplify\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n(\na\n \n||\n \nb\n)\n \n \n(\na\n \n||\n \nc\n)\n \n//\n \nSimplify\n\n\nOut\n[\n3\n]\n=\n \na\n \n||\n \n(\nb\n \n \nc\n)\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \na\n \n||\n \n!\n \na\n \n \nb\n \n//\n \nSimplify\n\n\nOut\n[\n4\n]\n=\n \na\n \n||\n \nb\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \na\n \n||\n \nb\n \n||\n \n!\n \na\n \n||\n \n!\n \nb\n \n//\n \nSimplify\n\n\nOut\n[\n5\n]\n=\n \nTrue\n\n\n\n\n\n\nRules\n\n\nSimplify\n[\nexp_\n]\n \n:=\n \nexp\n \n//.\n \n{\n!\nx_\n \n||\n \n!\ny_\n  \n:\n \n!\n(\nx\n \n \ny\n),\n \n!\nx_\n \n||\n \n!\ny_\n  \n||\n \n!\nz\n \n:\n \n!\n(\nx\n \n \ny\n \n \nz\n),\n \n(\na_\n \n||\n \nb_\n)\n \n \n(\na_\n \n||\n \nc_\n)\n \n:\n \na\n \n||\n \n(\nb\n \n \nc\n),\n \n(\nb_\n \n||\n \na_\n)\n \n \n(\nc_\n \n||\n \na_\n)\n \n:\n \na\n \n||\n \n(\nb\n \n \nc\n),\n \nOr\n[\n___\n,\n \na_\n,\n \n___\n,\n \nNot\n[\nAnd\n[\n___\n,\n \na_\n,\n \n___\n]\n \n|\n \na_\n],\n \n___\n]\n \n:\n \nTrue\n,\n \nOr\n[\n___\n,\n \nNot\n[\nAnd\n[\n___\n,\n \na_\n,\n \n___\n]\n \n|\n \na_\n],\n \n___\n,\n \na_\n,\n \n___\n]\n \n:\n \nTrue\n,\n \nOr\n[\nx1___\n,\n \na_\n,\n \nx2___\n,\n \nAnd\n[\nx3___\n,\n \na_\n,\n \nx4___\n],\n \nx5___\n]\n \n:\n \nOr\n[\na\n,\n \nx1\n,\n \nx2\n,\n \nx5\n],\n \nOr\n[\nx1___\n,\n \nAnd\n[\nx2___\n,\n \na_\n,\n \nx3___\n],\n \nx4___\n,\n \na_\n,\n \nx5___\n]\n \n:\n \nOr\n[\na\n,\n \nx1\n,\n \nx4\n,\n \nx5\n],\n \nOr\n[\nx1___\n,\n \na_\n,\n \nx2___\n,\n \na_\n,\n \nx3___\n]\n \n:\n \nOr\n[\na\n,\n \nx1\n,\n \nx2\n,\n \nx3\n],\n \nOr\n[\nx1___\n,\n \na_\n,\n \nx2___\n,\n \nAnd\n[\nx3___\n,\n \n!\na_\n,\n \nx4___\n],\n \nx5___\n]\n \n:\n \nOr\n[\na\n,\n \nx1\n,\n \nx2\n,\n \nAnd\n[\nx3\n,\n \nx4\n],\n \nx5\n],\n \nOr\n[\nx1___\n,\n \nAnd\n[\nx2___\n,\n \n!\na_\n,\n \nx3___\n],\n \nx4___\n,\n \na_\n,\n \nx5___\n]\n \n:\n \nOr\n[\na\n,\n \nx1\n,\n \nAnd\n[\nx2\n,\n \nx3\n],\n \nx4\n,\n \nx5\n],\n \nAnd\n[\n___\n,\n \na_\n,\n \n___\n,\n \nNot\n[\nOr\n[\n___\n,\n \na_\n,\n \n___\n]\n \n|\n \na_\n],\n \n___\n]\n \n:\n \nFalse\n,\n \nAnd\n[\n___\n,\n \nNot\n[\nOr\n[\n___\n,\n \na_\n,\n \n___\n]\n \n|\n \na_\n],\n \n___\n,\n \na_\n,\n \n___\n]\n \n:\n \nFalse\n,\n \nAnd\n[\nx1___\n,\n \na_\n,\n \nx2___\n,\n \nOr\n[\nx3___\n,\n \na_\n,\n \nx4___\n],\n \nx5___\n]\n \n:\n \nAnd\n[\na\n,\n \nx1\n,\n \nx2\n,\n \nx5\n],\n \nAnd\n[\nx1___\n,\n \nOr\n[\nx2___\n,\n \na_\n,\n \nx3___\n],\n \nx4___\n,\n \na_\n,\n \nx5___\n]\n \n:\n \nAnd\n[\na\n,\n \nx1\n,\n \nx4\n,\n \nx5\n],\n \nAnd\n[\nx1___\n,\n \na_\n,\n \nx2___\n,\n \na_\n,\n \nx3___\n]\n \n:\n \nAnd\n[\na\n,\n \nx1\n,\n \nx2\n,\n \nx3\n],\n \nAnd\n[\nx1___\n,\n \na_\n,\n \nx2___\n,\n \nOr\n[\nx3___\n,\n \n!\na_\n,\n \nx4___\n],\n \nx5___\n]\n \n:\n \nAnd\n[\na\n,\n \nx1\n,\n \nx2\n,\n \nOr\n[\nx3\n,\n \nx4\n],\n \nx5\n],\n \nAnd\n[\nx1___\n,\n \nOr\n[\nx2___\n,\n \n!\na_\n,\n \nx3___\n],\n \nx4___\n,\n \na_\n,\n \nx5___\n]\n \n:\n \nAnd\n[\na\n,\n \nx1\n,\n \nOr\n[\nx2\n,\n \nx3\n],\n \nx4\n,\n \nx5\n]}", 
             "title": "Simplify "
         }, 
         {
@@ -2132,32 +2272,32 @@
         }, 
         {
             "location": "/builtin/simplify/simplify/#simple-examples", 
-            "text": "Simplify  can simplify some boolean expressions.  In [ 1 ] :=   b     b   //   Simplify  Out [ 1 ] =   b   In [ 2 ] :=   a     b     ! b   //   Simplify  Out [ 2 ] =   False", 
+            "text": "Simplify  can simplify some boolean expressions.  In [ 1 ] :=   b     b   //   Simplify  Out [ 1 ] =   b   In [ 2 ] :=   a     b     ! b   //   Simplify  Out [ 2 ] =   False   In [ 3 ] :=   ( a   ||   b )     ( a   ||   c )   //   Simplify  Out [ 3 ] =   a   ||   ( b     c )   In [ 4 ] :=   a   ||   !   a     b   //   Simplify  Out [ 4 ] =   a   ||   b   In [ 5 ] :=   a   ||   b   ||   !   a   ||   !   b   //   Simplify  Out [ 5 ] =   True", 
             "title": "Simple examples"
         }, 
         {
             "location": "/builtin/simplify/simplify/#rules", 
-            "text": "Simplify [ exp_ ]   :=   exp   //.   { a_     ! a_   :   False ,   ! a_     a_   :   False ,   a_     a_    :   a ,   a_   ||   a_    :   a ,   a_   ||   ! a_   :   True ,   ! a_   ||   a_   :   True }", 
+            "text": "Simplify [ exp_ ]   :=   exp   //.   { ! x_   ||   ! y_    :   ! ( x     y ),   ! x_   ||   ! y_    ||   ! z   :   ! ( x     y     z ),   ( a_   ||   b_ )     ( a_   ||   c_ )   :   a   ||   ( b     c ),   ( b_   ||   a_ )     ( c_   ||   a_ )   :   a   ||   ( b     c ),   Or [ ___ ,   a_ ,   ___ ,   Not [ And [ ___ ,   a_ ,   ___ ]   |   a_ ],   ___ ]   :   True ,   Or [ ___ ,   Not [ And [ ___ ,   a_ ,   ___ ]   |   a_ ],   ___ ,   a_ ,   ___ ]   :   True ,   Or [ x1___ ,   a_ ,   x2___ ,   And [ x3___ ,   a_ ,   x4___ ],   x5___ ]   :   Or [ a ,   x1 ,   x2 ,   x5 ],   Or [ x1___ ,   And [ x2___ ,   a_ ,   x3___ ],   x4___ ,   a_ ,   x5___ ]   :   Or [ a ,   x1 ,   x4 ,   x5 ],   Or [ x1___ ,   a_ ,   x2___ ,   a_ ,   x3___ ]   :   Or [ a ,   x1 ,   x2 ,   x3 ],   Or [ x1___ ,   a_ ,   x2___ ,   And [ x3___ ,   ! a_ ,   x4___ ],   x5___ ]   :   Or [ a ,   x1 ,   x2 ,   And [ x3 ,   x4 ],   x5 ],   Or [ x1___ ,   And [ x2___ ,   ! a_ ,   x3___ ],   x4___ ,   a_ ,   x5___ ]   :   Or [ a ,   x1 ,   And [ x2 ,   x3 ],   x4 ,   x5 ],   And [ ___ ,   a_ ,   ___ ,   Not [ Or [ ___ ,   a_ ,   ___ ]   |   a_ ],   ___ ]   :   False ,   And [ ___ ,   Not [ Or [ ___ ,   a_ ,   ___ ]   |   a_ ],   ___ ,   a_ ,   ___ ]   :   False ,   And [ x1___ ,   a_ ,   x2___ ,   Or [ x3___ ,   a_ ,   x4___ ],   x5___ ]   :   And [ a ,   x1 ,   x2 ,   x5 ],   And [ x1___ ,   Or [ x2___ ,   a_ ,   x3___ ],   x4___ ,   a_ ,   x5___ ]   :   And [ a ,   x1 ,   x4 ,   x5 ],   And [ x1___ ,   a_ ,   x2___ ,   a_ ,   x3___ ]   :   And [ a ,   x1 ,   x2 ,   x3 ],   And [ x1___ ,   a_ ,   x2___ ,   Or [ x3___ ,   ! a_ ,   x4___ ],   x5___ ]   :   And [ a ,   x1 ,   x2 ,   Or [ x3 ,   x4 ],   x5 ],   And [ x1___ ,   Or [ x2___ ,   ! a_ ,   x3___ ],   x4___ ,   a_ ,   x5___ ]   :   And [ a ,   x1 ,   Or [ x2 ,   x3 ],   x4 ,   x5 ]}", 
             "title": "Rules"
         }, 
         {
             "location": "/builtin/numbertheory/", 
-            "text": "numbertheory documentation\n\n\nPrimeQ", 
+            "text": "numbertheory documentation\n\n\nPrimeQ\n\n\nGCD", 
             "title": "numbertheory"
         }, 
         {
             "location": "/builtin/numbertheory/#numbertheory-documentation", 
-            "text": "PrimeQ", 
+            "text": "PrimeQ  GCD", 
             "title": "numbertheory documentation"
         }, 
         {
             "location": "/builtin/numbertheory/primeq/", 
-            "text": "PrimeQ\n\n\nPrimeQ[n]\n returns True if \nn\n is prime, False otherwise.\n\n\nAttributes[PrimeQ] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPrimeQ\n[\n5\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPrimeQ\n[\n100\n]\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPrimeQ\n[\n982451653\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nPrimeQ\n[\n-\n2\n]\n\n\nOut\n[\n4\n]\n=\n \nTrue\n\n\n\n\n\n\nFurther examples\n\n\nPrimeQ\n only works for Integers:\n\n\nIn\n[\n1\n]\n:=\n \nPrimeQ\n[\n5.\n]\n\n\nOut\n[\n1\n]\n=\n \nFalse", 
+            "text": "PrimeQ\n\n\nPrimeQ[n]\n returns True if \nn\n is prime, False otherwise.\n\n\nAttributes[PrimeQ] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPrimeQ\n[\n5\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPrimeQ\n[\n100\n]\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPrimeQ\n[\n982451653\n]\n\n\nOut\n[\n3\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nPrimeQ\n[\n-\n2\n]\n\n\nOut\n[\n4\n]\n=\n \nTrue\n\n\n\n\n\n\nFurther examples\n\n\nPrimeQ\n only works for Integers:\n\n\nIn\n[\n1\n]\n:=\n \nPrimeQ\n[\n5.\n]\n\n\nOut\n[\n1\n]\n=\n \nFalse", 
             "title": "PrimeQ "
         }, 
         {
             "location": "/builtin/numbertheory/primeq/#primeq", 
-            "text": "PrimeQ[n]  returns True if  n  is prime, False otherwise.  Attributes[PrimeQ] := {Protected}", 
+            "text": "PrimeQ[n]  returns True if  n  is prime, False otherwise.  Attributes[PrimeQ] := {Listable, Protected}", 
             "title": "PrimeQ"
         }, 
         {
@@ -2169,6 +2309,21 @@
             "location": "/builtin/numbertheory/primeq/#further-examples", 
             "text": "PrimeQ  only works for Integers:  In [ 1 ] :=   PrimeQ [ 5. ]  Out [ 1 ] =   False", 
             "title": "Further examples"
+        }, 
+        {
+            "location": "/builtin/numbertheory/gcd/", 
+            "text": "GCD\n\n\nGCD[n1, n2, ...]\n finds the greatest common denominator of the integer inputs.\n\n\nAttributes[GCD] := {Flat, Listable, OneIdentity, Orderless, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nGCD\n[\n9\n,\n \n6\n]\n\n\nOut\n[\n1\n]\n=\n \n3\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nGCD\n[\n100\n,\n \n30\n,\n \n15\n]\n\n\nOut\n[\n2\n]\n=\n \n5", 
+            "title": "GCD "
+        }, 
+        {
+            "location": "/builtin/numbertheory/gcd/#gcd", 
+            "text": "GCD[n1, n2, ...]  finds the greatest common denominator of the integer inputs.  Attributes[GCD] := {Flat, Listable, OneIdentity, Orderless, Protected}", 
+            "title": "GCD"
+        }, 
+        {
+            "location": "/builtin/numbertheory/gcd/#simple-examples", 
+            "text": "In [ 1 ] :=   GCD [ 9 ,   6 ]  Out [ 1 ] =   3   In [ 2 ] :=   GCD [ 100 ,   30 ,   15 ]  Out [ 2 ] =   5", 
+            "title": "Simple examples"
         }
     ]
 }

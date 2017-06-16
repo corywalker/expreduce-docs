@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>LogicalExpand  - Expreduce</title>
+        <title>FreeQ  - Expreduce</title>
       
       
       
@@ -99,7 +99,7 @@
             
           </span>
         
-        LogicalExpand 
+        FreeQ 
       </div>
     </div>
     
@@ -348,6 +348,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="expression" href="../../expression/">
         expression
@@ -435,6 +439,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -596,6 +604,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="random" href="../../random/">
         random
@@ -712,6 +724,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="trig" href="../../trig/">
         trig
@@ -774,7 +794,7 @@
         
   
     <li>
-      <a class="" title="pattern" href="../../pattern/">
+      <a class="" title="pattern" href="../">
         pattern
       </a>
       
@@ -820,12 +840,28 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
-      <a class="" title="boolean" href="../">
+      <a class="" title="boolean" href="../../boolean/">
         boolean
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -883,6 +919,10 @@
   
 
       
+        
+  
+
+      
     </ul>
   </li>
 
@@ -897,12 +937,11 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="logicalexpand">LogicalExpand</h1>
-<p><code>Attributes[LogicalExpand] := {Protected}</code></p>
-<h2 id="simple-examples">Simple examples</h2>
-<p><code>LogicalExpand</code> can expand logic expressions.</p>
+          <h1 id="freeq">FreeQ</h1>
+<p><code>FreeQ[e, var]</code> returns True if <code>e</code> is free from any occurences of <code>var</code>.</p>
+<p><code>Attributes[FreeQ] := {Protected}</code></p>
 <h2 id="rules">Rules</h2>
-<div class="language-wl"><pre><span></span><span class="nb">LogicalExpand</span><span class="p">[</span><span class="nt">exp_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">exp</span><span class="w"> </span><span class="o">//.</span><span class="w"> </span><span class="p">{</span><span class="nb">And</span><span class="p">[</span><span class="nt">begin___</span><span class="p">,</span><span class="nt">e_</span><span class="p">,</span><span class="o">!</span><span class="nt">e_</span><span class="p">,</span><span class="nt">end___</span><span class="p">]</span><span class="o">:&gt;</span><span class="nb">And</span><span class="p">[</span><span class="nv">begin</span><span class="p">,</span><span class="w"> </span><span class="nv">end</span><span class="p">]}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">FreeQ</span><span class="p">[</span><span class="nt">expr_</span><span class="p">,</span><span class="w"> </span><span class="nt">val_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">expr</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="p">(</span><span class="nv">expr</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">val</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">Internal`DummyReplace</span><span class="p">)</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             
@@ -920,7 +959,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../booleanq/" title="BooleanQ ">
+        <a href="../alternatives/" title="Alternatives ">
           <span class="direction">
             Previous
           </span>
@@ -930,7 +969,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                BooleanQ 
+                Alternatives 
               </div>
             </div>
           </div>
@@ -939,14 +978,14 @@
     </div>
     <div class="next">
       
-        <a href="../../simplify/" title="simplify">
+        <a href="../replacelist/" title="ReplaceList ">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                simplify
+                ReplaceList 
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

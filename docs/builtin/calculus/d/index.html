@@ -348,6 +348,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="expression" href="../../expression/">
         expression
@@ -435,6 +439,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -596,6 +604,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="random" href="../../random/">
         random
@@ -667,6 +679,14 @@
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -820,12 +840,28 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="boolean" href="../../boolean/">
         boolean
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -883,6 +919,10 @@
   
 
       
+        
+  
+
+      
     </ul>
   </li>
 
@@ -919,8 +959,8 @@
 <h2 id="rules">Rules</h2>
 <div class="language-wl"><pre><span></span><span class="nb">D</span><span class="p">[</span><span class="nt">x_</span><span class="p">,</span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
 <span class="nb">D</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="m">0</span><span class="w"></span>
-<span class="nb">D</span><span class="p">[</span><span class="nt">a_</span><span class="o">+</span><span class="nt">b__</span><span class="p">,</span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="o">+</span><span class="nb">D</span><span class="p">[</span><span class="nb">Plus</span><span class="p">[</span><span class="nv">b</span><span class="p">],</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
-<span class="nb">D</span><span class="p">[</span><span class="nt">a_</span><span class="w"> </span><span class="nt">b__</span><span class="p">,</span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="o">*</span><span class="nv">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">a</span><span class="o">*</span><span class="nb">D</span><span class="p">[</span><span class="nb">Times</span><span class="p">[</span><span class="nv">b</span><span class="p">],</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">D</span><span class="p">[</span><span class="nt">a_</span><span class="o">+</span><span class="nt">b_</span><span class="p">,</span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="o">+</span><span class="nb">D</span><span class="p">[</span><span class="nv">b</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">D</span><span class="p">[</span><span class="nt">a_</span><span class="w"> </span><span class="nt">b_</span><span class="p">,</span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="o">*</span><span class="nv">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">a</span><span class="o">*</span><span class="nb">D</span><span class="p">[</span><span class="nv">b</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
 <span class="nb">D</span><span class="p">[</span><span class="nt">a_</span><span class="o">^</span><span class="p">(</span><span class="nt">b_</span><span class="p">),</span><span class="w"> </span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">a</span><span class="o">^</span><span class="nv">b</span><span class="o">*</span><span class="p">(</span><span class="nb">D</span><span class="p">[</span><span class="nv">b</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="w"> </span><span class="nb">Log</span><span class="p">[</span><span class="nv">a</span><span class="p">]</span><span class="o">+</span><span class="nb">D</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="o">/</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="p">)</span><span class="w"></span>
 <span class="nb">D</span><span class="p">[</span><span class="nb">Log</span><span class="p">[</span><span class="nt">a_</span><span class="p">],</span><span class="w"> </span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="o">/</span><span class="nv">a</span><span class="w"></span>
 <span class="nb">D</span><span class="p">[</span><span class="nb">Sin</span><span class="p">[</span><span class="nt">a_</span><span class="p">],</span><span class="w"> </span><span class="nt">x_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="w"> </span><span class="nb">Cos</span><span class="p">[</span><span class="nv">a</span><span class="p">]</span><span class="w"></span>
