@@ -290,6 +290,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="atoms" href="../../atoms/">
         atoms
@@ -492,6 +500,26 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -591,6 +619,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -732,6 +764,18 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="trig" href="../../trig/">
         trig
@@ -799,6 +843,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -975,6 +1023,7 @@
 <div class="language-wl"><pre><span></span><span class="nb">Power</span><span class="p">[</span><span class="nb">Power</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="nt">b_Integer</span><span class="p">],</span><span class="nt">c_Integer</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">a</span><span class="o">^</span><span class="p">(</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="p">)</span><span class="w"></span>
 <span class="nb">Power</span><span class="p">[</span><span class="nb">Power</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="nt">b_Real</span><span class="p">],</span><span class="nt">c_Integer</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">a</span><span class="o">^</span><span class="p">(</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="p">)</span><span class="w"></span>
 <span class="nb">Power</span><span class="p">[</span><span class="nb">Power</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="nt">b_Symbol</span><span class="p">],</span><span class="nt">c_Integer</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">a</span><span class="o">^</span><span class="p">(</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="p">)</span><span class="w"></span>
+<span class="nb">Power</span><span class="p">[</span><span class="nb">Infinity</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="m">0</span><span class="w"></span>
 <span class="p">(</span><span class="nb">Except</span><span class="p">[</span><span class="nt">_Symbol</span><span class="p">,</span><span class="w"> </span><span class="nt">first_</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">inner___</span><span class="p">)</span><span class="o">^</span><span class="nb">Except</span><span class="p">[</span><span class="nt">_Symbol</span><span class="p">,</span><span class="w"> </span><span class="nt">pow_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">first</span><span class="o">^</span><span class="nv">pow</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Times</span><span class="p">[</span><span class="nv">inner</span><span class="p">]</span><span class="o">^</span><span class="nv">pow</span><span class="w"></span>
 <span class="p">(</span><span class="nt">first_</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">inner___</span><span class="p">)</span><span class="o">^</span><span class="nb">Except</span><span class="p">[</span><span class="nt">_Symbol</span><span class="p">,</span><span class="w"> </span><span class="nt">pow_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">first</span><span class="o">^</span><span class="nv">pow</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Times</span><span class="p">[</span><span class="nv">inner</span><span class="p">]</span><span class="o">^</span><span class="nv">pow</span><span class="w"></span>
 <span class="nb">Power</span><span class="p">[</span><span class="nb">Rational</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="nt">b_</span><span class="p">],</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">Rational</span><span class="p">[</span><span class="nv">b</span><span class="p">,</span><span class="nv">a</span><span class="p">]</span><span class="w"></span>

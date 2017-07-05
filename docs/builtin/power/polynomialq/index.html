@@ -290,6 +290,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="atoms" href="../../atoms/">
         atoms
@@ -492,6 +500,26 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -608,6 +636,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="random" href="../../random/">
         random
@@ -679,6 +711,18 @@
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -852,6 +896,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="boolean" href="../../boolean/">
         boolean
@@ -940,14 +988,6 @@
           <h1 id="polynomialq">PolynomialQ</h1>
 <p><code>PolynomialQ[e, var]</code> returns True if <code>e</code> is a polynomial in <code>var</code>.</p>
 <p><code>Attributes[PolynomialQ] := {Protected}</code></p>
-<h2 id="rules">Rules</h2>
-<div class="language-wl"><pre><span></span><span class="nb">PolynomialQ</span><span class="p">[</span><span class="nt">p_Plus</span><span class="p">,</span><span class="nt">v_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">AllTrue</span><span class="p">[</span><span class="nb">List</span><span class="o">@@</span><span class="nv">p</span><span class="p">,(</span><span class="nb">PolynomialQ</span><span class="p">[</span><span class="nf">#</span><span class="p">,</span><span class="nv">v</span><span class="p">])</span><span class="o">&amp;</span><span class="p">]</span><span class="w"></span>
-<span class="nb">PolynomialQ</span><span class="p">[</span><span class="nt">p_</span><span class="o">*</span><span class="nt">v_</span><span class="o">^</span><span class="nt">exp_Integer</span><span class="p">,</span><span class="nt">v_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">If</span><span class="p">[</span><span class="nb">FreeQ</span><span class="p">[</span><span class="nv">p</span><span class="p">,</span><span class="nv">v</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="nb">Positive</span><span class="p">[</span><span class="nv">exp</span><span class="p">],</span><span class="nb">True</span><span class="p">,</span><span class="nb">False</span><span class="p">]</span><span class="w"></span>
-<span class="nb">PolynomialQ</span><span class="p">[</span><span class="o">_</span><span class="p">,</span><span class="nt">v_Integer</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
-<span class="nb">PolynomialQ</span><span class="p">[</span><span class="nt">v_</span><span class="p">,</span><span class="nt">v_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
-<span class="nb">PolynomialQ</span><span class="p">[</span><span class="nt">p_</span><span class="o">*</span><span class="nt">v_</span><span class="p">,</span><span class="nt">v_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">If</span><span class="p">[</span><span class="nb">FreeQ</span><span class="p">[</span><span class="nv">p</span><span class="p">,</span><span class="nv">v</span><span class="p">],</span><span class="nb">True</span><span class="p">,</span><span class="nb">False</span><span class="p">]</span><span class="w"></span>
-<span class="nb">PolynomialQ</span><span class="p">[</span><span class="nt">p_</span><span class="p">,</span><span class="nt">v_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">If</span><span class="p">[</span><span class="nb">FreeQ</span><span class="p">[</span><span class="nv">p</span><span class="p">,</span><span class="nv">v</span><span class="p">],</span><span class="nb">True</span><span class="p">,</span><span class="nb">False</span><span class="p">]</span><span class="w"></span>
-</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -983,14 +1023,14 @@
     </div>
     <div class="next">
       
-        <a href="../../random/" title="random">
+        <a href="../exponent/" title="Exponent ">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                random
+                Exponent 
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
