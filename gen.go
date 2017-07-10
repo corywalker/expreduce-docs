@@ -98,6 +98,14 @@ func renderExamples(f *os.File, category string, examples []expreduce.TestInstru
 			f.WriteString("```\n")
 			count += 1
 		}
+		sameTestEx, isSameTestEx := ti.(*expreduce.SameTestEx)
+		if isSameTestEx {
+			f.WriteString("```wl\n")
+			f.WriteString(fmt.Sprintf("In[%d]:= %v\n", count, sameTestEx.In))
+			f.WriteString(fmt.Sprintf("Out[%d]= %v\n", count, sameTestEx.Out))
+			f.WriteString("```\n")
+			count += 1
+		}
 		stringTest, isStringTest := ti.(*expreduce.StringTest)
 		if isStringTest {
 			f.WriteString("```wl\n")
@@ -191,6 +199,7 @@ func main() {
 			if def.OmitDocumentation{
 				continue
 			}
+			def.AnnotateWithDynamic(es)
 			symbolFn := fmt.Sprintf(
 				"builtin/%s/%s.md",
 				defSet.Name,

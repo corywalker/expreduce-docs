@@ -441,12 +441,20 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="list" href="../">
         list
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -582,6 +590,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="specialsyms" href="../../specialsyms/">
         specialsyms
@@ -619,6 +631,26 @@
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -971,6 +1003,10 @@
   
 
       
+        
+  
+
+      
     </ul>
   </li>
 
@@ -987,7 +1023,7 @@
           
           <h1 id="appendto">AppendTo</h1>
 <p><code>AppendTo[list, e]</code> appends <code>e</code> to <code>list</code> and returns the modified <code>list</code>.</p>
-<p><code>Attributes[AppendTo] := {Protected}</code></p>
+<p><code>Attributes[AppendTo] := {HoldFirst, Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">}</span><span class="o">;</span><span class="w"> </span><span class="nb">AppendTo</span><span class="p">[</span><span class="nv">l</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">]</span><span class="o">;</span><span class="w"> </span><span class="nv">l</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="nv">b</span><span class="p">,</span><span class="nv">c</span><span class="p">}</span><span class="w"></span>

@@ -777,17 +777,17 @@
         }, 
         {
             "location": "/builtin/flowcontrol/", 
-            "text": "flowcontrol documentation\n\n\nIf\n\n\nWhile\n\n\nCompoundExpression", 
+            "text": "flowcontrol documentation\n\n\nIf\n\n\nWhile\n\n\nCompoundExpression\n\n\nReturn", 
             "title": "flowcontrol"
         }, 
         {
             "location": "/builtin/flowcontrol/#flowcontrol-documentation", 
-            "text": "If  While  CompoundExpression", 
+            "text": "If  While  CompoundExpression  Return", 
             "title": "flowcontrol documentation"
         }, 
         {
             "location": "/builtin/flowcontrol/if/", 
-            "text": "If\n\n\nIf[cond, iftrue, iffalse]\n returns \niftrue\n if \ncond\n is True, and \niffalse\n if \ncond\n is False.\n\n\nAttributes[If] := {HoldRest, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nx\n=\n9\n\n\nOut\n[\n1\n]\n=\n \n9\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nIf\n[\nx\n+\n3\n==\n12\n,\n \nx\n*\n2\n,\n \nx\n+\n3\n]\n\n\nOut\n[\n2\n]\n=\n \n18\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nIf\n[\nx\n+\n3\n==\n11\n,\n \nx\n*\n2\n,\n \nx\n+\n3\n]\n\n\nOut\n[\n3\n]\n=\n \n12\n\n\n\n\n\n\nFurther examples\n\n\nUndefined conditions leave the statement unevaluated.\n\n\nIn\n[\n1\n]\n:=\n \nIf\n[\nundefined\n,\n \na\n,\n \nb\n]\n\n\nOut\n[\n1\n]\n=\n \nIf\n[\nundefined\n,\n \na\n,\n \nb\n]\n\n\n\n\n\n\nRules\n\n\nIf\n[\ncond_\n,\n \niftrue_\n]\n \n:=\n \nIf\n[\ncond\n,\n \niftrue\n,\n \nNull\n]", 
+            "text": "If\n\n\nIf[cond, iftrue, iffalse]\n returns \niftrue\n if \ncond\n is True, and \niffalse\n if \ncond\n is False.\n\n\nAttributes[If] := {HoldRest, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nx\n=\n9\n\n\nOut\n[\n1\n]\n=\n \n9\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nIf\n[\nx\n+\n3\n==\n12\n,\n \nx\n*\n2\n,\n \nx\n+\n3\n]\n\n\nOut\n[\n2\n]\n=\n \n18\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nIf\n[\nx\n+\n3\n==\n11\n,\n \nx\n*\n2\n,\n \nx\n+\n3\n]\n\n\nOut\n[\n3\n]\n=\n \n12\n\n\n\n\n\n\nFurther examples\n\n\nUndefined conditions leave the statement unevaluated.\n\n\nIn\n[\n1\n]\n:=\n \nIf\n[\nundefined\n,\n \na\n,\n \nb\n]\n\n\nOut\n[\n1\n]\n=\n \nIf\n[\nundefined\n,\n \na\n,\n \nb\n]", 
             "title": "If "
         }, 
         {
@@ -804,11 +804,6 @@
             "location": "/builtin/flowcontrol/if/#further-examples", 
             "text": "Undefined conditions leave the statement unevaluated.  In [ 1 ] :=   If [ undefined ,   a ,   b ]  Out [ 1 ] =   If [ undefined ,   a ,   b ]", 
             "title": "Further examples"
-        }, 
-        {
-            "location": "/builtin/flowcontrol/if/#rules", 
-            "text": "If [ cond_ ,   iftrue_ ]   :=   If [ cond ,   iftrue ,   Null ]", 
-            "title": "Rules"
         }, 
         {
             "location": "/builtin/flowcontrol/while/", 
@@ -841,13 +836,28 @@
             "title": "Simple examples"
         }, 
         {
+            "location": "/builtin/flowcontrol/return/", 
+            "text": "Return\n\n\nReturn[x]\n returns \nx\n immediately.\n\n\nAttributes[Return] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nmyreturnfunc\n:=\n(\nReturn\n[\nx\n]\n;\nhello\n)\n;\nmyreturnfunc\n\n\nOut\n[\n1\n]\n=\n \nx\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nmyreturnfunc\n[\nx_\n]\n:=\n(\nReturn\n[\nx\n]\n;\nhello\n)\n;\nmyreturnfunc\n[\n3\n]\n\n\nOut\n[\n2\n]\n=\n \n3\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nmyfoo\n:=\n(\ni\n=\n1\n;\nWhile\n[\ni\n5\n,\nIf\n[\ni\n===\n3\n,\nReturn\n[\ni\n]]\n;\ni\n=\ni\n+\n1\n])\n;\nmyfoo\n\n\nOut\n[\n3\n]\n=\n \n3\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nReturn\n[\n3\n]\n\n\nOut\n[\n4\n]\n=\n \nReturn\n[\n3\n]\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nmyreturnfunc\n:=\n(\nReturn\n[]\n;\nhello\n)\n;\nmyreturnfunc\n\n\nOut\n[\n5\n]\n=\n \nNull", 
+            "title": "Return "
+        }, 
+        {
+            "location": "/builtin/flowcontrol/return/#return", 
+            "text": "Return[x]  returns  x  immediately.  Attributes[Return] := {Protected}", 
+            "title": "Return"
+        }, 
+        {
+            "location": "/builtin/flowcontrol/return/#simple-examples", 
+            "text": "In [ 1 ] :=   myreturnfunc := ( Return [ x ] ; hello ) ; myreturnfunc  Out [ 1 ] =   x   In [ 2 ] :=   myreturnfunc [ x_ ] := ( Return [ x ] ; hello ) ; myreturnfunc [ 3 ]  Out [ 2 ] =   3   In [ 3 ] :=   myfoo := ( i = 1 ; While [ i 5 , If [ i === 3 , Return [ i ]] ; i = i + 1 ]) ; myfoo  Out [ 3 ] =   3   In [ 4 ] :=   Return [ 3 ]  Out [ 4 ] =   Return [ 3 ]   In [ 5 ] :=   myreturnfunc := ( Return [] ; hello ) ; myreturnfunc  Out [ 5 ] =   Null", 
+            "title": "Simple examples"
+        }, 
+        {
             "location": "/builtin/list/", 
-            "text": "list documentation\n\n\nList\n\n\nTotal\n\n\nMean\n\n\nTable\n\n\nMemberQ\n\n\nCases\n\n\nPadRight\n\n\nPadLeft\n\n\nRange\n\n\nPart\n\n\nAll\n\n\nThread\n\n\nAppend\n\n\nAppendTo\n\n\nPrepend\n\n\nPrependTo\n\n\nDeleteDuplicates", 
+            "text": "list documentation\n\n\nList\n\n\nTotal\n\n\nMean\n\n\nTable\n\n\nMemberQ\n\n\nCases\n\n\nPadRight\n\n\nPadLeft\n\n\nRange\n\n\nPart\n\n\nAll\n\n\nThread\n\n\nAppend\n\n\nAppendTo\n\n\nPrepend\n\n\nPrependTo\n\n\nDeleteDuplicates\n\n\nLast", 
             "title": "list"
         }, 
         {
             "location": "/builtin/list/#list-documentation", 
-            "text": "List  Total  Mean  Table  MemberQ  Cases  PadRight  PadLeft  Range  Part  All  Thread  Append  AppendTo  Prepend  PrependTo  DeleteDuplicates", 
+            "text": "List  Total  Mean  Table  MemberQ  Cases  PadRight  PadLeft  Range  Part  All  Thread  Append  AppendTo  Prepend  PrependTo  DeleteDuplicates  Last", 
             "title": "list documentation"
         }, 
         {
@@ -1082,12 +1092,12 @@
         }, 
         {
             "location": "/builtin/list/appendto/", 
-            "text": "AppendTo\n\n\nAppendTo[list, e]\n appends \ne\n to \nlist\n and returns the modified \nlist\n.\n\n\nAttributes[AppendTo] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nl\n \n=\n \n{\na\n,\n \nb\n}\n;\n \nAppendTo\n[\nl\n,\n \nc\n]\n;\n \nl\n\n\nOut\n[\n1\n]\n=\n \n{\na\n,\nb\n,\nc\n}", 
+            "text": "AppendTo\n\n\nAppendTo[list, e]\n appends \ne\n to \nlist\n and returns the modified \nlist\n.\n\n\nAttributes[AppendTo] := {HoldFirst, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nl\n \n=\n \n{\na\n,\n \nb\n}\n;\n \nAppendTo\n[\nl\n,\n \nc\n]\n;\n \nl\n\n\nOut\n[\n1\n]\n=\n \n{\na\n,\nb\n,\nc\n}", 
             "title": "AppendTo "
         }, 
         {
             "location": "/builtin/list/appendto/#appendto", 
-            "text": "AppendTo[list, e]  appends  e  to  list  and returns the modified  list .  Attributes[AppendTo] := {Protected}", 
+            "text": "AppendTo[list, e]  appends  e  to  list  and returns the modified  list .  Attributes[AppendTo] := {HoldFirst, Protected}", 
             "title": "AppendTo"
         }, 
         {
@@ -1112,12 +1122,12 @@
         }, 
         {
             "location": "/builtin/list/prependto/", 
-            "text": "PrependTo\n\n\nPrependTo[list, e]\n prepends \ne\n to \nlist\n and returns the modified \nlist\n.\n\n\nAttributes[PrependTo] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nl\n \n=\n \n{\na\n,\n \nb\n}\n;\n \nPrependTo\n[\nl\n,\n \nc\n]\n;\n \nl\n\n\nOut\n[\n1\n]\n=\n \n{\nc\n,\na\n,\nb\n}", 
+            "text": "PrependTo\n\n\nPrependTo[list, e]\n prepends \ne\n to \nlist\n and returns the modified \nlist\n.\n\n\nAttributes[PrependTo] := {HoldFirst, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nl\n \n=\n \n{\na\n,\n \nb\n}\n;\n \nPrependTo\n[\nl\n,\n \nc\n]\n;\n \nl\n\n\nOut\n[\n1\n]\n=\n \n{\nc\n,\na\n,\nb\n}", 
             "title": "PrependTo "
         }, 
         {
             "location": "/builtin/list/prependto/#prependto", 
-            "text": "PrependTo[list, e]  prepends  e  to  list  and returns the modified  list .  Attributes[PrependTo] := {Protected}", 
+            "text": "PrependTo[list, e]  prepends  e  to  list  and returns the modified  list .  Attributes[PrependTo] := {HoldFirst, Protected}", 
             "title": "PrependTo"
         }, 
         {
@@ -1138,6 +1148,21 @@
         {
             "location": "/builtin/list/deleteduplicates/#simple-examples", 
             "text": "In [ 1 ] :=   DeleteDuplicates [{ b , a , b }]  Out [ 1 ] =   { b , a }   In [ 2 ] :=   DeleteDuplicates [ foo [ b , a , b ]]  Out [ 2 ] =   foo [ b , a ]   In [ 3 ] :=   DeleteDuplicates [{}]  Out [ 3 ] =   {}", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/list/last/", 
+            "text": "Last\n\n\nLast[expr]\n returns the last part of \nexpr\n.\n\n\nAttributes[Last] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nLast\n[{\n1\n,\n5\n,\n6\n}]\n\n\nOut\n[\n1\n]\n=\n \n6\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nLast\n[\na\n+\nb\n]\n\n\nOut\n[\n2\n]\n=\n \nb", 
+            "title": "Last "
+        }, 
+        {
+            "location": "/builtin/list/last/#last", 
+            "text": "Last[expr]  returns the last part of  expr .  Attributes[Last] := {Protected}", 
+            "title": "Last"
+        }, 
+        {
+            "location": "/builtin/list/last/#simple-examples", 
+            "text": "In [ 1 ] :=   Last [{ 1 , 5 , 6 }]  Out [ 1 ] =   6   In [ 2 ] :=   Last [ a + b ]  Out [ 2 ] =   b", 
             "title": "Simple examples"
         }, 
         {
@@ -1262,12 +1287,12 @@
         }, 
         {
             "location": "/builtin/arithmetic/", 
-            "text": "arithmetic documentation\n\n\nPlus\n\n\nSum\n\n\nTimes\n\n\nProduct", 
+            "text": "arithmetic documentation\n\n\nPlus\n\n\nSum\n\n\nTimes\n\n\nProduct\n\n\nAbs", 
             "title": "arithmetic"
         }, 
         {
             "location": "/builtin/arithmetic/#arithmetic-documentation", 
-            "text": "Plus  Sum  Times  Product", 
+            "text": "Plus  Sum  Times  Product  Abs", 
             "title": "arithmetic documentation"
         }, 
         {
@@ -1348,6 +1373,21 @@
         {
             "location": "/builtin/arithmetic/product/#simple-examples", 
             "text": "In [ 1 ] :=   Product [ a ,   { a ,   1 ,   5 }]  Out [ 1 ] =   120   In [ 2 ] :=   Product [ f [ a ],   { a ,   1 ,   5 }]  Out [ 2 ] =   f [ 1 ]   *   f [ 2 ]   *   f [ 3 ]   *   f [ 4 ]   *   f [ 5 ]   In [ 3 ] :=   Product [ a ^ 2 ,   { a ,   4 }]  Out [ 3 ] =   576   In [ 4 ] :=   Product [ a   +   b ,   { a ,   1 ,   2 },   { b ,   1 ,   3 }]  Out [ 4 ] =   1440", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/arithmetic/abs/", 
+            "text": "Abs\n\n\nAbs[expr]\n calculates the absolute value of \nexpr\n.\n\n\nAttributes[Abs] := {Listable, NumericFunction, Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nAbs\n[\n-\n5.2\n]\n\n\nOut\n[\n1\n]\n=\n \n5.2\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nAbs\n[\n5\n]\n\n\nOut\n[\n2\n]\n=\n \n5\n\n\n\n\n\n\nAbsolute values of unspecified inputs will be left unevaluated:\n\n\nIn\n[\n3\n]\n:=\n \nAbs\n[\na\n]\n\n\nOut\n[\n3\n]\n=\n \nAbs\n[\na\n]\n\n\n\n\n\n\nBut sometimes simplifications can occur:\n\n\nIn\n[\n4\n]\n:=\n \nAbs\n[(\nSin\n[\nx\n]\n \n*\n \n-\n1\n)]\n\n\nOut\n[\n4\n]\n=\n \nAbs\n[\nSin\n[\nx\n]]", 
+            "title": "Abs "
+        }, 
+        {
+            "location": "/builtin/arithmetic/abs/#abs", 
+            "text": "Abs[expr]  calculates the absolute value of  expr .  Attributes[Abs] := {Listable, NumericFunction, Protected, ReadProtected}", 
+            "title": "Abs"
+        }, 
+        {
+            "location": "/builtin/arithmetic/abs/#simple-examples", 
+            "text": "In [ 1 ] :=   Abs [ - 5.2 ]  Out [ 1 ] =   5.2   In [ 2 ] :=   Abs [ 5 ]  Out [ 2 ] =   5   Absolute values of unspecified inputs will be left unevaluated:  In [ 3 ] :=   Abs [ a ]  Out [ 3 ] =   Abs [ a ]   But sometimes simplifications can occur:  In [ 4 ] :=   Abs [( Sin [ x ]   *   - 1 )]  Out [ 4 ] =   Abs [ Sin [ x ]]", 
             "title": "Simple examples"
         }, 
         {
@@ -1442,12 +1482,12 @@
         }, 
         {
             "location": "/builtin/power/", 
-            "text": "power documentation\n\n\nPower\n\n\nExpand\n\n\nPolynomialQ\n\n\nExponent", 
+            "text": "power documentation\n\n\nPower\n\n\nExpand\n\n\nPolynomialQ\n\n\nExponent\n\n\nCoefficient\n\n\nPolynomialQuotientRemainder\n\n\nPolynomialQuotient\n\n\nPolynomialRemainder\n\n\nFactorTermsList", 
             "title": "power"
         }, 
         {
             "location": "/builtin/power/#power-documentation", 
-            "text": "Power  Expand  PolynomialQ  Exponent", 
+            "text": "Power  Expand  PolynomialQ  Exponent  Coefficient  PolynomialQuotientRemainder  PolynomialQuotient  PolynomialRemainder  FactorTermsList", 
             "title": "power documentation"
         }, 
         {
@@ -1502,17 +1542,92 @@
         }, 
         {
             "location": "/builtin/power/exponent/", 
-            "text": "Exponent\n\n\nExponent[p, var]\n returns the degree of \np\n with respect to the variable \nvar\n.\n\n\nAttributes[Exponent] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nExponent\n[\n3\n \n+\n \nx\n^\n3\n \n+\n \nk\n*\nx\n^\n5\n,\n \nx\n,\n \nList\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n0\n,\n3\n,\n5\n}", 
+            "text": "Exponent\n\n\nExponent[p, var]\n returns the degree of \np\n with respect to the variable \nvar\n.\n\n\nAttributes[Exponent] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nExponent\n[\n3\n \n+\n \nx\n^\n3\n \n+\n \nk\n*\nx\n^\n5\n,\n \nx\n,\n \nList\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n0\n,\n3\n,\n5\n}", 
             "title": "Exponent "
         }, 
         {
             "location": "/builtin/power/exponent/#exponent", 
-            "text": "Exponent[p, var]  returns the degree of  p  with respect to the variable  var .  Attributes[Exponent] := {Protected}", 
+            "text": "Exponent[p, var]  returns the degree of  p  with respect to the variable  var .  Attributes[Exponent] := {Listable, Protected}", 
             "title": "Exponent"
         }, 
         {
             "location": "/builtin/power/exponent/#simple-examples", 
             "text": "In [ 1 ] :=   Exponent [ 3   +   x ^ 3   +   k * x ^ 5 ,   x ,   List ]  Out [ 1 ] =   { 0 , 3 , 5 }", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/power/coefficient/", 
+            "text": "Coefficient\n\n\nCoefficient[p, form]\n returns the coefficient of form \nform\n in polynomial \np\n.\n\n\nAttributes[Coefficient] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nCoefficient\n[(\na\n \n+\n \nb\n)\n^\n3\n,\n \na\n*\nb\n^\n2\n]\n\n\nOut\n[\n1\n]\n=\n \n3", 
+            "title": "Coefficient "
+        }, 
+        {
+            "location": "/builtin/power/coefficient/#coefficient", 
+            "text": "Coefficient[p, form]  returns the coefficient of form  form  in polynomial  p .  Attributes[Coefficient] := {Listable, Protected}", 
+            "title": "Coefficient"
+        }, 
+        {
+            "location": "/builtin/power/coefficient/#simple-examples", 
+            "text": "In [ 1 ] :=   Coefficient [( a   +   b ) ^ 3 ,   a * b ^ 2 ]  Out [ 1 ] =   3", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/power/polynomialquotientremainder/", 
+            "text": "PolynomialQuotientRemainder\n\n\nPolynomialQuotientRemainder[poly_, div_, var_]\n returns the quotient and remainder of \npoly\n divided by \ndiv\n treating \nvar\n as the polynomial variable.\n\n\nAttributes[PolynomialQuotientRemainder] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialQuotientRemainder\n[\n2\n \n+\n \nx\n^\n2\n \n+\n \nx\n^\n3\n,\n \n2\n \n+\n \n2\n*\nx\n,\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n{\nx\n^\n2\n/\n2\n,\n2\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialQuotientRemainder\n[\nx\n^\n3\n,\n \nx\n \n+\n \ny\n,\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n{\nx\n^\n2\n-\nx\n \ny\n+\ny\n^\n2\n,\n-\ny\n^\n3\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialQuotientRemainder\n[\n1\n \n+\n \nx\n^\n3\n,\n \n1\n \n+\n \na\n*\nx\n^\n2\n,\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n{\nx\n/\na\n,\n1\n-\nx\n/\na\n}", 
+            "title": "PolynomialQuotientRemainder "
+        }, 
+        {
+            "location": "/builtin/power/polynomialquotientremainder/#polynomialquotientremainder", 
+            "text": "PolynomialQuotientRemainder[poly_, div_, var_]  returns the quotient and remainder of  poly  divided by  div  treating  var  as the polynomial variable.  Attributes[PolynomialQuotientRemainder] := {Protected}", 
+            "title": "PolynomialQuotientRemainder"
+        }, 
+        {
+            "location": "/builtin/power/polynomialquotientremainder/#simple-examples", 
+            "text": "In [ 1 ] :=   PolynomialQuotientRemainder [ 2   +   x ^ 2   +   x ^ 3 ,   2   +   2 * x ,   x ]  Out [ 1 ] =   { x ^ 2 / 2 , 2 }   In [ 2 ] :=   PolynomialQuotientRemainder [ x ^ 3 ,   x   +   y ,   x ]  Out [ 2 ] =   { x ^ 2 - x   y + y ^ 2 , - y ^ 3 }   In [ 3 ] :=   PolynomialQuotientRemainder [ 1   +   x ^ 3 ,   1   +   a * x ^ 2 ,   x ]  Out [ 3 ] =   { x / a , 1 - x / a }", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/power/polynomialquotient/", 
+            "text": "PolynomialQuotient\n\n\nPolynomialQuotient[poly_, div_, var_]\n returns the quotient of \npoly\n divided by \ndiv\n treating \nvar\n as the polynomial variable.\n\n\nAttributes[PolynomialQuotient] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialQuotient\n[\n2\n \n+\n \nx\n^\n2\n \n+\n \nx\n^\n3\n,\n \n2\n \n+\n \n2\n*\nx\n,\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \nx\n^\n2\n/\n2\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialQuotient\n[\nx\n^\n3\n,\n \nx\n \n+\n \ny\n,\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \nx\n^\n2\n-\nx\n \ny\n+\ny\n^\n2\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialQuotient\n[\n1\n \n+\n \nx\n^\n3\n,\n \n1\n \n+\n \na\n*\nx\n^\n2\n,\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \nx\n/\na", 
+            "title": "PolynomialQuotient "
+        }, 
+        {
+            "location": "/builtin/power/polynomialquotient/#polynomialquotient", 
+            "text": "PolynomialQuotient[poly_, div_, var_]  returns the quotient of  poly  divided by  div  treating  var  as the polynomial variable.  Attributes[PolynomialQuotient] := {Protected}", 
+            "title": "PolynomialQuotient"
+        }, 
+        {
+            "location": "/builtin/power/polynomialquotient/#simple-examples", 
+            "text": "In [ 1 ] :=   PolynomialQuotient [ 2   +   x ^ 2   +   x ^ 3 ,   2   +   2 * x ,   x ]  Out [ 1 ] =   x ^ 2 / 2   In [ 2 ] :=   PolynomialQuotient [ x ^ 3 ,   x   +   y ,   x ]  Out [ 2 ] =   x ^ 2 - x   y + y ^ 2   In [ 3 ] :=   PolynomialQuotient [ 1   +   x ^ 3 ,   1   +   a * x ^ 2 ,   x ]  Out [ 3 ] =   x / a", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/power/polynomialremainder/", 
+            "text": "PolynomialRemainder\n\n\nPolynomialRemainder[poly_, div_, var_]\n returns the remainder of \npoly\n divided by \ndiv\n treating \nvar\n as the polynomial variable.\n\n\nAttributes[PolynomialRemainder] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialRemainder\n[\n2\n \n+\n \nx\n^\n2\n \n+\n \nx\n^\n3\n,\n \n2\n \n+\n \n2\n*\nx\n,\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n2\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialRemainder\n[\nx\n^\n3\n,\n \nx\n \n+\n \ny\n,\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n-\ny\n^\n3\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialRemainder\n[\n1\n \n+\n \nx\n^\n3\n,\n \n1\n \n+\n \na\n*\nx\n^\n2\n,\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n1\n-\nx\n/\na", 
+            "title": "PolynomialRemainder "
+        }, 
+        {
+            "location": "/builtin/power/polynomialremainder/#polynomialremainder", 
+            "text": "PolynomialRemainder[poly_, div_, var_]  returns the remainder of  poly  divided by  div  treating  var  as the polynomial variable.  Attributes[PolynomialRemainder] := {Protected}", 
+            "title": "PolynomialRemainder"
+        }, 
+        {
+            "location": "/builtin/power/polynomialremainder/#simple-examples", 
+            "text": "In [ 1 ] :=   PolynomialRemainder [ 2   +   x ^ 2   +   x ^ 3 ,   2   +   2 * x ,   x ]  Out [ 1 ] =   2   In [ 2 ] :=   PolynomialRemainder [ x ^ 3 ,   x   +   y ,   x ]  Out [ 2 ] =   - y ^ 3   In [ 3 ] :=   PolynomialRemainder [ 1   +   x ^ 3 ,   1   +   a * x ^ 2 ,   x ]  Out [ 3 ] =   1 - x / a", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/power/factortermslist/", 
+            "text": "FactorTermsList\n\n\nFactorTermsList[expr]\n factors out the constant term of \nexpr\n and puts the factored result into a \nList\n.\n\n\nAttributes[FactorTermsList] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nFactorTermsList\n[\n2\n*\nSin\n[\n8\n*\nk\n]]\n\n\nOut\n[\n1\n]\n=\n \n{\n2\n,\nSin\n[\n8\n \nk\n]}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFactorTermsList\n[\na\n/\n2\n \n+\n \nx\n/\n2\n]\n\n\nOut\n[\n2\n]\n=\n \n{\n1\n/\n2\n,\na\n+\nx\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nFactorTermsList\n[\na\n \n+\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n{\n1\n,\na\n+\nx\n}", 
+            "title": "FactorTermsList "
+        }, 
+        {
+            "location": "/builtin/power/factortermslist/#factortermslist", 
+            "text": "FactorTermsList[expr]  factors out the constant term of  expr  and puts the factored result into a  List .  Attributes[FactorTermsList] := {Protected}", 
+            "title": "FactorTermsList"
+        }, 
+        {
+            "location": "/builtin/power/factortermslist/#simple-examples", 
+            "text": "In [ 1 ] :=   FactorTermsList [ 2 * Sin [ 8 * k ]]  Out [ 1 ] =   { 2 , Sin [ 8   k ]}   In [ 2 ] :=   FactorTermsList [ a / 2   +   x / 2 ]  Out [ 2 ] =   { 1 / 2 , a + x }   In [ 3 ] :=   FactorTermsList [ a   +   x ]  Out [ 3 ] =   { 1 , a + x }", 
             "title": "Simple examples"
         }, 
         {
@@ -2442,12 +2557,12 @@
         }, 
         {
             "location": "/builtin/numbertheory/", 
-            "text": "numbertheory documentation\n\n\nPrimeQ\n\n\nGCD", 
+            "text": "numbertheory documentation\n\n\nPrimeQ\n\n\nGCD\n\n\nLCM", 
             "title": "numbertheory"
         }, 
         {
             "location": "/builtin/numbertheory/#numbertheory-documentation", 
-            "text": "PrimeQ  GCD", 
+            "text": "PrimeQ  GCD  LCM", 
             "title": "numbertheory documentation"
         }, 
         {
@@ -2483,6 +2598,21 @@
         {
             "location": "/builtin/numbertheory/gcd/#simple-examples", 
             "text": "In [ 1 ] :=   GCD [ 9 ,   6 ]  Out [ 1 ] =   3   In [ 2 ] :=   GCD [ 100 ,   30 ,   15 ]  Out [ 2 ] =   5", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/numbertheory/lcm/", 
+            "text": "LCM\n\n\nLCM[n1, n2, ...]\n finds the least common multiple of the inputs.\n\n\nAttributes[LCM] := {Flat, Listable, OneIdentity, Orderless, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nLCM\n[\n5\n,\n \n14\n]\n\n\nOut\n[\n1\n]\n=\n \n70\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nLCM\n[\n5\n,\n \n14\n,\n \n68\n]\n\n\nOut\n[\n2\n]\n=\n \n2380\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nLCM\n[\n2\n/\n3\n,\n \n1\n/\n3\n]\n\n\nOut\n[\n3\n]\n=\n \n2\n/\n3\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nLCM\n[\n2\n/\n3\n,\n \n1\n/\n3\n,\n \n5\n/\n6\n]\n\n\nOut\n[\n4\n]\n=\n \n10\n/\n3\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nLCM\n[\n2\n/\n3\n,\n \n1\n/\n3\n,\n \n5\n/\n6\n,\n \n3\n]\n\n\nOut\n[\n5\n]\n=\n \n30\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nLCM\n[\n2\n/\n3\n,\n \n{\n1\n/\n3\n,\n \n5\n/\n6\n,\n \n3\n}]\n\n\nOut\n[\n6\n]\n=\n \n{\n2\n/\n3\n,\n10\n/\n3\n,\n6\n}", 
+            "title": "LCM "
+        }, 
+        {
+            "location": "/builtin/numbertheory/lcm/#lcm", 
+            "text": "LCM[n1, n2, ...]  finds the least common multiple of the inputs.  Attributes[LCM] := {Flat, Listable, OneIdentity, Orderless, Protected}", 
+            "title": "LCM"
+        }, 
+        {
+            "location": "/builtin/numbertheory/lcm/#simple-examples", 
+            "text": "In [ 1 ] :=   LCM [ 5 ,   14 ]  Out [ 1 ] =   70   In [ 2 ] :=   LCM [ 5 ,   14 ,   68 ]  Out [ 2 ] =   2380   In [ 3 ] :=   LCM [ 2 / 3 ,   1 / 3 ]  Out [ 3 ] =   2 / 3   In [ 4 ] :=   LCM [ 2 / 3 ,   1 / 3 ,   5 / 6 ]  Out [ 4 ] =   10 / 3   In [ 5 ] :=   LCM [ 2 / 3 ,   1 / 3 ,   5 / 6 ,   3 ]  Out [ 5 ] =   30   In [ 6 ] :=   LCM [ 2 / 3 ,   { 1 / 3 ,   5 / 6 ,   3 }]  Out [ 6 ] =   { 2 / 3 , 10 / 3 , 6 }", 
             "title": "Simple examples"
         }
     ]
