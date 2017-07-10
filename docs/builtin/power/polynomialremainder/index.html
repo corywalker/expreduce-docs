@@ -298,6 +298,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="atoms" href="../../atoms/">
         atoms
@@ -528,6 +532,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -631,6 +643,14 @@
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1025,18 +1045,18 @@
 <p><code>PolynomialRemainder[poly_, div_, var_]</code> returns the remainder of <code>poly</code> divided by <code>div</code> treating <code>var</code> as the polynomial variable.</p>
 <p><code>Attributes[PolynomialRemainder] := {Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialRemainder</span><span class="p">[</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialRemainder</span><span class="p">[(</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="p">)),</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialRemainder</span><span class="p">[</span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">y</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="nv">y</span><span class="o">^</span><span class="m">3</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialRemainder</span><span class="p">[</span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">y</span><span class="p">),</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">y</span><span class="o">^</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialRemainder</span><span class="p">[</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">a</span><span class="o">*</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">-</span><span class="nv">x</span><span class="o">/</span><span class="nv">a</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialRemainder</span><span class="p">[(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">)),</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="nv">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">a</span><span class="o">^-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">))</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             

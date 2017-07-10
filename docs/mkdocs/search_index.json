@@ -182,12 +182,12 @@
         }, 
         {
             "location": "/builtin/comparison/", 
-            "text": "comparison documentation\n\n\nEqual\n\n\nUnequal\n\n\nSameQ\n\n\nUnsameQ\n\n\nAtomQ\n\n\nNumberQ\n\n\nLess\n\n\nGreater\n\n\nLessEqual\n\n\nGreaterEqual\n\n\nPositive\n\n\nNegative\n\n\nMax", 
+            "text": "comparison documentation\n\n\nEqual\n\n\nUnequal\n\n\nSameQ\n\n\nUnsameQ\n\n\nAtomQ\n\n\nNumberQ\n\n\nNumericQ\n\n\nLess\n\n\nGreater\n\n\nLessEqual\n\n\nGreaterEqual\n\n\nPositive\n\n\nNegative\n\n\nMax", 
             "title": "comparison"
         }, 
         {
             "location": "/builtin/comparison/#comparison-documentation", 
-            "text": "Equal  Unequal  SameQ  UnsameQ  AtomQ  NumberQ  Less  Greater  LessEqual  GreaterEqual  Positive  Negative  Max", 
+            "text": "Equal  Unequal  SameQ  UnsameQ  AtomQ  NumberQ  NumericQ  Less  Greater  LessEqual  GreaterEqual  Positive  Negative  Max", 
             "title": "comparison documentation"
         }, 
         {
@@ -288,6 +288,21 @@
         {
             "location": "/builtin/comparison/numberq/#simple-examples", 
             "text": "In [ 1 ] :=   NumberQ [ 2 ]  Out [ 1 ] =   True   In [ 2 ] :=   NumberQ [ 2.2 ]  Out [ 2 ] =   True   In [ 3 ] :=   NumberQ [ Rational [ 5 ,   2 ]]  Out [ 3 ] =   True   In [ 4 ] :=   NumberQ [ Infinity ]  Out [ 4 ] =   False   In [ 5 ] :=   NumberQ [ Sqrt [ 2 ]]  Out [ 5 ] =   False   In [ 6 ] :=   NumberQ [ randomvar ]  Out [ 6 ] =   False   In [ 7 ] :=   NumberQ [ hello ]  Out [ 7 ] =   False", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/comparison/numericq/", 
+            "text": "NumericQ\n\n\nNumericQ[expr]\n returns \nTrue\n if \nexpr\n is a numeric quantity, \nFalse\n otherwise.\n\n\nAttributes[NumericQ] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nNumericQ\n[\n5\n]\n\n\nOut\n[\n1\n]\n=\n \nTrue\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nNumericQ\n[\na\n]\n\n\nOut\n[\n2\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nNumericQ\n[\nSin\n[\na\n]]\n\n\nOut\n[\n3\n]\n=\n \nFalse\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nNumericQ\n[\nSin\n[\n2\n]]\n\n\nOut\n[\n4\n]\n=\n \nTrue", 
+            "title": "NumericQ "
+        }, 
+        {
+            "location": "/builtin/comparison/numericq/#numericq", 
+            "text": "NumericQ[expr]  returns  True  if  expr  is a numeric quantity,  False  otherwise.  Attributes[NumericQ] := {Protected}", 
+            "title": "NumericQ"
+        }, 
+        {
+            "location": "/builtin/comparison/numericq/#simple-examples", 
+            "text": "In [ 1 ] :=   NumericQ [ 5 ]  Out [ 1 ] =   True   In [ 2 ] :=   NumericQ [ a ]  Out [ 2 ] =   False   In [ 3 ] :=   NumericQ [ Sin [ a ]]  Out [ 3 ] =   False   In [ 4 ] :=   NumericQ [ Sin [ 2 ]]  Out [ 4 ] =   True", 
             "title": "Simple examples"
         }, 
         {
@@ -852,12 +867,12 @@
         }, 
         {
             "location": "/builtin/list/", 
-            "text": "list documentation\n\n\nList\n\n\nTotal\n\n\nMean\n\n\nTable\n\n\nMemberQ\n\n\nCases\n\n\nPadRight\n\n\nPadLeft\n\n\nRange\n\n\nPart\n\n\nAll\n\n\nThread\n\n\nAppend\n\n\nAppendTo\n\n\nPrepend\n\n\nPrependTo\n\n\nDeleteDuplicates\n\n\nLast", 
+            "text": "list documentation\n\n\nList\n\n\nTotal\n\n\nMean\n\n\nTable\n\n\nMemberQ\n\n\nCases\n\n\nDeleteCases\n\n\nUnion\n\n\nPadRight\n\n\nPadLeft\n\n\nRange\n\n\nPart\n\n\nAll\n\n\nThread\n\n\nAppend\n\n\nAppendTo\n\n\nPrepend\n\n\nPrependTo\n\n\nDeleteDuplicates\n\n\nLast", 
             "title": "list"
         }, 
         {
             "location": "/builtin/list/#list-documentation", 
-            "text": "List  Total  Mean  Table  MemberQ  Cases  PadRight  PadLeft  Range  Part  All  Thread  Append  AppendTo  Prepend  PrependTo  DeleteDuplicates  Last", 
+            "text": "List  Total  Mean  Table  MemberQ  Cases  DeleteCases  Union  PadRight  PadLeft  Range  Part  All  Thread  Append  AppendTo  Prepend  PrependTo  DeleteDuplicates  Last", 
             "title": "list documentation"
         }, 
         {
@@ -984,6 +999,36 @@
             "location": "/builtin/list/cases/#further-examples", 
             "text": "expr  need not be a list:  In [ 1 ] :=   Cases [ bar [ a ,   b ,   c ],   a ]  Out [ 1 ] =   { a }", 
             "title": "Further examples"
+        }, 
+        {
+            "location": "/builtin/list/deletecases/", 
+            "text": "DeleteCases\n\n\nDeleteCases[expr, pat]\n returns a new expression of all elements in \nexpr\n that do not match \npat\n.\n\n\nAttributes[DeleteCases] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nDeleteCases\n[{\n5\n,\n2\n,\n3.5\n,\nx\n,\ny\n,\n4\n},\n_Integer\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n3.5\n,\nx\n,\ny\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nDeleteCases\n[{\n5\n,\n2\n,\n3.5\n,\nx\n,\ny\n,\n4\n},\n_Real\n]\n\n\nOut\n[\n2\n]\n=\n \n{\n5\n,\n2\n,\nx\n,\ny\n,\n4\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nDeleteCases\n[\n3.5\n+\nx\n+\ny\n,\n_Real\n]\n\n\nOut\n[\n3\n]\n=\n \nx\n+\ny", 
+            "title": "DeleteCases "
+        }, 
+        {
+            "location": "/builtin/list/deletecases/#deletecases", 
+            "text": "DeleteCases[expr, pat]  returns a new expression of all elements in  expr  that do not match  pat .  Attributes[DeleteCases] := {Protected}", 
+            "title": "DeleteCases"
+        }, 
+        {
+            "location": "/builtin/list/deletecases/#simple-examples", 
+            "text": "In [ 1 ] :=   DeleteCases [{ 5 , 2 , 3.5 , x , y , 4 }, _Integer ]  Out [ 1 ] =   { 3.5 , x , y }   In [ 2 ] :=   DeleteCases [{ 5 , 2 , 3.5 , x , y , 4 }, _Real ]  Out [ 2 ] =   { 5 , 2 , x , y , 4 }   In [ 3 ] :=   DeleteCases [ 3.5 + x + y , _Real ]  Out [ 3 ] =   x + y", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/list/union/", 
+            "text": "Union\n\n\nUnion[expr1, expr2, ...]\n returns a sorted union of the items in the expressions.\n\n\nAttributes[Union] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nUnion\n[{\nb\n,\na\n,\na\n,\nb\n,\na\n}]\n\n\nOut\n[\n1\n]\n=\n \n{\na\n,\nb\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nUnion\n[{\nb\n,\na\n,\na\n,\nb\n,\na\n},{\ny\n,\nz\n}]\n\n\nOut\n[\n2\n]\n=\n \n{\na\n,\nb\n,\ny\n,\nz\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nUnion\n[\nfoo\n[\nb\n,\na\n,\na\n,\nb\n,\na\n],\nfoo\n[\ny\n,\nz\n]]\n\n\nOut\n[\n3\n]\n=\n \nfoo\n[\na\n,\nb\n,\ny\n,\nz\n]", 
+            "title": "Union "
+        }, 
+        {
+            "location": "/builtin/list/union/#union", 
+            "text": "Union[expr1, expr2, ...]  returns a sorted union of the items in the expressions.  Attributes[Union] := {Protected}", 
+            "title": "Union"
+        }, 
+        {
+            "location": "/builtin/list/union/#simple-examples", 
+            "text": "In [ 1 ] :=   Union [{ b , a , a , b , a }]  Out [ 1 ] =   { a , b }   In [ 2 ] :=   Union [{ b , a , a , b , a },{ y , z }]  Out [ 2 ] =   { a , b , y , z }   In [ 3 ] :=   Union [ foo [ b , a , a , b , a ], foo [ y , z ]]  Out [ 3 ] =   foo [ a , b , y , z ]", 
+            "title": "Simple examples"
         }, 
         {
             "location": "/builtin/list/padright/", 
@@ -1482,12 +1527,12 @@
         }, 
         {
             "location": "/builtin/power/", 
-            "text": "power documentation\n\n\nPower\n\n\nExpand\n\n\nPolynomialQ\n\n\nExponent\n\n\nCoefficient\n\n\nPolynomialQuotientRemainder\n\n\nPolynomialQuotient\n\n\nPolynomialRemainder\n\n\nFactorTermsList", 
+            "text": "power documentation\n\n\nPower\n\n\nExpand\n\n\nPolynomialQ\n\n\nExponent\n\n\nCoefficient\n\n\nPolynomialQuotientRemainder\n\n\nPolynomialQuotient\n\n\nPolynomialRemainder\n\n\nFactorTermsList\n\n\nVariables\n\n\nPolynomialGCD", 
             "title": "power"
         }, 
         {
             "location": "/builtin/power/#power-documentation", 
-            "text": "Power  Expand  PolynomialQ  Exponent  Coefficient  PolynomialQuotientRemainder  PolynomialQuotient  PolynomialRemainder  FactorTermsList", 
+            "text": "Power  Expand  PolynomialQ  Exponent  Coefficient  PolynomialQuotientRemainder  PolynomialQuotient  PolynomialRemainder  FactorTermsList  Variables  PolynomialGCD", 
             "title": "power documentation"
         }, 
         {
@@ -1517,7 +1562,7 @@
         }, 
         {
             "location": "/builtin/power/expand/", 
-            "text": "Expand\n\n\nExpand[expr]\n attempts to expand \nexpr\n.\n\n\nAttributes[Expand] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nExpand\n[(\na\n \n+\n \nb\n \n+\n \nc\n)\n^\n3\n]\n\n\nOut\n[\n1\n]\n=\n \na\n^\n3\n \n+\n \n3\n \na\n^\n2\n \n*\n \nb\n \n+\n \n3\n \na\n \nb\n^\n2\n \n+\n \nb\n^\n3\n \n+\n \n3\n \na\n^\n2\n \n*\n \nc\n \n+\n \n6\n \na\n \nb\n \nc\n \n+\n \n3\n \nb\n^\n2\n \n*\n \nc\n \n+\n \n3\n \na\n \nc\n^\n2\n \n+\n \n3\n \nb\n \nc\n^\n2\n \n+\n \nc\n^\n3\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \n(\na\n \n+\n \nb\n)\n \n*\n \n(\nc\n \n+\n \nd\n \n+\n \ne\n)\n \n//\n \nExpand\n\n\nOut\n[\n2\n]\n=\n \na\n \nc\n \n+\n \nb\n \nc\n \n+\n \na\n \nd\n \n+\n \nb\n \nd\n \n+\n \na\n \ne\n \n+\n \nb\n \ne\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \n(\na\n \n+\n \nb\n \n+\n \nc\n)\n*\n(\nd\n \n+\n \ne\n)\n^\n2\n \n//\n \nExpand\n\n\nOut\n[\n3\n]\n=\n \na\n \nd\n^\n2\n \n+\n \nb\n \nd\n^\n2\n \n+\n \nc\n \nd\n^\n2\n \n+\n \n2\n \na\n \nd\n \ne\n \n+\n \n2\n \nb\n \nd\n \ne\n \n+\n \n2\n \nc\n \nd\n \ne\n \n+\n \na\n \ne\n^\n2\n \n+\n \nb\n \ne\n^\n2\n \n+\n \nc\n \ne\n^\n2\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nExpand\n[(\na\n^\nb\n \n+\n \nc\n^\nd\n)\n^\n2\n]\n\n\nOut\n[\n4\n]\n=\n \na\n^\n(\n2\n \nb\n)\n \n+\n \n2\n \na\n^\nb\n \n*\n \nc\n^\nd\n \n+\n \nc\n^\n(\n2\n \nd\n)\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nExpand\n[(\na\n \n+\n \nb\n \n+\n \nc\n)\n/\nd\n]\n\n\nOut\n[\n5\n]\n=\n \na\n/\nd\n \n+\n \nb\n/\nd\n \n+\n \nc\n/\nd\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nExpand\n[((\na\n \n+\n \n1\n)\n^\n2\n \n+\n \nb\n \n+\n \nc\n)\n/\nd\n]\n\n\nOut\n[\n6\n]\n=\n \n1\n/\nd\n \n+\n \n(\n2\n \na\n)\n/\nd\n \n+\n \na\n^\n2\n/\nd\n \n+\n \nb\n/\nd\n \n+\n \nc\n/\nd\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \n2\n*\n(\na\n \n+\n \n1\n)\n \n//\n \nExpand\n\n\nOut\n[\n7\n]\n=\n \n2\n \n+\n \n2\n \na", 
+            "text": "Expand\n\n\nExpand[expr]\n attempts to expand \nexpr\n.\n\n\nAttributes[Expand] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nExpand\n[(\na\n \n+\n \nb\n \n+\n \nc\n)\n^\n3\n]\n\n\nOut\n[\n1\n]\n=\n \n(\na\n^\n3\n \n+\n \n(\n3\n \n*\n \na\n^\n2\n \n*\n \nb\n)\n \n+\n \n(\n3\n \n*\n \n(\na\n \n*\n \nb\n^\n2\n))\n \n+\n \nb\n^\n3\n \n+\n \n(\n3\n \n*\n \na\n^\n2\n \n*\n \nc\n)\n \n+\n \n(\n6\n \n*\n \n(\na\n \n*\n \n(\nb\n \n*\n \nc\n)))\n \n+\n \n(\n3\n \n*\n \nb\n^\n2\n \n*\n \nc\n)\n \n+\n \n(\n3\n \n*\n \n(\na\n \n*\n \nc\n^\n2\n))\n \n+\n \n(\n3\n \n*\n \n(\nb\n \n*\n \nc\n^\n2\n))\n \n+\n \nc\n^\n3\n)\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nExpand\n[((\na\n \n+\n \nb\n)\n \n*\n \n(\nc\n \n+\n \nd\n \n+\n \ne\n))]\n\n\nOut\n[\n2\n]\n=\n \n((\na\n \n*\n \nc\n)\n \n+\n \n(\nb\n \n*\n \nc\n)\n \n+\n \n(\na\n \n*\n \nd\n)\n \n+\n \n(\nb\n \n*\n \nd\n)\n \n+\n \n(\na\n \n*\n \ne\n)\n \n+\n \n(\nb\n \n*\n \ne\n))\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nExpand\n[((\na\n \n+\n \nb\n \n+\n \nc\n)\n \n*\n \n(\nd\n \n+\n \ne\n)\n^\n2\n)]\n\n\nOut\n[\n3\n]\n=\n \n((\na\n \n*\n \nd\n^\n2\n)\n \n+\n \n(\nb\n \n*\n \nd\n^\n2\n)\n \n+\n \n(\nc\n \n*\n \nd\n^\n2\n)\n \n+\n \n(\n2\n \n*\n \n(\na\n \n*\n \n(\nd\n \n*\n \ne\n)))\n \n+\n \n(\n2\n \n*\n \n(\nb\n \n*\n \n(\nd\n \n*\n \ne\n)))\n \n+\n \n(\n2\n \n*\n \n(\nc\n \n*\n \n(\nd\n \n*\n \ne\n)))\n \n+\n \n(\na\n \n*\n \ne\n^\n2\n)\n \n+\n \n(\nb\n \n*\n \ne\n^\n2\n)\n \n+\n \n(\nc\n \n*\n \ne\n^\n2\n))\n\n\n\n\n\n\nIn\n[\n4\n]\n:=\n \nExpand\n[(\na\n^\nb\n \n+\n \nc\n^\nd\n)\n^\n2\n]\n\n\nOut\n[\n4\n]\n=\n \n(\na\n^\n(\n2\n \n*\n \nb\n)\n \n+\n \n(\n2\n \n*\n \na\n^\nb\n \n*\n \nc\n^\nd\n)\n \n+\n \nc\n^\n(\n2\n \n*\n \nd\n))\n\n\n\n\n\n\nIn\n[\n5\n]\n:=\n \nExpand\n[((\na\n \n+\n \nb\n \n+\n \nc\n)\n \n*\n \nd\n^-\n1\n)]\n\n\nOut\n[\n5\n]\n=\n \n((\na\n \n*\n \nd\n^-\n1\n)\n \n+\n \n(\nb\n \n*\n \nd\n^-\n1\n)\n \n+\n \n(\nc\n \n*\n \nd\n^-\n1\n))\n\n\n\n\n\n\nIn\n[\n6\n]\n:=\n \nExpand\n[(((\na\n \n+\n \n1\n)\n^\n2\n \n+\n \nb\n \n+\n \nc\n)\n \n*\n \nd\n^-\n1\n)]\n\n\nOut\n[\n6\n]\n=\n \n((\n1\n \n*\n \nd\n^-\n1\n)\n \n+\n \n((\n2\n \n*\n \na\n)\n \n*\n \nd\n^-\n1\n)\n \n+\n \n(\na\n^\n2\n \n*\n \nd\n^-\n1\n)\n \n+\n \n(\nb\n \n*\n \nd\n^-\n1\n)\n \n+\n \n(\nc\n \n*\n \nd\n^-\n1\n))\n\n\n\n\n\n\nIn\n[\n7\n]\n:=\n \nExpand\n[(\n2\n \n*\n \n(\na\n \n+\n \n1\n))]\n\n\nOut\n[\n7\n]\n=\n \n(\n2\n \n+\n \n(\n2\n \n*\n \na\n))", 
             "title": "Expand "
         }, 
         {
@@ -1527,7 +1572,7 @@
         }, 
         {
             "location": "/builtin/power/expand/#simple-examples", 
-            "text": "In [ 1 ] :=   Expand [( a   +   b   +   c ) ^ 3 ]  Out [ 1 ] =   a ^ 3   +   3   a ^ 2   *   b   +   3   a   b ^ 2   +   b ^ 3   +   3   a ^ 2   *   c   +   6   a   b   c   +   3   b ^ 2   *   c   +   3   a   c ^ 2   +   3   b   c ^ 2   +   c ^ 3   In [ 2 ] :=   ( a   +   b )   *   ( c   +   d   +   e )   //   Expand  Out [ 2 ] =   a   c   +   b   c   +   a   d   +   b   d   +   a   e   +   b   e   In [ 3 ] :=   ( a   +   b   +   c ) * ( d   +   e ) ^ 2   //   Expand  Out [ 3 ] =   a   d ^ 2   +   b   d ^ 2   +   c   d ^ 2   +   2   a   d   e   +   2   b   d   e   +   2   c   d   e   +   a   e ^ 2   +   b   e ^ 2   +   c   e ^ 2   In [ 4 ] :=   Expand [( a ^ b   +   c ^ d ) ^ 2 ]  Out [ 4 ] =   a ^ ( 2   b )   +   2   a ^ b   *   c ^ d   +   c ^ ( 2   d )   In [ 5 ] :=   Expand [( a   +   b   +   c ) / d ]  Out [ 5 ] =   a / d   +   b / d   +   c / d   In [ 6 ] :=   Expand [(( a   +   1 ) ^ 2   +   b   +   c ) / d ]  Out [ 6 ] =   1 / d   +   ( 2   a ) / d   +   a ^ 2 / d   +   b / d   +   c / d   In [ 7 ] :=   2 * ( a   +   1 )   //   Expand  Out [ 7 ] =   2   +   2   a", 
+            "text": "In [ 1 ] :=   Expand [( a   +   b   +   c ) ^ 3 ]  Out [ 1 ] =   ( a ^ 3   +   ( 3   *   a ^ 2   *   b )   +   ( 3   *   ( a   *   b ^ 2 ))   +   b ^ 3   +   ( 3   *   a ^ 2   *   c )   +   ( 6   *   ( a   *   ( b   *   c )))   +   ( 3   *   b ^ 2   *   c )   +   ( 3   *   ( a   *   c ^ 2 ))   +   ( 3   *   ( b   *   c ^ 2 ))   +   c ^ 3 )   In [ 2 ] :=   Expand [(( a   +   b )   *   ( c   +   d   +   e ))]  Out [ 2 ] =   (( a   *   c )   +   ( b   *   c )   +   ( a   *   d )   +   ( b   *   d )   +   ( a   *   e )   +   ( b   *   e ))   In [ 3 ] :=   Expand [(( a   +   b   +   c )   *   ( d   +   e ) ^ 2 )]  Out [ 3 ] =   (( a   *   d ^ 2 )   +   ( b   *   d ^ 2 )   +   ( c   *   d ^ 2 )   +   ( 2   *   ( a   *   ( d   *   e )))   +   ( 2   *   ( b   *   ( d   *   e )))   +   ( 2   *   ( c   *   ( d   *   e )))   +   ( a   *   e ^ 2 )   +   ( b   *   e ^ 2 )   +   ( c   *   e ^ 2 ))   In [ 4 ] :=   Expand [( a ^ b   +   c ^ d ) ^ 2 ]  Out [ 4 ] =   ( a ^ ( 2   *   b )   +   ( 2   *   a ^ b   *   c ^ d )   +   c ^ ( 2   *   d ))   In [ 5 ] :=   Expand [(( a   +   b   +   c )   *   d ^- 1 )]  Out [ 5 ] =   (( a   *   d ^- 1 )   +   ( b   *   d ^- 1 )   +   ( c   *   d ^- 1 ))   In [ 6 ] :=   Expand [((( a   +   1 ) ^ 2   +   b   +   c )   *   d ^- 1 )]  Out [ 6 ] =   (( 1   *   d ^- 1 )   +   (( 2   *   a )   *   d ^- 1 )   +   ( a ^ 2   *   d ^- 1 )   +   ( b   *   d ^- 1 )   +   ( c   *   d ^- 1 ))   In [ 7 ] :=   Expand [( 2   *   ( a   +   1 ))]  Out [ 7 ] =   ( 2   +   ( 2   *   a ))", 
             "title": "Simple examples"
         }, 
         {
@@ -1542,7 +1587,7 @@
         }, 
         {
             "location": "/builtin/power/exponent/", 
-            "text": "Exponent\n\n\nExponent[p, var]\n returns the degree of \np\n with respect to the variable \nvar\n.\n\n\nAttributes[Exponent] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nExponent\n[\n3\n \n+\n \nx\n^\n3\n \n+\n \nk\n*\nx\n^\n5\n,\n \nx\n,\n \nList\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n0\n,\n3\n,\n5\n}", 
+            "text": "Exponent\n\n\nExponent[p, var]\n returns the degree of \np\n with respect to the variable \nvar\n.\n\n\nAttributes[Exponent] := {Listable, Protected}\n\n\nSimple examples\n\n\nFind the degree of a polynomial:\n\n\nIn\n[\n1\n]\n:=\n \nExponent\n[(\n3\n \n+\n \nx\n^\n3\n \n+\n \n(\nk\n \n*\n \nx\n^\n5\n)),\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n5\n\n\n\n\n\n\nFurther examples\n\n\nFind the degree of a polynomial:\n\n\nIn\n[\n1\n]\n:=\n \nExponent\n[(\n3\n \n+\n \nx\n^\n3\n \n+\n \n(\nk\n \n*\n \nx\n^\n5\n)),\n \nx\n,\n \nList\n]\n\n\nOut\n[\n1\n]\n=\n \n{\n0\n,\n \n3\n,\n \n5\n}", 
             "title": "Exponent "
         }, 
         {
@@ -1552,12 +1597,17 @@
         }, 
         {
             "location": "/builtin/power/exponent/#simple-examples", 
-            "text": "In [ 1 ] :=   Exponent [ 3   +   x ^ 3   +   k * x ^ 5 ,   x ,   List ]  Out [ 1 ] =   { 0 , 3 , 5 }", 
+            "text": "Find the degree of a polynomial:  In [ 1 ] :=   Exponent [( 3   +   x ^ 3   +   ( k   *   x ^ 5 )),   x ]  Out [ 1 ] =   5", 
             "title": "Simple examples"
         }, 
         {
+            "location": "/builtin/power/exponent/#further-examples", 
+            "text": "Find the degree of a polynomial:  In [ 1 ] :=   Exponent [( 3   +   x ^ 3   +   ( k   *   x ^ 5 )),   x ,   List ]  Out [ 1 ] =   { 0 ,   3 ,   5 }", 
+            "title": "Further examples"
+        }, 
+        {
             "location": "/builtin/power/coefficient/", 
-            "text": "Coefficient\n\n\nCoefficient[p, form]\n returns the coefficient of form \nform\n in polynomial \np\n.\n\n\nAttributes[Coefficient] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nCoefficient\n[(\na\n \n+\n \nb\n)\n^\n3\n,\n \na\n*\nb\n^\n2\n]\n\n\nOut\n[\n1\n]\n=\n \n3", 
+            "text": "Coefficient\n\n\nCoefficient[p, form]\n returns the coefficient of form \nform\n in polynomial \np\n.\n\n\nAttributes[Coefficient] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nCoefficient\n[(\na\n \n+\n \nb\n)\n^\n3\n,\n \n(\na\n \n*\n \nb\n^\n2\n)]\n\n\nOut\n[\n1\n]\n=\n \n3", 
             "title": "Coefficient "
         }, 
         {
@@ -1567,12 +1617,12 @@
         }, 
         {
             "location": "/builtin/power/coefficient/#simple-examples", 
-            "text": "In [ 1 ] :=   Coefficient [( a   +   b ) ^ 3 ,   a * b ^ 2 ]  Out [ 1 ] =   3", 
+            "text": "In [ 1 ] :=   Coefficient [( a   +   b ) ^ 3 ,   ( a   *   b ^ 2 )]  Out [ 1 ] =   3", 
             "title": "Simple examples"
         }, 
         {
             "location": "/builtin/power/polynomialquotientremainder/", 
-            "text": "PolynomialQuotientRemainder\n\n\nPolynomialQuotientRemainder[poly_, div_, var_]\n returns the quotient and remainder of \npoly\n divided by \ndiv\n treating \nvar\n as the polynomial variable.\n\n\nAttributes[PolynomialQuotientRemainder] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialQuotientRemainder\n[\n2\n \n+\n \nx\n^\n2\n \n+\n \nx\n^\n3\n,\n \n2\n \n+\n \n2\n*\nx\n,\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n{\nx\n^\n2\n/\n2\n,\n2\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialQuotientRemainder\n[\nx\n^\n3\n,\n \nx\n \n+\n \ny\n,\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n{\nx\n^\n2\n-\nx\n \ny\n+\ny\n^\n2\n,\n-\ny\n^\n3\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialQuotientRemainder\n[\n1\n \n+\n \nx\n^\n3\n,\n \n1\n \n+\n \na\n*\nx\n^\n2\n,\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n{\nx\n/\na\n,\n1\n-\nx\n/\na\n}", 
+            "text": "PolynomialQuotientRemainder\n\n\nPolynomialQuotientRemainder[poly_, div_, var_]\n returns the quotient and remainder of \npoly\n divided by \ndiv\n treating \nvar\n as the polynomial variable.\n\n\nAttributes[PolynomialQuotientRemainder] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialQuotientRemainder\n[(\n2\n \n+\n \nx\n^\n2\n \n+\n \nx\n^\n3\n),\n \n(\n2\n \n+\n \n(\n2\n \n*\n \nx\n)),\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n{(\nx\n^\n2\n \n*\n \n2\n^-\n1\n),\n \n2\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialQuotientRemainder\n[\nx\n^\n3\n,\n \n(\nx\n \n+\n \ny\n),\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n{(\nx\n^\n2\n \n+\n \n((\nx\n \n*\n \ny\n)\n \n*\n \n-\n1\n)\n \n+\n \ny\n^\n2\n),\n \n(\ny\n^\n3\n \n*\n \n-\n1\n)}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialQuotientRemainder\n[(\n1\n \n+\n \nx\n^\n3\n),\n \n(\n1\n \n+\n \n(\na\n \n*\n \nx\n^\n2\n)),\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n{(\nx\n \n*\n \na\n^-\n1\n),\n \n(\n1\n \n+\n \n((\nx\n \n*\n \na\n^-\n1\n)\n \n*\n \n-\n1\n))}", 
             "title": "PolynomialQuotientRemainder "
         }, 
         {
@@ -1582,12 +1632,12 @@
         }, 
         {
             "location": "/builtin/power/polynomialquotientremainder/#simple-examples", 
-            "text": "In [ 1 ] :=   PolynomialQuotientRemainder [ 2   +   x ^ 2   +   x ^ 3 ,   2   +   2 * x ,   x ]  Out [ 1 ] =   { x ^ 2 / 2 , 2 }   In [ 2 ] :=   PolynomialQuotientRemainder [ x ^ 3 ,   x   +   y ,   x ]  Out [ 2 ] =   { x ^ 2 - x   y + y ^ 2 , - y ^ 3 }   In [ 3 ] :=   PolynomialQuotientRemainder [ 1   +   x ^ 3 ,   1   +   a * x ^ 2 ,   x ]  Out [ 3 ] =   { x / a , 1 - x / a }", 
+            "text": "In [ 1 ] :=   PolynomialQuotientRemainder [( 2   +   x ^ 2   +   x ^ 3 ),   ( 2   +   ( 2   *   x )),   x ]  Out [ 1 ] =   {( x ^ 2   *   2 ^- 1 ),   2 }   In [ 2 ] :=   PolynomialQuotientRemainder [ x ^ 3 ,   ( x   +   y ),   x ]  Out [ 2 ] =   {( x ^ 2   +   (( x   *   y )   *   - 1 )   +   y ^ 2 ),   ( y ^ 3   *   - 1 )}   In [ 3 ] :=   PolynomialQuotientRemainder [( 1   +   x ^ 3 ),   ( 1   +   ( a   *   x ^ 2 )),   x ]  Out [ 3 ] =   {( x   *   a ^- 1 ),   ( 1   +   (( x   *   a ^- 1 )   *   - 1 ))}", 
             "title": "Simple examples"
         }, 
         {
             "location": "/builtin/power/polynomialquotient/", 
-            "text": "PolynomialQuotient\n\n\nPolynomialQuotient[poly_, div_, var_]\n returns the quotient of \npoly\n divided by \ndiv\n treating \nvar\n as the polynomial variable.\n\n\nAttributes[PolynomialQuotient] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialQuotient\n[\n2\n \n+\n \nx\n^\n2\n \n+\n \nx\n^\n3\n,\n \n2\n \n+\n \n2\n*\nx\n,\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \nx\n^\n2\n/\n2\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialQuotient\n[\nx\n^\n3\n,\n \nx\n \n+\n \ny\n,\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \nx\n^\n2\n-\nx\n \ny\n+\ny\n^\n2\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialQuotient\n[\n1\n \n+\n \nx\n^\n3\n,\n \n1\n \n+\n \na\n*\nx\n^\n2\n,\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \nx\n/\na", 
+            "text": "PolynomialQuotient\n\n\nPolynomialQuotient[poly_, div_, var_]\n returns the quotient of \npoly\n divided by \ndiv\n treating \nvar\n as the polynomial variable.\n\n\nAttributes[PolynomialQuotient] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialQuotient\n[(\n2\n \n+\n \nx\n^\n2\n \n+\n \nx\n^\n3\n),\n \n(\n2\n \n+\n \n(\n2\n \n*\n \nx\n)),\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n(\nx\n^\n2\n \n*\n \n2\n^-\n1\n)\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialQuotient\n[\nx\n^\n3\n,\n \n(\nx\n \n+\n \ny\n),\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n(\nx\n^\n2\n \n+\n \n((\nx\n \n*\n \ny\n)\n \n*\n \n-\n1\n)\n \n+\n \ny\n^\n2\n)\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialQuotient\n[(\n1\n \n+\n \nx\n^\n3\n),\n \n(\n1\n \n+\n \n(\na\n \n*\n \nx\n^\n2\n)),\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n(\nx\n \n*\n \na\n^-\n1\n)", 
             "title": "PolynomialQuotient "
         }, 
         {
@@ -1597,12 +1647,12 @@
         }, 
         {
             "location": "/builtin/power/polynomialquotient/#simple-examples", 
-            "text": "In [ 1 ] :=   PolynomialQuotient [ 2   +   x ^ 2   +   x ^ 3 ,   2   +   2 * x ,   x ]  Out [ 1 ] =   x ^ 2 / 2   In [ 2 ] :=   PolynomialQuotient [ x ^ 3 ,   x   +   y ,   x ]  Out [ 2 ] =   x ^ 2 - x   y + y ^ 2   In [ 3 ] :=   PolynomialQuotient [ 1   +   x ^ 3 ,   1   +   a * x ^ 2 ,   x ]  Out [ 3 ] =   x / a", 
+            "text": "In [ 1 ] :=   PolynomialQuotient [( 2   +   x ^ 2   +   x ^ 3 ),   ( 2   +   ( 2   *   x )),   x ]  Out [ 1 ] =   ( x ^ 2   *   2 ^- 1 )   In [ 2 ] :=   PolynomialQuotient [ x ^ 3 ,   ( x   +   y ),   x ]  Out [ 2 ] =   ( x ^ 2   +   (( x   *   y )   *   - 1 )   +   y ^ 2 )   In [ 3 ] :=   PolynomialQuotient [( 1   +   x ^ 3 ),   ( 1   +   ( a   *   x ^ 2 )),   x ]  Out [ 3 ] =   ( x   *   a ^- 1 )", 
             "title": "Simple examples"
         }, 
         {
             "location": "/builtin/power/polynomialremainder/", 
-            "text": "PolynomialRemainder\n\n\nPolynomialRemainder[poly_, div_, var_]\n returns the remainder of \npoly\n divided by \ndiv\n treating \nvar\n as the polynomial variable.\n\n\nAttributes[PolynomialRemainder] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialRemainder\n[\n2\n \n+\n \nx\n^\n2\n \n+\n \nx\n^\n3\n,\n \n2\n \n+\n \n2\n*\nx\n,\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n2\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialRemainder\n[\nx\n^\n3\n,\n \nx\n \n+\n \ny\n,\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n-\ny\n^\n3\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialRemainder\n[\n1\n \n+\n \nx\n^\n3\n,\n \n1\n \n+\n \na\n*\nx\n^\n2\n,\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n1\n-\nx\n/\na", 
+            "text": "PolynomialRemainder\n\n\nPolynomialRemainder[poly_, div_, var_]\n returns the remainder of \npoly\n divided by \ndiv\n treating \nvar\n as the polynomial variable.\n\n\nAttributes[PolynomialRemainder] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialRemainder\n[(\n2\n \n+\n \nx\n^\n2\n \n+\n \nx\n^\n3\n),\n \n(\n2\n \n+\n \n(\n2\n \n*\n \nx\n)),\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n2\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialRemainder\n[\nx\n^\n3\n,\n \n(\nx\n \n+\n \ny\n),\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n(\ny\n^\n3\n \n*\n \n-\n1\n)\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialRemainder\n[(\n1\n \n+\n \nx\n^\n3\n),\n \n(\n1\n \n+\n \n(\na\n \n*\n \nx\n^\n2\n)),\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n(\n1\n \n+\n \n((\nx\n \n*\n \na\n^-\n1\n)\n \n*\n \n-\n1\n))", 
             "title": "PolynomialRemainder "
         }, 
         {
@@ -1612,12 +1662,12 @@
         }, 
         {
             "location": "/builtin/power/polynomialremainder/#simple-examples", 
-            "text": "In [ 1 ] :=   PolynomialRemainder [ 2   +   x ^ 2   +   x ^ 3 ,   2   +   2 * x ,   x ]  Out [ 1 ] =   2   In [ 2 ] :=   PolynomialRemainder [ x ^ 3 ,   x   +   y ,   x ]  Out [ 2 ] =   - y ^ 3   In [ 3 ] :=   PolynomialRemainder [ 1   +   x ^ 3 ,   1   +   a * x ^ 2 ,   x ]  Out [ 3 ] =   1 - x / a", 
+            "text": "In [ 1 ] :=   PolynomialRemainder [( 2   +   x ^ 2   +   x ^ 3 ),   ( 2   +   ( 2   *   x )),   x ]  Out [ 1 ] =   2   In [ 2 ] :=   PolynomialRemainder [ x ^ 3 ,   ( x   +   y ),   x ]  Out [ 2 ] =   ( y ^ 3   *   - 1 )   In [ 3 ] :=   PolynomialRemainder [( 1   +   x ^ 3 ),   ( 1   +   ( a   *   x ^ 2 )),   x ]  Out [ 3 ] =   ( 1   +   (( x   *   a ^- 1 )   *   - 1 ))", 
             "title": "Simple examples"
         }, 
         {
             "location": "/builtin/power/factortermslist/", 
-            "text": "FactorTermsList\n\n\nFactorTermsList[expr]\n factors out the constant term of \nexpr\n and puts the factored result into a \nList\n.\n\n\nAttributes[FactorTermsList] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nFactorTermsList\n[\n2\n*\nSin\n[\n8\n*\nk\n]]\n\n\nOut\n[\n1\n]\n=\n \n{\n2\n,\nSin\n[\n8\n \nk\n]}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFactorTermsList\n[\na\n/\n2\n \n+\n \nx\n/\n2\n]\n\n\nOut\n[\n2\n]\n=\n \n{\n1\n/\n2\n,\na\n+\nx\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nFactorTermsList\n[\na\n \n+\n \nx\n]\n\n\nOut\n[\n3\n]\n=\n \n{\n1\n,\na\n+\nx\n}", 
+            "text": "FactorTermsList\n\n\nFactorTermsList[expr]\n factors out the constant term of \nexpr\n and puts the factored result into a \nList\n.\n\n\nAttributes[FactorTermsList] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nFactorTermsList\n[(\n2\n \n*\n \nSin\n[(\n8\n \n*\n \nk\n)])]\n\n\nOut\n[\n1\n]\n=\n \n{\n2\n,\n \nSin\n[(\n8\n \n*\n \nk\n)]}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nFactorTermsList\n[((\na\n \n*\n \n2\n^-\n1\n)\n \n+\n \n(\nx\n \n*\n \n2\n^-\n1\n))]\n\n\nOut\n[\n2\n]\n=\n \n{(\n1\n \n*\n \n2\n^-\n1\n),\n \n(\na\n \n+\n \nx\n)}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nFactorTermsList\n[(\na\n \n+\n \nx\n)]\n\n\nOut\n[\n3\n]\n=\n \n{\n1\n,\n \n(\na\n \n+\n \nx\n)}", 
             "title": "FactorTermsList "
         }, 
         {
@@ -1627,7 +1677,37 @@
         }, 
         {
             "location": "/builtin/power/factortermslist/#simple-examples", 
-            "text": "In [ 1 ] :=   FactorTermsList [ 2 * Sin [ 8 * k ]]  Out [ 1 ] =   { 2 , Sin [ 8   k ]}   In [ 2 ] :=   FactorTermsList [ a / 2   +   x / 2 ]  Out [ 2 ] =   { 1 / 2 , a + x }   In [ 3 ] :=   FactorTermsList [ a   +   x ]  Out [ 3 ] =   { 1 , a + x }", 
+            "text": "In [ 1 ] :=   FactorTermsList [( 2   *   Sin [( 8   *   k )])]  Out [ 1 ] =   { 2 ,   Sin [( 8   *   k )]}   In [ 2 ] :=   FactorTermsList [(( a   *   2 ^- 1 )   +   ( x   *   2 ^- 1 ))]  Out [ 2 ] =   {( 1   *   2 ^- 1 ),   ( a   +   x )}   In [ 3 ] :=   FactorTermsList [( a   +   x )]  Out [ 3 ] =   { 1 ,   ( a   +   x )}", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/power/variables/", 
+            "text": "Variables\n\n\nAttributes[Variables] := {Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nVariables\n[(\nx\n \n+\n \ny\n \n+\n \ny\n^\n2\n)]\n\n\nOut\n[\n1\n]\n=\n \n{\nx\n,\n \ny\n}\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nVariables\n[(\nw\n^\nw\n \n+\n \nx\n^\ny\n \n+\n \nz\n)]\n\n\nOut\n[\n2\n]\n=\n \n{\nw\n^\nw\n,\n \nx\n^\ny\n,\n \nz\n}\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nVariables\n[(\na\n^\n2\n \n*\n \nb\n^\n((\n2\n \n*\n \nc\n)\n \n+\n \n(\n2\n \n*\n \nd\n)))]\n\n\nOut\n[\n3\n]\n=\n \n{\na\n,\n \nb\n^\nc\n,\n \nb\n^\nd\n}", 
+            "title": "Variables "
+        }, 
+        {
+            "location": "/builtin/power/variables/#variables", 
+            "text": "Attributes[Variables] := {Protected}", 
+            "title": "Variables"
+        }, 
+        {
+            "location": "/builtin/power/variables/#simple-examples", 
+            "text": "In [ 1 ] :=   Variables [( x   +   y   +   y ^ 2 )]  Out [ 1 ] =   { x ,   y }   In [ 2 ] :=   Variables [( w ^ w   +   x ^ y   +   z )]  Out [ 2 ] =   { w ^ w ,   x ^ y ,   z }   In [ 3 ] :=   Variables [( a ^ 2   *   b ^ (( 2   *   c )   +   ( 2   *   d )))]  Out [ 3 ] =   { a ,   b ^ c ,   b ^ d }", 
+            "title": "Simple examples"
+        }, 
+        {
+            "location": "/builtin/power/polynomialgcd/", 
+            "text": "PolynomialGCD\n\n\nPolynomialGCD[a, b]\n calculates the polynomial GCD of \na\n and \nb\n.\n\n\nAttributes[PolynomialGCD] := {Listable, Protected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nPolynomialGCD\n[(\n15\n \n+\n \n(\n13\n \n*\n \na\n)\n \n+\n \n(\n2\n \n*\n \na\n^\n2\n)),\n \n(\n10\n \n+\n \n(\n7\n \n*\n \na\n)\n \n+\n \na\n^\n2\n)]\n\n\nOut\n[\n1\n]\n=\n \n(\n5\n \n+\n \na\n)\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nPolynomialGCD\n[(\n15\n \n+\n \n(\n13\n \n*\n \na\n)\n \n+\n \n(\n5\n \n*\n \na\n^\n2\n)\n \n+\n \n(\n2\n \n*\n \na\n^\n3\n)),\n \n(\n10\n \n+\n \n(\n7\n \n*\n \na\n)\n \n+\n \n(\n3\n \n*\n \na\n^\n2\n)\n \n+\n \na\n^\n3\n)]\n\n\nOut\n[\n2\n]\n=\n \n(\n5\n \n+\n \na\n \n+\n \na\n^\n2\n)\n\n\n\n\n\n\nIn\n[\n3\n]\n:=\n \nPolynomialGCD\n[(\n15\n \n+\n \n((\n13\n \n*\n \na\n)\n \n+\n \n(\na\n^\n2\n \n*\n \n-\n1\n)\n \n+\n \n((\n2\n \n*\n \na\n^\n3\n)\n \n*\n \n-\n1\n))),\n \n(\n5\n \n+\n \n(\na\n \n+\n \n(\na\n^\n2\n \n*\n \n-\n1\n)))]\n\n\nOut\n[\n3\n]\n=\n \n(\n-\n5\n \n+\n \n(\na\n \n*\n \n-\n1\n)\n \n+\n \na\n^\n2\n)", 
+            "title": "PolynomialGCD "
+        }, 
+        {
+            "location": "/builtin/power/polynomialgcd/#polynomialgcd", 
+            "text": "PolynomialGCD[a, b]  calculates the polynomial GCD of  a  and  b .  Attributes[PolynomialGCD] := {Listable, Protected}", 
+            "title": "PolynomialGCD"
+        }, 
+        {
+            "location": "/builtin/power/polynomialgcd/#simple-examples", 
+            "text": "In [ 1 ] :=   PolynomialGCD [( 15   +   ( 13   *   a )   +   ( 2   *   a ^ 2 )),   ( 10   +   ( 7   *   a )   +   a ^ 2 )]  Out [ 1 ] =   ( 5   +   a )   In [ 2 ] :=   PolynomialGCD [( 15   +   ( 13   *   a )   +   ( 5   *   a ^ 2 )   +   ( 2   *   a ^ 3 )),   ( 10   +   ( 7   *   a )   +   ( 3   *   a ^ 2 )   +   a ^ 3 )]  Out [ 2 ] =   ( 5   +   a   +   a ^ 2 )   In [ 3 ] :=   PolynomialGCD [( 15   +   (( 13   *   a )   +   ( a ^ 2   *   - 1 )   +   (( 2   *   a ^ 3 )   *   - 1 ))),   ( 5   +   ( a   +   ( a ^ 2   *   - 1 )))]  Out [ 3 ] =   ( - 5   +   ( a   *   - 1 )   +   a ^ 2 )", 
             "title": "Simple examples"
         }, 
         {

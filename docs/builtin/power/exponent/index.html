@@ -298,6 +298,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="atoms" href="../../atoms/">
         atoms
@@ -528,6 +532,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -631,6 +643,14 @@
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1025,8 +1045,16 @@
 <p><code>Exponent[p, var]</code> returns the degree of <code>p</code> with respect to the variable <code>var</code>.</p>
 <p><code>Attributes[Exponent] := {Listable, Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Exponent</span><span class="p">[</span><span class="m">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">k</span><span class="o">*</span><span class="nv">x</span><span class="o">^</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nb">List</span><span class="p">]</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">}</span><span class="w"></span>
+<p>Find the degree of a polynomial:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Exponent</span><span class="p">[(</span><span class="m">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">5</span><span class="p">)),</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="further-examples">Further examples</h2>
+<p>Find the degree of a polynomial:</p>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Exponent</span><span class="p">[(</span><span class="m">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">5</span><span class="p">)),</span><span class="w"> </span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nb">List</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">}</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             
