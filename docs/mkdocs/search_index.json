@@ -152,12 +152,12 @@
         }, 
         {
             "location": "/builtin/calculus/integrate/", 
-            "text": "Integrate\n\n\nIntegrate[f, x]\n finds the indefinite integral of \nf\n with respect to \nx\n.\n\n\n\n\nWarning\n\n\n\n\n\\\"Under development\\\"\n    This function is under development, and as such will be incomplete and inaccurate.\n\n\nAttributes[Integrate] := {Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nIntegrate\n[(\nx\n^\n(\n2\n \n*\n \n3\n^-\n1\n)\n \n+\n \n(\n3\n \n*\n \nx\n)\n \n+\n \n2\n),\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n((\n2\n \n*\n \nx\n)\n \n+\n \n((\n3\n \n*\n \nx\n^\n(\n5\n \n*\n \n3\n^-\n1\n))\n \n*\n \n5\n^-\n1\n)\n \n+\n \n((\n3\n \n*\n \nx\n^\n2\n)\n \n*\n \n2\n^-\n1\n))\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nIntegrate\n[\nIntegrate\n[(\nSin\n[\nx\n]\n \n+\n \nLog\n[\nx\n]),\n \nx\n],\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n((((\n3\n \n*\n \nx\n^\n2\n)\n \n*\n \n4\n^-\n1\n)\n \n*\n \n-\n1\n)\n \n+\n \n(((\n1\n \n*\n \n2\n^-\n1\n)\n \n*\n \nx\n^\n2\n \n*\n \nLog\n[\nx\n])\n \n+\n \n(\nSin\n[\nx\n]\n \n*\n \n-\n1\n)))", 
+            "text": "Integrate\n\n\nIntegrate[f, x]\n finds the indefinite integral of \nf\n with respect to \nx\n.\n\n\n\n\nUnder development\n\n\nThis function is under development, and as such will be incomplete and inaccurate.\n\n\n\n\nAttributes[Integrate] := {Protected, ReadProtected}\n\n\nSimple examples\n\n\nIn\n[\n1\n]\n:=\n \nIntegrate\n[(\nx\n^\n(\n2\n \n*\n \n3\n^-\n1\n)\n \n+\n \n(\n3\n \n*\n \nx\n)\n \n+\n \n2\n),\n \nx\n]\n\n\nOut\n[\n1\n]\n=\n \n((\n2\n \n*\n \nx\n)\n \n+\n \n((\n3\n \n*\n \nx\n^\n(\n5\n \n*\n \n3\n^-\n1\n))\n \n*\n \n5\n^-\n1\n)\n \n+\n \n((\n3\n \n*\n \nx\n^\n2\n)\n \n*\n \n2\n^-\n1\n))\n\n\n\n\n\n\nIn\n[\n2\n]\n:=\n \nIntegrate\n[\nIntegrate\n[(\nSin\n[\nx\n]\n \n+\n \nLog\n[\nx\n]),\n \nx\n],\n \nx\n]\n\n\nOut\n[\n2\n]\n=\n \n((((\n3\n \n*\n \nx\n^\n2\n)\n \n*\n \n4\n^-\n1\n)\n \n*\n \n-\n1\n)\n \n+\n \n(((\n1\n \n*\n \n2\n^-\n1\n)\n \n*\n \nx\n^\n2\n \n*\n \nLog\n[\nx\n])\n \n+\n \n(\nSin\n[\nx\n]\n \n*\n \n-\n1\n)))", 
             "title": "Integrate "
         }, 
         {
             "location": "/builtin/calculus/integrate/#integrate", 
-            "text": "Integrate[f, x]  finds the indefinite integral of  f  with respect to  x .   Warning   \\\"Under development\\\"\n    This function is under development, and as such will be incomplete and inaccurate.  Attributes[Integrate] := {Protected, ReadProtected}", 
+            "text": "Integrate[f, x]  finds the indefinite integral of  f  with respect to  x .   Under development  This function is under development, and as such will be incomplete and inaccurate.   Attributes[Integrate] := {Protected, ReadProtected}", 
             "title": "Integrate"
         }, 
         {
