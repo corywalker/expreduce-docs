@@ -540,6 +540,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../">
         matrix
@@ -692,6 +696,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="random" href="../../random/">
         random
@@ -738,6 +750,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="sort" href="../../sort/">
         sort
@@ -763,6 +779,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -1002,10 +1022,6 @@
       
         
   
-
-      
-        
-  
     <li>
       <a class="" title="numbertheory" href="../../numbertheory/">
         numbertheory
@@ -1016,6 +1032,37 @@
 
       
         
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+    <li>
+      <a class="" title="manip" href="../../manip/">
+        manip
+      </a>
+      
+    </li>
   
 
       
@@ -1045,13 +1092,13 @@
 <p><code>a.b</code> computes the product of <code>a</code> and <code>b</code> for vectors and matrices.</p>
 <p><code>Attributes[Dot] := {Flat, OneIdentity, Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">}</span><span class="o">.</span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="nv">d</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Dot</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="nv">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">c</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">d</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">}</span><span class="o">.</span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">e</span><span class="p">}</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">}</span><span class="o">.</span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">e</span><span class="p">}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Dot</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">e</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Dot</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">e</span><span class="p">}]</span><span class="w"></span>
 </pre></div>
 
 
@@ -1065,8 +1112,8 @@
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}}</span><span class="o">.</span><span class="p">{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">,</span><span class="w"> </span><span class="nv">g</span><span class="p">}</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}}</span><span class="o">.</span><span class="p">{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">,</span><span class="w"> </span><span class="nv">g</span><span class="p">}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Dot</span><span class="p">[{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">,</span><span class="w"> </span><span class="nv">g</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Dot</span><span class="p">[{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">,</span><span class="w"> </span><span class="nv">g</span><span class="p">}]</span><span class="w"></span>
 </pre></div>
 
 
@@ -1085,18 +1132,18 @@
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}}</span><span class="o">.</span><span class="p">{{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">g</span><span class="p">,</span><span class="w"> </span><span class="nv">h</span><span class="p">}}</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="nv">a</span><span class="w"> </span><span class="nv">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="nv">g</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="nv">h</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="w"> </span><span class="nv">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="nv">g</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="nv">h</span><span class="p">}}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Dot</span><span class="p">[{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">g</span><span class="p">,</span><span class="w"> </span><span class="nv">h</span><span class="p">}}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{((</span><span class="nv">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">e</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">g</span><span class="p">)),</span><span class="w"> </span><span class="p">((</span><span class="nv">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">f</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">h</span><span class="p">))},</span><span class="w"> </span><span class="p">{((</span><span class="nv">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">e</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">d</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">g</span><span class="p">)),</span><span class="w"> </span><span class="p">((</span><span class="nv">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">f</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">d</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">h</span><span class="p">))}}</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}}</span><span class="o">.</span><span class="p">{{</span><span class="nv">e</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">f</span><span class="p">}}</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="nv">a</span><span class="w"> </span><span class="nv">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="nv">f</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="w"> </span><span class="nv">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="nv">f</span><span class="p">}}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Dot</span><span class="p">[{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nv">e</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">f</span><span class="p">}}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">10</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{((</span><span class="nv">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">e</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">f</span><span class="p">))},</span><span class="w"> </span><span class="p">{((</span><span class="nv">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">e</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">d</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">f</span><span class="p">))}}</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}}</span><span class="o">.</span><span class="p">{{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">}}</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}}</span><span class="o">.</span><span class="p">{{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">}}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Dot</span><span class="p">[{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">}}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">11</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Dot</span><span class="p">[{{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}},</span><span class="w"> </span><span class="p">{{</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">}}]</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             

@@ -89,38 +89,37 @@ func renderExamples(f *os.File, category string, examples []expreduce.TestInstru
 		comment, isComment := ti.(*expreduce.TestComment)
 		if isComment {
 			f.WriteString(fmt.Sprintf("%v\n", comment.Comment))
+			continue
 		}
+
+		inStr, outStr := "", ""
 		sameTest, isSameTest := ti.(*expreduce.SameTest)
 		if isSameTest {
-			f.WriteString("```wl\n")
-			f.WriteString(fmt.Sprintf("In[%d]:= %v\n", count, sameTest.In))
-			f.WriteString(fmt.Sprintf("Out[%d]= %v\n", count, sameTest.Out))
-			f.WriteString("```\n")
-			count += 1
+			inStr = sameTest.In
+			outStr = sameTest.Out
 		}
 		sameTestEx, isSameTestEx := ti.(*expreduce.SameTestEx)
 		if isSameTestEx {
-			f.WriteString("```wl\n")
-			f.WriteString(fmt.Sprintf("In[%d]:= %v\n", count, sameTestEx.In))
-			f.WriteString(fmt.Sprintf("Out[%d]= %v\n", count, sameTestEx.Out))
-			f.WriteString("```\n")
-			count += 1
+			inStr = strings.Replace(sameTestEx.In.String(), "Private`", "", -1)
+			outStr = strings.Replace(sameTestEx.Out.String(), "Private`", "", -1)
 		}
 		stringTest, isStringTest := ti.(*expreduce.StringTest)
 		if isStringTest {
-			f.WriteString("```wl\n")
-			f.WriteString(fmt.Sprintf("In[%d]:= %v\n", count, stringTest.In))
-			f.WriteString(fmt.Sprintf("Out[%d]= %v\n", count, stringTest.Out))
-			f.WriteString("```\n")
-			count += 1
+			inStr = stringTest.In
+			outStr = stringTest.Out
 		}
 		exampleOnlyTest, isExampleOnlyInstruction := ti.(*expreduce.ExampleOnlyInstruction)
 		if isExampleOnlyInstruction {
+			inStr = exampleOnlyTest.In
+			outStr = exampleOnlyTest.Out
+		}
+		if len(inStr) > 0 {
 			f.WriteString("```wl\n")
-			f.WriteString(fmt.Sprintf("In[%d]:= %v\n", count, exampleOnlyTest.In))
-			f.WriteString(fmt.Sprintf("Out[%d]= %v\n", count, exampleOnlyTest.Out))
+			f.WriteString(fmt.Sprintf("In[%d]:= %v\n", count, inStr))
+			f.WriteString(fmt.Sprintf("Out[%d]= %v\n", count, outStr))
 			f.WriteString("```\n")
 			count += 1
+			continue
 		}
 	}
 }

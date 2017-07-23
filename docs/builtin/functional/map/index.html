@@ -540,6 +540,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -692,6 +696,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="random" href="../../random/">
         random
@@ -738,6 +750,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="sort" href="../../sort/">
         sort
@@ -763,6 +779,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -1002,10 +1022,6 @@
       
         
   
-
-      
-        
-  
     <li>
       <a class="" title="numbertheory" href="../../numbertheory/">
         numbertheory
@@ -1016,6 +1032,37 @@
 
       
         
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+    <li>
+      <a class="" title="manip" href="../../manip/">
+        manip
+      </a>
+      
+    </li>
   
 
       
@@ -1050,12 +1097,12 @@
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="o">/@</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Map</span><span class="p">[</span><span class="nv">foo</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">}]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">],</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">b</span><span class="p">],</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">c</span><span class="p">]}</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Times</span><span class="w"> </span><span class="o">/@</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Map</span><span class="p">[</span><span class="nb">Times</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">}]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 
@@ -1081,13 +1128,13 @@
 
 
 <p>Pure functions are useful with <code>Map</code>:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">/@</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="m">4</span><span class="p">}</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">4</span><span class="p">,</span><span class="m">16</span><span class="p">}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Map</span><span class="p">[</span><span class="nb">Function</span><span class="p">[</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">16</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Function</span><span class="p">[</span><span class="nf">#</span><span class="o">^</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">/@</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="m">4</span><span class="p">}</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">4</span><span class="p">,</span><span class="m">16</span><span class="p">}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Map</span><span class="p">[</span><span class="nb">Function</span><span class="p">[</span><span class="nb">Slot</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">^</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">16</span><span class="p">}</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             

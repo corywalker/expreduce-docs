@@ -540,6 +540,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -692,6 +696,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="random" href="../../random/">
         random
@@ -738,6 +750,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="sort" href="../../sort/">
         sort
@@ -763,6 +779,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -1002,10 +1022,6 @@
       
         
   
-
-      
-        
-  
     <li>
       <a class="" title="numbertheory" href="../../numbertheory/">
         numbertheory
@@ -1016,6 +1032,37 @@
 
       
         
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+    <li>
+      <a class="" title="manip" href="../../manip/">
+        manip
+      </a>
+      
+    </li>
   
 
       
@@ -1045,42 +1092,42 @@
 <p><code>alt1 | alt2 | ...</code> matches an expression if it matches any pattern in the list of alternatives.</p>
 <p><code>Attributes[Alternatives] := {Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">d</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Alternatives</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="nv">d</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Alternatives</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Alternatives</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">d</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nb">Alternatives</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">d</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nb">Alternatives</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">d</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nb">Alternatives</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Cases</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">},</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nt">_Integer</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Cases</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">},</span><span class="w"> </span><span class="nb">Alternatives</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nt">_Integer</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="m">1.</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">}</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nt">amatch_Symbol</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nt">amatch_Integer</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">amatch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">List</span><span class="p">)[</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="m">1.</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">({</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="m">1.</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">})</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">((</span><span class="nb">Alternatives</span><span class="p">[</span><span class="nt">amatch_Symbol</span><span class="p">,</span><span class="w"> </span><span class="nt">amatch_Integer</span><span class="p">])</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">((</span><span class="nv">amatch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)))</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">List</span><span class="p">)[(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">a</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">c</span><span class="p">),</span><span class="w"> </span><span class="m">1.</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Cases</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">},</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">e</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Cases</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="nv">f</span><span class="p">},</span><span class="w"> </span><span class="nb">Alternatives</span><span class="p">[</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">e</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">e</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nt">a_</span><span class="p">}]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nb">Alternatives</span><span class="p">[</span><span class="nv">k</span><span class="p">,</span><span class="w"> </span><span class="nt">a_</span><span class="p">]}]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
