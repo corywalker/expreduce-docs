@@ -17,11 +17,6 @@ Expreduce is [on GitHub](https://github.com/corywalker/expreduce).
 # Installation
 ```
 go get github.com/corywalker/expreduce/expreduce
-
-# It will complain about undefined Assets. To fix this, cd to the
-# <GOPATH>/src/github.com/corywalker/expreduce directory and run:
-
-go generate ./...
 ```
 
 # Example
