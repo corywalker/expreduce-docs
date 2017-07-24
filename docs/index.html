@@ -460,6 +460,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="list" href="builtin/list/">
         list
@@ -621,6 +625,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="specialsyms" href="builtin/specialsyms/">
         specialsyms
@@ -658,6 +666,18 @@
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1033,6 +1053,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="numbertheory" href="builtin/numbertheory/">
         numbertheory
@@ -1125,29 +1149,33 @@ go run calc.go
 
 <span class="nv">Welcome</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">Expreduce</span><span class="o">!</span><span class="w"></span>
 
-<span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nb">Sin</span><span class="p">[</span><span class="nv">x</span><span class="p">]</span><span class="o">/</span><span class="nv">x</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nb">Cos</span><span class="p">[</span><span class="nb">Log</span><span class="p">[</span><span class="nb">Sin</span><span class="p">[</span><span class="nv">x</span><span class="p">]]</span><span class="o">+</span><span class="nv">x</span><span class="p">]</span><span class="o">+</span><span class="nv">x</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
 
-<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="m">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="o">^-</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Sin</span><span class="p">[</span><span class="nv">x</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nb">Cos</span><span class="p">[</span><span class="nv">x</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="o">^-</span><span class="m">1</span><span class="p">))</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Cot</span><span class="p">[</span><span class="nv">x</span><span class="p">])</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Sin</span><span class="p">[(</span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Log</span><span class="p">[</span><span class="nb">Sin</span><span class="p">[</span><span class="nv">x</span><span class="p">]])]))</span><span class="w"></span>
 
-<span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="p">,{</span><span class="nv">a</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Integrate</span><span class="p">[</span><span class="m">5</span><span class="o">*</span><span class="nb">E</span><span class="o">^</span><span class="p">(</span><span class="m">3</span><span class="o">*</span><span class="nv">x</span><span class="p">),{</span><span class="nv">x</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="nv">a</span><span class="p">}]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Expand</span><span class="w"></span>
 
-<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">36</span><span class="p">,</span><span class="w"> </span><span class="m">49</span><span class="p">,</span><span class="w"> </span><span class="m">64</span><span class="p">,</span><span class="w"> </span><span class="m">81</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">}</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="m">5</span><span class="o">/</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">E</span><span class="o">^</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="o">/</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">E</span><span class="o">^</span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">a</span><span class="p">)))</span><span class="w"></span>
 
-<span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Sum</span><span class="p">[</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">FactorSquareFree</span><span class="p">[</span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">4</span><span class="p">]</span><span class="w"></span>
 
-<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">n</span><span class="p">)</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
 
-<span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">n</span><span class="p">))</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">n</span><span class="o">-&gt;</span><span class="m">5</span><span class="w"></span>
+<span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Sum</span><span class="p">[</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="p">}]</span><span class="w"></span>
 
-<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">n</span><span class="p">))</span><span class="w"></span>
 
-<span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Total</span><span class="p">[</span><span class="nb">Table</span><span class="p">[</span><span class="nv">i</span><span class="p">,{</span><span class="nv">i</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">}]]</span><span class="w"></span>
+<span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Together</span><span class="p">[(</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span><span class="o">/</span><span class="nv">a</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="o">+</span><span class="nv">b</span><span class="o">/</span><span class="nv">c</span><span class="p">]</span><span class="w"></span>
 
-<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="o">/</span><span class="m">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">a</span><span class="o">^-</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">c</span><span class="o">^-</span><span class="m">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">((</span><span class="m">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">36</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">c</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">12</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">c</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">c</span><span class="p">)))</span><span class="w"></span>
 
-<span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">]]</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="nt">amatch_Integer</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nt">cmatch__</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="nt">bmatch_Integer</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nt">cmatch__</span><span class="p">]]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="nv">amatch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">bmatch</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">cmatch</span><span class="p">]]</span><span class="w"></span>
+<span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">40</span><span class="o">!</span><span class="w"></span>
 
-<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">bar</span><span class="p">[</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">815915283247897734345611269596115894272000000000</span><span class="w"></span>
+
+<span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Solve</span><span class="p">[</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="o">-</span><span class="nv">x</span><span class="o">-</span><span class="m">2.5</span><span class="o">==</span><span class="m">0</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{(</span><span class="nv">x</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="m">1.15831</span><span class="p">)},</span><span class="w"> </span><span class="p">{(</span><span class="nv">x</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="m">2.15831</span><span class="p">)}}</span><span class="w"></span>
 </pre></div>
 
 

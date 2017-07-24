@@ -318,6 +318,12 @@
     </url>
         
     <url>
+     <loc>/builtin/flowcontrol/which/</loc>
+     <lastmod>2017-07-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/builtin/list/</loc>
      <lastmod>2017-07-23</lastmod>
      <changefreq>daily</changefreq>
@@ -528,6 +534,12 @@
     </url>
         
     <url>
+     <loc>/builtin/arithmetic/divide/</loc>
+     <lastmod>2017-07-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/builtin/specialsyms/</loc>
      <lastmod>2017-07-23</lastmod>
      <changefreq>daily</changefreq>
@@ -577,6 +589,24 @@
         
     <url>
      <loc>/builtin/power/expand/</loc>
+     <lastmod>2017-07-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/power/log/</loc>
+     <lastmod>2017-07-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/power/sqrt/</loc>
+     <lastmod>2017-07-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/power/i/</loc>
      <lastmod>2017-07-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1015,6 +1045,12 @@
         
     <url>
      <loc>/builtin/simplify/</loc>
+     <lastmod>2017-07-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/builtin/simplify/simplify/</loc>
      <lastmod>2017-07-23</lastmod>
      <changefreq>daily</changefreq>
     </url>

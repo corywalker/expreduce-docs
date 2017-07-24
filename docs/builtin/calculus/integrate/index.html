@@ -449,6 +449,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="list" href="../../list/">
         list
@@ -610,6 +614,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="specialsyms" href="../../specialsyms/">
         specialsyms
@@ -647,6 +655,18 @@
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1022,6 +1042,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="numbertheory" href="../../numbertheory/">
         numbertheory
@@ -1103,6 +1127,36 @@
 
 <div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Integrate</span><span class="p">[</span><span class="nb">Integrate</span><span class="p">[(</span><span class="nb">Sin</span><span class="p">[</span><span class="nv">x</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Log</span><span class="p">[</span><span class="nv">x</span><span class="p">]),</span><span class="w"> </span><span class="nv">x</span><span class="p">],</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">((((</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">4</span><span class="o">^-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(((</span><span class="m">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="o">^-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Log</span><span class="p">[</span><span class="nv">x</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nb">Sin</span><span class="p">[</span><span class="nv">x</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">)))</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Integrate</span><span class="p">[</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">3</span><span class="o">^-</span><span class="m">1</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">((</span><span class="nb">Integrate</span><span class="p">[</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="m">1.</span><span class="p">}]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">0.291667</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">)))</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="nv">e</span><span class="o">-</span><span class="m">05.</span><span class="p">)</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Integrate</span><span class="p">[</span><span class="nb">E</span><span class="o">^</span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="p">),</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nb">E</span><span class="o">^</span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">x</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">3</span><span class="o">^-</span><span class="m">1</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Integrate</span><span class="p">[</span><span class="nv">x</span><span class="o">^</span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">),</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="o">^</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="o">^-</span><span class="m">1</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Integrate</span><span class="p">[</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">n</span><span class="o">^</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">3</span><span class="o">^-</span><span class="m">1</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Integrate</span><span class="p">[</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">3</span><span class="o">^-</span><span class="m">1</span><span class="p">)</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             
