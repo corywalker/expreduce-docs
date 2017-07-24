@@ -1135,6 +1135,11 @@
 <p>Expreduce is <a href="https://github.com/corywalker/expreduce">on GitHub</a>.</p>
 <h1 id="installation">Installation</h1>
 <div class="language-wl"><pre><span></span>go get github.com/corywalker/expreduce/expreduce
+
+# It will complain about undefined Assets. To fix this, cd to the
+# &lt;GOPATH&gt;/src/github.com/corywalker/expreduce directory and run:
+
+go generate ./...
 </pre></div>
 
 
