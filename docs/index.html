@@ -1133,21 +1133,14 @@
 <p>The term rewriting system and pattern matching engine is fairly advanced. The computer algebra system at this stage is extremely limited, but simple calculus and algebraic manipulation is certainly supported (see examples below). If you are looking for a more mature computer algebra system, please consider using Mathematica (proprietary) or Mathics (open source, Sympy-backed).</p>
 <h2 id="source-code">Source code</h2>
 <p>Expreduce is <a href="https://github.com/corywalker/expreduce">on GitHub</a>.</p>
-<h1 id="installation">Installation</h1>
-<div class="language-wl"><pre><span></span>go get github.com/corywalker/expreduce/expreduce
+<h1 id="install-and-run">Install and run</h1>
+<div class="language-wl"><pre><span></span>go get github.com/corywalker/expreduce
+expreduce
 </pre></div>
 
 
 <h1 id="example">Example</h1>
-<p>To run the example CAS prompt:</p>
-<div class="language-wl"><pre><span></span>cd example
-go run calc.go
-</pre></div>
-
-
-<div class="language-wl"><pre><span></span><span class="nf">#</span><span class="w"> </span><span class="nv">go</span><span class="w"> </span><span class="nv">run</span><span class="w"> </span><span class="nv">calc</span><span class="o">.</span><span class="nv">go</span><span class="w"></span>
-
-<span class="nv">Welcome</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">Expreduce</span><span class="o">!</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nv">Welcome</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">Expreduce</span><span class="o">!</span><span class="w"></span>
 
 <span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">D</span><span class="p">[</span><span class="nb">Cos</span><span class="p">[</span><span class="nb">Log</span><span class="p">[</span><span class="nb">Sin</span><span class="p">[</span><span class="nv">x</span><span class="p">]]</span><span class="o">+</span><span class="nv">x</span><span class="p">]</span><span class="o">+</span><span class="nv">x</span><span class="p">,</span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
 
@@ -1193,10 +1186,15 @@ go run calc.go
 <li>Given a set of rules for a symbol (or the universe of rules?), can we prove that the recursive rewrites will terminate? It is fairly easy to write a rule that loops on itself or in cooperation with other rules. Of course, we should remove from consideration some of the imperative symbols such as <code>While</code> and <code>For</code>. Even with these imperative functions removed, is this question still the halting problem? Can we restrict our considerations enough such that the problem is not the halting problem? Answering this question would improve the stability of the system.</li>
 </ol>
 <h1 id="development">Development</h1>
-<p>To run the tests:</p>
-<div class="language-wl"><pre><span></span>cd expreduce
-go test
+<p>Pretty standard Go workflow. Just remember to <code>go generate</code>.</p>
+<div class="language-wl"><pre><span></span># To update any .m changes or changes to the parser:
+go generate ./...
+# To run the test suite:
+go test ./...
 </pre></div>
+
+
+<p>The use of <code>go generate</code> might require the download of additional dependencies.</p>
           <aside class="copyright" role="note">
             
             Documentation built with
