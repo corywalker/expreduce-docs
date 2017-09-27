@@ -59,6 +59,23 @@ In[7]:= Solve[x^2-x-2.5==0,x]
 Out[7]= {{x -> -1.15831}, {x -> 2.15831}}
 ```
 
+# Rubi integration rules
+
+Expreduce uses the Rubi integration suite by Albert Rich. The rules can be loaded by running `LoadRubi[]` and then the integration can be called like `Int[Sin[a + b*Log[c*x^n]], x]`. These rules are much more powerful than the simplistic ones in `Integrate[]`.
+
+http://www.apmaths.uwo.ca/~arich/
+
+## Integration examples
+```wl
+In[1]:= Int[((A + C*Sin[e + f*x]^2)*(a + a*Sin[e + f*x])^m*(c + -c*Sin[e + f*x])^(-1/2)), x]
+
+Out[1]= (f^-1*Cos[e + f*x]*Hypergeometric2F1[1, 1/2 + m, 3/2 + m, 1/2*(1 + Sin[e + f*x])]*(1 + 2*m)^-1*(A + C)*(a + a*Sin[e + f*x])^m*(c + -c*Sin[e + f*x])^(-1/2) + -2*C*a^-1*f^-1*Cos[e + f*x]*(3 + 2*m)^-1*(a + a*Sin[e + f*x])^(1 + m)*(c + -c*Sin[e + f*x])^(-1/2))
+
+In[2]:= Int[(x^-5*(a*x)^(-1/2)*(1 + -a*x)^(-1/2)*(1 + a*x)), x]
+
+Out[1]= (-2/9*a^4*(a*x)^(-9/2)*(1 + -a*x)^(1/2) + -34/63*a^4*(a*x)^(-7/2)*(1 + -a*x)^(1/2) + -68/105*a^4*(a*x)^(-5/2)*(1 + -a*x)^(1/2) + -272/315*a^4*(a*x)^(-3/2)*(1 + -a*x)^(1/2) + -544/315*a^4*(a*x)^(-1/2)*(1 + -a*x)^(1/2))
+```
+
 # Other projects
 
 Expreduce is indeed very similar to Mathics, a similar term rewriting system that uses Sympy as a backend for CAS operations. I created expreduce for a few reasons. The first is that I wanted to learn everything I could about term rewriting systems. The second is that I believe the syntax implemented in here is better suited for building a computer algebra system than using Python to manipulate expressions (as Sympy, and thus Mathics does). Using a language with first-class support for pattern matching and replacement across expression trees is ideal for writing a computer algebra system. This combined with an optimized core can lead to efficient and informed evaluation without much translation work for the programmer when translating equations to code.
