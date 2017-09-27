@@ -302,12 +302,24 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="atoms" href="../../atoms/">
         atoms
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -364,12 +376,56 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="expression" href="../../expression/">
         expression
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -453,12 +509,60 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="list" href="../../list/">
         list
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -724,6 +828,18 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="random" href="../../random/">
         random
@@ -749,6 +865,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -868,12 +988,84 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="trig" href="../../trig/">
         trig
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -914,6 +1106,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="time" href="../../time/">
         time
@@ -935,6 +1135,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -1081,6 +1285,22 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="manip" href="../../manip/">
         manip
@@ -1091,6 +1311,29 @@
 
       
         
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+    <li>
+      <a class="" title="rubi" href="../../rubi/">
+        rubi
+      </a>
+      
+    </li>
   
 
       
@@ -1117,13 +1360,13 @@
 <p><code>Attributes[CompoundExpression] := {HoldAll, Protected, ReadProtected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <p>The result of the first expression is not included in the output, but the result of the second is:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">CompoundExpression</span><span class="p">[(</span><span class="nv">a</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">))]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">CompoundExpression</span><span class="p">[(</span><span class="nv">a</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*-</span><span class="m">1</span><span class="p">]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w"></span>
 </pre></div>
 
 
 <p>Including a trailing semicolon causes the expression to return <code>Null</code>:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">CompoundExpression</span><span class="p">[(</span><span class="nv">a</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">)),</span><span class="w"> </span><span class="nb">Null</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">CompoundExpression</span><span class="p">[(</span><span class="nv">a</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*-</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nb">Null</span><span class="p">]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Null</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
