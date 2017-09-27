@@ -4,7 +4,11 @@
     
     <url>
      <loc>/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,138 +17,227 @@
         
     <url>
      <loc>/builtin/combinatorics/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/combinatorics/integerpartitions/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/combinatorics/permutations/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/combinatorics/multinomial/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/combinatorics/factorial/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/calculus/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/calculus/d/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/calculus/integrate/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/equal/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/unequal/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/sameq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/unsameq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/atomq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/numberq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/numericq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/less/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/greater/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/lessequal/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/greaterequal/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/positive/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/negative/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/comparison/max/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -158,35 +251,55 @@
     <url>
      <loc>/builtin/comparison/possiblezeroq/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/atoms/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/atoms/rational/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/atoms/string/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/atoms/real/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/atoms/integer/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -194,35 +307,55 @@
     <url>
      <loc>/builtin/atoms/integerq/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/functional/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/functional/function/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/functional/slot/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/functional/apply/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/functional/map/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -272,71 +405,115 @@
     <url>
      <loc>/builtin/functional/fixedpoint/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/functional/array/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/functional/identity/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/head/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/depth/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/length/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/sequence/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/evaluate/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/hold/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/holdform/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/expression/flatten/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -356,53 +533,85 @@
     <url>
      <loc>/builtin/expression/holdcomplete/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/solve/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/solve/solve/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/flowcontrol/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/flowcontrol/if/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/flowcontrol/while/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/flowcontrol/compoundexpression/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/flowcontrol/return/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/flowcontrol/which/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -422,59 +631,95 @@
     <url>
      <loc>/builtin/flowcontrol/do/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/list/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/total/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/mean/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/table/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/memberq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/cases/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/deletecases/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/union/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -482,29 +727,45 @@
     <url>
      <loc>/builtin/list/complement/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/padright/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/padleft/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/range/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/part/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -512,47 +773,75 @@
     <url>
      <loc>/builtin/list/span/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/all/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/thread/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/append/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/appendto/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/prepend/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/prependto/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/deleteduplicates/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -578,16 +867,24 @@
     <url>
      <loc>/builtin/list/listq/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/list/last/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
+<<<<<<< HEAD
      <loc>/builtin/list/first/</loc>
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
@@ -608,179 +905,296 @@
     <url>
      <loc>/builtin/list/tally/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <loc>/builtin/list/select/</loc>
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/matrix/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/matrix/inverse/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/matrix/dimensions/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/matrix/vectorq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/matrix/matrixq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/matrix/dot/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/matrix/transpose/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/arithmetic/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/arithmetic/plus/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/arithmetic/sum/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/arithmetic/times/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/arithmetic/product/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/arithmetic/abs/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/arithmetic/divide/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/specialsyms/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/specialsyms/infinity/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/specialsyms/complexinfinity/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/specialsyms/indeterminate/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/specialsyms/pi/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/specialsyms/e/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/power/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/expand/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/log/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/sqrt/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/i/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/polynomialq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/exponent/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/coefficient/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -788,29 +1202,45 @@
     <url>
      <loc>/builtin/power/coefficientlist/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/polynomialquotientremainder/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/polynomialquotient/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/polynomialremainder/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/factortermslist/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -824,83 +1254,135 @@
     <url>
      <loc>/builtin/power/expreducefactorconstant/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/variables/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/polynomialgcd/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/squarefreeq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/power/factorsquarefree/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/random/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/random/randomreal/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/random/seedrandom/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/replaceall/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/replace/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/replacerepeated/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/rule/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/replacement/ruledelayed/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -908,59 +1390,95 @@
     <url>
      <loc>/builtin/replacement/replacepart/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/sort/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/sort/sort/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/sort/order/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/expreducesetlogging/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/expreducedefinitiontimes/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/attributes/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/default/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/clear/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -968,71 +1486,115 @@
     <url>
      <loc>/builtin/system/downvalues/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/set/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/setdelayed/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/timing/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/print/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/messagename/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/trace/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/n/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/listable/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/get/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/module/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/system/hash/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1130,29 +1692,45 @@
     <url>
      <loc>/builtin/system/reap/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/trig/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/trig/sin/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/trig/cos/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/trig/tan/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1160,29 +1738,45 @@
     <url>
      <loc>/builtin/trig/cot/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/string/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/string/tostring/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/string/stringjoin/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/string/infix/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1196,101 +1790,165 @@
     <url>
      <loc>/builtin/string/stringtake/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/time/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/time/unixtime/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/matchq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/pattern/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/blank/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/blanksequence/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/blanknullsequence/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/except/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/patterntest/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/condition/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/alternatives/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/freeq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/replacelist/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/repeated/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/pattern/optional/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1298,95 +1956,155 @@
     <url>
      <loc>/builtin/pattern/holdpattern/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/boolean/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/boolean/and/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/boolean/or/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/boolean/not/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/boolean/trueq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/boolean/booleanq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/boolean/alltrue/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/boolean/boole/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/simplify/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/simplify/simplify/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/numbertheory/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/numbertheory/primeq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/numbertheory/gcd/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/numbertheory/lcm/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/numbertheory/mod/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1394,17 +2112,25 @@
     <url>
      <loc>/builtin/numbertheory/primepi/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/numbertheory/evenq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/numbertheory/oddq/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1424,17 +2150,25 @@
     <url>
      <loc>/builtin/numbertheory/integerpart/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/manip/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/manip/together/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1448,11 +2182,15 @@
     <url>
      <loc>/builtin/manip/denominator/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/builtin/manip/distribute/</loc>
+<<<<<<< HEAD
      <lastmod>2017-09-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1466,6 +2204,9 @@
     <url>
      <loc>/builtin/rubi/loadrubi/</loc>
      <lastmod>2017-09-27</lastmod>
+=======
+     <lastmod>2017-07-27</lastmod>
+>>>>>>> 5460c9c8ca82fd7f38de3272fe018a01bc899296
      <changefreq>daily</changefreq>
     </url>
         

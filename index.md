@@ -15,6 +15,12 @@ The term rewriting system and pattern matching engine is fairly advanced. The co
 Expreduce is [on GitHub](https://github.com/corywalker/expreduce).
 
 # Install and run
+
+[DOWNLOAD HERE](https://github.com/corywalker/expreduce/releases/latest)
+
+If you just want to get started, you can download a binary release and run the software without any downloading Go or compiling. Head over to the [latest release](https://github.com/corywalker/expreduce/releases/latest) and download the correct package for your OS.
+
+## From source
 ```
 go get github.com/corywalker/expreduce
 expreduce
