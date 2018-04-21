@@ -73,15 +73,6 @@ func renderUsage(f *os.File, def expreduce.Definition, es *expreduce.EvalState) 
 	f.WriteString(fmt.Sprintf("`%v := %v`\n\n", attrLookup, attrs))
 }
 
-func renderRules(f *os.File, def expreduce.Definition) {
-	f.WriteString("##Rules\n")
-	f.WriteString("```wl\n")
-	for _, rule := range def.Rules {
-		f.WriteString(fmt.Sprintf("%v := %v\n", rule.Lhs, rule.Rhs))
-	}
-	f.WriteString("```\n")
-}
-
 func renderExamples(f *os.File, category string, examples []expreduce.TestInstruction) {
 	f.WriteString(fmt.Sprintf("##%v\n\n", category))
 	count := 1
@@ -148,10 +139,6 @@ func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definiti
 
 	if len(def.FurtherExamples) > 0 {
 		renderExamples(f, "Further examples", def.FurtherExamples)
-	}
-
-	if len(def.Rules) > 0 {
-		renderRules(f, def)
 	}
 
 	f.Sync()
