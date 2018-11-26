@@ -235,6 +235,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="comparison" href="../../comparison/">
         comparison
@@ -357,6 +361,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="functional" href="../../functional/">
         functional
@@ -434,6 +446,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -699,6 +715,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -824,12 +848,24 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="power" href="../../power/">
         power
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1139,12 +1175,48 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="trig" href="../../trig/">
         trig
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1216,12 +1288,24 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="time" href="../../time/">
         time
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -1490,6 +1574,29 @@
   
 
       
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+    <li>
+      <a class="" title="tests" href="../../tests/">
+        tests
+      </a>
+      
+    </li>
+  
+
+      
     </ul>
   </li>
 
@@ -1509,48 +1616,48 @@
 <p><code>Attributes[Part] := {NHoldRest, Protected, ReadProtected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <p>Return the second item in a list:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Part</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">},</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">}[[</span><span class="m">2</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">b</span><span class="w"></span>
 </pre></div>
 
 
 <p>Multi-dimensional indices are supported:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">((</span><span class="nv">mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nb">Table</span><span class="p">[</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">}],</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">}]))</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Table</span><span class="p">[</span><span class="nb">Table</span><span class="p">[</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">}],</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">}]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="m">32</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="m">27</span><span class="p">,</span><span class="w"> </span><span class="m">48</span><span class="p">,</span><span class="w"> </span><span class="m">75</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="m">36</span><span class="p">,</span><span class="w"> </span><span class="m">64</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="m">125</span><span class="p">}}</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Part</span><span class="p">[</span><span class="nv">mat</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">mat</span><span class="p">[[</span><span class="m">5</span><span class="p">,</span><span class="m">2</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="w"></span>
 </pre></div>
 
 
 <p>Use <code>All</code> to select along the entire dimension:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Part</span><span class="p">[</span><span class="nv">mat</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="nb">All</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">mat</span><span class="p">[[</span><span class="m">5</span><span class="p">,</span><span class="nb">All</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="m">125</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 
 
 <h2 id="further-examples">Further examples</h2>
 <p>Out of bounds issues will prevent the expression from evaluating:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Part</span><span class="p">[{</span><span class="nv">a</span><span class="p">},</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Part</span><span class="p">[{</span><span class="nv">a</span><span class="p">},</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">}[[</span><span class="m">2</span><span class="p">]]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">}[[</span><span class="m">2</span><span class="p">]]</span><span class="w"></span>
 </pre></div>
 
 
 <p>The input need not be a <code>List</code>:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Part</span><span class="p">[</span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">],</span><span class="w"> </span><span class="m">0</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">foo</span><span class="p">[</span><span class="nv">a</span><span class="p">][[</span><span class="m">0</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">foo</span><span class="w"></span>
 </pre></div>
 
 
 <p>Omitting an index will return the original expression:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Part</span><span class="p">[</span><span class="nv">i</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">i</span><span class="p">[[]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">i</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Part</span><span class="p">[{{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">}},</span><span class="w"> </span><span class="nb">All</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">{{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">}}[[</span><span class="nb">All</span><span class="p">,</span><span class="m">2</span><span class="p">]]</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">}</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">

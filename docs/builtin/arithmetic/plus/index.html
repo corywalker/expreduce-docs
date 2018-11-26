@@ -235,6 +235,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="comparison" href="../../comparison/">
         comparison
@@ -357,6 +361,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="functional" href="../../functional/">
         functional
@@ -434,6 +446,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -699,6 +715,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -824,12 +848,24 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="power" href="../../power/">
         power
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1139,12 +1175,48 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="trig" href="../../trig/">
         trig
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1216,12 +1288,24 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="time" href="../../time/">
         time
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -1490,6 +1574,29 @@
   
 
       
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+    <li>
+      <a class="" title="tests" href="../../tests/">
+        tests
+      </a>
+      
+    </li>
+  
+
+      
     </ul>
   </li>
 
@@ -1508,30 +1615,30 @@
 <p><code>(e1 + e2 + ...)</code> computes the sum of all expressions in the function.</p>
 <p><code>Attributes[Plus] := {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"></span>
 </pre></div>
 
 
 <p>If Reals are present, other Integers are demoted to Reals:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">((</span><span class="m">5.2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.2</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">))</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="m">5.2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.2</span><span class="o">*-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="o">*-</span><span class="m">1</span><span class="w"></span>
 <span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">0.</span><span class="w"></span>
 </pre></div>
 
 
 <p>Plus automatically combines like terms:</p>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="o">*</span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">6</span><span class="o">*</span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="o">*</span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">6</span><span class="o">*</span><span class="nv">b</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">((</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">c</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="nv">c</span><span class="o">^</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="nv">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="o">*</span><span class="nv">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="o">*</span><span class="nv">d</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span><span class="o">*</span><span class="nv">c</span><span class="o">^</span><span class="nv">a</span><span class="p">)</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="o">*</span><span class="nv">c</span><span class="o">^</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span><span class="o">*</span><span class="nv">d</span><span class="p">)</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="o">*-</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">c</span><span class="o">*-</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="nv">c</span><span class="o">^</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="nv">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="o">*</span><span class="nv">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="o">*</span><span class="nv">d</span><span class="p">)</span><span class="o">*-</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span><span class="o">*</span><span class="nv">c</span><span class="o">^</span><span class="nv">a</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="o">*</span><span class="nv">c</span><span class="o">^</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span><span class="o">*</span><span class="nv">d</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="m">4</span><span class="o">*</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="o">*</span><span class="nv">d</span><span class="o">*</span><span class="nv">e</span><span class="o">*</span><span class="nv">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="m">7</span><span class="p">)</span><span class="o">*</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="o">*</span><span class="nv">d</span><span class="o">*</span><span class="nv">e</span><span class="o">*</span><span class="nv">f</span><span class="p">)</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="m">3</span><span class="p">)</span><span class="o">*</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="o">*</span><span class="nv">d</span><span class="o">*</span><span class="nv">e</span><span class="o">*</span><span class="nv">f</span><span class="p">)</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="m">4</span><span class="o">*</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="o">*</span><span class="nv">d</span><span class="o">*</span><span class="nv">e</span><span class="o">*</span><span class="nv">f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">7</span><span class="o">*</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="o">*</span><span class="nv">d</span><span class="o">*</span><span class="nv">e</span><span class="o">*</span><span class="nv">f</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">3</span><span class="o">*</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="o">*</span><span class="nv">d</span><span class="o">*</span><span class="nv">e</span><span class="o">*</span><span class="nv">f</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             

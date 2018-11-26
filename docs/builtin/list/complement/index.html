@@ -235,6 +235,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="comparison" href="../../comparison/">
         comparison
@@ -357,6 +361,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="functional" href="../../functional/">
         functional
@@ -434,6 +446,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -699,6 +715,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -824,12 +848,24 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="power" href="../../power/">
         power
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1139,12 +1175,48 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="trig" href="../../trig/">
         trig
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1216,12 +1288,24 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="time" href="../../time/">
         time
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -1490,6 +1574,29 @@
   
 
       
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+    <li>
+      <a class="" title="tests" href="../../tests/">
+        tests
+      </a>
+      
+    </li>
+  
+
+      
     </ul>
   </li>
 
@@ -1508,13 +1615,13 @@
 <p><code>Complement[expr1, expr2, ...]</code> returns a sorted union of the items in the expressions.</p>
 <p><code>Attributes[Complement] := {Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Complement</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">}]</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">b</span><span class="p">}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Intersection</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 
 
-<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Complement</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">b</span><span class="p">}]</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">c</span><span class="p">}</span><span class="w"></span>
+<div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Intersection</span><span class="p">[{</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">a</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nv">b</span><span class="p">}]</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             
@@ -1551,14 +1658,14 @@
     </div>
     <div class="next">
       
-        <a href="../padright/" title="PadRight ">
+        <a href="../intersection/" title="Intersection ">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                PadRight 
+                Intersection 
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

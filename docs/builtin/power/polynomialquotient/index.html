@@ -235,6 +235,10 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="comparison" href="../../comparison/">
         comparison
@@ -357,6 +361,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="functional" href="../../functional/">
         functional
@@ -434,6 +446,10 @@
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -699,6 +715,14 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="matrix" href="../../matrix/">
         matrix
@@ -824,12 +848,24 @@
       
         
   
+
+      
+        
+  
     <li>
       <a class="" title="power" href="../">
         power
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1139,12 +1175,48 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="trig" href="../../trig/">
         trig
       </a>
       
     </li>
+  
+
+      
+        
+  
+
+      
+        
   
 
       
@@ -1216,12 +1288,24 @@
       
         
   
+
+      
+        
+  
+
+      
+        
+  
     <li>
       <a class="" title="time" href="../../time/">
         time
       </a>
       
     </li>
+  
+
+      
+        
   
 
       
@@ -1490,6 +1574,29 @@
   
 
       
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+
+      
+        
+  
+    <li>
+      <a class="" title="tests" href="../../tests/">
+        tests
+      </a>
+      
+    </li>
+  
+
+      
     </ul>
   </li>
 
@@ -1509,17 +1616,17 @@
 <p><code>Attributes[PolynomialQuotient] := {Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialQuotient</span><span class="p">[</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="o">*</span><span class="m">2</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">))</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 
 
 <div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialQuotient</span><span class="p">[</span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">y</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="o">*</span><span class="nv">y</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">y</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="o">*</span><span class="nv">y</span><span class="p">)</span><span class="o">*-</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">y</span><span class="o">^</span><span class="m">2</span><span class="w"></span>
 </pre></div>
 
 
 <div class="language-wl"><pre><span></span><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialQuotient</span><span class="p">[</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">a</span><span class="o">*</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span><span class="w"></span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="o">*</span><span class="nv">a</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">))</span><span class="w"></span>
+<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nv">a</span><span class="p">)</span><span class="w"></span>
 </pre></div>
           <aside class="copyright" role="note">
             

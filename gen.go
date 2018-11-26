@@ -73,7 +73,7 @@ func renderUsage(f *os.File, def expreduce.Definition, es *expreduce.EvalState) 
 	f.WriteString(fmt.Sprintf("`%v := %v`\n\n", attrLookup, attrs))
 }
 
-func renderExamples(f *os.File, category string, examples []expreduce.TestInstruction) {
+func renderExamples(f *os.File, category string, examples []expreduce.TestInstruction, es *expreduce.EvalState) {
 	f.WriteString(fmt.Sprintf("##%v\n\n", category))
 	count := 1
 	for _, ti := range examples {
@@ -89,10 +89,11 @@ func renderExamples(f *os.File, category string, examples []expreduce.TestInstru
 			inStr = sameTest.In
 			outStr = sameTest.Out
 		}
+		toStringParams := expreduce.ActualStringFormArgsFull("InputForm", es)
 		sameTestEx, isSameTestEx := ti.(*expreduce.SameTestEx)
 		if isSameTestEx {
-			inStr = strings.Replace(sameTestEx.In.String(), "Private`", "", -1)
-			outStr = strings.Replace(sameTestEx.Out.String(), "Private`", "", -1)
+			inStr = strings.Replace(sameTestEx.In.StringForm(toStringParams), "Private`", "", -1)
+			outStr = strings.Replace(sameTestEx.Out.StringForm(toStringParams), "Private`", "", -1)
 		}
 		stringTest, isStringTest := ti.(*expreduce.StringTest)
 		if isStringTest {
@@ -134,11 +135,11 @@ func writeSymbol(fn string, defSet expreduce.NamedDefSet, def expreduce.Definiti
 	}
 
 	if len(def.SimpleExamples) > 0 {
-		renderExamples(f, "Simple examples", def.SimpleExamples)
+		renderExamples(f, "Simple examples", def.SimpleExamples, es)
 	}
 
 	if len(def.FurtherExamples) > 0 {
-		renderExamples(f, "Further examples", def.FurtherExamples)
+		renderExamples(f, "Further examples", def.FurtherExamples, es)
 	}
 
 	f.Sync()
