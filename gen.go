@@ -6,6 +6,7 @@ import (
 	"os"
 	"path"
 	"strings"
+
 	"github.com/corywalker/expreduce/expreduce"
 )
 
@@ -165,7 +166,7 @@ func main() {
 	f.WriteString("site_name: Expreduce\n\n")
 	f.WriteString("docs_dir: 'doc_source'\n")
 	f.WriteString("site_dir: 'docs'\n\n")
-	f.WriteString("pages:\n")
+	f.WriteString("nav:\n")
 	f.WriteString("- Home: 'index.md'\n")
 	writeMainIndex(path.Join(*docs_location, "index.md"))
 	f.WriteString("- Language reference:\n")
@@ -203,8 +204,8 @@ func main() {
 	}
 
 	// Write remaining configuration.
-	f.WriteString("\ntheme: readthedocs\n")
-	f.WriteString("theme_dir: 'material'\n")
+	f.WriteString("\ntheme:\n")
+	f.WriteString("  name: material\n")
 	f.WriteString("\n")
 	f.WriteString("repo_name: 'GitHub'\n")
 	f.WriteString("repo_url: 'https://github.com/corywalker/expreduce'\n")
@@ -222,7 +223,7 @@ func main() {
 	f.WriteString("# Extensions\n")
 	f.WriteString("markdown_extensions:\n")
 	f.WriteString("  #- codehilite(css_class=code)\n")
-	f.WriteString("  - codehilite(css_class=language-wl)\n")
+	f.WriteString("  - codehilite\n")
 	f.WriteString("  - admonition\n")
 
 	f.Sync()
