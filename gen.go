@@ -6,6 +6,7 @@ import (
 	"os"
 	"path"
 	"strings"
+
 	"github.com/corywalker/expreduce/expreduce"
 )
 
@@ -54,7 +55,7 @@ func writeCategoryIndex(fn string, defSet expreduce.NamedDefSet) {
 	f.WriteString(fmt.Sprintf("#%v documentation\n", defSet.Name))
 
 	for _, def := range defSet.Defs {
-		if def.OmitDocumentation{
+		if def.OmitDocumentation {
 			continue
 		}
 		f.WriteString(fmt.Sprintf("[%v](%v.md)\n\n", defNamePrint(def.Name), defNameFile(def.Name)))
@@ -165,7 +166,7 @@ func main() {
 	f.WriteString("site_name: Expreduce\n\n")
 	f.WriteString("docs_dir: 'doc_source'\n")
 	f.WriteString("site_dir: 'docs'\n\n")
-	f.WriteString("pages:\n")
+	f.WriteString("nav:\n")
 	f.WriteString("- Home: 'index.md'\n")
 	writeMainIndex(path.Join(*docs_location, "index.md"))
 	f.WriteString("- Language reference:\n")
@@ -183,7 +184,7 @@ func main() {
 		f.WriteString(categoryDef)
 
 		for _, def := range defSet.Defs {
-			if def.OmitDocumentation{
+			if def.OmitDocumentation {
 				continue
 			}
 			def.AnnotateWithDynamic(es)
@@ -193,37 +194,35 @@ func main() {
 				defNameFile(def.Name),
 			)
 			writeSymbol(path.Join(*docs_location, symbolFn), defSet, def, es)
-			symbolDef := fmt.Sprintf(
+			/*symbolDef := fmt.Sprintf(
 				"    - '%s ': '%s'\n",
 				defNamePrint(def.Name),
 				symbolFn,
 			)
-			f.WriteString(symbolDef)
+			f.WriteString(symbolDef)*/
 		}
 	}
 
 	// Write remaining configuration.
-	f.WriteString("\ntheme: readthedocs\n")
-	f.WriteString("theme_dir: 'material'\n")
+	f.WriteString("\ntheme:\n")
+	f.WriteString("  name: material\n")
+	f.WriteString("  features:\n")
+	f.WriteString("    - navigation.expand\n")
+	f.WriteString("  palette:\n")
+	f.WriteString("    primary: deep orange\n")
 	f.WriteString("\n")
 	f.WriteString("repo_name: 'GitHub'\n")
 	f.WriteString("repo_url: 'https://github.com/corywalker/expreduce'\n")
 	f.WriteString("\n")
-	f.WriteString("extra:\n")
-	//f.WriteString("  version: '0.1.0'\n")
-	f.WriteString("  logo: 'assets/images/logo.png'\n")
-	f.WriteString("  palette:\n")
-	f.WriteString("    primary: 'red'\n")
-	f.WriteString("    accent: 'light blue'\n")
-	f.WriteString("  font:\n")
-	f.WriteString("    text: 'Roboto'\n")
-	f.WriteString("    code: 'Roboto Mono'\n")
-	f.WriteString("\n")
 	f.WriteString("# Extensions\n")
 	f.WriteString("markdown_extensions:\n")
-	f.WriteString("  #- codehilite(css_class=code)\n")
-	f.WriteString("  - codehilite(css_class=language-wl)\n")
-	f.WriteString("  - admonition\n")
+	f.WriteString("  - pymdownx.highlight:\n")
+	f.WriteString("      anchor_linenums: true\n")
+	f.WriteString("      line_spans: __span\n")
+	f.WriteString("      pygments_lang_class: true\n")
+	f.WriteString("  - pymdownx.inlinehilite\n")
+	f.WriteString("  - pymdownx.snippets\n")
+	f.WriteString("  - pymdownx.superfences\n")
 
 	f.Sync()
 	fmt.Printf("Finished writing %v.\n", ymlFn)
