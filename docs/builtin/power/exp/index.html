@@ -694,6 +694,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simple-examples" class="md-nav__link">
+    Simple examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -711,7 +726,12 @@
 
 
 <h1 id="exp">Exp</h1>
-<p><code>Attributes[Exp] := {Protected}</code></p>
+<p><code>Exp[x]</code> returns the exponential of <code>x</code>.</p>
+<p><code>Attributes[Exp] := {Listable, NumericFunction, Protected, ReadProtected}</code></p>
+<h2 id="simple-examples">Simple examples</h2>
+<div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">True</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">Simplify</span><span class="p">[</span><span class="nb">Exp</span><span class="p">[</span><span class="nv">x</span><span class="p">]</span><span class="o">*</span><span class="nb">Exp</span><span class="p">[</span><span class="nv">y</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">Exp</span><span class="p">[</span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">y</span><span class="p">]]</span>
+</span></code></pre></div>
 
 
 
