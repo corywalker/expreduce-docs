@@ -55,7 +55,7 @@ func writeCategoryIndex(fn string, defSet expreduce.NamedDefSet) {
 	f.WriteString(fmt.Sprintf("#%v documentation\n", defSet.Name))
 
 	for _, def := range defSet.Defs {
-		if def.OmitDocumentation{
+		if def.OmitDocumentation {
 			continue
 		}
 		f.WriteString(fmt.Sprintf("[%v](%v.md)\n\n", defNamePrint(def.Name), defNameFile(def.Name)))
@@ -184,7 +184,7 @@ func main() {
 		f.WriteString(categoryDef)
 
 		for _, def := range defSet.Defs {
-			if def.OmitDocumentation{
+			if def.OmitDocumentation {
 				continue
 			}
 			def.AnnotateWithDynamic(es)
@@ -194,18 +194,20 @@ func main() {
 				defNameFile(def.Name),
 			)
 			writeSymbol(path.Join(*docs_location, symbolFn), defSet, def, es)
-			symbolDef := fmt.Sprintf(
+			/*symbolDef := fmt.Sprintf(
 				"    - '%s ': '%s'\n",
 				defNamePrint(def.Name),
 				symbolFn,
 			)
-			f.WriteString(symbolDef)
+			f.WriteString(symbolDef)*/
 		}
 	}
 
 	// Write remaining configuration.
 	f.WriteString("\ntheme:\n")
 	f.WriteString("  name: material\n")
+	f.WriteString("  features:\n")
+	f.WriteString("    - navigation.expand\n")
 	f.WriteString("\n")
 	f.WriteString("repo_name: 'GitHub'\n")
 	f.WriteString("repo_url: 'https://github.com/corywalker/expreduce'\n")
