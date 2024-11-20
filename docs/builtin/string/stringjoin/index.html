@@ -21,6 +21,9 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
       
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
       
 
     
@@ -45,11 +48,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
   
     
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -98,6 +104,8 @@
         </div>
       </div>
     </div>
+    
+      
     
     
     
@@ -728,29 +736,25 @@
 <p><code>s1 &lt;&gt; s2 &lt;&gt; ...</code> can join a list of strings into a single string.</p>
 <p><code>Attributes[StringJoin] := {Flat, OneIdentity, Protected}</code></p>
 <h2 id="simple-examples">Simple examples</h2>
-<div class="codehilite"><pre><span></span><code><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot;World&quot;</span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;If a=2, then &quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="nb">ToString</span><span class="p">[</span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nb">InputForm</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot;=&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="nb">ToString</span><span class="p">[((</span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="p">))</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">((</span><span class="nv">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="m">2</span><span class="p">)),</span><span class="w"> </span><span class="nb">InputForm</span><span class="p">]</span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;If a=2, then a^2=4&quot;</span>
-</code></pre></div>
-
+<p><div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot;World&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span>
+</span></code></pre></div>
+<div class="language-wl highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;If a=2, then &quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="nb">ToString</span><span class="p">[</span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nb">InputForm</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot;=&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="nb">ToString</span><span class="p">[((</span><span class="nv">a</span><span class="o">^</span><span class="m">2</span><span class="p">))</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">((</span><span class="nv">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="m">2</span><span class="p">)),</span><span class="w"> </span><span class="nb">InputForm</span><span class="p">]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;If a=2, then a^2=4&quot;</span>
+</span></code></pre></div></p>
 <h2 id="further-examples">Further examples</h2>
-<p>The <code>StringJoin</code> of nothing is the empty string:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">StringJoin</span><span class="p">[]</span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-</code></pre></div>
-
-<p>If <code>StringJoin</code> receives any non-string arguments, the expression does not evaluate:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">5</span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">5</span>
-</code></pre></div>
-
-<p>This function takes <code>List</code> arguments as well:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">StringJoin</span><span class="p">[{</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p">}]</span>
-<span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span>
-</code></pre></div>
+<p>The <code>StringJoin</code> of nothing is the empty string:
+<div class="language-wl highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">StringJoin</span><span class="p">[]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</span></code></pre></div>
+If <code>StringJoin</code> receives any non-string arguments, the expression does not evaluate:
+<div class="language-wl highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">5</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">5</span>
+</span></code></pre></div>
+This function takes <code>List</code> arguments as well:
+<div class="language-wl highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">StringJoin</span><span class="p">[{</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p">}]</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span>
+</span></code></pre></div></p>
 
 
 
