@@ -57,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -960,8 +960,8 @@
 
 
 <h1 id="polynomialquotientremainder">PolynomialQuotientRemainder</h1>
-<p><code>PolynomialQuotientRemainder[poly_, div_, var_]</code> returns the quotient and remainder of <code>poly</code> divided by <code>div</code> treating <code>var</code> as the polynomial variable.</p>
-<p><code>Attributes[PolynomialQuotientRemainder] := {Protected}</code></p>
+<p><code class="language-wl highlight"><span class="nb">PolynomialQuotientRemainder</span><span class="p">[</span><span class="nt">poly_</span><span class="p">,</span><span class="w"> </span><span class="nt">div_</span><span class="p">,</span><span class="w"> </span><span class="nt">var_</span><span class="p">]</span></code> returns the quotient and remainder of <code class="language-wl highlight"><span class="nv">poly</span></code> divided by <code class="language-wl highlight"><span class="nv">div</span></code> treating <code class="language-wl highlight"><span class="nv">var</span></code> as the polynomial variable.</p>
+<p><code class="language-wl highlight"><span class="nb">Attributes</span><span class="p">[</span><span class="nb">PolynomialQuotientRemainder</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nb">Protected</span><span class="p">}</span></code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <p><div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">PolynomialQuotientRemainder</span><span class="p">[</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="nv">x</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">]</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{(</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="m">2</span><span class="p">}</span>
@@ -1000,11 +1000,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

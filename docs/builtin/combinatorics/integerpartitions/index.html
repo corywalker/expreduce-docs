@@ -57,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -969,9 +969,9 @@
 
 
 <h1 id="integerpartitions">IntegerPartitions</h1>
-<p><code>IntegerPartitions[n]</code> lists the possible ways to partition <code>n</code> into smaller integers.</p>
-<p><code>IntegerPartitions[n, k]</code> lists the possible ways to partition <code>n</code> into smaller integers, using up to <code>k</code> elements.</p>
-<p><code>Attributes[IntegerPartitions] := {Protected}</code></p>
+<p><code class="language-wl highlight"><span class="nb">IntegerPartitions</span><span class="p">[</span><span class="nv">n</span><span class="p">]</span></code> lists the possible ways to partition <code class="language-wl highlight"><span class="nv">n</span></code> into smaller integers.</p>
+<p><code class="language-wl highlight"><span class="nb">IntegerPartitions</span><span class="p">[</span><span class="nv">n</span><span class="p">,</span><span class="w"> </span><span class="nv">k</span><span class="p">]</span></code> lists the possible ways to partition <code class="language-wl highlight"><span class="nv">n</span></code> into smaller integers, using up to <code class="language-wl highlight"><span class="nv">k</span></code> elements.</p>
+<p><code class="language-wl highlight"><span class="nb">Attributes</span><span class="p">[</span><span class="nb">IntegerPartitions</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nb">Protected</span><span class="p">}</span></code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <p>Find the partitions of 4:
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">IntegerPartitions</span><span class="p">[</span><span class="m">4</span><span class="p">]</span>
@@ -1014,11 +1014,6 @@ Find the partitions of 10, using a maximum of k = 2 integers:
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

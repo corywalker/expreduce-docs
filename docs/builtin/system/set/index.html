@@ -57,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -969,8 +969,8 @@
 
 
 <h1 id="set">Set</h1>
-<p><code>lhs = rhs</code> sets <code>lhs</code> to stand for <code>rhs</code>.</p>
-<p><code>Attributes[Set] := {HoldFirst, Protected, SequenceHold}</code></p>
+<p><code class="language-wl highlight"><span class="nv">lhs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">rhs</span></code> sets <code class="language-wl highlight"><span class="nv">lhs</span></code> to stand for <code class="language-wl highlight"><span class="nv">rhs</span></code>.</p>
+<p><code class="language-wl highlight"><span class="nb">Attributes</span><span class="p">[</span><span class="nb">Set</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nb">HoldFirst</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">,</span><span class="w"> </span><span class="nb">SequenceHold</span><span class="p">}</span></code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <p><div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">x</span><span class="o">=</span><span class="m">1</span><span class="o">+</span><span class="m">2</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
@@ -997,11 +997,11 @@
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">36</span>
 </span></code></pre></div></p>
 <h2 id="further-examples">Further examples</h2>
-<p><code>Set</code> has the <code>HoldFirst</code> attribute, meaning <code>rhs</code> is evaluated before assignment:
+<p><code class="language-wl highlight"><span class="nb">Set</span></code> has the <code class="language-wl highlight"><span class="nb">HoldFirst</span></code> attribute, meaning <code class="language-wl highlight"><span class="nv">rhs</span></code> is evaluated before assignment:
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nb">Set</span><span class="p">]</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nb">HoldFirst</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">,</span><span class="w"> </span><span class="nb">SequenceHold</span><span class="p">}</span>
 </span></code></pre></div>
-<code>SetDelayed</code> has the <code>HoldAll</code> attribute, meaning <code>rhs</code> is not evaluated during assignment:
+<code class="language-wl highlight"><span class="nb">SetDelayed</span></code> has the <code class="language-wl highlight"><span class="nb">HoldAll</span></code> attribute, meaning <code class="language-wl highlight"><span class="nv">rhs</span></code> is not evaluated during assignment:
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Attributes</span><span class="p">[</span><span class="nb">SetDelayed</span><span class="p">]</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nb">HoldAll</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">,</span><span class="w"> </span><span class="nb">SequenceHold</span><span class="p">}</span>
 </span></code></pre></div></p>
@@ -1033,11 +1033,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

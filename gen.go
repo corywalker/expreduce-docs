@@ -194,12 +194,6 @@ func main() {
 				defNameFile(def.Name),
 			)
 			writeSymbol(path.Join(*docs_location, symbolFn), defSet, def, es)
-			/*symbolDef := fmt.Sprintf(
-				"    - '%s ': '%s'\n",
-				defNamePrint(def.Name),
-				symbolFn,
-			)
-			f.WriteString(symbolDef)*/
 		}
 	}
 
@@ -210,17 +204,23 @@ func main() {
 	f.WriteString("    - navigation.expand\n")
 	f.WriteString("  palette:\n")
 	f.WriteString("    primary: deep orange\n")
+	f.WriteString("    accent: orange\n")
+	f.WriteString("\n")
+	f.WriteString("extra:\n")
+	f.WriteString("  generator: false\n")
 	f.WriteString("\n")
 	f.WriteString("repo_name: 'GitHub'\n")
 	f.WriteString("repo_url: 'https://github.com/corywalker/expreduce'\n")
 	f.WriteString("\n")
 	f.WriteString("# Extensions\n")
 	f.WriteString("markdown_extensions:\n")
+	f.WriteString("  - admonition\n")
 	f.WriteString("  - pymdownx.highlight:\n")
 	f.WriteString("      anchor_linenums: true\n")
 	f.WriteString("      line_spans: __span\n")
 	f.WriteString("      pygments_lang_class: true\n")
-	f.WriteString("  - pymdownx.inlinehilite\n")
+	f.WriteString("  - pymdownx.inlinehilite:\n")
+	f.WriteString("      style_plain_text: wl\n")
 	f.WriteString("  - pymdownx.snippets\n")
 	f.WriteString("  - pymdownx.superfences\n")
 

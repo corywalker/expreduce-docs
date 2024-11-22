@@ -57,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -969,9 +969,9 @@
 
 
 <h1 id="blank">Blank</h1>
-<p><code>_</code> matches any expression.</p>
-<p><code>_head</code> matches any expression with a <code>Head</code> of <code>head</code>.</p>
-<p><code>Attributes[Blank] := {Protected}</code></p>
+<p><code class="language-wl highlight"><span class="o">_</span></code> matches any expression.</p>
+<p><code class="language-wl highlight"><span class="nt">_head</span></code> matches any expression with a <code class="language-wl highlight"><span class="nb">Head</span></code> of <code class="language-wl highlight"><span class="nv">head</span></code>.</p>
+<p><code class="language-wl highlight"><span class="nb">Attributes</span><span class="p">[</span><span class="nb">Blank</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nb">Protected</span><span class="p">}</span></code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <p><div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="o">_</span><span class="p">]</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span>
@@ -982,12 +982,12 @@
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">s</span><span class="p">,</span><span class="w"> </span><span class="nt">_Integer</span><span class="p">]</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">False</span>
 </span></code></pre></div>
-<code>Blank</code> works with nonatomic <code>head</code>s:
+<code class="language-wl highlight"><span class="nb">Blank</span></code> works with nonatomic <code class="language-wl highlight"><span class="nv">head</span></code>s:
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">((</span><span class="nv">a</span><span class="o">*</span><span class="nv">b</span><span class="o">*</span><span class="nv">c</span><span class="o">*</span><span class="nv">d</span><span class="p">))</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">((</span><span class="nt">_Times</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="m">2</span><span class="p">))</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
 </span></code></pre></div></p>
 <h2 id="further-examples">Further examples</h2>
-<p>For <code>Orderless</code> functions, the match engine will attempt to find a match in any order:
+<p>For <code class="language-wl highlight"><span class="nb">Orderless</span></code> functions, the match engine will attempt to find a match in any order:
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">MatchQ</span><span class="p">[</span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3.</span><span class="p">,</span><span class="w"> </span><span class="nt">c1match_Real</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">matcha_</span><span class="p">]</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span>
 </span></code></pre></div></p>
@@ -1019,11 +1019,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

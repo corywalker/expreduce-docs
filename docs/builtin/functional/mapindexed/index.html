@@ -57,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -960,11 +960,11 @@
 
 
 <h1 id="mapindexed">MapIndexed</h1>
-<p><code>MapIndexed[f, expr]</code> returns a new expression with the same head as <code>expr</code>, but with <code>f</code> mapped to each of the arguments.
+<p><code class="language-wl highlight"><span class="nb">MapIndexed</span><span class="p">[</span><span class="nv">f</span><span class="p">,</span><span class="w"> </span><span class="nv">expr</span><span class="p">]</span></code> returns a new expression with the same head as <code class="language-wl highlight"><span class="nv">expr</span></code>, but with <code class="language-wl highlight"><span class="nv">f</span></code> mapped to each of the arguments.
 Additionally, MapIdnexed supplies the part specification of the subexpression as the second argument of f.
 Map[f, expr, levelspec] maps f to all subexpressions that match the level specification levelspec, also supplying the part specification for
 each subexpression as the second argument to f.</p>
-<p><code>Attributes[MapIndexed] := {Protected}</code></p>
+<p><code class="language-wl highlight"><span class="nb">Attributes</span><span class="p">[</span><span class="nb">MapIndexed</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nb">Protected</span><span class="p">}</span></code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <p><div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nv">f</span><span class="p">[</span><span class="nv">a</span><span class="p">[</span><span class="nv">f</span><span class="p">[</span><span class="nv">b</span><span class="p">[</span><span class="nv">f</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">}],</span><span class="w"> </span><span class="nv">f</span><span class="p">[</span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">}],</span><span class="w"> </span><span class="nv">f</span><span class="p">[</span><span class="nv">e</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">}]],</span><span class="w"> </span><span class="p">{</span><span class="m">1</span><span class="p">}],</span><span class="w"> </span><span class="nv">f</span><span class="p">[</span><span class="nv">l</span><span class="p">[</span><span class="nv">f</span><span class="p">[</span><span class="nv">g</span><span class="p">[</span><span class="nv">f</span><span class="p">[</span><span class="nv">h</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">}],</span><span class="w"> </span><span class="nv">f</span><span class="p">[</span><span class="nv">j</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">}]],</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">}],</span><span class="w"> </span><span class="nv">f</span><span class="p">[</span><span class="nv">k</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">}]],</span><span class="w"> </span><span class="p">{</span><span class="m">2</span><span class="p">}]],</span><span class="w"> </span><span class="p">{}]</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">MapIndexed</span><span class="p">[</span><span class="nv">f</span><span class="p">,</span><span class="w"> </span><span class="nv">a</span><span class="p">[</span><span class="nv">b</span><span class="p">[</span><span class="nv">c</span><span class="p">,</span><span class="w"> </span><span class="nv">d</span><span class="p">,</span><span class="w"> </span><span class="nv">e</span><span class="p">],</span><span class="w"> </span><span class="nv">l</span><span class="p">[</span><span class="nv">g</span><span class="p">[</span><span class="nv">h</span><span class="p">,</span><span class="w"> </span><span class="nv">j</span><span class="p">],</span><span class="w"> </span><span class="nv">k</span><span class="p">]],</span><span class="w"> </span><span class="p">{</span><span class="nb">Infinity</span><span class="o">*-</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nb">Infinity</span><span class="p">}]</span>
@@ -1012,11 +1012,6 @@ each subexpression as the second argument to f.</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

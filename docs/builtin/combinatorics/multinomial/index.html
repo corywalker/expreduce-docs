@@ -57,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -960,14 +960,14 @@
 
 
 <h1 id="multinomial">Multinomial</h1>
-<p><code>Multinomial[n1, n2, ...]</code> gives the multinomial coefficient for the given term.</p>
-<p><code>Attributes[Multinomial] := {Listable, NumericFunction, Orderless, Protected, ReadProtected}</code></p>
+<p><code class="language-wl highlight"><span class="nb">Multinomial</span><span class="p">[</span><span class="nv">n1</span><span class="p">,</span><span class="w"> </span><span class="nv">n2</span><span class="p">,</span><span class="w"> </span><span class="o">...</span><span class="p">]</span></code> gives the multinomial coefficient for the given term.</p>
+<p><code class="language-wl highlight"><span class="nb">Attributes</span><span class="p">[</span><span class="nb">Multinomial</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nb">Listable</span><span class="p">,</span><span class="w"> </span><span class="nb">NumericFunction</span><span class="p">,</span><span class="w"> </span><span class="nb">Orderless</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">,</span><span class="w"> </span><span class="nb">ReadProtected</span><span class="p">}</span></code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <p>Find the multinomial coefficient for the 1, 3, 1 term:
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Multinomial</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">20</span>
 </span></code></pre></div>
-<code>Multinomial</code> handles symbolic arguments:
+<code class="language-wl highlight"><span class="nb">Multinomial</span></code> handles symbolic arguments:
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Multinomial</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nb">Factorial</span><span class="p">[</span><span class="nv">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="nb">Factorial</span><span class="p">[</span><span class="nv">k</span><span class="p">])</span>
 </span></code></pre></div></p>
@@ -999,11 +999,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

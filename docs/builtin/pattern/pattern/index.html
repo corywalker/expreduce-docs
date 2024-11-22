@@ -57,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -969,11 +969,11 @@
 
 
 <h1 id="pattern">Pattern</h1>
-<p><code>name{BLANKFORM}</code> is equivalent to <code>Pattern[name, {BLANKFORM}]</code> and can be used in pattern matching to refer to the matched expression as <code>name</code>, where <code>{BLANKFORM}</code> is one of <code>{_, __, ___}</code>.</p>
-<p><code>name{BLANKFORM}head</code> is equivalent to <code>Pattern[name, {BLANKFORM}head]</code> and can be used in pattern matching to refer to the matched expression as <code>name</code>, where <code>{BLANKFORM}</code> is one of <code>{_, __, ___}</code>.</p>
-<p><code>Attributes[Pattern] := {HoldFirst, Protected}</code></p>
+<p><code class="language-wl highlight"><span class="nv">name</span><span class="p">{</span><span class="nv">BLANKFORM</span><span class="p">}</span></code> is equivalent to <code class="language-wl highlight"><span class="nb">Pattern</span><span class="p">[</span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">BLANKFORM</span><span class="p">}]</span></code> and can be used in pattern matching to refer to the matched expression as <code class="language-wl highlight"><span class="nv">name</span></code>, where <code class="language-wl highlight"><span class="p">{</span><span class="nv">BLANKFORM</span><span class="p">}</span></code> is one of <code class="language-wl highlight"><span class="p">{</span><span class="o">_</span><span class="p">,</span><span class="w"> </span><span class="o">__</span><span class="p">,</span><span class="w"> </span><span class="o">___</span><span class="p">}</span></code>.</p>
+<p><code class="language-wl highlight"><span class="nv">name</span><span class="p">{</span><span class="nv">BLANKFORM</span><span class="p">}</span><span class="nv">head</span></code> is equivalent to <code class="language-wl highlight"><span class="nb">Pattern</span><span class="p">[</span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">BLANKFORM</span><span class="p">}</span><span class="nv">head</span><span class="p">]</span></code> and can be used in pattern matching to refer to the matched expression as <code class="language-wl highlight"><span class="nv">name</span></code>, where <code class="language-wl highlight"><span class="p">{</span><span class="nv">BLANKFORM</span><span class="p">}</span></code> is one of <code class="language-wl highlight"><span class="p">{</span><span class="o">_</span><span class="p">,</span><span class="w"> </span><span class="o">__</span><span class="p">,</span><span class="w"> </span><span class="o">___</span><span class="p">}</span></code>.</p>
+<p><code class="language-wl highlight"><span class="nb">Attributes</span><span class="p">[</span><span class="nb">Pattern</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nb">HoldFirst</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">}</span></code></p>
 <h2 id="simple-examples">Simple examples</h2>
-<p>To demonstrate referencing <code>name</code> in the replacement RHS:
+<p>To demonstrate referencing <code class="language-wl highlight"><span class="nv">name</span></code> in the replacement RHS:
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="nv">foo</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">])</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">((</span><span class="nv">foo</span><span class="p">[</span><span class="nt">a_</span><span class="p">,</span><span class="w"> </span><span class="nt">b_</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">a</span><span class="p">))</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
 </span></code></pre></div>
@@ -1024,11 +1024,6 @@ To demonstrate the head matching capability:
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

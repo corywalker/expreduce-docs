@@ -57,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -960,13 +960,13 @@
 
 
 <h1 id="ruledelayed">RuleDelayed</h1>
-<p><code>lhs :&gt; rhs</code> can be used in replacement functions to say that instances of <code>lhs</code> should be replaced with <code>rhs</code>, evaluating <code>rhs</code> only after replacement.</p>
-<p><code>Attributes[RuleDelayed] := {HoldRest, Protected, SequenceHold}</code></p>
+<p><code class="language-wl highlight"><span class="nv">lhs</span><span class="w"> </span><span class="o">:&gt;</span><span class="w"> </span><span class="nv">rhs</span></code> can be used in replacement functions to say that instances of <code class="language-wl highlight"><span class="nv">lhs</span></code> should be replaced with <code class="language-wl highlight"><span class="nv">rhs</span></code>, evaluating <code class="language-wl highlight"><span class="nv">rhs</span></code> only after replacement.</p>
+<p><code class="language-wl highlight"><span class="nb">Attributes</span><span class="p">[</span><span class="nb">RuleDelayed</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">{</span><span class="nb">HoldRest</span><span class="p">,</span><span class="w"> </span><span class="nb">Protected</span><span class="p">,</span><span class="w"> </span><span class="nb">SequenceHold</span><span class="p">}</span></code></p>
 <h2 id="simple-examples">Simple examples</h2>
 <p><div class="language-wl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="p">((</span><span class="m">2</span><span class="o">^</span><span class="p">(</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">))</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">(((</span><span class="nv">x</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">:&gt;</span><span class="w"> </span><span class="nv">y</span><span class="p">))</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">^</span><span class="p">(</span><span class="nv">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">y</span>
 </span></code></pre></div>
-To demonstrate the difference between <code>Rule</code> and <code>RuleDelayed</code>:
+To demonstrate the difference between <code class="language-wl highlight"><span class="nb">Rule</span></code> and <code class="language-wl highlight"><span class="nb">RuleDelayed</span></code>:
 <div class="language-wl highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">In</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="nb">Apply</span><span class="p">[</span><span class="nb">Equal</span><span class="p">,</span><span class="w"> </span><span class="p">({</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">})</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="p">((</span><span class="m">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb">RandomReal</span><span class="p">[]))]</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Out</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nb">True</span>
 </span></code></pre></div>
@@ -1001,11 +1001,6 @@ To demonstrate the difference between <code>Rule</code> and <code>RuleDelayed</c
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
